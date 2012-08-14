@@ -37,7 +37,7 @@ main( void )
 
 	RKH_FILTER_OFF_GROUP_EVENT( RKH_TRCG_RQ, RKH_TRCE_RQ_FIFO );
 	
-//	RKH_FILTER_ON_SMA( my );
+	RKH_FILTER_OFF_SMA( my );
 
 	rkh_init();
 
