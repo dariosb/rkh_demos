@@ -13,7 +13,7 @@
 #include "trtemp.h"
 #include "trkact.h"
 #include "trk.h"
-#include "emgr.h"
+#include "gmgr.h"
 #include "bsp.h"
 #include "dbgcfg.h"
 
@@ -116,7 +116,7 @@ send_vmax_limit( void )
 
 	mdebug( TRK_DBG );
 
-	if( ( e = emgr_evt_req() ) == NULL )
+	if( ( e = gmgr_evt_req() ) == NULL )
 		return;
 
 	e->ts = (ts_t)time( NULL ); 
@@ -128,7 +128,7 @@ send_vmax_limit( void )
 	p->lng = ppos->frm.lng;
 	p->vel = ppos->frm.vel;
 
-	emgr_evt_post( e );
+	gmgr_evt_post( e );
 }
 
 
@@ -178,7 +178,7 @@ send_curr_pos( RKHEVT_T *pe )
 
 	mdebug( TRK_DBG );
 
-	if( ( e = emgr_evt_req() ) == NULL )
+	if( ( e = gmgr_evt_req() ) == NULL )
 		return;
 
 	e->ts = (ts_t)time( NULL ); 
@@ -186,7 +186,7 @@ send_curr_pos( RKHEVT_T *pe )
 
 	e->data.pos = ppos->frm;
 
-	emgr_evt_post( e );
+	gmgr_evt_post( e );
 }
 
 
@@ -200,7 +200,7 @@ send_in_stop( RKHEVT_T *pe )
 
 	mdebug( TRK_DBG );
 
-	if( ( e = emgr_evt_req() ) == NULL )
+	if( ( e = gmgr_evt_req() ) == NULL )
 		return;
 
 	e->ts = (ts_t)time( NULL ); 
@@ -210,7 +210,7 @@ send_in_stop( RKHEVT_T *pe )
 	p->lat = ppos->frm.lat;
 	p->lng = ppos->frm.lng;
 
-	emgr_evt_post( e );	
+	gmgr_evt_post( e );	
 }
 
 

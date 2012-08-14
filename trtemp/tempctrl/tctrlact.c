@@ -12,7 +12,7 @@
 #include "trtemp.h"
 #include "tctrlact.h"
 #include "tctrl.h"
-#include "emgr.h"
+#include "gmgr.h"
 #include "dbgcfg.h"
 
 #include <time.h>
@@ -44,7 +44,7 @@ tctrl_send_evt( rkhui8_t st, rkhui8_t temp )
 	SEND_EVT_REQ_T *e;
 	CMPCHG_T *p;
 	
-	if( ( e = emgr_evt_req() ) == NULL )
+	if( ( e = gmgr_evt_req() ) == NULL )
 		return;
 
 	e->ts = (ts_t)time( NULL ); 
@@ -55,7 +55,7 @@ tctrl_send_evt( rkhui8_t st, rkhui8_t temp )
 	p->temp = temp;
 	p->state = st;
 	
-	emgr_evt_post( e );
+	gmgr_evt_post( e );
 }
 
 

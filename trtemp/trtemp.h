@@ -160,7 +160,7 @@ typedef struct
  *	\brief
  *	Reportable event constitution definitions
  *	SEND_EVT_REQ is used by publishers aos ( tempmgr, trk )
- *	to request to emgr a new GPRS transmision request.
+ *	to request to gmgr a new GPRS transmision request.
  *	SEND_EVT_REQ data type is SEND_EVT_REQ_T:
  *	
  *	typedef struct
@@ -223,7 +223,7 @@ typedef rkhui16_t ts_t;
 
 /**
  *	\brief
- *	Message to request to emgr send an reportable event
+ *	Message to request to gmgr send an reportable event
  */
 
 typedef struct
@@ -267,7 +267,7 @@ typedef struct
 
 enum smaprio
 {
-	EMGR_PRIO,
+	GMGR_PRIO,
 	TCTRL_PRIO,
 	TRK_PRIO,
 	SIMU_PRIO

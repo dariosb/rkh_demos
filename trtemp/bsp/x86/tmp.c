@@ -74,7 +74,7 @@ tmp_inc( void )
 		curr_temp += TEMP_DELTA;
 		exit_critical();
 
-		printf( "%s\tTemperature = %d\r\n", DBG_OFFSET, curr_temp );	
+		printf( "%s\t Temperature = %d\r\n", DBG_OFFSET, curr_temp );	
 	}
 
 }
@@ -92,7 +92,7 @@ tmp_dec( void )
 		curr_temp -= TEMP_DELTA;
 		exit_critical();
 
-		printf( "%s\tTemperature = %d\r\n", DBG_OFFSET, curr_temp );
+		printf( "%s\t Temperature = %d\r\n", DBG_OFFSET, curr_temp );
 	}
 
 }

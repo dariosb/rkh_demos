@@ -1,5 +1,5 @@
 /*
- *	file: emgr.h
+ *	file: gmgr.h
  *	Last updated for version: 1.0.00
  *	Date of the last update:  May 20, 2012
  *	Contact information:
@@ -7,7 +7,7 @@
  */
 
 /**
- * 	\file emgr.h
+ * 	\file gmgr.h
  *
  *	\brief
  *	Tracking AO:

@@ -17,7 +17,7 @@
 #include "rkh.h"
 #include "trtemp.h"
 #include "gprs.h"
-#include "emgr.h"
+#include "gmgr.h"
 #include "bsp.h"
 #include "critical.h"
 #include "dbgcfg.h"
@@ -57,7 +57,7 @@ static RKH_DCLR_STATIC_EVENT( e_scfm, SEND_EVT_CFM );
 static RKH_DCLR_STATIC_EVENT( e_srej, SEND_EVT_REJ );
 
 
-#define SHOW_GPRS_FMT( s, ... )		printf( "%s%u - "s"\r\n", PR_OFFSET, gevt.ts, ##__VA_ARGS__ )
+#define SHOW_GPRS_FMT( s, ... )		printf( "%s%06u - "s"\r\n", PR_OFFSET, gevt.ts, ##__VA_ARGS__ )
 
 
 /*
@@ -68,7 +68,7 @@ static
 void
 show_evt_position( GPSFRM_T *p )
 {
-	SHOW_GPRS_FMT( "POSITION: Lat= %d, Long= %d, Vel= %d", p->lat, p->lng, p->vel );
+	SHOW_GPRS_FMT( "%s: Lat= %05d, Long= %05d, Vel= %03d", " POSITION ", p->lat, p->lng, p->vel );
 }
 
 
@@ -76,7 +76,7 @@ static
 void
 show_evt_stop( STOP_T *p )
 {
-	SHOW_GPRS_FMT( "STOP: Lat= %d, Long= %d", p->lat, p->lng );
+	SHOW_GPRS_FMT( "%s: Lat= %05d, Long= %05d", "   STOP   ", p->lat, p->lng );
 }
 
 
@@ -84,7 +84,7 @@ static
 void
 show_evt_vmax( VMAX_T *p )
 {
-	SHOW_GPRS_FMT( "VMAX: Lat= %d, Long= %d, Vel= %d", p->lat, p->lng, p->vel );
+	SHOW_GPRS_FMT( "%s: Lat= %05d, Long= %05d, Vel= %03d", "   VMAX   ", p->lat, p->lng, p->vel );
 }
 
 
@@ -92,7 +92,7 @@ static
 void
 show_evt_compressor( CMPCHG_T *p )
 {
-	SHOW_GPRS_FMT( "COMPRESSOR: %s at Temp= %d", cmpst_str[p->state], p->temp );
+	SHOW_GPRS_FMT( "%s: %s at Temp= %02d", "COMPRESSOR", cmpst_str[p->state], p->temp );
 }
 
 
@@ -138,10 +138,10 @@ gprs_isr( void )
 		if( link_is_ok )
 		{
 			show_evt();
-			rkh_sma_post_fifo( emgr, &e_scfm );
+			rkh_sma_post_fifo( gmgr, &e_scfm );
 		}
 		else
-			rkh_sma_post_fifo( emgr, &e_srej );
+			rkh_sma_post_fifo( gmgr, &e_srej );
 	}
 	
 	exit_critical();
@@ -174,7 +174,7 @@ gprs_link_chg( void )
 
 	exit_critical();
 
-	printf( "%s\tGPRS Link: %s\r\n", DBG_OFFSET, link_is_ok ? "OK" : "BROKEN" );	
+	printf( "%s\t GPRS Link: %s\r\n", DBG_OFFSET, link_is_ok ? "OK" : "BROKEN" );	
 }
 
 

@@ -75,7 +75,7 @@ vel_inc( void )
 		gpsfrm.vel += VEL_DELTA;
 		exit_critical();
 
-		printf( "%s\tVelocity = %u\r\n", DBG_OFFSET, gpsfrm.vel );	
+		printf( "%s\t Velocity = %u\r\n", DBG_OFFSET, gpsfrm.vel );	
 	}
 }
 
@@ -92,7 +92,7 @@ vel_dec( void )
 		gpsfrm.vel -= VEL_DELTA;
 		exit_critical();
 
-		printf( "%s\tVelocity = %u\r\n", DBG_OFFSET, gpsfrm.vel );	
+		printf( "%s\t Velocity = %u\r\n", DBG_OFFSET, gpsfrm.vel );	
 	}
 }
 
@@ -106,7 +106,7 @@ gps_sats_chg( void )
 	
 	exit_critical();
 
-	printf( "%s\tGPS Coverage: %s\r\n", DBG_OFFSET,
+	printf( "%s\t GPS Coverage: %s\r\n", DBG_OFFSET,
 			gpsfrm.state == GPS_IS_ONLINE ? "ONLINE" : "OFFLINE" );	
 }
 

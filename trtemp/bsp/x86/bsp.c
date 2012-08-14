@@ -14,7 +14,7 @@
 #include "tmp.h"
 #include "gps.h"
 #include "gprs.h"
-#include "emgr.h"
+#include "gmgr.h"
 #include "trk.h"
 #include "tctrl.h"
 #include "critical.h"
@@ -121,27 +121,30 @@ static FILE *ftbin;
 #endif
 
 
-#define PRINT_STIMULUS_BAR()	printf( "%sEmulated stimulus log\n" \
-										"%s---------------------\n\n", \
+#define PRINT_STIMULUS_BAR()	printf( "%s\tParametric Variables\n" \
+										"%s\t--------------------\n\n", \
 										DBG_OFFSET, DBG_OFFSET )	
 
-#define PRINT_GPRS_BAR()		printf( "\tGPRS Link event log\n" 		\
-										"# Time Stamp - Event Type: Event Data\n" \
-										"-------------------------------------\n\n" ) 
+#define PRINT_GPRS_BAR()		printf( "\tGPRS LINK REPORT LOG\n" 				 \
+										"#TStamp - Event Type: Event Data\n" \
+										"-------------------------------------------------------\n\n" ) 
 
 static
 void
 print_help( void )
 {
 	printf(	"\nKeyboard Reference: \n"
+			"\n"
 			"   Temperature\n"
 			"     -Rgt: Increment Temperature\n"
 			"     -Lft: Decrement Temperature\n"
 			"     -c:   Switch compresor status Ready/Failure\n"
+			"\n"
 			"   GPS\n"
 			"     -Up: Increment Velocity\n"
 			"     -Dw: Decrement Velocity\n"
 			"     -g:  Switch GPS satellites coverage\n"
+			"\n"
 			"   GPRS\n"
 			"     -l: Switch GPRS Link status OK/Broken\n"
 			"\n"
@@ -220,7 +223,7 @@ isr_kbd_thread( LPVOID par )	/* Win32 thread to emulate keyboard ISR */
 				break;
 
 			case EXIT_KEY:
-				rkh_sma_post_fifo( emgr, &e_term );
+				rkh_sma_post_fifo( gmgr, &e_term );
 				break;
 
 			default:

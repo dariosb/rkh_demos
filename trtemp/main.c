@@ -20,14 +20,14 @@
 #include "rkh.h"
 #include "rkhtrc.h"
 #include "bsp.h"
-#include "emgr.h"
+#include "gmgr.h"
 #include "tctrl.h"
 #include "trk.h"
 
 
-#define QEMGR_STO_SIZE	4
+#define QGMGR_STO_SIZE	4
 
-static RKHEVT_T *qe_emgr[ QEMGR_STO_SIZE ];
+static RKHEVT_T *qe_gmgr[ QGMGR_STO_SIZE ];
 
 
 #define QTCTRL_STO_SIZE	4
@@ -50,8 +50,9 @@ trtemp_trace_filters( void )
 	RKH_FILTER_OFF_GROUP_EVENT( RKH_TRCG_RKH, RKH_TRCE_SIG );	
 
 	RKH_FILTER_OFF_GROUP_EVENT( RKH_TRCG_SM, RKH_TRCE_SM_DCH );
-	RKH_FILTER_OFF_GROUP_EVENT( RKH_TRCG_SM, RKH_TRCE_SM_ENSTATE );
+	RKH_FILTER_OFF_GROUP_EVENT( RKH_TRCG_SM, RKH_TRCE_SM_STATE );
 #if 0
+	RKH_FILTER_OFF_SMA( tctrl );
 	RKH_FILTER_OFF_GROUP_EVENT( RKH_TRCG_SM, RKH_TRCE_SM_NENEX );
 	RKH_FILTER_OFF_GROUP_EVENT( RKH_TRCG_SM, RKH_TRCE_SM_ENSTATE );
 	RKH_FILTER_OFF_GROUP_EVENT( RKH_TRCG_SM, RKH_TRCE_SM_EXSTATE );
@@ -96,11 +97,11 @@ trtemp_trace_sigobj( void )
 	RKH_TRCR_RKH_OBJ( &gps_moving );
 
 	/*
-	 * emgr objects
+	 * gmgr objects
 	 */
-	RKH_TRCR_RKH_OBJ( emgr );
-	RKH_TRCR_RKH_OBJ( &emgr_idle );
-	RKH_TRCR_RKH_OBJ( &emgr_in_progress );
+	RKH_TRCR_RKH_OBJ( gmgr );
+	RKH_TRCR_RKH_OBJ( &gmgr_idle );
+	RKH_TRCR_RKH_OBJ( &gmgr_in_progress );
 
 }
 
@@ -118,7 +119,7 @@ main( int argc, char *argv[] )
 	
 	trtemp_trace_sigobj();
 
-	rkh_sma_activate( emgr, qe_emgr, QEMGR_STO_SIZE, CV(0), 0 );
+	rkh_sma_activate( gmgr, qe_gmgr, QGMGR_STO_SIZE, CV(0), 0 );
 	rkh_sma_activate( tctrl, qe_tctrl, QTCTRL_STO_SIZE, CV(0), 0 );
 	rkh_sma_activate( trk, qe_trk, QTRK_STO_SIZE, CV(0), 0 );
 
