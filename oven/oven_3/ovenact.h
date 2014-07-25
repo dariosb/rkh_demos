@@ -25,4 +25,10 @@ void start_cooking( void );
 void stop_cooking( void );
 
 
+/*
+ * Defines actions functions
+ */
+
+void restart_timer( void );
+
 #endif

@@ -29,6 +29,7 @@ main( int argc, char *argv[] )
 	RKH_TR_FWK_QUEUE( &oven->equeue );
 	RKH_TR_FWK_STATE( oven, &open );
 	RKH_TR_FWK_STATE( oven, &close );
+	RKH_TR_FWK_STATE( oven, &close_hist );
 	RKH_TR_FWK_STATE( oven, &ready );
 	RKH_TR_FWK_STATE( oven, &cooking );
 	RKH_TR_FWK_OBJ(	&oventim );

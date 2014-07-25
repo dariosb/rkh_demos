@@ -21,8 +21,8 @@ void oven_init( void );
  *	Defines state entry/exit functions
  */
 
-void emiter_on( void );
-void emiter_off( void );
+void start_cooking( void );
+void stop_cooking( void );
 
 
 #endif

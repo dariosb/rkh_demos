@@ -32,6 +32,7 @@ RKH_SMA_DCLR( oven );
 
 RKH_DCLR_BASIC_STATE open, ready, cooking;
 RKH_DCLR_COMP_STATE close;
+RKH_DCLR_SHIST_STATE close_hist;
 
 
 #endif

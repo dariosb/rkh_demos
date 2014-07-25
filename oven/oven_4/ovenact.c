@@ -58,3 +58,13 @@ stop_cooking( void )
 	rkh_tmr_stop( &oventim );
 }
 
+
+/*
+ * Defines actions functions
+ */
+
+void
+restart_timer( void )
+{
+	RKH_TMR_ONESHOT( &oventim, oven, EMITTER_ON_TIME );
+}

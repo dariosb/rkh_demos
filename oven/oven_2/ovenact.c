@@ -45,15 +45,16 @@ oven_init( void )
  */
 
 void 
-emiter_on( void )
+start_cooking( void )
 {
 	bsp_emitter_on();
 	RKH_TMR_ONESHOT( &oventim, oven, EMITTER_ON_TIME );
 }
 
 void 
-emiter_off( void )
+stop_cooking( void )
 {
 	bsp_emitter_off();
+	rkh_tmr_stop( &oventim );
 }
 
