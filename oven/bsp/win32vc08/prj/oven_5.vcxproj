@@ -50,6 +50,46 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.c" />
+    <ClCompile Include="..\..\..\..\rkh\source\rkh.c" />
+    <ClCompile Include="..\..\..\..\rkh\source\rkhdyn.c" />
+    <ClCompile Include="..\..\..\..\rkh\source\rkhmp.c" />
+    <ClCompile Include="..\..\..\..\rkh\source\rkhrq.c" />
+    <ClCompile Include="..\..\..\..\rkh\source\rkhs.c" />
+    <ClCompile Include="..\..\..\..\rkh\source\rkhsma.c" />
+    <ClCompile Include="..\..\..\..\rkh\source\rkhtbl.c" />
+    <ClCompile Include="..\..\..\..\rkh\source\rkhtim.c" />
+    <ClCompile Include="..\..\..\..\rkh\source\rkhtrc.c" />
+    <ClCompile Include="..\..\..\oven_5\main.c" />
+    <ClCompile Include="..\..\..\oven_5\oven.c" />
+    <ClCompile Include="..\..\..\oven_5\ovenact.c" />
+    <ClCompile Include="..\bsp.c" />
+    <ClCompile Include="..\tcptrc.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\source\portable\80x86\win32_st\vc08\rkhport.h" />
+    <ClInclude Include="..\..\..\..\..\..\source\portable\80x86\win32_st\vc08\rkht.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkh.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhassert.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhdef.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhevt.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhitl.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhmp.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhplat.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhrdy.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhrq.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhs.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhtim.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhtrc.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\include\rkhtype.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.h" />
+    <ClInclude Include="..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkht.h" />
+    <ClInclude Include="..\..\..\oven_5\oven.h" />
+    <ClInclude Include="..\..\..\oven_5\ovenact.h" />
+    <ClInclude Include="..\..\..\oven_5\ovenevt.h" />
+    <ClInclude Include="..\..\..\oven_5\rkhcfg.h" />
+    <ClInclude Include="..\bsp.h" />
+    <ClInclude Include="..\tcptrc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
