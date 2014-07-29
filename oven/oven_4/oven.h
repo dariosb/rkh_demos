@@ -35,4 +35,11 @@ RKH_DCLR_COMP_STATE close;
 RKH_DCLR_SHIST_STATE close_hist;
 
 
+/*
+ * Declares public variables
+ */
+
+extern RKH_TMR_T oventim;
+
+
 #endif

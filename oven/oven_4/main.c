@@ -15,8 +15,6 @@
 
 static RKH_EVT_T *qsto[ QSTO_SIZE ];
 
-extern RKH_TMR_T oventim;
-
 	
 int
 main( int argc, char *argv[] )

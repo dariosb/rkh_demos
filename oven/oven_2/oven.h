@@ -34,4 +34,11 @@ RKH_DCLR_BASIC_STATE open, ready, cooking;
 RKH_DCLR_COMP_STATE close;
 
 
+/*
+ * Declares public variables
+ */
+
+extern RKH_TMR_T oventim;
+
+
 #endif

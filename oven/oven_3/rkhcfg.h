@@ -367,7 +367,7 @@
  *	See RKH_GUARD_T definition.
  */
 
-#define RKH_CFG_SMA_GRD_ARG_EVT_EN		RKH_ENABLED
+#define RKH_CFG_SMA_GRD_ARG_EVT_EN		RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_SMA_GRD_ARG_SMA_EN is set to 1 then the transition guard  
@@ -375,7 +375,7 @@
  *	RKH_SMA_T. See RKH_GUARD_T definition.
  */
 
-#define RKH_CFG_SMA_GRD_ARG_SMA_EN		RKH_ENABLED
+#define RKH_CFG_SMA_GRD_ARG_SMA_EN		RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_SMA_PPRO_ARG_SMA_EN is set to 1 then the event preprocessor  
@@ -384,7 +384,7 @@
  *	RKH_SMA_T. See RKH_PPRO_T definition.
  */
 
-#define RKH_CFG_SMA_PPRO_ARG_SMA_EN		RKH_ENABLED	
+#define RKH_CFG_SMA_PPRO_ARG_SMA_EN		RKH_DISABLED	
 
 
 /* --- Configuration options related to trace facility -------------------- */
