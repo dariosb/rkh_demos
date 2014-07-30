@@ -3,8 +3,8 @@
  */
 
 
-#ifndef __CLIACT_H__
-#define __CLIACT_H__
+#ifndef __OVENACT_H__
+#define __OVENACT_H__
 
 
 #include "rkh.h"

@@ -4,56 +4,14 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.5.4	//
-ACTIVE_DEBUG	.\trtemp\bsp\x86\gprs.c	30;"	d	file:
-ACTIVE_DEBUG	.\trtemp\bsp\x86\gprs.c	32;"	d	file:
-ACTIVE_DEBUG	.\trtemp\bsp\x86\gps.c	30;"	d	file:
-ACTIVE_DEBUG	.\trtemp\bsp\x86\gps.c	32;"	d	file:
-ACTIVE_DEBUG	.\trtemp\bsp\x86\tmp.c	29;"	d	file:
-ACTIVE_DEBUG	.\trtemp\bsp\x86\tmp.c	31;"	d	file:
-ACTIVE_DEBUG	.\trtemp\gprsmgr\gmgract.c	19;"	d	file:
-ACTIVE_DEBUG	.\trtemp\gprsmgr\gmgract.c	21;"	d	file:
-ACTIVE_DEBUG	.\trtemp\tempctrl\tctrlact.c	21;"	d	file:
-ACTIVE_DEBUG	.\trtemp\tempctrl\tctrlact.c	23;"	d	file:
-ACTIVE_DEBUG	.\trtemp\tracking\trkact.c	23;"	d	file:
-ACTIVE_DEBUG	.\trtemp\tracking\trkact.c	25;"	d	file:
-B1200	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B1200	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B19200	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B19200	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B2400	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B2400	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B300	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B300	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B38400	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	B38400, B57600,$/;"	e
-B38400	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	B38400, B57600,$/;"	e
-B4800	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B4800	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B57600	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	B38400, B57600,$/;"	e
-B57600	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	B38400, B57600,$/;"	e
-B600	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B600	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B9600	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-B9600	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	B300, B600, B1200, B2400, B4800, B9600, B19200,$/;"	e
-BIN_TRACE	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	38;"	d	file:
 BIN_TRACE	.\oven\bsp\win32vc08\bsp.c	56;"	d	file:
-BIN_TRACE	.\trtemp\bsp\x86\bsp.c	33;"	d	file:
-BIT7	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	BIT8, BIT7,$/;"	e
-BIT7	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	BIT8, BIT7,$/;"	e
-BIT8	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	BIT8, BIT7,$/;"	e
-BIT8	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	BIT8, BIT7,$/;"	e
 BSP_HIGHEST_IRQ_PRI	.\oven\bsp\twrk60iar72\bsp.h	58;"	d
 BSP_KERNEL_IRQ_PRIO	.\oven\bsp\twrk60iar72\bsp.h	56;"	d
-BSP_TICKS_PER_SEC	.\ahsm\bsp\80x86\win32_st\vc08\bsp.h	31;"	d
-BSP_TICKS_PER_SEC	.\ahsm\bsp\cfv1\cw6_3\bsp.h	31;"	d
-BSP_TICKS_PER_SEC	.\ahsm\bsp\s08\cw6_3\bsp.h	31;"	d
 BSP_TICKS_PER_SEC	.\oven\bsp\twrk60iar72\bsp.h	61;"	d
 BSP_TICKS_PER_SEC	.\oven\bsp\win32vc08\bsp.h	52;"	d
-BSP_TICKS_PER_SEC	.\trtemp\bsp\x86\bsp.h	14;"	d
 BSP_TS_RATE_HZ	.\oven\bsp\twrk60iar72\bsp.h	71;"	d
 BSP_TS_RATE_HZ	.\oven\bsp\win32vc08\bsp.h	61;"	d
 BSP_UART_IRQ_PRIO	.\oven\bsp\twrk60iar72\bsp.h	57;"	d
-C1	.\ahsm\my.h	/^RKH_DCLR_COND_STATE		C1,C2;$/;"	v
-C2	.\ahsm\my.h	/^RKH_DCLR_COND_STATE		C1,C2;$/;"	v
 CA	.\rkh\source\include\rkhitl.h	188;"	d
 CB	.\rkh\source\include\rkhitl.h	174;"	d
 CBSC	.\rkh\source\include\rkhitl.h	177;"	d
@@ -62,7 +20,6 @@ CCE	.\rkh\source\include\rkhitl.h	194;"	d
 CCH	.\rkh\source\include\rkhitl.h	179;"	d
 CCMP	.\rkh\source\include\rkhitl.h	176;"	d
 CE	.\rkh\source\include\rkhitl.h	193;"	d
-CEGF	.\trtemp\trtemp.h	156;"	d
 CENP	.\rkh\source\include\rkhitl.h	189;"	d
 CENPCN	.\rkh\source\include\rkhitl.h	191;"	d
 CEXP	.\rkh\source\include\rkhitl.h	190;"	d
@@ -70,138 +27,56 @@ CEXPCN	.\rkh\source\include\rkhitl.h	192;"	d
 CFV1_INTERRUPT_MASK	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.c	69;"	d	file:
 CG	.\rkh\source\include\rkhitl.h	187;"	d
 CH	.\rkh\source\include\rkhitl.h	180;"	d
-CIA	.\rkh\source\include\rkhitl.h	2157;"	d
+CIA	.\rkh\source\include\rkhitl.h	2167;"	d
 CLOSE	.\oven\oven_1\ovenevt.h	/^	CLOSE,	\/* door is close *\/$/;"	e	enum:ov_sigs_t
 CLOSE	.\oven\oven_2\ovenevt.h	/^	CLOSE,	\/* door is close *\/$/;"	e	enum:ov_sigs_t
 CLOSE	.\oven\oven_3\ovenevt.h	/^	CLOSE,	\/* door is close *\/$/;"	e	enum:ov_sigs_t
 CLOSE	.\oven\oven_4\ovenevt.h	/^	CLOSE,	\/* door is close *\/$/;"	e	enum:ov_sigs_t
 CLOSE	.\oven\oven_5\ovenevt.h	/^	CLOSE,	\/* door is close *\/$/;"	e	enum:ov_sigs_t
+CLOSE	.\oven\oven_6\ovenevt.h	/^	CLOSE,	\/* door is close *\/$/;"	e	enum:ov_sigs_t
 CM	.\rkh\source\include\rkhitl.h	183;"	d
-CMPCHG_T	.\trtemp\trtemp.h	/^} CMPCHG_T;$/;"	t
-CMP_FAILURE	.\trtemp\trtemp.h	/^	CMP_FAILURE,$/;"	e	enum:trtemp_sigs
-CMP_FAILURE_RST	.\trtemp\trtemp.h	/^	CMP_FAILURE_RST,$/;"	e	enum:trtemp_sigs
-CMP_STATES	.\trtemp\tempctrl\tctrl.h	/^enum CMP_STATES$/;"	g
-CMY	.\ahsm\myact.c	11;"	d	file:
-COM1	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	COM1, COM2,$/;"	e
-COM1	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	COM1, COM2,$/;"	e
-COM2	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	COM1, COM2,$/;"	e
-COM2	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	COM1, COM2,$/;"	e
-COMPRESSOR_FAILRST	.\trtemp\tempctrl\tctrl.h	/^	COMPRESSOR_FAILRST,$/;"	e	enum:CMP_STATES
-COMPRESSOR_FAILURE	.\trtemp\tempctrl\tctrl.h	/^	COMPRESSOR_FAILURE,$/;"	e	enum:CMP_STATES
-COMPRESSOR_IDLE	.\trtemp\tempctrl\tctrl.h	/^	COMPRESSOR_IDLE,$/;"	e	enum:CMP_STATES
-COMPRESSOR_RUNNING	.\trtemp\tempctrl\tctrl.h	/^	COMPRESSOR_RUNNING,$/;"	e	enum:CMP_STATES
-COMP_STATE	.\trtemp\bsp\x86\keymap.h	45;"	d
-COMSET_T	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^} COMSET_T;$/;"	t
-COMSET_T	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^} COMSET_T;$/;"	t
-COM_ENABLE	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	72;"	d
-COM_ENABLE	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	72;"	d
-COM_T	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^} COM_T;$/;"	t
-COM_T	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^} COM_T;$/;"	t
-CONSOLE_IO_SUPPORT	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	56;"	d	file:
 CPP	.\rkh\source\include\rkhitl.h	186;"	d
 CPT	.\rkh\source\include\rkhitl.h	185;"	d
 CPTIM	.\rkh\source\rkhtim.c	55;"	d	file:
 CQ	.\rkh\source\include\rkhitl.h	197;"	d
-CQE	.\ahsm\main.c	13;"	d	file:
-CRITICAL_METHOD	.\ahsm\bsp\cfv1\cw6_3\critical\critical.h	9;"	d
-CRITICAL_METHOD	.\ahsm\bsp\s08\cw6_3\critical\critical.h	9;"	d
 CRSM	.\rkh\source\include\rkhitl.h	182;"	d
 CSBM	.\rkh\source\include\rkhitl.h	181;"	d
 CSMA	.\rkh\source\include\rkhitl.h	196;"	d
-CSREQ	.\trtemp\trtemp.h	260;"	d
 CST	.\rkh\source\include\rkhitl.h	175;"	d
 CT	.\rkh\source\include\rkhitl.h	184;"	d
-CTA	.\rkh\source\include\rkhitl.h	2609;"	d
-CTS	.\trtemp\trtemp.h	75;"	d
+CTA	.\rkh\source\include\rkhitl.h	2619;"	d
 CV	.\rkh\source\include\rkhitl.h	195;"	d
-Call_Constructors	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	/^static void Call_Constructors(void) {$/;"	f	file:
-Call_Constructors	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	/^static void Call_Constructors(void) {$/;"	f	file:
-DBG_MODULE_NAME	.\trtemp\bsp\x86\debug.h	20;"	d
-DBG_MODULE_NAME	.\trtemp\bsp\x86\debug.h	9;"	d
-DBG_OFFSET	.\trtemp\bsp\x86\debug.h	29;"	d
-DH	.\ahsm\my.h	/^RKH_DCLR_DHIST_STATE	DH;$/;"	v
-DW_KEY	.\trtemp\bsp\x86\keymap.h	30;"	d
 ECHANGE	.\rkh\source\include\rkhtrc.h	235;"	d
-EGPSFRM_T	.\trtemp\trtemp.h	/^} EGPSFRM_T;$/;"	t
 ELSE	.\rkh\source\include\rkh.h	192;"	d
-EMGR_DBG	.\trtemp\bsp\x86\debug.h	/^	EMGR_DBG,$/;"	e
-EMGR_DBG_CFG	.\trtemp\bsp\x86\dbgcfg.h	30;"	d
-EMGR_MAX_DEFER_EVENT	.\trtemp\gprsmgr\gmgr.h	51;"	d
 EMITTER_ON_TIME	.\oven\oven_1\oven.h	13;"	d
 EMITTER_ON_TIME	.\oven\oven_2\oven.h	13;"	d
 EMITTER_ON_TIME	.\oven\oven_3\oven.h	13;"	d
 EMITTER_ON_TIME	.\oven\oven_4\oven.h	13;"	d
 EMITTER_ON_TIME	.\oven\oven_5\oven.h	13;"	d
-EP1_GUARD	.\trtemp\bsp\x86\bsp.c	45;"	d	file:
-EPOS_TOUT	.\trtemp\trtemp.h	/^	EPOS_TOUT,$/;"	e	enum:trtemp_sigs
-ESC	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	40;"	d	file:
+EMITTER_ON_TIME	.\oven\oven_6\oven.h	13;"	d
 ESC	.\oven\bsp\win32vc08\bsp.c	58;"	d	file:
-ESC_CODE	.\trtemp\bsp\x86\keymap.h	26;"	d
-ESC_KEY	.\trtemp\bsp\x86\keymap.h	25;"	d
-ESTOP_TOUT	.\trtemp\trtemp.h	/^	ESTOP_TOUT,$/;"	e	enum:trtemp_sigs
 EUNCHANGE	.\rkh\source\include\rkhtrc.h	236;"	d
-EVENT_DATA_T	.\trtemp\trtemp.h	/^} EVENT_DATA_T;$/;"	t
-EVEN_PAR	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	NO_PAR, EVEN_PAR, ODD_PAR, HIGH_PAR, LOW_PAR,$/;"	e
-EVEN_PAR	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	NO_PAR, EVEN_PAR, ODD_PAR, HIGH_PAR, LOW_PAR,$/;"	e
-EXIT_KEY	.\trtemp\bsp\x86\keymap.h	51;"	d
 EXTE	.\rkh\source\include\rkhtrc.h	232;"	d
-FE	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	20;"	d	file:
-FE	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	20;"	d	file:
 FILTER_OFF	.\rkh\source\include\rkhtrc.h	/^	FILTER_ON, FILTER_OFF$/;"	e
 FILTER_ON	.\rkh\source\include\rkhtrc.h	/^	FILTER_ON, FILTER_OFF$/;"	e
 FIND_BRANCH	.\rkh\source\rkh.c	111;"	d	file:
 FIND_TRANS	.\rkh\source\rkh.c	75;"	d	file:
-FIVE	.\ahsm\my.h	/^	FIVE,		\/* press the key '5' on the keyboard *\/$/;"	e
 FLAT	.\rkh\source\include\rkh.h	/^	FLAT,$/;"	e
 FOREVER	.\rkh\source\include\rkhitl.h	167;"	d
-FOUR	.\ahsm\my.h	/^	FOUR,		\/* press the key '4' on the keyboard *\/$/;"	e
-FTBIN_CLOSE	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	107;"	d	file:
-FTBIN_CLOSE	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	117;"	d	file:
 FTBIN_CLOSE	.\oven\bsp\win32vc08\bsp.c	137;"	d	file:
 FTBIN_CLOSE	.\oven\bsp\win32vc08\bsp.c	146;"	d	file:
-FTBIN_CLOSE	.\trtemp\bsp\x86\bsp.c	109;"	d	file:
-FTBIN_CLOSE	.\trtemp\bsp\x86\bsp.c	119;"	d	file:
-FTBIN_FLUSH	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	104;"	d	file:
-FTBIN_FLUSH	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	116;"	d	file:
 FTBIN_FLUSH	.\oven\bsp\win32vc08\bsp.c	132;"	d	file:
 FTBIN_FLUSH	.\oven\bsp\win32vc08\bsp.c	145;"	d	file:
-FTBIN_FLUSH	.\trtemp\bsp\x86\bsp.c	106;"	d	file:
-FTBIN_FLUSH	.\trtemp\bsp\x86\bsp.c	118;"	d	file:
-FTBIN_OPEN	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	109;"	d	file:
-FTBIN_OPEN	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	118;"	d	file:
 FTBIN_OPEN	.\oven\bsp\win32vc08\bsp.c	138;"	d	file:
 FTBIN_OPEN	.\oven\bsp\win32vc08\bsp.c	147;"	d	file:
-FTBIN_OPEN	.\trtemp\bsp\x86\bsp.c	111;"	d	file:
-FTBIN_OPEN	.\trtemp\bsp\x86\bsp.c	120;"	d	file:
 GETEVT	.\rkh\source\rkhtrc.c	60;"	d	file:
 GETGRP	.\rkh\source\rkhtrc.c	59;"	d	file:
-GMGR_PRIO	.\trtemp\trtemp.h	/^	GMGR_PRIO,$/;"	e	enum:smaprio
-GPRS_DBG	.\trtemp\bsp\x86\debug.h	/^	GPRS_DBG$/;"	e
-GPRS_DBG_CFG	.\trtemp\bsp\x86\dbgcfg.h	31;"	d
-GPRS_LINK	.\trtemp\bsp\x86\keymap.h	43;"	d
-GPRS_RESP_TIME	.\trtemp\bsp\x86\gprs.h	30;"	d
-GPSFRM	.\trtemp\trtemp.h	/^	GPSFRM,$/;"	e	enum:trtemp_sigs
-GPSFRM_T	.\trtemp\bsp\x86\gps.h	/^} GPSFRM_T;$/;"	t
-GPS_DBG	.\trtemp\bsp\x86\debug.h	/^	GPS_DBG,$/;"	e
-GPS_DBG_CFG	.\trtemp\bsp\x86\dbgcfg.h	28;"	d
-GPS_IS_OFFLINE	.\trtemp\tracking\trk.h	/^	GPS_IS_OFFLINE,$/;"	e	enum:GPS_STATES
-GPS_IS_ONLINE	.\trtemp\tracking\trk.h	/^	GPS_IS_ONLINE,$/;"	e	enum:GPS_STATES
-GPS_SATS	.\trtemp\bsp\x86\keymap.h	47;"	d
-GPS_STATES	.\trtemp\tracking\trk.h	/^enum GPS_STATES$/;"	g
-GPS_TICK	.\trtemp\bsp\x86\gps.h	26;"	d
 GRPLSH	.\rkh\source\include\rkhtrc.h	231;"	d
-H	.\ahsm\my.h	/^RKH_DCLR_SHIST_STATE	H;$/;"	v
 HCAL	.\rkh\source\include\rkh.h	/^	HCAL,$/;"	e
-HIGH_PAR	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	NO_PAR, EVEN_PAR, ODD_PAR, HIGH_PAR, LOW_PAR,$/;"	e
-HIGH_PAR	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	NO_PAR, EVEN_PAR, ODD_PAR, HIGH_PAR, LOW_PAR,$/;"	e
-HLP_KEY	.\trtemp\bsp\x86\keymap.h	49;"	d
 INFO_EXEC_TRS	.\rkh\source\rkh.c	137;"	d	file:
 INFO_EXEC_TRS	.\rkh\source\rkh.c	140;"	d	file:
 INFO_RCV_EVENTS	.\rkh\source\rkh.c	136;"	d	file:
 INFO_RCV_EVENTS	.\rkh\source\rkh.c	139;"	d	file:
-INF_ON_RELEASE	.\ahsm\bsp\cfv1\cw6_3\switch\switch.c	12;"	d	file:
-INF_ON_RELEASE	.\ahsm\bsp\s08\cw6_3\switch\switch.c	12;"	d	file:
-INT_MASK	.\ahsm\bsp\cfv1\cw6_3\critical\critical.c	9;"	d	file:
 IS_COMPOSITE	.\rkh\source\rkh.c	59;"	d	file:
 IS_EMPTY_HIST	.\rkh\source\rkh.c	54;"	d	file:
 IS_FOUND_TRANS	.\rkh\source\rkh.c	55;"	d	file:
@@ -212,9 +87,6 @@ IS_PSEUDO	.\rkh\source\rkh.c	58;"	d	file:
 IS_REF_SUBMACHINE	.\rkh\source\rkh.c	61;"	d	file:
 IS_SUBMACHINE	.\rkh\source\rkh.c	60;"	d	file:
 IS_VALID_GUARD	.\rkh\source\rkh.c	57;"	d	file:
-Init	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	/^static void Init(void) {$/;"	f	file:
-Init	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	/^static void Init(void) {$/;"	f	file:
-J	.\ahsm\my.h	/^RKH_DCLR_JUNC_STATE		J;$/;"	v
 KUART0	.\oven\bsp\twrk60iar72\kuart.c	/^	KUART0,$/;"	e	file:
 KUART1	.\oven\bsp\twrk60iar72\kuart.c	/^	KUART1,$/;"	e	file:
 KUART2	.\oven\bsp\twrk60iar72\kuart.c	/^	KUART2,$/;"	e	file:
@@ -227,155 +99,68 @@ KUART_HFC_DISABLE	.\oven\bsp\twrk60iar72\kuart.h	/^	KUART_HFC_DISABLE,$/;"	e
 KUART_HFC_ENABLE	.\oven\bsp\twrk60iar72\kuart.h	/^	KUART_HFC_ENABLE$/;"	e
 KUART_HFC_T	.\oven\bsp\twrk60iar72\kuart.h	/^}KUART_HFC_T;$/;"	t
 KUART_IRQ_ST	.\oven\bsp\twrk60iar72\kuart.c	/^}KUART_IRQ_ST;$/;"	t	file:
-LED1	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	74;"	d
-LED1	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	74;"	d
 LED1	.\oven\bsp\twrk60iar72\gpio.h	54;"	d
-LED2	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	75;"	d
-LED2	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	75;"	d
 LED2	.\oven\bsp\twrk60iar72\gpio.h	55;"	d
-LED3	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	76;"	d
-LED3	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	76;"	d
 LED3	.\oven\bsp\twrk60iar72\gpio.h	56;"	d
-LED4	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	77;"	d
-LED4	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	77;"	d
 LED4	.\oven\bsp\twrk60iar72\gpio.h	57;"	d
-LED5	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	78;"	d
-LED5	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	78;"	d
-LED6	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	79;"	d
-LED6	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	79;"	d
-LED7	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	80;"	d
-LED7	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	80;"	d
-LED8	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	81;"	d
-LED8	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	81;"	d
-LFT_KEY	.\trtemp\bsp\x86\keymap.h	28;"	d
-LOW_PAR	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	NO_PAR, EVEN_PAR, ODD_PAR, HIGH_PAR, LOW_PAR,$/;"	e
-LOW_PAR	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	NO_PAR, EVEN_PAR, ODD_PAR, HIGH_PAR, LOW_PAR,$/;"	e
-MAX_NESTING_CSECT	.\ahsm\bsp\cfv1\cw6_3\critical\critical.h	11;"	d
-MAX_NESTING_CSECT	.\ahsm\bsp\s08\cw6_3\critical\critical.c	10;"	d	file:
-MAX_NESTING_CSECT	.\ahsm\bsp\s08\cw6_3\critical\critical.h	11;"	d
 MAX_SIZEOF_QURC	.\oven\oven_5\ovenact.c	35;"	d	file:
-MCF5XXX_EXCEPTFMT	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	120;"	d	file:
-MCF5XXX_RD_SF_FORMAT	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	107;"	d	file:
-MCF5XXX_RD_SF_FS	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	113;"	d	file:
-MCF5XXX_RD_SF_VECTOR	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	110;"	d	file:
-MCF5XXX_SF_PC	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	118;"	d	file:
-MCF5XXX_SF_SR	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	116;"	d	file:
-MCU_BUSCLK	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.h	36;"	d
-MCU_BUSCLK	.\ahsm\bsp\s08\cw6_3\mcu\mcu.h	36;"	d
-MCU_FLL_OUT	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.h	34;"	d
-MCU_FLL_OUT	.\ahsm\bsp\s08\cw6_3\mcu\mcu.h	34;"	d
-MCU_REF_CLK	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.h	33;"	d
-MCU_REF_CLK	.\ahsm\bsp\s08\cw6_3\mcu\mcu.h	33;"	d
-MCU_REF_CLK_DIVIDER	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.h	32;"	d
-MCU_REF_CLK_DIVIDER	.\ahsm\bsp\s08\cw6_3\mcu\mcu.h	32;"	d
-MCU_XTAL_CLK	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.h	31;"	d
-MCU_XTAL_CLK	.\ahsm\bsp\s08\cw6_3\mcu\mcu.h	31;"	d
-MEMORY_INIT	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.h	46;"	d
+MAX_SIZEOF_QURC	.\oven\oven_6\ovenact.c	35;"	d	file:
 MKBASE	.\rkh\source\include\rkhitl.h	1737;"	d
-MKBASIC	.\rkh\source\include\rkhitl.h	1742;"	d
-MKBASIC	.\rkh\source\include\rkhitl.h	1745;"	d
+MKBASIC	.\rkh\source\include\rkhitl.h	1743;"	d
+MKBASIC	.\rkh\source\include\rkhitl.h	1746;"	d
+MKBASIC	.\rkh\source\include\rkhitl.h	1751;"	d
 MKBASIC	.\rkh\source\include\rkhitl.h	1754;"	d
-MKBASIC	.\rkh\source\include\rkhitl.h	1757;"	d
-MKCOMP	.\rkh\source\include\rkhitl.h	1743;"	d
-MKCOMP	.\rkh\source\include\rkhitl.h	1746;"	d
+MKBASIC	.\rkh\source\include\rkhitl.h	1764;"	d
+MKBASIC	.\rkh\source\include\rkhitl.h	1767;"	d
+MKCOMP	.\rkh\source\include\rkhitl.h	1744;"	d
+MKCOMP	.\rkh\source\include\rkhitl.h	1747;"	d
+MKCOMP	.\rkh\source\include\rkhitl.h	1752;"	d
 MKCOMP	.\rkh\source\include\rkhitl.h	1755;"	d
-MKCOMP	.\rkh\source\include\rkhitl.h	1758;"	d
-MKENP	.\rkh\source\include\rkhitl.h	1751;"	d
-MKENP	.\rkh\source\include\rkhitl.h	1763;"	d
-MKMCH	.\rkh\source\include\rkhitl.h	1750;"	d
-MKMCH	.\rkh\source\include\rkhitl.h	1762;"	d
+MKCOMP	.\rkh\source\include\rkhitl.h	1765;"	d
+MKCOMP	.\rkh\source\include\rkhitl.h	1768;"	d
+MKENP	.\rkh\source\include\rkhitl.h	1761;"	d
+MKENP	.\rkh\source\include\rkhitl.h	1773;"	d
+MKMCH	.\rkh\source\include\rkhitl.h	1760;"	d
+MKMCH	.\rkh\source\include\rkhitl.h	1772;"	d
 MKRRKH	.\rkh\source\include\rkhitl.h	1711;"	d
 MKRRKH	.\rkh\source\include\rkhitl.h	1714;"	d
 MKRRKH	.\rkh\source\include\rkhitl.h	1719;"	d
 MKRRKH	.\rkh\source\include\rkhitl.h	1722;"	d
-MKSBM	.\rkh\source\include\rkhitl.h	1749;"	d
-MKSBM	.\rkh\source\include\rkhitl.h	1761;"	d
+MKSBM	.\rkh\source\include\rkhitl.h	1759;"	d
+MKSBM	.\rkh\source\include\rkhitl.h	1771;"	d
 MKSMA	.\rkh\source\include\rkhitl.h	1728;"	d
-MKST	.\rkh\source\include\rkhitl.h	1748;"	d
-MKST	.\rkh\source\include\rkhitl.h	1760;"	d
-MK_EVT	.\rkh\source\include\rkhitl.h	1772;"	d
-MK_EVT_STRUCT	.\rkh\source\include\rkhitl.h	1778;"	d
-MK_ROM_EVT	.\rkh\source\include\rkhitl.h	1775;"	d
-MK_SET_EVT	.\rkh\source\include\rkhitl.h	1767;"	d
-MY	.\ahsm\rkhdata.h	/^	MY$/;"	e
-MYEVT_T	.\ahsm\my.h	/^} MYEVT_T;$/;"	t
-MYSM_T	.\ahsm\my.h	/^} MYSM_T;			\/* SMA derived from RKHSMA_T structure *\/$/;"	t
-NF	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	19;"	d	file:
-NF	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	19;"	d	file:
+MKST	.\rkh\source\include\rkhitl.h	1758;"	d
+MKST	.\rkh\source\include\rkhitl.h	1770;"	d
+MK_EVT	.\rkh\source\include\rkhitl.h	1782;"	d
+MK_EVT_STRUCT	.\rkh\source\include\rkhitl.h	1788;"	d
+MK_ROM_EVT	.\rkh\source\include\rkhitl.h	1785;"	d
+MK_SET_EVT	.\rkh\source\include\rkhitl.h	1777;"	d
 NGSH	.\rkh\source\include\rkhtrc.h	226;"	d
 NGSH	.\rkh\source\include\rkhtrc.h	228;"	d
-NO_PAR	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	NO_PAR, EVEN_PAR, ODD_PAR, HIGH_PAR, LOW_PAR,$/;"	e
-NO_PAR	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	NO_PAR, EVEN_PAR, ODD_PAR, HIGH_PAR, LOW_PAR,$/;"	e
-NO_PRINTF	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	20;"	d	file:
-NUM_BAUD	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	NUM_BAUD$/;"	e
-NUM_BAUD	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	NUM_BAUD$/;"	e
-NUM_BITS	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	NUM_BITS$/;"	e
-NUM_BITS	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	NUM_BITS$/;"	e
-NUM_CHANNELS	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	NUM_CHANNELS$/;"	e
-NUM_CHANNELS	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	NUM_CHANNELS$/;"	e
-NUM_CMPSTS	.\trtemp\tempctrl\tctrl.h	/^	NUM_CMPSTS$/;"	e	enum:CMP_STATES
-NUM_GPS_STATES	.\trtemp\tracking\trk.h	/^	NUM_GPS_STATES$/;"	e	enum:GPS_STATES
-NUM_PAR	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	NUM_PAR$/;"	e
-NUM_PAR	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	NUM_PAR$/;"	e
-NUM_TRTEMP_EVT	.\trtemp\trtemp.h	/^	NUM_TRTEMP_EVT$/;"	e	enum:trtemp_sigs
-ODD_PAR	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	NO_PAR, EVEN_PAR, ODD_PAR, HIGH_PAR, LOW_PAR,$/;"	e
-ODD_PAR	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	NO_PAR, EVEN_PAR, ODD_PAR, HIGH_PAR, LOW_PAR,$/;"	e
-ONE	.\ahsm\my.h	/^	ONE,		\/* press the key '1' on the keyboard *\/$/;"	e
-ONE_BIT_STOP	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	ONE_BIT_STOP, TWO_BIT_STOP$/;"	e
-ONE_BIT_STOP	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	ONE_BIT_STOP, TWO_BIT_STOP$/;"	e
 OPEN	.\oven\oven_1\ovenevt.h	/^	OPEN,	\/* door is open  *\/$/;"	e	enum:ov_sigs_t
 OPEN	.\oven\oven_2\ovenevt.h	/^	OPEN,	\/* door is open  *\/$/;"	e	enum:ov_sigs_t
 OPEN	.\oven\oven_3\ovenevt.h	/^	OPEN,	\/* door is open  *\/$/;"	e	enum:ov_sigs_t
 OPEN	.\oven\oven_4\ovenevt.h	/^	OPEN,	\/* door is open  *\/$/;"	e	enum:ov_sigs_t
 OPEN	.\oven\oven_5\ovenevt.h	/^	OPEN,	\/* door is open  *\/$/;"	e	enum:ov_sigs_t
+OPEN	.\oven\oven_6\ovenevt.h	/^	OPEN,	\/* door is open  *\/$/;"	e	enum:ov_sigs_t
 OVEN_T	.\oven\oven_1\oven.h	/^} OVEN_T;			\/* SMA derived from RKH_SMA_T structure *\/$/;"	t
 OVEN_T	.\oven\oven_2\oven.h	/^} OVEN_T;			\/* SMA derived from RKH_SMA_T structure *\/$/;"	t
 OVEN_T	.\oven\oven_3\oven.h	/^} OVEN_T;			\/* SMA derived from RKH_SMA_T structure *\/$/;"	t
 OVEN_T	.\oven\oven_4\oven.h	/^} OVEN_T;			\/* SMA derived from RKH_SMA_T structure *\/$/;"	t
 OVEN_T	.\oven\oven_5\oven.h	/^} OVEN_T;			\/* SMA derived from RKH_SMA_T structure *\/$/;"	t
-OVRN	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	18;"	d	file:
-OVRN	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	18;"	d	file:
+OVEN_T	.\oven\oven_6\oven.h	/^} OVEN_T;			\/* SMA derived from RKH_SMA_T structure *\/$/;"	t
 OV_SIGS_T	.\oven\oven_1\ovenevt.h	/^} OV_SIGS_T;$/;"	t
 OV_SIGS_T	.\oven\oven_2\ovenevt.h	/^} OV_SIGS_T;$/;"	t
 OV_SIGS_T	.\oven\oven_3\ovenevt.h	/^} OV_SIGS_T;$/;"	t
 OV_SIGS_T	.\oven\oven_4\ovenevt.h	/^} OV_SIGS_T;$/;"	t
 OV_SIGS_T	.\oven\oven_5\ovenevt.h	/^} OV_SIGS_T;$/;"	t
-PERR	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	21;"	d	file:
-PERR	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	21;"	d	file:
-PIN_DIR_IN	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	/^	PIN_DIR_IN, PIN_DIR_OUT$/;"	e
-PIN_DIR_IN	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	/^	PIN_DIR_IN, PIN_DIR_OUT$/;"	e
-PIN_DIR_OUT	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	/^	PIN_DIR_IN, PIN_DIR_OUT$/;"	e
-PIN_DIR_OUT	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	/^	PIN_DIR_IN, PIN_DIR_OUT$/;"	e
-PIN_HIGH	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	/^	PIN_LOW, PIN_HIGH$/;"	e
-PIN_HIGH	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	/^	PIN_LOW, PIN_HIGH$/;"	e
-PIN_LOW	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	/^	PIN_LOW, PIN_HIGH$/;"	e
-PIN_LOW	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	/^	PIN_LOW, PIN_HIGH$/;"	e
-PIN_PE_DIS	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	/^	PIN_PE_DIS, PIN_PE_ENA$/;"	e
-PIN_PE_DIS	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	/^	PIN_PE_DIS, PIN_PE_ENA$/;"	e
-PIN_PE_ENA	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	/^	PIN_PE_DIS, PIN_PE_ENA$/;"	e
-PIN_PE_ENA	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	/^	PIN_PE_DIS, PIN_PE_ENA$/;"	e
-PRINT_GPRS_BAR	.\trtemp\bsp\x86\bsp.c	128;"	d	file:
-PRINT_STIMULUS_BAR	.\trtemp\bsp\x86\bsp.c	124;"	d	file:
-PR_OFFSET	.\trtemp\bsp\x86\debug.h	28;"	d
-PSHBUTT1	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	67;"	d
-PSHBUTT1	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	67;"	d
-PSHBUTT2	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	68;"	d
-PSHBUTT2	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	68;"	d
-PSHBUTT3	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	69;"	d
-PSHBUTT3	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	69;"	d
-PSHBUTT4	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	70;"	d
-PSHBUTT4	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	70;"	d
-QGMGR_STO_SIZE	.\trtemp\main.c	28;"	d	file:
-QSTO_SIZE	.\ahsm\main.c	15;"	d	file:
+OV_SIGS_T	.\oven\oven_6\ovenevt.h	/^} OV_SIGS_T;$/;"	t
 QSTO_SIZE	.\oven\oven_1\main.c	14;"	d	file:
 QSTO_SIZE	.\oven\oven_2\main.c	14;"	d	file:
 QSTO_SIZE	.\oven\oven_3\main.c	14;"	d	file:
 QSTO_SIZE	.\oven\oven_4\main.c	14;"	d	file:
 QSTO_SIZE	.\oven\oven_5\main.c	14;"	d	file:
-QTCTRL_STO_SIZE	.\trtemp\main.c	33;"	d	file:
-QTRK_STO_SIZE	.\trtemp\main.c	38;"	d	file:
-REGISTER_ABI	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	11;"	d	file:
-RGT_KEY	.\trtemp\bsp\x86\keymap.h	29;"	d
+QSTO_SIZE	.\oven\oven_6\main.c	14;"	d	file:
 RKHROM	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	163;"	d
 RKHROM	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	156;"	d
 RKHROM	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	161;"	d
@@ -396,8 +181,6 @@ RKH_ARRAY_SMA_CREATE	.\rkh\source\include\rkh.h	1075;"	d
 RKH_ARRAY_SMA_DCLR	.\rkh\source\include\rkh.h	1047;"	d
 RKH_ASSERT	.\rkh\source\include\rkhassert.h	172;"	d
 RKH_ASSERT	.\rkh\source\include\rkhassert.h	210;"	d
-RKH_ASSERT_EN	.\ahsm\rkhcfg.h	98;"	d
-RKH_ASSERT_EN	.\trtemp\rkhcfg.h	97;"	d
 RKH_BASE_T	.\rkh\source\include\rkhitl.h	/^typedef struct RKH_BASE_T$/;"	s
 RKH_BASE_T	.\rkh\source\include\rkhitl.h	/^} RKH_BASE_T;$/;"	t
 RKH_BASIC	.\rkh\source\include\rkhitl.h	1591;"	d
@@ -419,20 +202,17 @@ RKH_BIT_MASK_32	.\rkh\source\include\rkhdef.h	144;"	d
 RKH_BIT_SET_08	.\rkh\source\include\rkhdef.h	160;"	d
 RKH_BIT_SET_16	.\rkh\source\include\rkhdef.h	162;"	d
 RKH_BIT_SET_32	.\rkh\source\include\rkhdef.h	164;"	d
-RKH_BRANCH	.\ahsm\my.c	/^	RKH_BRANCH( ELSE, 		NULL, 		&S2 ),$/;"	v
-RKH_BRANCH	.\ahsm\my.c	/^	RKH_BRANCH( x1, 		dummy_act, 	&S3 ),$/;"	v
-RKH_BRANCH	.\ahsm\my.c	/^	RKH_BRANCH( x2_or_x3, 	NULL, 		&S32 ),$/;"	v
+RKH_BRANCH	.\oven\oven_6\oven.c	/^	RKH_BRANCH( ELSE, 				NULL,			&off ),$/;"	v
+RKH_BRANCH	.\oven\oven_6\oven.c	/^	RKH_BRANCH( chk_restart_cnt,	defer_start,	&on ),$/;"	v
 RKH_BRANCH	.\rkh\source\include\rkh.h	919;"	d
-RKH_BRANCH	.\trtemp\tracking\trk.c	/^	RKH_BRANCH( ELSE, 		rel_curr_pos,	&gps_offline ),$/;"	v
-RKH_BRANCH	.\trtemp\tracking\trk.c	/^	RKH_BRANCH( is_online, 	upd_curr_pos,	&gps_chk_vmax ),$/;"	v
-RKH_CALL_ACTION	.\rkh\source\include\rkhitl.h	2647;"	d
-RKH_CALL_ACTION	.\rkh\source\include\rkhitl.h	2653;"	d
-RKH_CALL_ACTION	.\rkh\source\include\rkhitl.h	2659;"	d
-RKH_CALL_ACTION	.\rkh\source\include\rkhitl.h	2664;"	d
+RKH_CALL_ACTION	.\rkh\source\include\rkhitl.h	2657;"	d
+RKH_CALL_ACTION	.\rkh\source\include\rkhitl.h	2663;"	d
+RKH_CALL_ACTION	.\rkh\source\include\rkhitl.h	2669;"	d
+RKH_CALL_ACTION	.\rkh\source\include\rkhitl.h	2674;"	d
 RKH_CAST	.\rkh\source\include\rkh.h	2765;"	d
 RKH_CFGPORT_NATIVE_DYN_EVT_EN	.\rkh\source\include\rkhitl.h	1254;"	d
 RKH_CFGPORT_NATIVE_DYN_EVT_EN	.\rkh\source\include\rkhitl.h	1255;"	d
-RKH_CFGPORT_NATIVE_DYN_EVT_EN	.\rkh\source\include\rkhitl.h	1841;"	d
+RKH_CFGPORT_NATIVE_DYN_EVT_EN	.\rkh\source\include\rkhitl.h	1851;"	d
 RKH_CFGPORT_NATIVE_DYN_EVT_EN	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	111;"	d
 RKH_CFGPORT_NATIVE_DYN_EVT_EN	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	104;"	d
 RKH_CFGPORT_NATIVE_DYN_EVT_EN	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	109;"	d
@@ -442,7 +222,7 @@ RKH_CFGPORT_NATIVE_DYN_EVT_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_
 RKH_CFGPORT_NATIVE_DYN_EVT_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	101;"	d
 RKH_CFGPORT_NATIVE_DYN_EVT_EN	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	104;"	d
 RKH_CFGPORT_NATIVE_DYN_EVT_EN	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	104;"	d
-RKH_CFGPORT_NATIVE_EQUEUE_EN	.\rkh\source\include\rkhitl.h	1830;"	d
+RKH_CFGPORT_NATIVE_EQUEUE_EN	.\rkh\source\include\rkhitl.h	1840;"	d
 RKH_CFGPORT_NATIVE_EQUEUE_EN	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	100;"	d
 RKH_CFGPORT_NATIVE_EQUEUE_EN	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	93;"	d
 RKH_CFGPORT_NATIVE_EQUEUE_EN	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	98;"	d
@@ -452,7 +232,7 @@ RKH_CFGPORT_NATIVE_EQUEUE_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v
 RKH_CFGPORT_NATIVE_EQUEUE_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	90;"	d
 RKH_CFGPORT_NATIVE_EQUEUE_EN	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	93;"	d
 RKH_CFGPORT_NATIVE_EQUEUE_EN	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	93;"	d
-RKH_CFGPORT_NATIVE_SCHEDULER_EN	.\rkh\source\include\rkhitl.h	1821;"	d
+RKH_CFGPORT_NATIVE_SCHEDULER_EN	.\rkh\source\include\rkhitl.h	1831;"	d
 RKH_CFGPORT_NATIVE_SCHEDULER_EN	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	91;"	d
 RKH_CFGPORT_NATIVE_SCHEDULER_EN	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	84;"	d
 RKH_CFGPORT_NATIVE_SCHEDULER_EN	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	89;"	d
@@ -462,7 +242,7 @@ RKH_CFGPORT_NATIVE_SCHEDULER_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\c
 RKH_CFGPORT_NATIVE_SCHEDULER_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	81;"	d
 RKH_CFGPORT_NATIVE_SCHEDULER_EN	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	84;"	d
 RKH_CFGPORT_NATIVE_SCHEDULER_EN	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	84;"	d
-RKH_CFGPORT_REENTRANT_EN	.\rkh\source\include\rkhitl.h	1849;"	d
+RKH_CFGPORT_REENTRANT_EN	.\rkh\source\include\rkhitl.h	1859;"	d
 RKH_CFGPORT_REENTRANT_EN	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	119;"	d
 RKH_CFGPORT_REENTRANT_EN	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	112;"	d
 RKH_CFGPORT_REENTRANT_EN	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	117;"	d
@@ -472,7 +252,7 @@ RKH_CFGPORT_REENTRANT_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\r
 RKH_CFGPORT_REENTRANT_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	109;"	d
 RKH_CFGPORT_REENTRANT_EN	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	112;"	d
 RKH_CFGPORT_REENTRANT_EN	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	112;"	d
-RKH_CFGPORT_SMA_QSTO_EN	.\rkh\source\include\rkhitl.h	1878;"	d
+RKH_CFGPORT_SMA_QSTO_EN	.\rkh\source\include\rkhitl.h	1888;"	d
 RKH_CFGPORT_SMA_QSTO_EN	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	148;"	d
 RKH_CFGPORT_SMA_QSTO_EN	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	141;"	d
 RKH_CFGPORT_SMA_QSTO_EN	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	146;"	d
@@ -482,7 +262,7 @@ RKH_CFGPORT_SMA_QSTO_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\rk
 RKH_CFGPORT_SMA_QSTO_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	138;"	d
 RKH_CFGPORT_SMA_QSTO_EN	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	141;"	d
 RKH_CFGPORT_SMA_QSTO_EN	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	141;"	d
-RKH_CFGPORT_SMA_STK_EN	.\rkh\source\include\rkhitl.h	1886;"	d
+RKH_CFGPORT_SMA_STK_EN	.\rkh\source\include\rkhitl.h	1896;"	d
 RKH_CFGPORT_SMA_STK_EN	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	156;"	d
 RKH_CFGPORT_SMA_STK_EN	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	149;"	d
 RKH_CFGPORT_SMA_STK_EN	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	154;"	d
@@ -492,7 +272,7 @@ RKH_CFGPORT_SMA_STK_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\rkh
 RKH_CFGPORT_SMA_STK_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	146;"	d
 RKH_CFGPORT_SMA_STK_EN	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	149;"	d
 RKH_CFGPORT_SMA_STK_EN	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	149;"	d
-RKH_CFGPORT_SMA_THREAD_DATA_EN	.\rkh\source\include\rkhitl.h	1811;"	d
+RKH_CFGPORT_SMA_THREAD_DATA_EN	.\rkh\source\include\rkhitl.h	1821;"	d
 RKH_CFGPORT_SMA_THREAD_DATA_EN	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	81;"	d
 RKH_CFGPORT_SMA_THREAD_DATA_EN	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	74;"	d
 RKH_CFGPORT_SMA_THREAD_DATA_EN	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	79;"	d
@@ -502,7 +282,7 @@ RKH_CFGPORT_SMA_THREAD_DATA_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw
 RKH_CFGPORT_SMA_THREAD_DATA_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	71;"	d
 RKH_CFGPORT_SMA_THREAD_DATA_EN	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	74;"	d
 RKH_CFGPORT_SMA_THREAD_DATA_EN	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	74;"	d
-RKH_CFGPORT_SMA_THREAD_EN	.\rkh\source\include\rkhitl.h	1803;"	d
+RKH_CFGPORT_SMA_THREAD_EN	.\rkh\source\include\rkhitl.h	1813;"	d
 RKH_CFGPORT_SMA_THREAD_EN	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	73;"	d
 RKH_CFGPORT_SMA_THREAD_EN	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	66;"	d
 RKH_CFGPORT_SMA_THREAD_EN	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	71;"	d
@@ -512,7 +292,7 @@ RKH_CFGPORT_SMA_THREAD_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\
 RKH_CFGPORT_SMA_THREAD_EN	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	63;"	d
 RKH_CFGPORT_SMA_THREAD_EN	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	66;"	d
 RKH_CFGPORT_SMA_THREAD_EN	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	66;"	d
-RKH_CFGPORT_TRC_SIZEOF_FUN_PTR	.\rkh\source\include\rkhitl.h	1863;"	d
+RKH_CFGPORT_TRC_SIZEOF_FUN_PTR	.\rkh\source\include\rkhitl.h	1873;"	d
 RKH_CFGPORT_TRC_SIZEOF_FUN_PTR	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	133;"	d
 RKH_CFGPORT_TRC_SIZEOF_FUN_PTR	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	126;"	d
 RKH_CFGPORT_TRC_SIZEOF_FUN_PTR	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	131;"	d
@@ -522,7 +302,7 @@ RKH_CFGPORT_TRC_SIZEOF_FUN_PTR	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw
 RKH_CFGPORT_TRC_SIZEOF_FUN_PTR	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	123;"	d
 RKH_CFGPORT_TRC_SIZEOF_FUN_PTR	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	126;"	d
 RKH_CFGPORT_TRC_SIZEOF_FUN_PTR	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	126;"	d
-RKH_CFGPORT_TRC_SIZEOF_PTR	.\rkh\source\include\rkhitl.h	1856;"	d
+RKH_CFGPORT_TRC_SIZEOF_PTR	.\rkh\source\include\rkhitl.h	1866;"	d
 RKH_CFGPORT_TRC_SIZEOF_PTR	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	126;"	d
 RKH_CFGPORT_TRC_SIZEOF_PTR	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	119;"	d
 RKH_CFGPORT_TRC_SIZEOF_PTR	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	124;"	d
@@ -532,7 +312,7 @@ RKH_CFGPORT_TRC_SIZEOF_PTR	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10
 RKH_CFGPORT_TRC_SIZEOF_PTR	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	116;"	d
 RKH_CFGPORT_TRC_SIZEOF_PTR	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	119;"	d
 RKH_CFGPORT_TRC_SIZEOF_PTR	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	119;"	d
-RKH_CFGPORT_TRC_SIZEOF_TSTAMP	.\rkh\source\include\rkhitl.h	1870;"	d
+RKH_CFGPORT_TRC_SIZEOF_TSTAMP	.\rkh\source\include\rkhitl.h	1880;"	d
 RKH_CFGPORT_TRC_SIZEOF_TSTAMP	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	140;"	d
 RKH_CFGPORT_TRC_SIZEOF_TSTAMP	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	133;"	d
 RKH_CFGPORT_TRC_SIZEOF_TSTAMP	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	138;"	d
@@ -547,436 +327,523 @@ RKH_CFG_FWK_ASSERT_EN	.\oven\oven_2\rkhcfg.h	125;"	d
 RKH_CFG_FWK_ASSERT_EN	.\oven\oven_3\rkhcfg.h	125;"	d
 RKH_CFG_FWK_ASSERT_EN	.\oven\oven_4\rkhcfg.h	125;"	d
 RKH_CFG_FWK_ASSERT_EN	.\oven\oven_5\rkhcfg.h	125;"	d
+RKH_CFG_FWK_ASSERT_EN	.\oven\oven_6\rkhcfg.h	125;"	d
 RKH_CFG_FWK_DEFER_EVT_EN	.\oven\oven_1\rkhcfg.h	113;"	d
 RKH_CFG_FWK_DEFER_EVT_EN	.\oven\oven_2\rkhcfg.h	113;"	d
 RKH_CFG_FWK_DEFER_EVT_EN	.\oven\oven_3\rkhcfg.h	113;"	d
 RKH_CFG_FWK_DEFER_EVT_EN	.\oven\oven_4\rkhcfg.h	113;"	d
 RKH_CFG_FWK_DEFER_EVT_EN	.\oven\oven_5\rkhcfg.h	113;"	d
+RKH_CFG_FWK_DEFER_EVT_EN	.\oven\oven_6\rkhcfg.h	113;"	d
 RKH_CFG_FWK_DYN_EVT_EN	.\oven\oven_1\rkhcfg.h	70;"	d
 RKH_CFG_FWK_DYN_EVT_EN	.\oven\oven_2\rkhcfg.h	70;"	d
 RKH_CFG_FWK_DYN_EVT_EN	.\oven\oven_3\rkhcfg.h	70;"	d
 RKH_CFG_FWK_DYN_EVT_EN	.\oven\oven_4\rkhcfg.h	70;"	d
 RKH_CFG_FWK_DYN_EVT_EN	.\oven\oven_5\rkhcfg.h	70;"	d
+RKH_CFG_FWK_DYN_EVT_EN	.\oven\oven_6\rkhcfg.h	70;"	d
 RKH_CFG_FWK_MAX_EVT_POOL	.\oven\oven_1\rkhcfg.h	80;"	d
 RKH_CFG_FWK_MAX_EVT_POOL	.\oven\oven_2\rkhcfg.h	80;"	d
 RKH_CFG_FWK_MAX_EVT_POOL	.\oven\oven_3\rkhcfg.h	80;"	d
 RKH_CFG_FWK_MAX_EVT_POOL	.\oven\oven_4\rkhcfg.h	80;"	d
 RKH_CFG_FWK_MAX_EVT_POOL	.\oven\oven_5\rkhcfg.h	80;"	d
+RKH_CFG_FWK_MAX_EVT_POOL	.\oven\oven_6\rkhcfg.h	80;"	d
 RKH_CFG_FWK_MAX_SIGNALS	.\oven\oven_1\rkhcfg.h	96;"	d
 RKH_CFG_FWK_MAX_SIGNALS	.\oven\oven_2\rkhcfg.h	96;"	d
 RKH_CFG_FWK_MAX_SIGNALS	.\oven\oven_3\rkhcfg.h	96;"	d
 RKH_CFG_FWK_MAX_SIGNALS	.\oven\oven_4\rkhcfg.h	96;"	d
 RKH_CFG_FWK_MAX_SIGNALS	.\oven\oven_5\rkhcfg.h	96;"	d
+RKH_CFG_FWK_MAX_SIGNALS	.\oven\oven_6\rkhcfg.h	96;"	d
 RKH_CFG_FWK_MAX_SMA	.\oven\oven_1\rkhcfg.h	62;"	d
 RKH_CFG_FWK_MAX_SMA	.\oven\oven_2\rkhcfg.h	62;"	d
 RKH_CFG_FWK_MAX_SMA	.\oven\oven_3\rkhcfg.h	62;"	d
 RKH_CFG_FWK_MAX_SMA	.\oven\oven_4\rkhcfg.h	62;"	d
 RKH_CFG_FWK_MAX_SMA	.\oven\oven_5\rkhcfg.h	62;"	d
+RKH_CFG_FWK_MAX_SMA	.\oven\oven_6\rkhcfg.h	62;"	d
 RKH_CFG_FWK_SIZEOF_EVT	.\oven\oven_1\rkhcfg.h	89;"	d
 RKH_CFG_FWK_SIZEOF_EVT	.\oven\oven_2\rkhcfg.h	89;"	d
 RKH_CFG_FWK_SIZEOF_EVT	.\oven\oven_3\rkhcfg.h	89;"	d
 RKH_CFG_FWK_SIZEOF_EVT	.\oven\oven_4\rkhcfg.h	89;"	d
 RKH_CFG_FWK_SIZEOF_EVT	.\oven\oven_5\rkhcfg.h	89;"	d
+RKH_CFG_FWK_SIZEOF_EVT	.\oven\oven_6\rkhcfg.h	89;"	d
 RKH_CFG_FWK_SIZEOF_EVT_SIZE	.\oven\oven_1\rkhcfg.h	105;"	d
 RKH_CFG_FWK_SIZEOF_EVT_SIZE	.\oven\oven_2\rkhcfg.h	105;"	d
 RKH_CFG_FWK_SIZEOF_EVT_SIZE	.\oven\oven_3\rkhcfg.h	105;"	d
 RKH_CFG_FWK_SIZEOF_EVT_SIZE	.\oven\oven_4\rkhcfg.h	105;"	d
 RKH_CFG_FWK_SIZEOF_EVT_SIZE	.\oven\oven_5\rkhcfg.h	105;"	d
+RKH_CFG_FWK_SIZEOF_EVT_SIZE	.\oven\oven_6\rkhcfg.h	105;"	d
 RKH_CFG_FWK_TICK_RATE_HZ	.\oven\oven_1\rkhcfg.h	196;"	d
 RKH_CFG_FWK_TICK_RATE_HZ	.\oven\oven_2\rkhcfg.h	196;"	d
 RKH_CFG_FWK_TICK_RATE_HZ	.\oven\oven_3\rkhcfg.h	196;"	d
 RKH_CFG_FWK_TICK_RATE_HZ	.\oven\oven_4\rkhcfg.h	196;"	d
 RKH_CFG_FWK_TICK_RATE_HZ	.\oven\oven_5\rkhcfg.h	196;"	d
+RKH_CFG_FWK_TICK_RATE_HZ	.\oven\oven_6\rkhcfg.h	196;"	d
 RKH_CFG_HOOK_DISPATCH_EN	.\oven\oven_1\rkhcfg.h	133;"	d
 RKH_CFG_HOOK_DISPATCH_EN	.\oven\oven_2\rkhcfg.h	133;"	d
 RKH_CFG_HOOK_DISPATCH_EN	.\oven\oven_3\rkhcfg.h	133;"	d
 RKH_CFG_HOOK_DISPATCH_EN	.\oven\oven_4\rkhcfg.h	133;"	d
 RKH_CFG_HOOK_DISPATCH_EN	.\oven\oven_5\rkhcfg.h	133;"	d
+RKH_CFG_HOOK_DISPATCH_EN	.\oven\oven_6\rkhcfg.h	133;"	d
 RKH_CFG_HOOK_EXIT_EN	.\oven\oven_1\rkhcfg.h	171;"	d
 RKH_CFG_HOOK_EXIT_EN	.\oven\oven_2\rkhcfg.h	171;"	d
 RKH_CFG_HOOK_EXIT_EN	.\oven\oven_3\rkhcfg.h	171;"	d
 RKH_CFG_HOOK_EXIT_EN	.\oven\oven_4\rkhcfg.h	171;"	d
 RKH_CFG_HOOK_EXIT_EN	.\oven\oven_5\rkhcfg.h	171;"	d
+RKH_CFG_HOOK_EXIT_EN	.\oven\oven_6\rkhcfg.h	171;"	d
 RKH_CFG_HOOK_SIGNAL_EN	.\oven\oven_1\rkhcfg.h	142;"	d
 RKH_CFG_HOOK_SIGNAL_EN	.\oven\oven_2\rkhcfg.h	142;"	d
 RKH_CFG_HOOK_SIGNAL_EN	.\oven\oven_3\rkhcfg.h	142;"	d
 RKH_CFG_HOOK_SIGNAL_EN	.\oven\oven_4\rkhcfg.h	142;"	d
 RKH_CFG_HOOK_SIGNAL_EN	.\oven\oven_5\rkhcfg.h	142;"	d
+RKH_CFG_HOOK_SIGNAL_EN	.\oven\oven_6\rkhcfg.h	142;"	d
 RKH_CFG_HOOK_START_EN	.\oven\oven_1\rkhcfg.h	161;"	d
 RKH_CFG_HOOK_START_EN	.\oven\oven_2\rkhcfg.h	161;"	d
 RKH_CFG_HOOK_START_EN	.\oven\oven_3\rkhcfg.h	161;"	d
 RKH_CFG_HOOK_START_EN	.\oven\oven_4\rkhcfg.h	161;"	d
 RKH_CFG_HOOK_START_EN	.\oven\oven_5\rkhcfg.h	161;"	d
+RKH_CFG_HOOK_START_EN	.\oven\oven_6\rkhcfg.h	161;"	d
 RKH_CFG_HOOK_TIMEOUT_EN	.\oven\oven_1\rkhcfg.h	152;"	d
 RKH_CFG_HOOK_TIMEOUT_EN	.\oven\oven_2\rkhcfg.h	152;"	d
 RKH_CFG_HOOK_TIMEOUT_EN	.\oven\oven_3\rkhcfg.h	152;"	d
 RKH_CFG_HOOK_TIMEOUT_EN	.\oven\oven_4\rkhcfg.h	152;"	d
 RKH_CFG_HOOK_TIMEOUT_EN	.\oven\oven_5\rkhcfg.h	152;"	d
+RKH_CFG_HOOK_TIMEOUT_EN	.\oven\oven_6\rkhcfg.h	152;"	d
 RKH_CFG_HOOK_TIMETICK_EN	.\oven\oven_1\rkhcfg.h	186;"	d
 RKH_CFG_HOOK_TIMETICK_EN	.\oven\oven_2\rkhcfg.h	186;"	d
 RKH_CFG_HOOK_TIMETICK_EN	.\oven\oven_3\rkhcfg.h	186;"	d
 RKH_CFG_HOOK_TIMETICK_EN	.\oven\oven_4\rkhcfg.h	186;"	d
 RKH_CFG_HOOK_TIMETICK_EN	.\oven\oven_5\rkhcfg.h	186;"	d
+RKH_CFG_HOOK_TIMETICK_EN	.\oven\oven_6\rkhcfg.h	186;"	d
 RKH_CFG_MP_EN	.\oven\oven_1\rkhcfg.h	687;"	d
 RKH_CFG_MP_EN	.\oven\oven_2\rkhcfg.h	687;"	d
 RKH_CFG_MP_EN	.\oven\oven_3\rkhcfg.h	687;"	d
 RKH_CFG_MP_EN	.\oven\oven_4\rkhcfg.h	687;"	d
 RKH_CFG_MP_EN	.\oven\oven_5\rkhcfg.h	687;"	d
+RKH_CFG_MP_EN	.\oven\oven_6\rkhcfg.h	687;"	d
 RKH_CFG_MP_GET_BSIZE_EN	.\oven\oven_1\rkhcfg.h	716;"	d
 RKH_CFG_MP_GET_BSIZE_EN	.\oven\oven_2\rkhcfg.h	716;"	d
 RKH_CFG_MP_GET_BSIZE_EN	.\oven\oven_3\rkhcfg.h	716;"	d
 RKH_CFG_MP_GET_BSIZE_EN	.\oven\oven_4\rkhcfg.h	716;"	d
 RKH_CFG_MP_GET_BSIZE_EN	.\oven\oven_5\rkhcfg.h	716;"	d
+RKH_CFG_MP_GET_BSIZE_EN	.\oven\oven_6\rkhcfg.h	716;"	d
 RKH_CFG_MP_GET_INFO_EN	.\oven\oven_1\rkhcfg.h	743;"	d
 RKH_CFG_MP_GET_INFO_EN	.\oven\oven_2\rkhcfg.h	743;"	d
 RKH_CFG_MP_GET_INFO_EN	.\oven\oven_3\rkhcfg.h	743;"	d
 RKH_CFG_MP_GET_INFO_EN	.\oven\oven_4\rkhcfg.h	743;"	d
 RKH_CFG_MP_GET_INFO_EN	.\oven\oven_5\rkhcfg.h	743;"	d
+RKH_CFG_MP_GET_INFO_EN	.\oven\oven_6\rkhcfg.h	743;"	d
 RKH_CFG_MP_GET_LWM_EN	.\oven\oven_1\rkhcfg.h	735;"	d
 RKH_CFG_MP_GET_LWM_EN	.\oven\oven_2\rkhcfg.h	735;"	d
 RKH_CFG_MP_GET_LWM_EN	.\oven\oven_3\rkhcfg.h	735;"	d
 RKH_CFG_MP_GET_LWM_EN	.\oven\oven_4\rkhcfg.h	735;"	d
 RKH_CFG_MP_GET_LWM_EN	.\oven\oven_5\rkhcfg.h	735;"	d
+RKH_CFG_MP_GET_LWM_EN	.\oven\oven_6\rkhcfg.h	735;"	d
 RKH_CFG_MP_GET_NFREE_EN	.\oven\oven_1\rkhcfg.h	725;"	d
 RKH_CFG_MP_GET_NFREE_EN	.\oven\oven_2\rkhcfg.h	725;"	d
 RKH_CFG_MP_GET_NFREE_EN	.\oven\oven_3\rkhcfg.h	725;"	d
 RKH_CFG_MP_GET_NFREE_EN	.\oven\oven_4\rkhcfg.h	725;"	d
 RKH_CFG_MP_GET_NFREE_EN	.\oven\oven_5\rkhcfg.h	725;"	d
+RKH_CFG_MP_GET_NFREE_EN	.\oven\oven_6\rkhcfg.h	725;"	d
 RKH_CFG_MP_REDUCED_EN	.\oven\oven_1\rkhcfg.h	694;"	d
 RKH_CFG_MP_REDUCED_EN	.\oven\oven_2\rkhcfg.h	694;"	d
 RKH_CFG_MP_REDUCED_EN	.\oven\oven_3\rkhcfg.h	694;"	d
 RKH_CFG_MP_REDUCED_EN	.\oven\oven_4\rkhcfg.h	694;"	d
 RKH_CFG_MP_REDUCED_EN	.\oven\oven_5\rkhcfg.h	694;"	d
+RKH_CFG_MP_REDUCED_EN	.\oven\oven_6\rkhcfg.h	694;"	d
 RKH_CFG_MP_SIZEOF_BSIZE	.\oven\oven_1\rkhcfg.h	701;"	d
 RKH_CFG_MP_SIZEOF_BSIZE	.\oven\oven_2\rkhcfg.h	701;"	d
 RKH_CFG_MP_SIZEOF_BSIZE	.\oven\oven_3\rkhcfg.h	701;"	d
 RKH_CFG_MP_SIZEOF_BSIZE	.\oven\oven_4\rkhcfg.h	701;"	d
 RKH_CFG_MP_SIZEOF_BSIZE	.\oven\oven_5\rkhcfg.h	701;"	d
+RKH_CFG_MP_SIZEOF_BSIZE	.\oven\oven_6\rkhcfg.h	701;"	d
 RKH_CFG_MP_SIZEOF_NBLOCK	.\oven\oven_1\rkhcfg.h	708;"	d
 RKH_CFG_MP_SIZEOF_NBLOCK	.\oven\oven_2\rkhcfg.h	708;"	d
 RKH_CFG_MP_SIZEOF_NBLOCK	.\oven\oven_3\rkhcfg.h	708;"	d
 RKH_CFG_MP_SIZEOF_NBLOCK	.\oven\oven_4\rkhcfg.h	708;"	d
 RKH_CFG_MP_SIZEOF_NBLOCK	.\oven\oven_5\rkhcfg.h	708;"	d
+RKH_CFG_MP_SIZEOF_NBLOCK	.\oven\oven_6\rkhcfg.h	708;"	d
 RKH_CFG_RQ_DEPLETE_EN	.\oven\oven_1\rkhcfg.h	651;"	d
 RKH_CFG_RQ_DEPLETE_EN	.\oven\oven_2\rkhcfg.h	651;"	d
 RKH_CFG_RQ_DEPLETE_EN	.\oven\oven_3\rkhcfg.h	651;"	d
 RKH_CFG_RQ_DEPLETE_EN	.\oven\oven_4\rkhcfg.h	651;"	d
 RKH_CFG_RQ_DEPLETE_EN	.\oven\oven_5\rkhcfg.h	651;"	d
+RKH_CFG_RQ_DEPLETE_EN	.\oven\oven_6\rkhcfg.h	651;"	d
 RKH_CFG_RQ_EN	.\oven\oven_1\rkhcfg.h	609;"	d
 RKH_CFG_RQ_EN	.\oven\oven_2\rkhcfg.h	609;"	d
 RKH_CFG_RQ_EN	.\oven\oven_3\rkhcfg.h	609;"	d
 RKH_CFG_RQ_EN	.\oven\oven_4\rkhcfg.h	609;"	d
 RKH_CFG_RQ_EN	.\oven\oven_5\rkhcfg.h	609;"	d
+RKH_CFG_RQ_EN	.\oven\oven_6\rkhcfg.h	609;"	d
 RKH_CFG_RQ_GET_INFO_EN	.\oven\oven_1\rkhcfg.h	634;"	d
 RKH_CFG_RQ_GET_INFO_EN	.\oven\oven_2\rkhcfg.h	634;"	d
 RKH_CFG_RQ_GET_INFO_EN	.\oven\oven_3\rkhcfg.h	634;"	d
 RKH_CFG_RQ_GET_INFO_EN	.\oven\oven_4\rkhcfg.h	634;"	d
 RKH_CFG_RQ_GET_INFO_EN	.\oven\oven_5\rkhcfg.h	634;"	d
+RKH_CFG_RQ_GET_INFO_EN	.\oven\oven_6\rkhcfg.h	634;"	d
 RKH_CFG_RQ_GET_LWMARK_EN	.\oven\oven_1\rkhcfg.h	626;"	d
 RKH_CFG_RQ_GET_LWMARK_EN	.\oven\oven_2\rkhcfg.h	626;"	d
 RKH_CFG_RQ_GET_LWMARK_EN	.\oven\oven_3\rkhcfg.h	626;"	d
 RKH_CFG_RQ_GET_LWMARK_EN	.\oven\oven_4\rkhcfg.h	626;"	d
 RKH_CFG_RQ_GET_LWMARK_EN	.\oven\oven_5\rkhcfg.h	626;"	d
+RKH_CFG_RQ_GET_LWMARK_EN	.\oven\oven_6\rkhcfg.h	626;"	d
 RKH_CFG_RQ_GET_NELEMS_EN	.\oven\oven_1\rkhcfg.h	668;"	d
 RKH_CFG_RQ_GET_NELEMS_EN	.\oven\oven_2\rkhcfg.h	668;"	d
 RKH_CFG_RQ_GET_NELEMS_EN	.\oven\oven_3\rkhcfg.h	668;"	d
 RKH_CFG_RQ_GET_NELEMS_EN	.\oven\oven_4\rkhcfg.h	668;"	d
 RKH_CFG_RQ_GET_NELEMS_EN	.\oven\oven_5\rkhcfg.h	668;"	d
+RKH_CFG_RQ_GET_NELEMS_EN	.\oven\oven_6\rkhcfg.h	668;"	d
 RKH_CFG_RQ_IS_FULL_EN	.\oven\oven_1\rkhcfg.h	659;"	d
 RKH_CFG_RQ_IS_FULL_EN	.\oven\oven_2\rkhcfg.h	659;"	d
 RKH_CFG_RQ_IS_FULL_EN	.\oven\oven_3\rkhcfg.h	659;"	d
 RKH_CFG_RQ_IS_FULL_EN	.\oven\oven_4\rkhcfg.h	659;"	d
 RKH_CFG_RQ_IS_FULL_EN	.\oven\oven_5\rkhcfg.h	659;"	d
+RKH_CFG_RQ_IS_FULL_EN	.\oven\oven_6\rkhcfg.h	659;"	d
 RKH_CFG_RQ_PUT_LIFO_EN	.\oven\oven_1\rkhcfg.h	677;"	d
 RKH_CFG_RQ_PUT_LIFO_EN	.\oven\oven_2\rkhcfg.h	677;"	d
 RKH_CFG_RQ_PUT_LIFO_EN	.\oven\oven_3\rkhcfg.h	677;"	d
 RKH_CFG_RQ_PUT_LIFO_EN	.\oven\oven_4\rkhcfg.h	677;"	d
 RKH_CFG_RQ_PUT_LIFO_EN	.\oven\oven_5\rkhcfg.h	677;"	d
+RKH_CFG_RQ_PUT_LIFO_EN	.\oven\oven_6\rkhcfg.h	677;"	d
 RKH_CFG_RQ_READ_EN	.\oven\oven_1\rkhcfg.h	642;"	d
 RKH_CFG_RQ_READ_EN	.\oven\oven_2\rkhcfg.h	642;"	d
 RKH_CFG_RQ_READ_EN	.\oven\oven_3\rkhcfg.h	642;"	d
 RKH_CFG_RQ_READ_EN	.\oven\oven_4\rkhcfg.h	642;"	d
 RKH_CFG_RQ_READ_EN	.\oven\oven_5\rkhcfg.h	642;"	d
+RKH_CFG_RQ_READ_EN	.\oven\oven_6\rkhcfg.h	642;"	d
 RKH_CFG_RQ_SIZEOF_NELEM	.\oven\oven_1\rkhcfg.h	617;"	d
 RKH_CFG_RQ_SIZEOF_NELEM	.\oven\oven_2\rkhcfg.h	617;"	d
 RKH_CFG_RQ_SIZEOF_NELEM	.\oven\oven_3\rkhcfg.h	617;"	d
 RKH_CFG_RQ_SIZEOF_NELEM	.\oven\oven_4\rkhcfg.h	617;"	d
 RKH_CFG_RQ_SIZEOF_NELEM	.\oven\oven_5\rkhcfg.h	617;"	d
+RKH_CFG_RQ_SIZEOF_NELEM	.\oven\oven_6\rkhcfg.h	617;"	d
 RKH_CFG_SMA_ACT_ARG_EVT_EN	.\oven\oven_1\rkhcfg.h	362;"	d
 RKH_CFG_SMA_ACT_ARG_EVT_EN	.\oven\oven_2\rkhcfg.h	362;"	d
 RKH_CFG_SMA_ACT_ARG_EVT_EN	.\oven\oven_3\rkhcfg.h	362;"	d
 RKH_CFG_SMA_ACT_ARG_EVT_EN	.\oven\oven_4\rkhcfg.h	362;"	d
 RKH_CFG_SMA_ACT_ARG_EVT_EN	.\oven\oven_5\rkhcfg.h	362;"	d
+RKH_CFG_SMA_ACT_ARG_EVT_EN	.\oven\oven_6\rkhcfg.h	362;"	d
 RKH_CFG_SMA_ACT_ARG_SMA_EN	.\oven\oven_1\rkhcfg.h	354;"	d
 RKH_CFG_SMA_ACT_ARG_SMA_EN	.\oven\oven_2\rkhcfg.h	354;"	d
 RKH_CFG_SMA_ACT_ARG_SMA_EN	.\oven\oven_3\rkhcfg.h	354;"	d
 RKH_CFG_SMA_ACT_ARG_SMA_EN	.\oven\oven_4\rkhcfg.h	354;"	d
 RKH_CFG_SMA_ACT_ARG_SMA_EN	.\oven\oven_5\rkhcfg.h	354;"	d
+RKH_CFG_SMA_ACT_ARG_SMA_EN	.\oven\oven_6\rkhcfg.h	354;"	d
 RKH_CFG_SMA_CHOICE_EN	.\oven\oven_1\rkhcfg.h	273;"	d
 RKH_CFG_SMA_CHOICE_EN	.\oven\oven_2\rkhcfg.h	273;"	d
 RKH_CFG_SMA_CHOICE_EN	.\oven\oven_3\rkhcfg.h	273;"	d
 RKH_CFG_SMA_CHOICE_EN	.\oven\oven_4\rkhcfg.h	273;"	d
 RKH_CFG_SMA_CHOICE_EN	.\oven\oven_5\rkhcfg.h	273;"	d
+RKH_CFG_SMA_CHOICE_EN	.\oven\oven_6\rkhcfg.h	273;"	d
 RKH_CFG_SMA_CONDITIONAL_EN	.\oven\oven_1\rkhcfg.h	280;"	d
 RKH_CFG_SMA_CONDITIONAL_EN	.\oven\oven_2\rkhcfg.h	280;"	d
 RKH_CFG_SMA_CONDITIONAL_EN	.\oven\oven_3\rkhcfg.h	280;"	d
 RKH_CFG_SMA_CONDITIONAL_EN	.\oven\oven_4\rkhcfg.h	280;"	d
 RKH_CFG_SMA_CONDITIONAL_EN	.\oven\oven_5\rkhcfg.h	280;"	d
+RKH_CFG_SMA_CONDITIONAL_EN	.\oven\oven_6\rkhcfg.h	280;"	d
 RKH_CFG_SMA_DEEP_HIST_EN	.\oven\oven_1\rkhcfg.h	259;"	d
 RKH_CFG_SMA_DEEP_HIST_EN	.\oven\oven_2\rkhcfg.h	259;"	d
 RKH_CFG_SMA_DEEP_HIST_EN	.\oven\oven_3\rkhcfg.h	259;"	d
 RKH_CFG_SMA_DEEP_HIST_EN	.\oven\oven_4\rkhcfg.h	259;"	d
 RKH_CFG_SMA_DEEP_HIST_EN	.\oven\oven_5\rkhcfg.h	259;"	d
+RKH_CFG_SMA_DEEP_HIST_EN	.\oven\oven_6\rkhcfg.h	259;"	d
 RKH_CFG_SMA_ENT_ARG_SMA_EN	.\oven\oven_1\rkhcfg.h	322;"	d
 RKH_CFG_SMA_ENT_ARG_SMA_EN	.\oven\oven_2\rkhcfg.h	322;"	d
 RKH_CFG_SMA_ENT_ARG_SMA_EN	.\oven\oven_3\rkhcfg.h	322;"	d
 RKH_CFG_SMA_ENT_ARG_SMA_EN	.\oven\oven_4\rkhcfg.h	322;"	d
 RKH_CFG_SMA_ENT_ARG_SMA_EN	.\oven\oven_5\rkhcfg.h	322;"	d
+RKH_CFG_SMA_ENT_ARG_SMA_EN	.\oven\oven_6\rkhcfg.h	322;"	d
 RKH_CFG_SMA_ENT_ARG_STATE_EN	.\oven\oven_1\rkhcfg.h	330;"	d
 RKH_CFG_SMA_ENT_ARG_STATE_EN	.\oven\oven_2\rkhcfg.h	330;"	d
 RKH_CFG_SMA_ENT_ARG_STATE_EN	.\oven\oven_3\rkhcfg.h	330;"	d
 RKH_CFG_SMA_ENT_ARG_STATE_EN	.\oven\oven_4\rkhcfg.h	330;"	d
 RKH_CFG_SMA_ENT_ARG_STATE_EN	.\oven\oven_5\rkhcfg.h	330;"	d
+RKH_CFG_SMA_ENT_ARG_STATE_EN	.\oven\oven_6\rkhcfg.h	330;"	d
 RKH_CFG_SMA_EXT_ARG_SMA_EN	.\oven\oven_1\rkhcfg.h	338;"	d
 RKH_CFG_SMA_EXT_ARG_SMA_EN	.\oven\oven_2\rkhcfg.h	338;"	d
 RKH_CFG_SMA_EXT_ARG_SMA_EN	.\oven\oven_3\rkhcfg.h	338;"	d
 RKH_CFG_SMA_EXT_ARG_SMA_EN	.\oven\oven_4\rkhcfg.h	338;"	d
 RKH_CFG_SMA_EXT_ARG_SMA_EN	.\oven\oven_5\rkhcfg.h	338;"	d
+RKH_CFG_SMA_EXT_ARG_SMA_EN	.\oven\oven_6\rkhcfg.h	338;"	d
 RKH_CFG_SMA_EXT_ARG_STATE_EN	.\oven\oven_1\rkhcfg.h	346;"	d
 RKH_CFG_SMA_EXT_ARG_STATE_EN	.\oven\oven_2\rkhcfg.h	346;"	d
 RKH_CFG_SMA_EXT_ARG_STATE_EN	.\oven\oven_3\rkhcfg.h	346;"	d
 RKH_CFG_SMA_EXT_ARG_STATE_EN	.\oven\oven_4\rkhcfg.h	346;"	d
 RKH_CFG_SMA_EXT_ARG_STATE_EN	.\oven\oven_5\rkhcfg.h	346;"	d
+RKH_CFG_SMA_EXT_ARG_STATE_EN	.\oven\oven_6\rkhcfg.h	346;"	d
 RKH_CFG_SMA_GET_INFO_EN	.\oven\oven_1\rkhcfg.h	206;"	d
 RKH_CFG_SMA_GET_INFO_EN	.\oven\oven_2\rkhcfg.h	206;"	d
 RKH_CFG_SMA_GET_INFO_EN	.\oven\oven_3\rkhcfg.h	206;"	d
 RKH_CFG_SMA_GET_INFO_EN	.\oven\oven_4\rkhcfg.h	206;"	d
 RKH_CFG_SMA_GET_INFO_EN	.\oven\oven_5\rkhcfg.h	206;"	d
+RKH_CFG_SMA_GET_INFO_EN	.\oven\oven_6\rkhcfg.h	206;"	d
 RKH_CFG_SMA_GRD_ARG_EVT_EN	.\oven\oven_1\rkhcfg.h	370;"	d
 RKH_CFG_SMA_GRD_ARG_EVT_EN	.\oven\oven_2\rkhcfg.h	370;"	d
 RKH_CFG_SMA_GRD_ARG_EVT_EN	.\oven\oven_3\rkhcfg.h	370;"	d
 RKH_CFG_SMA_GRD_ARG_EVT_EN	.\oven\oven_4\rkhcfg.h	370;"	d
 RKH_CFG_SMA_GRD_ARG_EVT_EN	.\oven\oven_5\rkhcfg.h	370;"	d
+RKH_CFG_SMA_GRD_ARG_EVT_EN	.\oven\oven_6\rkhcfg.h	370;"	d
 RKH_CFG_SMA_GRD_ARG_SMA_EN	.\oven\oven_1\rkhcfg.h	378;"	d
 RKH_CFG_SMA_GRD_ARG_SMA_EN	.\oven\oven_2\rkhcfg.h	378;"	d
 RKH_CFG_SMA_GRD_ARG_SMA_EN	.\oven\oven_3\rkhcfg.h	378;"	d
 RKH_CFG_SMA_GRD_ARG_SMA_EN	.\oven\oven_4\rkhcfg.h	378;"	d
 RKH_CFG_SMA_GRD_ARG_SMA_EN	.\oven\oven_5\rkhcfg.h	378;"	d
+RKH_CFG_SMA_GRD_ARG_SMA_EN	.\oven\oven_6\rkhcfg.h	378;"	d
 RKH_CFG_SMA_HCAL_EN	.\oven\oven_1\rkhcfg.h	227;"	d
 RKH_CFG_SMA_HCAL_EN	.\oven\oven_2\rkhcfg.h	227;"	d
 RKH_CFG_SMA_HCAL_EN	.\oven\oven_3\rkhcfg.h	227;"	d
 RKH_CFG_SMA_HCAL_EN	.\oven\oven_4\rkhcfg.h	227;"	d
 RKH_CFG_SMA_HCAL_EN	.\oven\oven_5\rkhcfg.h	227;"	d
+RKH_CFG_SMA_HCAL_EN	.\oven\oven_6\rkhcfg.h	227;"	d
 RKH_CFG_SMA_INIT_ARG_SMA_EN	.\oven\oven_1\rkhcfg.h	314;"	d
 RKH_CFG_SMA_INIT_ARG_SMA_EN	.\oven\oven_2\rkhcfg.h	314;"	d
 RKH_CFG_SMA_INIT_ARG_SMA_EN	.\oven\oven_3\rkhcfg.h	314;"	d
 RKH_CFG_SMA_INIT_ARG_SMA_EN	.\oven\oven_4\rkhcfg.h	314;"	d
 RKH_CFG_SMA_INIT_ARG_SMA_EN	.\oven\oven_5\rkhcfg.h	314;"	d
+RKH_CFG_SMA_INIT_ARG_SMA_EN	.\oven\oven_6\rkhcfg.h	314;"	d
 RKH_CFG_SMA_INIT_EVT_EN	.\oven\oven_1\rkhcfg.h	303;"	d
 RKH_CFG_SMA_INIT_EVT_EN	.\oven\oven_2\rkhcfg.h	303;"	d
 RKH_CFG_SMA_INIT_EVT_EN	.\oven\oven_3\rkhcfg.h	303;"	d
 RKH_CFG_SMA_INIT_EVT_EN	.\oven\oven_4\rkhcfg.h	303;"	d
 RKH_CFG_SMA_INIT_EVT_EN	.\oven\oven_5\rkhcfg.h	303;"	d
+RKH_CFG_SMA_INIT_EVT_EN	.\oven\oven_6\rkhcfg.h	303;"	d
 RKH_CFG_SMA_MAX_HCAL_DEPTH	.\oven\oven_1\rkhcfg.h	236;"	d
 RKH_CFG_SMA_MAX_HCAL_DEPTH	.\oven\oven_2\rkhcfg.h	236;"	d
 RKH_CFG_SMA_MAX_HCAL_DEPTH	.\oven\oven_3\rkhcfg.h	236;"	d
 RKH_CFG_SMA_MAX_HCAL_DEPTH	.\oven\oven_4\rkhcfg.h	236;"	d
 RKH_CFG_SMA_MAX_HCAL_DEPTH	.\oven\oven_5\rkhcfg.h	236;"	d
+RKH_CFG_SMA_MAX_HCAL_DEPTH	.\oven\oven_6\rkhcfg.h	236;"	d
 RKH_CFG_SMA_MAX_TRC_SEGS	.\oven\oven_1\rkhcfg.h	245;"	d
 RKH_CFG_SMA_MAX_TRC_SEGS	.\oven\oven_2\rkhcfg.h	245;"	d
 RKH_CFG_SMA_MAX_TRC_SEGS	.\oven\oven_3\rkhcfg.h	245;"	d
 RKH_CFG_SMA_MAX_TRC_SEGS	.\oven\oven_4\rkhcfg.h	245;"	d
 RKH_CFG_SMA_MAX_TRC_SEGS	.\oven\oven_5\rkhcfg.h	245;"	d
+RKH_CFG_SMA_MAX_TRC_SEGS	.\oven\oven_6\rkhcfg.h	245;"	d
 RKH_CFG_SMA_PPRO_ARG_SMA_EN	.\oven\oven_1\rkhcfg.h	387;"	d
 RKH_CFG_SMA_PPRO_ARG_SMA_EN	.\oven\oven_2\rkhcfg.h	387;"	d
 RKH_CFG_SMA_PPRO_ARG_SMA_EN	.\oven\oven_3\rkhcfg.h	387;"	d
 RKH_CFG_SMA_PPRO_ARG_SMA_EN	.\oven\oven_4\rkhcfg.h	387;"	d
 RKH_CFG_SMA_PPRO_ARG_SMA_EN	.\oven\oven_5\rkhcfg.h	387;"	d
+RKH_CFG_SMA_PPRO_ARG_SMA_EN	.\oven\oven_6\rkhcfg.h	387;"	d
 RKH_CFG_SMA_PPRO_EN	.\oven\oven_1\rkhcfg.h	218;"	d
 RKH_CFG_SMA_PPRO_EN	.\oven\oven_2\rkhcfg.h	218;"	d
 RKH_CFG_SMA_PPRO_EN	.\oven\oven_3\rkhcfg.h	218;"	d
 RKH_CFG_SMA_PPRO_EN	.\oven\oven_4\rkhcfg.h	218;"	d
 RKH_CFG_SMA_PPRO_EN	.\oven\oven_5\rkhcfg.h	218;"	d
+RKH_CFG_SMA_PPRO_EN	.\oven\oven_6\rkhcfg.h	218;"	d
 RKH_CFG_SMA_PSEUDOSTATE_EN	.\oven\oven_1\rkhcfg.h	252;"	d
 RKH_CFG_SMA_PSEUDOSTATE_EN	.\oven\oven_2\rkhcfg.h	252;"	d
 RKH_CFG_SMA_PSEUDOSTATE_EN	.\oven\oven_3\rkhcfg.h	252;"	d
 RKH_CFG_SMA_PSEUDOSTATE_EN	.\oven\oven_4\rkhcfg.h	252;"	d
 RKH_CFG_SMA_PSEUDOSTATE_EN	.\oven\oven_5\rkhcfg.h	252;"	d
+RKH_CFG_SMA_PSEUDOSTATE_EN	.\oven\oven_6\rkhcfg.h	252;"	d
 RKH_CFG_SMA_SHALLOW_HIST_EN	.\oven\oven_1\rkhcfg.h	266;"	d
 RKH_CFG_SMA_SHALLOW_HIST_EN	.\oven\oven_2\rkhcfg.h	266;"	d
 RKH_CFG_SMA_SHALLOW_HIST_EN	.\oven\oven_3\rkhcfg.h	266;"	d
 RKH_CFG_SMA_SHALLOW_HIST_EN	.\oven\oven_4\rkhcfg.h	266;"	d
 RKH_CFG_SMA_SHALLOW_HIST_EN	.\oven\oven_5\rkhcfg.h	266;"	d
+RKH_CFG_SMA_SHALLOW_HIST_EN	.\oven\oven_6\rkhcfg.h	266;"	d
 RKH_CFG_SMA_SUBMACHINE_EN	.\oven\oven_1\rkhcfg.h	287;"	d
 RKH_CFG_SMA_SUBMACHINE_EN	.\oven\oven_2\rkhcfg.h	287;"	d
 RKH_CFG_SMA_SUBMACHINE_EN	.\oven\oven_3\rkhcfg.h	287;"	d
 RKH_CFG_SMA_SUBMACHINE_EN	.\oven\oven_4\rkhcfg.h	287;"	d
 RKH_CFG_SMA_SUBMACHINE_EN	.\oven\oven_5\rkhcfg.h	287;"	d
+RKH_CFG_SMA_SUBMACHINE_EN	.\oven\oven_6\rkhcfg.h	287;"	d
 RKH_CFG_SMA_TRC_SNDR_EN	.\oven\oven_1\rkhcfg.h	294;"	d
 RKH_CFG_SMA_TRC_SNDR_EN	.\oven\oven_2\rkhcfg.h	294;"	d
 RKH_CFG_SMA_TRC_SNDR_EN	.\oven\oven_3\rkhcfg.h	294;"	d
 RKH_CFG_SMA_TRC_SNDR_EN	.\oven\oven_4\rkhcfg.h	294;"	d
 RKH_CFG_SMA_TRC_SNDR_EN	.\oven\oven_5\rkhcfg.h	294;"	d
+RKH_CFG_SMA_TRC_SNDR_EN	.\oven\oven_6\rkhcfg.h	294;"	d
 RKH_CFG_TMR_EN	.\oven\oven_1\rkhcfg.h	753;"	d
 RKH_CFG_TMR_EN	.\oven\oven_2\rkhcfg.h	753;"	d
 RKH_CFG_TMR_EN	.\oven\oven_3\rkhcfg.h	753;"	d
 RKH_CFG_TMR_EN	.\oven\oven_4\rkhcfg.h	753;"	d
 RKH_CFG_TMR_EN	.\oven\oven_5\rkhcfg.h	753;"	d
+RKH_CFG_TMR_EN	.\oven\oven_6\rkhcfg.h	753;"	d
 RKH_CFG_TMR_GET_INFO_EN	.\oven\oven_1\rkhcfg.h	777;"	d
 RKH_CFG_TMR_GET_INFO_EN	.\oven\oven_2\rkhcfg.h	777;"	d
 RKH_CFG_TMR_GET_INFO_EN	.\oven\oven_3\rkhcfg.h	777;"	d
 RKH_CFG_TMR_GET_INFO_EN	.\oven\oven_4\rkhcfg.h	777;"	d
 RKH_CFG_TMR_GET_INFO_EN	.\oven\oven_5\rkhcfg.h	777;"	d
+RKH_CFG_TMR_GET_INFO_EN	.\oven\oven_6\rkhcfg.h	777;"	d
 RKH_CFG_TMR_HOOK_EN	.\oven\oven_1\rkhcfg.h	769;"	d
 RKH_CFG_TMR_HOOK_EN	.\oven\oven_2\rkhcfg.h	769;"	d
 RKH_CFG_TMR_HOOK_EN	.\oven\oven_3\rkhcfg.h	769;"	d
 RKH_CFG_TMR_HOOK_EN	.\oven\oven_4\rkhcfg.h	769;"	d
 RKH_CFG_TMR_HOOK_EN	.\oven\oven_5\rkhcfg.h	769;"	d
+RKH_CFG_TMR_HOOK_EN	.\oven\oven_6\rkhcfg.h	769;"	d
 RKH_CFG_TMR_SIZEOF_NTIMER	.\oven\oven_1\rkhcfg.h	761;"	d
 RKH_CFG_TMR_SIZEOF_NTIMER	.\oven\oven_2\rkhcfg.h	761;"	d
 RKH_CFG_TMR_SIZEOF_NTIMER	.\oven\oven_3\rkhcfg.h	761;"	d
 RKH_CFG_TMR_SIZEOF_NTIMER	.\oven\oven_4\rkhcfg.h	761;"	d
 RKH_CFG_TMR_SIZEOF_NTIMER	.\oven\oven_5\rkhcfg.h	761;"	d
+RKH_CFG_TMR_SIZEOF_NTIMER	.\oven\oven_6\rkhcfg.h	761;"	d
 RKH_CFG_TRC_ALL_EN	.\oven\oven_1\rkhcfg.h	440;"	d
 RKH_CFG_TRC_ALL_EN	.\oven\oven_2\rkhcfg.h	440;"	d
 RKH_CFG_TRC_ALL_EN	.\oven\oven_3\rkhcfg.h	440;"	d
 RKH_CFG_TRC_ALL_EN	.\oven\oven_4\rkhcfg.h	440;"	d
 RKH_CFG_TRC_ALL_EN	.\oven\oven_5\rkhcfg.h	440;"	d
+RKH_CFG_TRC_ALL_EN	.\oven\oven_6\rkhcfg.h	440;"	d
 RKH_CFG_TRC_ASSERT_EN	.\oven\oven_1\rkhcfg.h	489;"	d
 RKH_CFG_TRC_ASSERT_EN	.\oven\oven_2\rkhcfg.h	489;"	d
 RKH_CFG_TRC_ASSERT_EN	.\oven\oven_3\rkhcfg.h	489;"	d
 RKH_CFG_TRC_ASSERT_EN	.\oven\oven_4\rkhcfg.h	489;"	d
 RKH_CFG_TRC_ASSERT_EN	.\oven\oven_5\rkhcfg.h	489;"	d
+RKH_CFG_TRC_ASSERT_EN	.\oven\oven_6\rkhcfg.h	489;"	d
 RKH_CFG_TRC_CHK_EN	.\oven\oven_1\rkhcfg.h	584;"	d
 RKH_CFG_TRC_CHK_EN	.\oven\oven_2\rkhcfg.h	584;"	d
 RKH_CFG_TRC_CHK_EN	.\oven\oven_3\rkhcfg.h	584;"	d
 RKH_CFG_TRC_CHK_EN	.\oven\oven_4\rkhcfg.h	584;"	d
 RKH_CFG_TRC_CHK_EN	.\oven\oven_5\rkhcfg.h	584;"	d
+RKH_CFG_TRC_CHK_EN	.\oven\oven_6\rkhcfg.h	584;"	d
 RKH_CFG_TRC_EN	.\oven\oven_1\rkhcfg.h	397;"	d
 RKH_CFG_TRC_EN	.\oven\oven_2\rkhcfg.h	397;"	d
 RKH_CFG_TRC_EN	.\oven\oven_3\rkhcfg.h	397;"	d
 RKH_CFG_TRC_EN	.\oven\oven_4\rkhcfg.h	397;"	d
 RKH_CFG_TRC_EN	.\oven\oven_5\rkhcfg.h	397;"	d
+RKH_CFG_TRC_EN	.\oven\oven_6\rkhcfg.h	397;"	d
 RKH_CFG_TRC_FWK_EN	.\oven\oven_1\rkhcfg.h	482;"	d
 RKH_CFG_TRC_FWK_EN	.\oven\oven_2\rkhcfg.h	482;"	d
 RKH_CFG_TRC_FWK_EN	.\oven\oven_3\rkhcfg.h	482;"	d
 RKH_CFG_TRC_FWK_EN	.\oven\oven_4\rkhcfg.h	482;"	d
 RKH_CFG_TRC_FWK_EN	.\oven\oven_5\rkhcfg.h	482;"	d
+RKH_CFG_TRC_FWK_EN	.\oven\oven_6\rkhcfg.h	482;"	d
 RKH_CFG_TRC_MP_EN	.\oven\oven_1\rkhcfg.h	447;"	d
 RKH_CFG_TRC_MP_EN	.\oven\oven_2\rkhcfg.h	447;"	d
 RKH_CFG_TRC_MP_EN	.\oven\oven_3\rkhcfg.h	447;"	d
 RKH_CFG_TRC_MP_EN	.\oven\oven_4\rkhcfg.h	447;"	d
 RKH_CFG_TRC_MP_EN	.\oven\oven_5\rkhcfg.h	447;"	d
+RKH_CFG_TRC_MP_EN	.\oven\oven_6\rkhcfg.h	447;"	d
 RKH_CFG_TRC_NSEQ_EN	.\oven\oven_1\rkhcfg.h	577;"	d
 RKH_CFG_TRC_NSEQ_EN	.\oven\oven_2\rkhcfg.h	577;"	d
 RKH_CFG_TRC_NSEQ_EN	.\oven\oven_3\rkhcfg.h	577;"	d
 RKH_CFG_TRC_NSEQ_EN	.\oven\oven_4\rkhcfg.h	577;"	d
 RKH_CFG_TRC_NSEQ_EN	.\oven\oven_5\rkhcfg.h	577;"	d
+RKH_CFG_TRC_NSEQ_EN	.\oven\oven_6\rkhcfg.h	577;"	d
 RKH_CFG_TRC_RQ_EN	.\oven\oven_1\rkhcfg.h	454;"	d
 RKH_CFG_TRC_RQ_EN	.\oven\oven_2\rkhcfg.h	454;"	d
 RKH_CFG_TRC_RQ_EN	.\oven\oven_3\rkhcfg.h	454;"	d
 RKH_CFG_TRC_RQ_EN	.\oven\oven_4\rkhcfg.h	454;"	d
 RKH_CFG_TRC_RQ_EN	.\oven\oven_5\rkhcfg.h	454;"	d
+RKH_CFG_TRC_RQ_EN	.\oven\oven_6\rkhcfg.h	454;"	d
 RKH_CFG_TRC_RTFIL_EN	.\oven\oven_1\rkhcfg.h	409;"	d
 RKH_CFG_TRC_RTFIL_EN	.\oven\oven_2\rkhcfg.h	409;"	d
 RKH_CFG_TRC_RTFIL_EN	.\oven\oven_3\rkhcfg.h	409;"	d
 RKH_CFG_TRC_RTFIL_EN	.\oven\oven_4\rkhcfg.h	409;"	d
 RKH_CFG_TRC_RTFIL_EN	.\oven\oven_5\rkhcfg.h	409;"	d
+RKH_CFG_TRC_RTFIL_EN	.\oven\oven_6\rkhcfg.h	409;"	d
 RKH_CFG_TRC_RTFIL_SIGNAL_EN	.\oven\oven_1\rkhcfg.h	425;"	d
 RKH_CFG_TRC_RTFIL_SIGNAL_EN	.\oven\oven_2\rkhcfg.h	425;"	d
 RKH_CFG_TRC_RTFIL_SIGNAL_EN	.\oven\oven_3\rkhcfg.h	425;"	d
 RKH_CFG_TRC_RTFIL_SIGNAL_EN	.\oven\oven_4\rkhcfg.h	425;"	d
 RKH_CFG_TRC_RTFIL_SIGNAL_EN	.\oven\oven_5\rkhcfg.h	425;"	d
+RKH_CFG_TRC_RTFIL_SIGNAL_EN	.\oven\oven_6\rkhcfg.h	425;"	d
 RKH_CFG_TRC_RTFIL_SMA_EN	.\oven\oven_1\rkhcfg.h	417;"	d
 RKH_CFG_TRC_RTFIL_SMA_EN	.\oven\oven_2\rkhcfg.h	417;"	d
 RKH_CFG_TRC_RTFIL_SMA_EN	.\oven\oven_3\rkhcfg.h	417;"	d
 RKH_CFG_TRC_RTFIL_SMA_EN	.\oven\oven_4\rkhcfg.h	417;"	d
 RKH_CFG_TRC_RTFIL_SMA_EN	.\oven\oven_5\rkhcfg.h	417;"	d
+RKH_CFG_TRC_RTFIL_SMA_EN	.\oven\oven_6\rkhcfg.h	417;"	d
 RKH_CFG_TRC_SIZEOF_STREAM	.\oven\oven_1\rkhcfg.h	599;"	d
 RKH_CFG_TRC_SIZEOF_STREAM	.\oven\oven_2\rkhcfg.h	599;"	d
 RKH_CFG_TRC_SIZEOF_STREAM	.\oven\oven_3\rkhcfg.h	599;"	d
 RKH_CFG_TRC_SIZEOF_STREAM	.\oven\oven_4\rkhcfg.h	599;"	d
 RKH_CFG_TRC_SIZEOF_STREAM	.\oven\oven_5\rkhcfg.h	599;"	d
+RKH_CFG_TRC_SIZEOF_STREAM	.\oven\oven_6\rkhcfg.h	599;"	d
 RKH_CFG_TRC_SMA_DCH_EN	.\oven\oven_1\rkhcfg.h	503;"	d
 RKH_CFG_TRC_SMA_DCH_EN	.\oven\oven_2\rkhcfg.h	503;"	d
 RKH_CFG_TRC_SMA_DCH_EN	.\oven\oven_3\rkhcfg.h	503;"	d
 RKH_CFG_TRC_SMA_DCH_EN	.\oven\oven_4\rkhcfg.h	503;"	d
 RKH_CFG_TRC_SMA_DCH_EN	.\oven\oven_5\rkhcfg.h	503;"	d
+RKH_CFG_TRC_SMA_DCH_EN	.\oven\oven_6\rkhcfg.h	503;"	d
 RKH_CFG_TRC_SMA_EN	.\oven\oven_1\rkhcfg.h	461;"	d
 RKH_CFG_TRC_SMA_EN	.\oven\oven_2\rkhcfg.h	461;"	d
 RKH_CFG_TRC_SMA_EN	.\oven\oven_3\rkhcfg.h	461;"	d
 RKH_CFG_TRC_SMA_EN	.\oven\oven_4\rkhcfg.h	461;"	d
 RKH_CFG_TRC_SMA_EN	.\oven\oven_5\rkhcfg.h	461;"	d
+RKH_CFG_TRC_SMA_EN	.\oven\oven_6\rkhcfg.h	461;"	d
 RKH_CFG_TRC_SM_CLRH_EN	.\oven\oven_1\rkhcfg.h	510;"	d
 RKH_CFG_TRC_SM_CLRH_EN	.\oven\oven_2\rkhcfg.h	510;"	d
 RKH_CFG_TRC_SM_CLRH_EN	.\oven\oven_3\rkhcfg.h	510;"	d
 RKH_CFG_TRC_SM_CLRH_EN	.\oven\oven_4\rkhcfg.h	510;"	d
 RKH_CFG_TRC_SM_CLRH_EN	.\oven\oven_5\rkhcfg.h	510;"	d
+RKH_CFG_TRC_SM_CLRH_EN	.\oven\oven_6\rkhcfg.h	510;"	d
 RKH_CFG_TRC_SM_EN	.\oven\oven_1\rkhcfg.h	475;"	d
 RKH_CFG_TRC_SM_EN	.\oven\oven_2\rkhcfg.h	475;"	d
 RKH_CFG_TRC_SM_EN	.\oven\oven_3\rkhcfg.h	475;"	d
 RKH_CFG_TRC_SM_EN	.\oven\oven_4\rkhcfg.h	475;"	d
 RKH_CFG_TRC_SM_EN	.\oven\oven_5\rkhcfg.h	475;"	d
+RKH_CFG_TRC_SM_EN	.\oven\oven_6\rkhcfg.h	475;"	d
 RKH_CFG_TRC_SM_ENSTATE_EN	.\oven\oven_1\rkhcfg.h	531;"	d
 RKH_CFG_TRC_SM_ENSTATE_EN	.\oven\oven_2\rkhcfg.h	531;"	d
 RKH_CFG_TRC_SM_ENSTATE_EN	.\oven\oven_3\rkhcfg.h	531;"	d
 RKH_CFG_TRC_SM_ENSTATE_EN	.\oven\oven_4\rkhcfg.h	531;"	d
 RKH_CFG_TRC_SM_ENSTATE_EN	.\oven\oven_5\rkhcfg.h	531;"	d
+RKH_CFG_TRC_SM_ENSTATE_EN	.\oven\oven_6\rkhcfg.h	531;"	d
 RKH_CFG_TRC_SM_EXSTATE_EN	.\oven\oven_1\rkhcfg.h	538;"	d
 RKH_CFG_TRC_SM_EXSTATE_EN	.\oven\oven_2\rkhcfg.h	538;"	d
 RKH_CFG_TRC_SM_EXSTATE_EN	.\oven\oven_3\rkhcfg.h	538;"	d
 RKH_CFG_TRC_SM_EXSTATE_EN	.\oven\oven_4\rkhcfg.h	538;"	d
 RKH_CFG_TRC_SM_EXSTATE_EN	.\oven\oven_5\rkhcfg.h	538;"	d
+RKH_CFG_TRC_SM_EXSTATE_EN	.\oven\oven_6\rkhcfg.h	538;"	d
 RKH_CFG_TRC_SM_INIT_EN	.\oven\oven_1\rkhcfg.h	496;"	d
 RKH_CFG_TRC_SM_INIT_EN	.\oven\oven_2\rkhcfg.h	496;"	d
 RKH_CFG_TRC_SM_INIT_EN	.\oven\oven_3\rkhcfg.h	496;"	d
 RKH_CFG_TRC_SM_INIT_EN	.\oven\oven_4\rkhcfg.h	496;"	d
 RKH_CFG_TRC_SM_INIT_EN	.\oven\oven_5\rkhcfg.h	496;"	d
+RKH_CFG_TRC_SM_INIT_EN	.\oven\oven_6\rkhcfg.h	496;"	d
 RKH_CFG_TRC_SM_NENEX_EN	.\oven\oven_1\rkhcfg.h	546;"	d
 RKH_CFG_TRC_SM_NENEX_EN	.\oven\oven_2\rkhcfg.h	546;"	d
 RKH_CFG_TRC_SM_NENEX_EN	.\oven\oven_3\rkhcfg.h	546;"	d
 RKH_CFG_TRC_SM_NENEX_EN	.\oven\oven_4\rkhcfg.h	546;"	d
 RKH_CFG_TRC_SM_NENEX_EN	.\oven\oven_5\rkhcfg.h	546;"	d
+RKH_CFG_TRC_SM_NENEX_EN	.\oven\oven_6\rkhcfg.h	546;"	d
 RKH_CFG_TRC_SM_NTRNACT_EN	.\oven\oven_1\rkhcfg.h	554;"	d
 RKH_CFG_TRC_SM_NTRNACT_EN	.\oven\oven_2\rkhcfg.h	554;"	d
 RKH_CFG_TRC_SM_NTRNACT_EN	.\oven\oven_3\rkhcfg.h	554;"	d
 RKH_CFG_TRC_SM_NTRNACT_EN	.\oven\oven_4\rkhcfg.h	554;"	d
 RKH_CFG_TRC_SM_NTRNACT_EN	.\oven\oven_5\rkhcfg.h	554;"	d
+RKH_CFG_TRC_SM_NTRNACT_EN	.\oven\oven_6\rkhcfg.h	554;"	d
 RKH_CFG_TRC_SM_PROCESS_EN	.\oven\oven_1\rkhcfg.h	569;"	d
 RKH_CFG_TRC_SM_PROCESS_EN	.\oven\oven_2\rkhcfg.h	569;"	d
 RKH_CFG_TRC_SM_PROCESS_EN	.\oven\oven_3\rkhcfg.h	569;"	d
 RKH_CFG_TRC_SM_PROCESS_EN	.\oven\oven_4\rkhcfg.h	569;"	d
 RKH_CFG_TRC_SM_PROCESS_EN	.\oven\oven_5\rkhcfg.h	569;"	d
+RKH_CFG_TRC_SM_PROCESS_EN	.\oven\oven_6\rkhcfg.h	569;"	d
 RKH_CFG_TRC_SM_STATE_EN	.\oven\oven_1\rkhcfg.h	524;"	d
 RKH_CFG_TRC_SM_STATE_EN	.\oven\oven_2\rkhcfg.h	524;"	d
 RKH_CFG_TRC_SM_STATE_EN	.\oven\oven_3\rkhcfg.h	524;"	d
 RKH_CFG_TRC_SM_STATE_EN	.\oven\oven_4\rkhcfg.h	524;"	d
 RKH_CFG_TRC_SM_STATE_EN	.\oven\oven_5\rkhcfg.h	524;"	d
+RKH_CFG_TRC_SM_STATE_EN	.\oven\oven_6\rkhcfg.h	524;"	d
 RKH_CFG_TRC_SM_TRN_EN	.\oven\oven_1\rkhcfg.h	517;"	d
 RKH_CFG_TRC_SM_TRN_EN	.\oven\oven_2\rkhcfg.h	517;"	d
 RKH_CFG_TRC_SM_TRN_EN	.\oven\oven_3\rkhcfg.h	517;"	d
 RKH_CFG_TRC_SM_TRN_EN	.\oven\oven_4\rkhcfg.h	517;"	d
 RKH_CFG_TRC_SM_TRN_EN	.\oven\oven_5\rkhcfg.h	517;"	d
+RKH_CFG_TRC_SM_TRN_EN	.\oven\oven_6\rkhcfg.h	517;"	d
 RKH_CFG_TRC_SM_TS_STATE_EN	.\oven\oven_1\rkhcfg.h	562;"	d
 RKH_CFG_TRC_SM_TS_STATE_EN	.\oven\oven_2\rkhcfg.h	562;"	d
 RKH_CFG_TRC_SM_TS_STATE_EN	.\oven\oven_3\rkhcfg.h	562;"	d
 RKH_CFG_TRC_SM_TS_STATE_EN	.\oven\oven_4\rkhcfg.h	562;"	d
 RKH_CFG_TRC_SM_TS_STATE_EN	.\oven\oven_5\rkhcfg.h	562;"	d
+RKH_CFG_TRC_SM_TS_STATE_EN	.\oven\oven_6\rkhcfg.h	562;"	d
 RKH_CFG_TRC_TMR_EN	.\oven\oven_1\rkhcfg.h	468;"	d
 RKH_CFG_TRC_TMR_EN	.\oven\oven_2\rkhcfg.h	468;"	d
 RKH_CFG_TRC_TMR_EN	.\oven\oven_3\rkhcfg.h	468;"	d
 RKH_CFG_TRC_TMR_EN	.\oven\oven_4\rkhcfg.h	468;"	d
 RKH_CFG_TRC_TMR_EN	.\oven\oven_5\rkhcfg.h	468;"	d
+RKH_CFG_TRC_TMR_EN	.\oven\oven_6\rkhcfg.h	468;"	d
 RKH_CFG_TRC_TSTAMP_EN	.\oven\oven_1\rkhcfg.h	592;"	d
 RKH_CFG_TRC_TSTAMP_EN	.\oven\oven_2\rkhcfg.h	592;"	d
 RKH_CFG_TRC_TSTAMP_EN	.\oven\oven_3\rkhcfg.h	592;"	d
 RKH_CFG_TRC_TSTAMP_EN	.\oven\oven_4\rkhcfg.h	592;"	d
 RKH_CFG_TRC_TSTAMP_EN	.\oven\oven_5\rkhcfg.h	592;"	d
+RKH_CFG_TRC_TSTAMP_EN	.\oven\oven_6\rkhcfg.h	592;"	d
 RKH_CFG_TRC_USER_TRACE_EN	.\oven\oven_1\rkhcfg.h	433;"	d
 RKH_CFG_TRC_USER_TRACE_EN	.\oven\oven_2\rkhcfg.h	433;"	d
 RKH_CFG_TRC_USER_TRACE_EN	.\oven\oven_3\rkhcfg.h	433;"	d
 RKH_CFG_TRC_USER_TRACE_EN	.\oven\oven_4\rkhcfg.h	433;"	d
 RKH_CFG_TRC_USER_TRACE_EN	.\oven\oven_5\rkhcfg.h	433;"	d
+RKH_CFG_TRC_USER_TRACE_EN	.\oven\oven_6\rkhcfg.h	433;"	d
 RKH_CHOICE	.\rkh\source\include\rkhitl.h	1597;"	d
 RKH_CHOICE_ENABLED	.\rkh\source\include\rkhitl.h	1641;"	d
 RKH_CHOICE_OR_CONDITIONAL_ENABLED	.\rkh\source\include\rkhitl.h	1647;"	d
@@ -986,9 +853,11 @@ RKH_CLR_STEP	.\rkh\source\rkh.c	129;"	d	file:
 RKH_CND_NFOUND	.\rkh\source\include\rkh.h	/^	RKH_CND_NFOUND,$/;"	e
 RKH_COMPOSITE	.\rkh\source\include\rkhitl.h	1592;"	d
 RKH_CONDITIONAL	.\rkh\source\include\rkhitl.h	1596;"	d
-RKH_CPUSR_TYPE	.\rkh\source\include\rkhitl.h	2021;"	d
+RKH_CPUSR_TYPE	.\rkh\source\include\rkhitl.h	2031;"	d
 RKH_CREATE_BASIC_STATE	.\oven\oven_2\oven.c	/^RKH_CREATE_BASIC_STATE( ready, NULL, NULL,  &close, NULL );$/;"	v
 RKH_CREATE_BASIC_STATE	.\oven\oven_3\oven.c	/^RKH_CREATE_BASIC_STATE( ready, NULL, NULL,  &close, NULL );$/;"	v
+RKH_CREATE_BASIC_STATE	.\oven\oven_6\oven.c	/^RKH_CREATE_BASIC_STATE( off, NULL, NULL,  &cooking, NULL );$/;"	v
+RKH_CREATE_BASIC_STATE	.\oven\oven_6\oven.c	/^RKH_CREATE_BASIC_STATE( on, start_cooking, stop_cooking,  &cooking, NULL );$/;"	v
 RKH_CREATE_BASIC_STATE	.\rkh\source\include\rkh.h	281;"	d
 RKH_CREATE_BRANCH_TABLE	.\rkh\source\include\rkh.h	881;"	d
 RKH_CREATE_CHOICE_STATE	.\rkh\source\include\rkh.h	353;"	d
@@ -1001,6 +870,7 @@ RKH_CREATE_REF_EXPNT	.\rkh\source\include\rkh.h	702;"	d
 RKH_CREATE_REF_SUBMACHINE	.\rkh\source\include\rkh.h	649;"	d
 RKH_CREATE_SHALLOW_HISTORY_STATE	.\oven\oven_4\oven.c	/^RKH_CREATE_SHALLOW_HISTORY_STATE( close_hist, &close );$/;"	v
 RKH_CREATE_SHALLOW_HISTORY_STATE	.\oven\oven_5\oven.c	/^RKH_CREATE_SHALLOW_HISTORY_STATE( close_hist, &close );$/;"	v
+RKH_CREATE_SHALLOW_HISTORY_STATE	.\oven\oven_6\oven.c	/^RKH_CREATE_SHALLOW_HISTORY_STATE( close_hist, &close );$/;"	v
 RKH_CREATE_SHALLOW_HISTORY_STATE	.\rkh\source\include\rkh.h	419;"	d
 RKH_CREATE_SUBMACHINE_STATE	.\rkh\source\include\rkh.h	479;"	d
 RKH_CREATE_TRANS_TABLE	.\rkh\source\include\rkh.h	773;"	d
@@ -1020,7 +890,7 @@ RKH_DECLARE_TR_TBL	.\rkh\source\include\rkh.h	1143;"	d
 RKH_DEEP_ENABLED	.\rkh\source\include\rkhitl.h	1625;"	d
 RKH_DHISTORY	.\rkh\source\include\rkhitl.h	1599;"	d
 RKH_DISABLED	.\rkh\source\include\rkhdef.h	64;"	d
-RKH_DIS_INTERRUPT	.\rkh\source\include\rkhitl.h	1975;"	d
+RKH_DIS_INTERRUPT	.\rkh\source\include\rkhitl.h	1985;"	d
 RKH_DIS_INTERRUPT	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	166;"	d
 RKH_DIS_INTERRUPT	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	159;"	d
 RKH_DIS_INTERRUPT	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	164;"	d
@@ -1032,22 +902,22 @@ RKH_DIS_INTERRUPT	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	159;"	d
 RKH_DIS_INTERRUPT	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	167;"	d
 RKH_DYNE_GET	.\rkh\source\include\rkh.h	116;"	d
 RKH_DYNE_GET	.\rkh\source\include\rkh.h	125;"	d
-RKH_DYNE_GET	.\rkh\source\include\rkhitl.h	2117;"	d
+RKH_DYNE_GET	.\rkh\source\include\rkhitl.h	2127;"	d
 RKH_DYNE_GET_ESIZE	.\rkh\source\include\rkh.h	113;"	d
 RKH_DYNE_GET_ESIZE	.\rkh\source\include\rkh.h	124;"	d
-RKH_DYNE_GET_ESIZE	.\rkh\source\include\rkhitl.h	2102;"	d
+RKH_DYNE_GET_ESIZE	.\rkh\source\include\rkhitl.h	2112;"	d
 RKH_DYNE_INIT	.\rkh\source\include\rkh.h	110;"	d
 RKH_DYNE_INIT	.\rkh\source\include\rkh.h	123;"	d
-RKH_DYNE_INIT	.\rkh\source\include\rkhitl.h	2090;"	d
+RKH_DYNE_INIT	.\rkh\source\include\rkhitl.h	2100;"	d
 RKH_DYNE_PUT	.\rkh\source\include\rkh.h	119;"	d
 RKH_DYNE_PUT	.\rkh\source\include\rkh.h	126;"	d
-RKH_DYNE_PUT	.\rkh\source\include\rkhitl.h	2131;"	d
+RKH_DYNE_PUT	.\rkh\source\include\rkhitl.h	2141;"	d
 RKH_DYNE_TYPE	.\rkh\source\include\rkh.h	108;"	d
 RKH_DYNE_TYPE	.\rkh\source\include\rkh.h	122;"	d
-RKH_DYNE_TYPE	.\rkh\source\include\rkhitl.h	2073;"	d
+RKH_DYNE_TYPE	.\rkh\source\include\rkhitl.h	2083;"	d
 RKH_EBTBL	.\rkh\source\include\rkh.h	927;"	d
 RKH_ENABLED	.\rkh\source\include\rkhdef.h	65;"	d
-RKH_ENA_INTERRUPT	.\rkh\source\include\rkhitl.h	1976;"	d
+RKH_ENA_INTERRUPT	.\rkh\source\include\rkhitl.h	1986;"	d
 RKH_ENA_INTERRUPT	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	167;"	d
 RKH_ENA_INTERRUPT	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	160;"	d
 RKH_ENA_INTERRUPT	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	165;"	d
@@ -1064,7 +934,7 @@ RKH_ENPCN_T	.\rkh\source\include\rkhitl.h	/^typedef struct RKH_ENPCN_T$/;"	s
 RKH_ENPCN_T	.\rkh\source\include\rkhitl.h	/^} RKH_ENPCN_T;$/;"	t
 RKH_ENPOINT	.\rkh\source\include\rkhitl.h	1600;"	d
 RKH_ENSURE	.\rkh\source\include\rkhassert.h	235;"	d
-RKH_ENTER_CRITICAL	.\rkh\source\include\rkhitl.h	2024;"	d
+RKH_ENTER_CRITICAL	.\rkh\source\include\rkhitl.h	2034;"	d
 RKH_ENTER_CRITICAL	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	169;"	d
 RKH_ENTER_CRITICAL	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	162;"	d
 RKH_ENTER_CRITICAL	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	167;"	d
@@ -1074,40 +944,15 @@ RKH_ENTER_CRITICAL	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\rkhport
 RKH_ENTER_CRITICAL	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	171;"	d
 RKH_ENTER_CRITICAL	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	168;"	d
 RKH_ENTER_CRITICAL	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	175;"	d
-RKH_ENTER_CRITICAL_	.\rkh\source\include\rkhitl.h	2139;"	d
-RKH_ENTER_CRITICAL_	.\rkh\source\include\rkhitl.h	2144;"	d
+RKH_ENTER_CRITICAL_	.\rkh\source\include\rkhitl.h	2149;"	d
+RKH_ENTER_CRITICAL_	.\rkh\source\include\rkhitl.h	2154;"	d
 RKH_ENT_ACT_T	.\rkh\source\include\rkhitl.h	/^		typedef void ( *RKH_ENT_ACT_T )(	const struct RKH_SMA_T *sma, $/;"	t
 RKH_ENT_ACT_T	.\rkh\source\include\rkhitl.h	/^		typedef void ( *RKH_ENT_ACT_T )( const struct RKH_SMA_T *sma );$/;"	t
 RKH_ENT_ACT_T	.\rkh\source\include\rkhitl.h	/^		typedef void ( *RKH_ENT_ACT_T )( const struct RKH_ST_T *state );$/;"	t
 RKH_ENT_ACT_T	.\rkh\source\include\rkhitl.h	/^		typedef void ( *RKH_ENT_ACT_T )( void );$/;"	t
 RKH_EN_CNNPNT	.\rkh\source\include\rkh.h	618;"	d
-RKH_EN_DEFERRED_EVENT	.\ahsm\rkhcfg.h	87;"	d
-RKH_EN_DEFERRED_EVENT	.\trtemp\rkhcfg.h	86;"	d
-RKH_EN_DOXYGEN	.\rkh\source\include\rkhitl.h	1792;"	d
-RKH_EN_DYNAMIC_EVENT	.\ahsm\rkhcfg.h	51;"	d
-RKH_EN_DYNAMIC_EVENT	.\trtemp\rkhcfg.h	51;"	d
-RKH_EN_NATIVE_DYN_EVENT	.\ahsm\rkhcfg.h	229;"	d
-RKH_EN_NATIVE_DYN_EVENT	.\trtemp\rkhcfg.h	211;"	d
-RKH_EN_NATIVE_EQUEUE	.\ahsm\rkhcfg.h	218;"	d
-RKH_EN_NATIVE_EQUEUE	.\trtemp\rkhcfg.h	200;"	d
-RKH_EN_NATIVE_SCHEDULER	.\ahsm\rkhcfg.h	200;"	d
-RKH_EN_NATIVE_SCHEDULER	.\ahsm\rkhcfg.h	204;"	d
-RKH_EN_NATIVE_SCHEDULER	.\ahsm\rkhcfg.h	208;"	d
-RKH_EN_NATIVE_SCHEDULER	.\trtemp\rkhcfg.h	187;"	d
-RKH_EN_NATIVE_SCHEDULER	.\trtemp\rkhcfg.h	191;"	d
-RKH_EN_REENTRANT	.\ahsm\rkhcfg.h	237;"	d
-RKH_EN_REENTRANT	.\trtemp\rkhcfg.h	219;"	d
-RKH_EN_SMA_THREAD	.\ahsm\rkhcfg.h	160;"	d
-RKH_EN_SMA_THREAD	.\ahsm\rkhcfg.h	164;"	d
-RKH_EN_SMA_THREAD	.\ahsm\rkhcfg.h	168;"	d
-RKH_EN_SMA_THREAD	.\trtemp\rkhcfg.h	157;"	d
-RKH_EN_SMA_THREAD	.\trtemp\rkhcfg.h	161;"	d
-RKH_EN_SMA_THREAD_DATA	.\ahsm\rkhcfg.h	179;"	d
-RKH_EN_SMA_THREAD_DATA	.\ahsm\rkhcfg.h	183;"	d
-RKH_EN_SMA_THREAD_DATA	.\ahsm\rkhcfg.h	187;"	d
-RKH_EN_SMA_THREAD_DATA	.\trtemp\rkhcfg.h	171;"	d
-RKH_EN_SMA_THREAD_DATA	.\trtemp\rkhcfg.h	175;"	d
-RKH_EQ_TYPE	.\rkh\source\include\rkhitl.h	1906;"	d
+RKH_EN_DOXYGEN	.\rkh\source\include\rkhitl.h	1802;"	d
+RKH_EQ_TYPE	.\rkh\source\include\rkhitl.h	1916;"	d
 RKH_EQ_TYPE	.\rkh\source\include\rkhs.h	57;"	d
 RKH_EQ_TYPE	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	173;"	d
 RKH_EQ_TYPE	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	166;"	d
@@ -1130,26 +975,26 @@ RKH_EVT_NFOUND	.\rkh\source\include\rkh.h	/^	RKH_EVT_NFOUND,$/;"	e
 RKH_EVT_PROC	.\rkh\source\include\rkh.h	/^	RKH_EVT_PROC,$/;"	e
 RKH_EVT_T	.\rkh\source\include\rkhevt.h	/^typedef struct RKH_EVT_T$/;"	s
 RKH_EVT_T	.\rkh\source\include\rkhevt.h	/^} RKH_EVT_T;$/;"	t
-RKH_EXEC_ENTRY	.\rkh\source\include\rkhitl.h	2468;"	d
-RKH_EXEC_ENTRY	.\rkh\source\include\rkhitl.h	2477;"	d
-RKH_EXEC_ENTRY	.\rkh\source\include\rkhitl.h	2488;"	d
-RKH_EXEC_ENTRY	.\rkh\source\include\rkhitl.h	2496;"	d
+RKH_EXEC_ENTRY	.\rkh\source\include\rkhitl.h	2478;"	d
+RKH_EXEC_ENTRY	.\rkh\source\include\rkhitl.h	2487;"	d
+RKH_EXEC_ENTRY	.\rkh\source\include\rkhitl.h	2498;"	d
+RKH_EXEC_ENTRY	.\rkh\source\include\rkhitl.h	2506;"	d
 RKH_EXEC_ENTRY_ACTION	.\rkh\source\rkh.c	207;"	d	file:
 RKH_EXEC_ENTRY_ACTION	.\rkh\source\rkh.c	228;"	d	file:
-RKH_EXEC_EXIT	.\rkh\source\include\rkhitl.h	2536;"	d
-RKH_EXEC_EXIT	.\rkh\source\include\rkhitl.h	2545;"	d
-RKH_EXEC_EXIT	.\rkh\source\include\rkhitl.h	2556;"	d
-RKH_EXEC_EXIT	.\rkh\source\include\rkhitl.h	2565;"	d
+RKH_EXEC_EXIT	.\rkh\source\include\rkhitl.h	2546;"	d
+RKH_EXEC_EXIT	.\rkh\source\include\rkhitl.h	2555;"	d
+RKH_EXEC_EXIT	.\rkh\source\include\rkhitl.h	2566;"	d
+RKH_EXEC_EXIT	.\rkh\source\include\rkhitl.h	2575;"	d
 RKH_EXEC_EXIT_ACTION	.\rkh\source\rkh.c	162;"	d	file:
 RKH_EXEC_EXIT_ACTION	.\rkh\source\rkh.c	200;"	d	file:
-RKH_EXEC_INIT	.\rkh\source\include\rkhitl.h	2176;"	d
-RKH_EXEC_INIT	.\rkh\source\include\rkhitl.h	2185;"	d
-RKH_EXEC_INIT	.\rkh\source\include\rkhitl.h	2193;"	d
-RKH_EXEC_INIT	.\rkh\source\include\rkhitl.h	2200;"	d
+RKH_EXEC_INIT	.\rkh\source\include\rkhitl.h	2186;"	d
+RKH_EXEC_INIT	.\rkh\source\include\rkhitl.h	2195;"	d
+RKH_EXEC_INIT	.\rkh\source\include\rkhitl.h	2203;"	d
+RKH_EXEC_INIT	.\rkh\source\include\rkhitl.h	2210;"	d
 RKH_EXEC_THOOK	.\rkh\source\rkhtim.c	58;"	d	file:
 RKH_EXEC_THOOK	.\rkh\source\rkhtim.c	64;"	d	file:
 RKH_EXEC_TRANSITION	.\rkh\source\rkh.c	118;"	d	file:
-RKH_EXIT_CRITICAL	.\rkh\source\include\rkhitl.h	2025;"	d
+RKH_EXIT_CRITICAL	.\rkh\source\include\rkhitl.h	2035;"	d
 RKH_EXIT_CRITICAL	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	170;"	d
 RKH_EXIT_CRITICAL	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	163;"	d
 RKH_EXIT_CRITICAL	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	168;"	d
@@ -1159,8 +1004,8 @@ RKH_EXIT_CRITICAL	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\rkhport.
 RKH_EXIT_CRITICAL	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.h	172;"	d
 RKH_EXIT_CRITICAL	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.h	169;"	d
 RKH_EXIT_CRITICAL	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.h	176;"	d
-RKH_EXIT_CRITICAL_	.\rkh\source\include\rkhitl.h	2140;"	d
-RKH_EXIT_CRITICAL_	.\rkh\source\include\rkhitl.h	2145;"	d
+RKH_EXIT_CRITICAL_	.\rkh\source\include\rkhitl.h	2150;"	d
+RKH_EXIT_CRITICAL_	.\rkh\source\include\rkhitl.h	2155;"	d
 RKH_EXPCN_T	.\rkh\source\include\rkhitl.h	/^typedef struct RKH_EXPCN_T$/;"	s
 RKH_EXPCN_T	.\rkh\source\include\rkhitl.h	/^} RKH_EXPCN_T;$/;"	t
 RKH_EXPOINT	.\rkh\source\include\rkhitl.h	1601;"	d
@@ -1238,16 +1083,6 @@ RKH_GUARD_T	.\rkh\source\include\rkhitl.h	/^	typedef rbool_t (*RKH_GUARD_T)( con
 RKH_GUARD_T	.\rkh\source\include\rkhitl.h	/^	typedef rbool_t (*RKH_GUARD_T)( const struct RKH_SMA_T *sma, $/;"	t
 RKH_GUARD_T	.\rkh\source\include\rkhitl.h	/^	typedef rbool_t (*RKH_GUARD_T)( void );$/;"	t
 RKH_HISTORY_ENABLED	.\rkh\source\include\rkhitl.h	1619;"	d
-RKH_HK_EN_DISPATCH	.\ahsm\rkhcfg.h	106;"	d
-RKH_HK_EN_DISPATCH	.\trtemp\rkhcfg.h	105;"	d
-RKH_HK_EN_EXIT	.\ahsm\rkhcfg.h	144;"	d
-RKH_HK_EN_EXIT	.\trtemp\rkhcfg.h	142;"	d
-RKH_HK_EN_SIGNAL	.\ahsm\rkhcfg.h	115;"	d
-RKH_HK_EN_SIGNAL	.\trtemp\rkhcfg.h	114;"	d
-RKH_HK_EN_START	.\ahsm\rkhcfg.h	134;"	d
-RKH_HK_EN_START	.\trtemp\rkhcfg.h	132;"	d
-RKH_HK_EN_TIMEOUT	.\ahsm\rkhcfg.h	125;"	d
-RKH_HK_EN_TIMEOUT	.\trtemp\rkhcfg.h	123;"	d
 RKH_HOOK_DISPATCH	.\rkh\source\include\rkhitl.h	1652;"	d
 RKH_HOOK_DISPATCH	.\rkh\source\include\rkhitl.h	1656;"	d
 RKH_HOOK_EXIT	.\rkh\source\include\rkhitl.h	1685;"	d
@@ -1289,11 +1124,7 @@ RKH_IUPDT_PUT	.\rkh\source\rkhrq.c	62;"	d	file:
 RKH_IUPDT_READ	.\rkh\source\rkhrq.c	60;"	d	file:
 RKH_IUPDT_READ	.\rkh\source\rkhrq.c	66;"	d	file:
 RKH_LOWEST_PRIO	.\rkh\source\include\rkhitl.h	155;"	d
-RKH_MAX_EPOOL	.\ahsm\rkhcfg.h	61;"	d
-RKH_MAX_EPOOL	.\trtemp\rkhcfg.h	61;"	d
 RKH_MAX_NUM_TE_PER_GROUP	.\rkh\source\include\rkhtrc.h	55;"	d
-RKH_MAX_SMA	.\ahsm\rkhcfg.h	43;"	d
-RKH_MAX_SMA	.\trtemp\rkhcfg.h	43;"	d
 RKH_MEM_T	.\rkh\source\include\rkhtrc.h	/^	RKH_MEM_T,		\/**< up to 255-bytes memory block format *\/$/;"	e	enum:RKH_TRC_FMT
 RKH_MODULE_DESC	.\rkh\source\include\rkh.h	92;"	d
 RKH_MODULE_GET_DESC	.\rkh\source\include\rkh.h	101;"	d
@@ -1311,22 +1142,6 @@ RKH_MPI_T	.\rkh\source\include\rkhmp.h	/^} RKH_MPI_T;$/;"	t
 RKH_MPNB_T	.\rkh\source\include\rkhmp.h	/^	typedef rui16_t RKH_MPNB_T;$/;"	t
 RKH_MPNB_T	.\rkh\source\include\rkhmp.h	/^	typedef rui32_t RKH_MPNB_T;$/;"	t
 RKH_MPNB_T	.\rkh\source\include\rkhmp.h	/^	typedef rui8_t RKH_MPNB_T;$/;"	t
-RKH_MP_EN	.\ahsm\rkhcfg.h	699;"	d
-RKH_MP_EN	.\trtemp\rkhcfg.h	680;"	d
-RKH_MP_EN_GET_BSIZE	.\ahsm\rkhcfg.h	728;"	d
-RKH_MP_EN_GET_BSIZE	.\trtemp\rkhcfg.h	709;"	d
-RKH_MP_EN_GET_INFO	.\ahsm\rkhcfg.h	755;"	d
-RKH_MP_EN_GET_INFO	.\trtemp\rkhcfg.h	736;"	d
-RKH_MP_EN_GET_LWM	.\ahsm\rkhcfg.h	747;"	d
-RKH_MP_EN_GET_LWM	.\trtemp\rkhcfg.h	728;"	d
-RKH_MP_EN_GET_NFREE	.\ahsm\rkhcfg.h	737;"	d
-RKH_MP_EN_GET_NFREE	.\trtemp\rkhcfg.h	718;"	d
-RKH_MP_REDUCED	.\ahsm\rkhcfg.h	706;"	d
-RKH_MP_REDUCED	.\trtemp\rkhcfg.h	687;"	d
-RKH_MP_SIZEOF_BSIZE	.\ahsm\rkhcfg.h	713;"	d
-RKH_MP_SIZEOF_BSIZE	.\trtemp\rkhcfg.h	694;"	d
-RKH_MP_SIZEOF_NBLOCK	.\ahsm\rkhcfg.h	720;"	d
-RKH_MP_SIZEOF_NBLOCK	.\trtemp\rkhcfg.h	701;"	d
 RKH_MP_START	.\rkh\source\include\rkhtrc.h	163;"	d
 RKH_MP_T	.\rkh\source\include\rkhmp.h	/^typedef struct RKH_MP_T$/;"	s
 RKH_MP_T	.\rkh\source\include\rkhmp.h	/^} RKH_MP_T;$/;"	t
@@ -1348,7 +1163,7 @@ RKH_OBJ_T	.\rkh\source\include\rkhtrc.h	/^	RKH_OBJ_T,		\/**< object pointer form
 RKH_OFF	.\rkh\source\include\rkhdef.h	73;"	d
 RKH_OK	.\rkh\source\include\rkhdef.h	80;"	d
 RKH_ON	.\rkh\source\include\rkhdef.h	74;"	d
-RKH_OSSIGNAL_TYPE	.\rkh\source\include\rkhitl.h	1956;"	d
+RKH_OSSIGNAL_TYPE	.\rkh\source\include\rkhitl.h	1966;"	d
 RKH_OSSIGNAL_TYPE	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	174;"	d
 RKH_OSSIGNAL_TYPE	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	167;"	d
 RKH_OSSIGNAL_TYPE	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	172;"	d
@@ -1382,27 +1197,9 @@ RKH_RQNE_T	.\rkh\source\include\rkhrq.h	/^	typedef rui16_t RKH_RQNE_T;$/;"	t
 RKH_RQNE_T	.\rkh\source\include\rkhrq.h	/^	typedef rui32_t RKH_RQNE_T;$/;"	t
 RKH_RQNE_T	.\rkh\source\include\rkhrq.h	/^	typedef rui8_t RKH_RQNE_T;$/;"	t
 RKH_RQ_EMPTY	.\rkh\source\include\rkhrq.h	/^	RKH_RQ_OK, RKH_RQ_EMPTY, RKH_RQ_FULL$/;"	e
-RKH_RQ_EN	.\ahsm\rkhcfg.h	621;"	d
-RKH_RQ_EN	.\trtemp\rkhcfg.h	602;"	d
-RKH_RQ_EN_DEPLETE	.\ahsm\rkhcfg.h	663;"	d
-RKH_RQ_EN_DEPLETE	.\trtemp\rkhcfg.h	644;"	d
-RKH_RQ_EN_GET_INFO	.\ahsm\rkhcfg.h	646;"	d
-RKH_RQ_EN_GET_INFO	.\trtemp\rkhcfg.h	627;"	d
-RKH_RQ_EN_GET_LWMARK	.\ahsm\rkhcfg.h	638;"	d
-RKH_RQ_EN_GET_LWMARK	.\trtemp\rkhcfg.h	619;"	d
-RKH_RQ_EN_GET_NELEMS	.\ahsm\rkhcfg.h	680;"	d
-RKH_RQ_EN_GET_NELEMS	.\trtemp\rkhcfg.h	661;"	d
-RKH_RQ_EN_IS_FULL	.\ahsm\rkhcfg.h	671;"	d
-RKH_RQ_EN_IS_FULL	.\trtemp\rkhcfg.h	652;"	d
-RKH_RQ_EN_PUT_LIFO	.\ahsm\rkhcfg.h	689;"	d
-RKH_RQ_EN_PUT_LIFO	.\trtemp\rkhcfg.h	670;"	d
-RKH_RQ_EN_READ	.\ahsm\rkhcfg.h	654;"	d
-RKH_RQ_EN_READ	.\trtemp\rkhcfg.h	635;"	d
 RKH_RQ_FULL	.\rkh\source\include\rkhrq.h	/^	RKH_RQ_OK, RKH_RQ_EMPTY, RKH_RQ_FULL$/;"	e
 RKH_RQ_IS_EMPTY	.\rkh\source\include\rkhrq.h	256;"	d
 RKH_RQ_OK	.\rkh\source\include\rkhrq.h	/^	RKH_RQ_OK, RKH_RQ_EMPTY, RKH_RQ_FULL$/;"	e
-RKH_RQ_SIZEOF_NELEM	.\ahsm\rkhcfg.h	629;"	d
-RKH_RQ_SIZEOF_NELEM	.\trtemp\rkhcfg.h	610;"	d
 RKH_RQ_START	.\rkh\source\include\rkhtrc.h	164;"	d
 RKH_RQ_T	.\rkh\source\include\rkhrq.h	/^typedef struct RKH_RQ_T$/;"	s
 RKH_RQ_T	.\rkh\source\include\rkhrq.h	/^} RKH_RQ_T;$/;"	t
@@ -1433,72 +1230,24 @@ RKH_SHIST_T	.\rkh\source\include\rkhitl.h	/^} RKH_SHIST_T;$/;"	t
 RKH_SIG_T	.\rkh\source\include\rkhevt.h	/^	typedef rui16_t RKH_SIG_T;$/;"	t
 RKH_SIG_T	.\rkh\source\include\rkhevt.h	/^	typedef rui32_t RKH_SIG_T;$/;"	t
 RKH_SIG_T	.\rkh\source\include\rkhevt.h	/^	typedef rui8_t RKH_SIG_T;$/;"	t
-RKH_SIZEOF_ESIZE	.\ahsm\rkhcfg.h	79;"	d
-RKH_SIZEOF_ESIZE	.\trtemp\rkhcfg.h	78;"	d
-RKH_SIZEOF_EVENT	.\ahsm\rkhcfg.h	70;"	d
-RKH_SIZEOF_EVENT	.\trtemp\rkhcfg.h	70;"	d
 RKH_SMAI_T	.\rkh\source\include\rkhitl.h	/^typedef struct RKH_SMAI_T$/;"	s
 RKH_SMAI_T	.\rkh\source\include\rkhitl.h	/^} RKH_SMAI_T;$/;"	t
 RKH_SMA_ACTIVATE	.\rkh\source\include\rkh.h	1696;"	d
 RKH_SMA_ACTIVATE	.\rkh\source\include\rkh.h	1704;"	d
 RKH_SMA_ACTIVATE	.\rkh\source\include\rkh.h	1716;"	d
 RKH_SMA_ACTIVATE	.\rkh\source\include\rkh.h	1724;"	d
-RKH_SMA_BLOCK	.\rkh\source\include\rkhitl.h	2036;"	d
+RKH_SMA_BLOCK	.\rkh\source\include\rkhitl.h	2046;"	d
 RKH_SMA_BLOCK	.\rkh\source\include\rkhs.h	59;"	d
 RKH_SMA_BLOCK	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	178;"	d
 RKH_SMA_BLOCK	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	171;"	d
 RKH_SMA_BLOCK	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	176;"	d
 RKH_SMA_CREATE	.\rkh\source\include\rkh.h	1797;"	d
 RKH_SMA_DCLR	.\rkh\source\include\rkh.h	988;"	d
-RKH_SMA_EN_ACT_ARG_EVT	.\ahsm\rkhcfg.h	388;"	d
-RKH_SMA_EN_ACT_ARG_EVT	.\trtemp\rkhcfg.h	369;"	d
-RKH_SMA_EN_ACT_ARG_SMA	.\ahsm\rkhcfg.h	380;"	d
-RKH_SMA_EN_ACT_ARG_SMA	.\trtemp\rkhcfg.h	361;"	d
-RKH_SMA_EN_CONDITIONAL	.\ahsm\rkhcfg.h	338;"	d
-RKH_SMA_EN_CONDITIONAL	.\trtemp\rkhcfg.h	320;"	d
-RKH_SMA_EN_DEEP_HISTORY	.\ahsm\rkhcfg.h	317;"	d
-RKH_SMA_EN_DEEP_HISTORY	.\trtemp\rkhcfg.h	299;"	d
-RKH_SMA_EN_ENT_ARG_SMA	.\ahsm\rkhcfg.h	364;"	d
-RKH_SMA_EN_ENT_ARG_SMA	.\trtemp\rkhcfg.h	345;"	d
-RKH_SMA_EN_EXT_ARG_SMA	.\ahsm\rkhcfg.h	372;"	d
-RKH_SMA_EN_EXT_ARG_SMA	.\trtemp\rkhcfg.h	353;"	d
-RKH_SMA_EN_GET_INFO	.\ahsm\rkhcfg.h	256;"	d
-RKH_SMA_EN_GET_INFO	.\trtemp\rkhcfg.h	238;"	d
-RKH_SMA_EN_GRD_ARG_EVT	.\ahsm\rkhcfg.h	396;"	d
-RKH_SMA_EN_GRD_ARG_EVT	.\trtemp\rkhcfg.h	377;"	d
-RKH_SMA_EN_GRD_ARG_SMA	.\ahsm\rkhcfg.h	404;"	d
-RKH_SMA_EN_GRD_ARG_SMA	.\trtemp\rkhcfg.h	385;"	d
-RKH_SMA_EN_HCAL	.\ahsm\rkhcfg.h	285;"	d
-RKH_SMA_EN_HCAL	.\trtemp\rkhcfg.h	267;"	d
-RKH_SMA_EN_ID	.\ahsm\rkhcfg.h	248;"	d
-RKH_SMA_EN_ID	.\trtemp\rkhcfg.h	230;"	d
-RKH_SMA_EN_IEVENT	.\ahsm\rkhcfg.h	152;"	d
-RKH_SMA_EN_IEVENT	.\trtemp\rkhcfg.h	150;"	d
-RKH_SMA_EN_INIT_ARG_SMA	.\ahsm\rkhcfg.h	356;"	d
-RKH_SMA_EN_INIT_ARG_SMA	.\trtemp\rkhcfg.h	337;"	d
-RKH_SMA_EN_JUNCTION	.\ahsm\rkhcfg.h	331;"	d
-RKH_SMA_EN_JUNCTION	.\trtemp\rkhcfg.h	313;"	d
-RKH_SMA_EN_PPRO	.\ahsm\rkhcfg.h	276;"	d
-RKH_SMA_EN_PPRO	.\trtemp\rkhcfg.h	258;"	d
-RKH_SMA_EN_PPRO_ARG_SMA	.\ahsm\rkhcfg.h	413;"	d
-RKH_SMA_EN_PPRO_ARG_SMA	.\trtemp\rkhcfg.h	394;"	d
-RKH_SMA_EN_PSEUDOSTATE	.\ahsm\rkhcfg.h	310;"	d
-RKH_SMA_EN_PSEUDOSTATE	.\trtemp\rkhcfg.h	292;"	d
-RKH_SMA_EN_SHALLOW_HISTORY	.\ahsm\rkhcfg.h	324;"	d
-RKH_SMA_EN_SHALLOW_HISTORY	.\trtemp\rkhcfg.h	306;"	d
-RKH_SMA_EN_STATE_ID	.\ahsm\rkhcfg.h	264;"	d
-RKH_SMA_EN_STATE_ID	.\trtemp\rkhcfg.h	246;"	d
-RKH_SMA_EN_SUBMACHINE	.\ahsm\rkhcfg.h	345;"	d
-RKH_SMA_EN_SUBMACHINE	.\trtemp\rkhcfg.h	327;"	d
-RKH_SMA_MAX_HCAL_DEPTH	.\ahsm\rkhcfg.h	294;"	d
-RKH_SMA_MAX_HCAL_DEPTH	.\trtemp\rkhcfg.h	276;"	d
-RKH_SMA_MAX_TRC_SEGS	.\ahsm\rkhcfg.h	303;"	d
-RKH_SMA_MAX_TRC_SEGS	.\trtemp\rkhcfg.h	285;"	d
 RKH_SMA_POST_FIFO	.\rkh\source\include\rkh.h	1893;"	d
 RKH_SMA_POST_FIFO	.\rkh\source\include\rkh.h	1899;"	d
 RKH_SMA_POST_LIFO	.\rkh\source\include\rkh.h	1961;"	d
 RKH_SMA_POST_LIFO	.\rkh\source\include\rkh.h	1967;"	d
-RKH_SMA_READY	.\rkh\source\include\rkhitl.h	2048;"	d
+RKH_SMA_READY	.\rkh\source\include\rkhitl.h	2058;"	d
 RKH_SMA_READY	.\rkh\source\include\rkhs.h	62;"	d
 RKH_SMA_READY	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	181;"	d
 RKH_SMA_READY	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	180;"	d
@@ -1508,7 +1257,7 @@ RKH_SMA_T	.\rkh\source\include\rkhitl.h	/^typedef struct RKH_SMA_T$/;"	s
 RKH_SMA_T	.\rkh\source\include\rkhitl.h	/^} RKH_SMA_T;$/;"	t
 RKH_SMA_TTBL_OFFSET	.\rkh\source\include\rkhtrc.h	218;"	d
 RKH_SMA_TTBL_RANGE	.\rkh\source\include\rkhtrc.h	182;"	d
-RKH_SMA_UNREADY	.\rkh\source\include\rkhitl.h	2059;"	d
+RKH_SMA_UNREADY	.\rkh\source\include\rkhitl.h	2069;"	d
 RKH_SMA_UNREADY	.\rkh\source\include\rkhs.h	65;"	d
 RKH_SMA_UNREADY	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	185;"	d
 RKH_SMA_UNREADY	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	183;"	d
@@ -1516,9 +1265,9 @@ RKH_SMA_UNREADY	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	183;"	d
 RKH_SM_START	.\rkh\source\include\rkhtrc.h	166;"	d
 RKH_SM_TTBL_OFFSET	.\rkh\source\include\rkhtrc.h	219;"	d
 RKH_SM_TTBL_RANGE	.\rkh\source\include\rkhtrc.h	183;"	d
-RKH_SR_ALLOC	.\rkh\source\include\rkhitl.h	2022;"	d
-RKH_SR_ALLOC	.\rkh\source\include\rkhitl.h	2137;"	d
-RKH_SR_ALLOC	.\rkh\source\include\rkhitl.h	2143;"	d
+RKH_SR_ALLOC	.\rkh\source\include\rkhitl.h	2032;"	d
+RKH_SR_ALLOC	.\rkh\source\include\rkhitl.h	2147;"	d
+RKH_SR_ALLOC	.\rkh\source\include\rkhitl.h	2153;"	d
 RKH_SSBM_T	.\rkh\source\include\rkhitl.h	/^typedef struct RKH_SSBM_T$/;"	s
 RKH_SSBM_T	.\rkh\source\include\rkhitl.h	/^} RKH_SSBM_T;$/;"	t
 RKH_STATIC_EVENT	.\rkh\source\include\rkh.h	2426;"	d
@@ -1601,7 +1350,7 @@ RKH_TG_USR	.\rkh\source\include\rkhtrc.h	/^	RKH_TG_USR,$/;"	e	enum:rkh_trc_group
 RKH_THIS_MODULE	.\rkh\source\include\rkhassert.h	126;"	d
 RKH_THIS_MODULE	.\rkh\source\include\rkhassert.h	209;"	d
 RKH_THK_T	.\rkh\source\include\rkhtim.h	/^typedef void ( *RKH_THK_T )( void *t );$/;"	t
-RKH_THREAD_TYPE	.\rkh\source\include\rkhitl.h	1932;"	d
+RKH_THREAD_TYPE	.\rkh\source\include\rkhitl.h	1942;"	d
 RKH_THREAD_TYPE	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.h	175;"	d
 RKH_THREAD_TYPE	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	168;"	d
 RKH_THREAD_TYPE	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.h	173;"	d
@@ -1611,17 +1360,6 @@ RKH_TICK_RATE_MS	.\rkh\source\include\rkhitl.h	477;"	d
 RKH_TIME_MIN	.\rkh\source\include\rkhitl.h	491;"	d
 RKH_TIME_MS	.\rkh\source\include\rkhitl.h	489;"	d
 RKH_TIME_SEC	.\rkh\source\include\rkhitl.h	490;"	d
-RKH_TIM_EN	.\ahsm\rkhcfg.h	765;"	d
-RKH_TIM_EN	.\trtemp\rkhcfg.h	746;"	d
-RKH_TIM_EN_GET_INFO	.\ahsm\rkhcfg.h	797;"	d
-RKH_TIM_EN_GET_INFO	.\trtemp\rkhcfg.h	778;"	d
-RKH_TIM_EN_HOOK	.\ahsm\rkhcfg.h	781;"	d
-RKH_TIM_EN_HOOK	.\trtemp\rkhcfg.h	762;"	d
-RKH_TIM_EN_RESTART	.\ahsm\rkhcfg.h	789;"	d
-RKH_TIM_EN_RESTART	.\trtemp\rkhcfg.h	770;"	d
-RKH_TIM_MS	.\trtemp\bsp\x86\bsp.h	16;"	d
-RKH_TIM_SIZEOF_NTIMER	.\ahsm\rkhcfg.h	773;"	d
-RKH_TIM_SIZEOF_NTIMER	.\trtemp\rkhcfg.h	754;"	d
 RKH_TIM_TICK	.\rkh\source\include\rkh.h	1582;"	d
 RKH_TIM_TICK	.\rkh\source\include\rkh.h	1587;"	d
 RKH_TIM_TTBL_OFFSET	.\rkh\source\include\rkhtrc.h	220;"	d
@@ -1639,8 +1377,6 @@ RKH_TNT_T	.\rkh\source\include\rkhtim.h	/^	typedef rui16_t RKH_TNT_T;$/;"	t
 RKH_TNT_T	.\rkh\source\include\rkhtim.h	/^	typedef rui32_t RKH_TNT_T;$/;"	t
 RKH_TNT_T	.\rkh\source\include\rkhtim.h	/^	typedef rui8_t RKH_TNT_T;$/;"	t
 RKH_TOT_NUM_TRC_EVTS	.\rkh\source\include\rkhtrc.h	194;"	d
-RKH_TRC_ALL	.\ahsm\rkhcfg.h	449;"	d
-RKH_TRC_ALL	.\trtemp\rkhcfg.h	430;"	d
 RKH_TRC_ALL_EVENTS	.\rkh\source\include\rkhtrc.h	277;"	d
 RKH_TRC_ALL_FILTERS	.\rkh\source\include\rkhtrc.h	286;"	d
 RKH_TRC_ALL_GROUPS	.\rkh\source\include\rkhtrc.h	269;"	d
@@ -1671,10 +1407,8 @@ RKH_TRC_BSIZE	.\rkh\source\include\rkhtrc.h	1312;"	d
 RKH_TRC_BSIZE	.\rkh\source\include\rkhtrc.h	1315;"	d
 RKH_TRC_CHK	.\rkh\source\include\rkhtrc.h	635;"	d
 RKH_TRC_CHK	.\rkh\source\include\rkhtrc.h	639;"	d
-RKH_TRC_CLOSE	.\rkh\source\include\rkh.h	2867;"	d
-RKH_TRC_CLOSE	.\rkh\source\include\rkh.h	2869;"	d
-RKH_TRC_EN	.\ahsm\rkhcfg.h	422;"	d
-RKH_TRC_EN	.\trtemp\rkhcfg.h	403;"	d
+RKH_TRC_CLOSE	.\rkh\source\include\rkh.h	2870;"	d
+RKH_TRC_CLOSE	.\rkh\source\include\rkh.h	2872;"	d
 RKH_TRC_END	.\rkh\source\include\rkhtrc.h	746;"	d
 RKH_TRC_END	.\rkh\source\include\rkhtrc.h	830;"	d
 RKH_TRC_END_DFT	.\rkh\source\include\rkhtrc.h	901;"	d
@@ -1682,46 +1416,6 @@ RKH_TRC_END_NOCRIT	.\rkh\source\include\rkhtrc.h	810;"	d
 RKH_TRC_END_NOCRIT	.\rkh\source\include\rkhtrc.h	846;"	d
 RKH_TRC_END_WOFIL	.\rkh\source\include\rkhtrc.h	866;"	d
 RKH_TRC_END_WOFIL_NOCRIT	.\rkh\source\include\rkhtrc.h	882;"	d
-RKH_TRC_EN_CHK	.\ahsm\rkhcfg.h	583;"	d
-RKH_TRC_EN_CHK	.\trtemp\rkhcfg.h	564;"	d
-RKH_TRC_EN_MP	.\ahsm\rkhcfg.h	456;"	d
-RKH_TRC_EN_MP	.\trtemp\rkhcfg.h	437;"	d
-RKH_TRC_EN_NSEQ	.\ahsm\rkhcfg.h	576;"	d
-RKH_TRC_EN_NSEQ	.\trtemp\rkhcfg.h	557;"	d
-RKH_TRC_EN_RKH	.\ahsm\rkhcfg.h	491;"	d
-RKH_TRC_EN_RKH	.\trtemp\rkhcfg.h	472;"	d
-RKH_TRC_EN_RQ	.\ahsm\rkhcfg.h	463;"	d
-RKH_TRC_EN_RQ	.\trtemp\rkhcfg.h	444;"	d
-RKH_TRC_EN_SM	.\ahsm\rkhcfg.h	484;"	d
-RKH_TRC_EN_SM	.\trtemp\rkhcfg.h	465;"	d
-RKH_TRC_EN_SMA	.\ahsm\rkhcfg.h	470;"	d
-RKH_TRC_EN_SMA	.\trtemp\rkhcfg.h	451;"	d
-RKH_TRC_EN_SM_CLRH	.\ahsm\rkhcfg.h	512;"	d
-RKH_TRC_EN_SM_CLRH	.\trtemp\rkhcfg.h	493;"	d
-RKH_TRC_EN_SM_CSTATE	.\ahsm\rkhcfg.h	561;"	d
-RKH_TRC_EN_SM_CSTATE	.\trtemp\rkhcfg.h	542;"	d
-RKH_TRC_EN_SM_DCH	.\ahsm\rkhcfg.h	505;"	d
-RKH_TRC_EN_SM_DCH	.\trtemp\rkhcfg.h	486;"	d
-RKH_TRC_EN_SM_DCH_RC	.\ahsm\rkhcfg.h	568;"	d
-RKH_TRC_EN_SM_DCH_RC	.\trtemp\rkhcfg.h	549;"	d
-RKH_TRC_EN_SM_ENSTATE	.\ahsm\rkhcfg.h	533;"	d
-RKH_TRC_EN_SM_ENSTATE	.\trtemp\rkhcfg.h	514;"	d
-RKH_TRC_EN_SM_EXSTATE	.\ahsm\rkhcfg.h	540;"	d
-RKH_TRC_EN_SM_EXSTATE	.\trtemp\rkhcfg.h	521;"	d
-RKH_TRC_EN_SM_INIT	.\ahsm\rkhcfg.h	498;"	d
-RKH_TRC_EN_SM_INIT	.\trtemp\rkhcfg.h	479;"	d
-RKH_TRC_EN_SM_NENEX	.\ahsm\rkhcfg.h	547;"	d
-RKH_TRC_EN_SM_NENEX	.\trtemp\rkhcfg.h	528;"	d
-RKH_TRC_EN_SM_NTRNACT	.\ahsm\rkhcfg.h	554;"	d
-RKH_TRC_EN_SM_NTRNACT	.\trtemp\rkhcfg.h	535;"	d
-RKH_TRC_EN_SM_STATE	.\ahsm\rkhcfg.h	526;"	d
-RKH_TRC_EN_SM_STATE	.\trtemp\rkhcfg.h	507;"	d
-RKH_TRC_EN_SM_TRN	.\ahsm\rkhcfg.h	519;"	d
-RKH_TRC_EN_SM_TRN	.\trtemp\rkhcfg.h	500;"	d
-RKH_TRC_EN_TIM	.\ahsm\rkhcfg.h	477;"	d
-RKH_TRC_EN_TIM	.\trtemp\rkhcfg.h	458;"	d
-RKH_TRC_EN_TSTAMP	.\ahsm\rkhcfg.h	590;"	d
-RKH_TRC_EN_TSTAMP	.\trtemp\rkhcfg.h	571;"	d
 RKH_TRC_ES	.\rkh\source\include\rkhtrc.h	1387;"	d
 RKH_TRC_ES	.\rkh\source\include\rkhtrc.h	1390;"	d
 RKH_TRC_ES	.\rkh\source\include\rkhtrc.h	1393;"	d
@@ -1730,8 +1424,8 @@ RKH_TRC_EVENTS	.\rkh\source\include\rkhtrc.h	/^} RKH_TRC_EVENTS;$/;"	t
 RKH_TRC_FIL_T	.\rkh\source\include\rkhtrc.h	/^typedef struct RKH_TRC_FIL_T$/;"	s
 RKH_TRC_FIL_T	.\rkh\source\include\rkhtrc.h	/^} RKH_TRC_FIL_T;$/;"	t
 RKH_TRC_FLG	.\rkh\source\include\rkhtrc.h	649;"	d
-RKH_TRC_FLUSH	.\rkh\source\include\rkh.h	2928;"	d
-RKH_TRC_FLUSH	.\rkh\source\include\rkh.h	2930;"	d
+RKH_TRC_FLUSH	.\rkh\source\include\rkh.h	2931;"	d
+RKH_TRC_FLUSH	.\rkh\source\include\rkh.h	2933;"	d
 RKH_TRC_FMT	.\rkh\source\include\rkhtrc.h	/^enum RKH_TRC_FMT$/;"	g
 RKH_TRC_FOPT	.\rkh\source\include\rkhtrc.h	/^} RKH_TRC_FOPT;$/;"	t
 RKH_TRC_FSLOT	.\rkh\source\include\rkhtrc.h	/^		typedef rui16_t RKH_TRC_FSLOT;$/;"	t
@@ -1742,9 +1436,7 @@ RKH_TRC_FUN	.\rkh\source\include\rkhtrc.h	1231;"	d
 RKH_TRC_FUN	.\rkh\source\include\rkhtrc.h	1234;"	d
 RKH_TRC_GROUPS	.\rkh\source\include\rkhtrc.h	/^} RKH_TRC_GROUPS;$/;"	t
 RKH_TRC_HDR	.\rkh\source\include\rkhtrc.h	1185;"	d
-RKH_TRC_MAX_EVENTS	.\ahsm\rkhcfg.h	431;"	d
 RKH_TRC_MAX_EVENTS	.\rkh\source\include\rkhtrc.h	64;"	d
-RKH_TRC_MAX_EVENTS	.\trtemp\rkhcfg.h	412;"	d
 RKH_TRC_MAX_EVENTS_IN_BYTES	.\rkh\source\include\rkhtrc.h	209;"	d
 RKH_TRC_MAX_GROUPS	.\rkh\source\include\rkhtrc.h	54;"	d
 RKH_TRC_MAX_SIGNALS	.\rkh\source\include\rkhtrc.h	89;"	d
@@ -1773,8 +1465,8 @@ RKH_TRC_NTICK	.\rkh\source\include\rkhtrc.h	1244;"	d
 RKH_TRC_NTICK	.\rkh\source\include\rkhtrc.h	1247;"	d
 RKH_TRC_NTICK	.\rkh\source\include\rkhtrc.h	1250;"	d
 RKH_TRC_NTICK	.\rkh\source\include\rkhtrc.h	1253;"	d
-RKH_TRC_OPEN	.\rkh\source\include\rkh.h	2828;"	d
-RKH_TRC_OPEN	.\rkh\source\include\rkh.h	2830;"	d
+RKH_TRC_OPEN	.\rkh\source\include\rkh.h	2831;"	d
+RKH_TRC_OPEN	.\rkh\source\include\rkh.h	2833;"	d
 RKH_TRC_RQ_NMIN	.\rkh\source\include\rkhtrc.h	1328;"	d
 RKH_TRC_RQ_NMIN	.\rkh\source\include\rkhtrc.h	1331;"	d
 RKH_TRC_RQ_NMIN	.\rkh\source\include\rkhtrc.h	1337;"	d
@@ -1783,10 +1475,8 @@ RKH_TRC_RQ_NMIN	.\rkh\source\include\rkhtrc.h	1346;"	d
 RKH_TRC_RQ_NMIN	.\rkh\source\include\rkhtrc.h	1349;"	d
 RKH_TRC_RQ_NMIN	.\rkh\source\include\rkhtrc.h	1355;"	d
 RKH_TRC_RQ_NMIN	.\rkh\source\include\rkhtrc.h	1358;"	d
-RKH_TRC_RUNTIME_FILTER	.\ahsm\rkhcfg.h	442;"	d
-RKH_TRC_RUNTIME_FILTER	.\trtemp\rkhcfg.h	423;"	d
-RKH_TRC_SEND_CFG	.\rkh\source\include\rkh.h	2986;"	d
 RKH_TRC_SEND_CFG	.\rkh\source\include\rkh.h	2989;"	d
+RKH_TRC_SEND_CFG	.\rkh\source\include\rkh.h	2992;"	d
 RKH_TRC_SET_ALL	.\rkh\source\include\rkhtrc.h	284;"	d
 RKH_TRC_SIG	.\rkh\source\include\rkhtrc.h	1368;"	d
 RKH_TRC_SIG	.\rkh\source\include\rkhtrc.h	1371;"	d
@@ -1794,12 +1484,6 @@ RKH_TRC_SIG	.\rkh\source\include\rkhtrc.h	1374;"	d
 RKH_TRC_SIG	.\rkh\source\include\rkhtrc.h	1377;"	d
 RKH_TRC_SIG_ISOFF	.\rkh\source\include\rkhtrc.h	3415;"	d
 RKH_TRC_SIG_ISOFF	.\rkh\source\include\rkhtrc.h	3418;"	d
-RKH_TRC_SIZEOF_POINTER	.\ahsm\rkhcfg.h	611;"	d
-RKH_TRC_SIZEOF_POINTER	.\trtemp\rkhcfg.h	592;"	d
-RKH_TRC_SIZEOF_STREAM	.\ahsm\rkhcfg.h	604;"	d
-RKH_TRC_SIZEOF_STREAM	.\trtemp\rkhcfg.h	585;"	d
-RKH_TRC_SIZEOF_TSTAMP	.\ahsm\rkhcfg.h	597;"	d
-RKH_TRC_SIZEOF_TSTAMP	.\trtemp\rkhcfg.h	578;"	d
 RKH_TRC_SNDR	.\rkh\source\include\rkhtrc.h	1215;"	d
 RKH_TRC_SNDR	.\rkh\source\include\rkhtrc.h	1218;"	d
 RKH_TRC_STR	.\rkh\source\include\rkhtrc.h	943;"	d
@@ -1823,26 +1507,14 @@ RKH_TRC_USR_END	.\rkh\source\include\rkhtrc.h	1148;"	d
 RKH_TRC_USR_END	.\rkh\source\include\rkhtrc.h	994;"	d
 RKH_TRC_USR_END_NOCRIT	.\rkh\source\include\rkhtrc.h	1013;"	d
 RKH_TRC_USR_END_NOCRIT	.\rkh\source\include\rkhtrc.h	1150;"	d
-RKH_TRINT	.\ahsm\my.c	/^	RKH_TRINT( SIX, 	NULL, 		show_data ),$/;"	v
 RKH_TRINT	.\oven\oven_3\oven.c	/^	RKH_TRINT( START,	NULL,	restart_timer ),$/;"	v
 RKH_TRINT	.\oven\oven_4\oven.c	/^	RKH_TRINT( START,	NULL,	restart_timer ),$/;"	v
 RKH_TRINT	.\oven\oven_5\oven.c	/^	RKH_TRINT( START,	chk_restart_cnt,		inc_defer_start ),$/;"	v
 RKH_TRINT	.\rkh\source\include\rkh.h	832;"	d
-RKH_TRINT	.\trtemp\gprsmgr\gmgr.c	/^	RKH_TRINT( TERM, 			NULL, 			gmgr_term ),$/;"	v
-RKH_TRINT	.\trtemp\tracking\trk.c	/^	RKH_TRINT( EPOS_TOUT, 	NULL, 	send_curr_pos ),$/;"	v
 RKH_TRN_ACT_T	.\rkh\source\include\rkhitl.h	/^	typedef void (*RKH_TRN_ACT_T)( 	const struct RKH_SMA_T *sma, $/;"	t
 RKH_TRN_ACT_T	.\rkh\source\include\rkhitl.h	/^	typedef void (*RKH_TRN_ACT_T)( RKH_EVT_T *pe );$/;"	t
 RKH_TRN_ACT_T	.\rkh\source\include\rkhitl.h	/^	typedef void (*RKH_TRN_ACT_T)( const struct RKH_SMA_T *sma );$/;"	t
 RKH_TRN_ACT_T	.\rkh\source\include\rkhitl.h	/^	typedef void (*RKH_TRN_ACT_T)( void );$/;"	t
-RKH_TRREG	.\ahsm\my.c	/^	RKH_TRREG( FIVE, 	NULL, 		NULL, 		&S12 ),$/;"	v
-RKH_TRREG	.\ahsm\my.c	/^	RKH_TRREG( FOUR, 	NULL, 		NULL, 		&S12 ),$/;"	v
-RKH_TRREG	.\ahsm\my.c	/^	RKH_TRREG( ONE, 	NULL, 		NULL,		&S111 ),$/;"	v
-RKH_TRREG	.\ahsm\my.c	/^	RKH_TRREG( ONE, 	NULL, 		NULL, 		&S32 ),$/;"	v
-RKH_TRREG	.\ahsm\my.c	/^	RKH_TRREG( THREE, 	NULL, 		NULL, 		&J ),$/;"	v
-RKH_TRREG	.\ahsm\my.c	/^	RKH_TRREG( THREE, 	NULL, 		NULL, 		&S3 ),$/;"	v
-RKH_TRREG	.\ahsm\my.c	/^	RKH_TRREG( TWO, 	NULL, 		NULL, 		&S11 ),$/;"	v
-RKH_TRREG	.\ahsm\my.c	/^	RKH_TRREG( TWO, 	NULL, 		NULL, 		&S112 ),$/;"	v
-RKH_TRREG	.\ahsm\my.c	/^	RKH_TRREG( TWO, 	NULL, 		set_y_2,	&S2 ),$/;"	v
 RKH_TRREG	.\oven\oven_1\oven.c	/^	RKH_TRREG( OPEN,	NULL,	NULL,	&idle ),$/;"	v
 RKH_TRREG	.\oven\oven_1\oven.c	/^	RKH_TRREG( START,	NULL,	NULL,	&cooking ),$/;"	v
 RKH_TRREG	.\oven\oven_2\oven.c	/^	RKH_TRREG( OPEN,	NULL,	NULL,	&open ),$/;"	v
@@ -1852,12 +1524,10 @@ RKH_TRREG	.\oven\oven_3\oven.c	/^	RKH_TRREG( TOUT,	NULL,	NULL,	&ready ),$/;"	v
 RKH_TRREG	.\oven\oven_4\oven.c	/^	RKH_TRREG( OPEN,	NULL,	NULL,	&open ),$/;"	v
 RKH_TRREG	.\oven\oven_4\oven.c	/^	RKH_TRREG( TOUT,	NULL,	NULL,	&ready ),$/;"	v
 RKH_TRREG	.\oven\oven_5\oven.c	/^	RKH_TRREG( OPEN,	NULL,	NULL,	&open ),$/;"	v
-RKH_TRREG	.\oven\oven_5\oven.c	/^	RKH_TRREG( TOUT,	NULL,	recall_evts,	&ready ),$/;"	v
+RKH_TRREG	.\oven\oven_5\oven.c	/^	RKH_TRREG( TOUT,	NULL,		recall_evts,		&ready ),$/;"	v
+RKH_TRREG	.\oven\oven_6\oven.c	/^	RKH_TRREG( OPEN,	NULL,	NULL,	&open ),$/;"	v
+RKH_TRREG	.\oven\oven_6\oven.c	/^	RKH_TRREG( TOUT,	NULL,		recall_evts,	&ready ),$/;"	v
 RKH_TRREG	.\rkh\source\include\rkh.h	807;"	d
-RKH_TRREG	.\trtemp\gprsmgr\gmgr.c	/^	RKH_TRREG( SEND_EVT_CFM, 	NULL,	gmgr_send_cfm, 	&gmgr_idle ),$/;"	v
-RKH_TRREG	.\trtemp\tempctrl\tctrl.c	/^	RKH_TRREG( CMP_FAILURE_RST, NULL, 	compressor_failrst,	&tctrl_ready ),$/;"	v
-RKH_TRREG	.\trtemp\tempctrl\tctrl.c	/^	RKH_TRREG( TSMP, 	upper2tmax, 	compressor_start, 	&cmp_on ),$/;"	v
-RKH_TRREG	.\trtemp\tracking\trk.c	/^	RKH_TRREG( GPSFRM, 		NULL, 	NULL,	&gps_chk_online ),$/;"	v
 RKH_TRUE	.\rkh\source\include\rkhdef.h	59;"	d
 RKH_TR_FWK_AE	.\rkh\source\include\rkhtrc.h	2252;"	d
 RKH_TR_FWK_AE	.\rkh\source\include\rkhtrc.h	2864;"	d
@@ -2118,329 +1788,87 @@ RKH_X32_T	.\rkh\source\include\rkhtrc.h	/^	RKH_X32_T,		\/**< signed 16-bit integ
 RKH_XOR	.\rkh\source\include\rkhtrc.h	621;"	d
 RKH_YES	.\rkh\source\include\rkhdef.h	62;"	d
 ROMRKH_T	.\rkh\source\include\rkhitl.h	/^typedef struct ROMRKH_T$/;"	s
-RTI_MS	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.h	39;"	d
-RTI_MS	.\ahsm\bsp\s08\cw6_3\mcu\mcu.h	39;"	d
-RTI_TICK	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.h	38;"	d
-RTI_TICK	.\ahsm\bsp\s08\cw6_3\mcu\mcu.h	38;"	d
 R_CAST_EVT	.\rkh\source\include\rkhevt.h	54;"	d
 R_TRC_AO_NAME_EN	.\rkh\source\include\rkhitl.h	1703;"	d
 R_TRC_AO_NAME_EN	.\rkh\source\include\rkhitl.h	1705;"	d
-RomInfo	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.h	/^typedef struct RomInfo {$/;"	s
-RomInfo	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.h	/^} RomInfo;$/;"	t
-S1	.\ahsm\my.h	/^RKH_DCLR_COMP_STATE		S1,S3,S11;$/;"	v
-S11	.\ahsm\my.h	/^RKH_DCLR_COMP_STATE		S1,S3,S11;$/;"	v
-S111	.\ahsm\my.h	/^RKH_DCLR_BASIC_STATE	S2,S31,S32,S111,S112,S12;$/;"	v
-S112	.\ahsm\my.h	/^RKH_DCLR_BASIC_STATE	S2,S31,S32,S111,S112,S12;$/;"	v
-S12	.\ahsm\my.h	/^RKH_DCLR_BASIC_STATE	S2,S31,S32,S111,S112,S12;$/;"	v
-S2	.\ahsm\my.h	/^RKH_DCLR_BASIC_STATE	S2,S31,S32,S111,S112,S12;$/;"	v
-S3	.\ahsm\my.h	/^RKH_DCLR_COMP_STATE		S1,S3,S11;$/;"	v
-S31	.\ahsm\my.h	/^RKH_DCLR_BASIC_STATE	S2,S31,S32,S111,S112,S12;$/;"	v
-S32	.\ahsm\my.h	/^RKH_DCLR_BASIC_STATE	S2,S31,S32,S111,S112,S12;$/;"	v
-SCI_ENADIS_INTERRUPT	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	61;"	d
-SCI_ENADIS_INTERRUPT	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	61;"	d
-SEND_EVT_CFM	.\trtemp\trtemp.h	/^	SEND_EVT_CFM,$/;"	e	enum:trtemp_sigs
-SEND_EVT_REJ	.\trtemp\trtemp.h	/^	SEND_EVT_REJ,$/;"	e	enum:trtemp_sigs
-SEND_EVT_REQ	.\trtemp\trtemp.h	/^	SEND_EVT_REQ,$/;"	e	enum:trtemp_sigs
-SEND_EVT_REQ_T	.\trtemp\trtemp.h	/^} SEND_EVT_REQ_T;$/;"	t
-SERIAL_TRACE	.\ahsm\bsp\cfv1\cw6_3\bsp.c	34;"	d	file:
-SERIAL_TRACE	.\ahsm\bsp\s08\cw6_3\bsp.c	34;"	d	file:
 SERIAL_TRACE	.\oven\bsp\twrk60iar72\bsp.c	68;"	d	file:
-SERIAL_TRACE_CLOSE	.\ahsm\bsp\cfv1\cw6_3\bsp.c	59;"	d	file:
-SERIAL_TRACE_CLOSE	.\ahsm\bsp\cfv1\cw6_3\bsp.c	63;"	d	file:
-SERIAL_TRACE_CLOSE	.\ahsm\bsp\s08\cw6_3\bsp.c	59;"	d	file:
-SERIAL_TRACE_CLOSE	.\ahsm\bsp\s08\cw6_3\bsp.c	63;"	d	file:
 SERIAL_TRACE_CLOSE	.\oven\bsp\twrk60iar72\bsp.c	103;"	d	file:
 SERIAL_TRACE_CLOSE	.\oven\bsp\twrk60iar72\bsp.c	111;"	d	file:
-SERIAL_TRACE_OPEN	.\ahsm\bsp\cfv1\cw6_3\bsp.c	58;"	d	file:
-SERIAL_TRACE_OPEN	.\ahsm\bsp\cfv1\cw6_3\bsp.c	62;"	d	file:
-SERIAL_TRACE_OPEN	.\ahsm\bsp\s08\cw6_3\bsp.c	58;"	d	file:
-SERIAL_TRACE_OPEN	.\ahsm\bsp\s08\cw6_3\bsp.c	62;"	d	file:
 SERIAL_TRACE_OPEN	.\oven\bsp\twrk60iar72\bsp.c	102;"	d	file:
 SERIAL_TRACE_OPEN	.\oven\bsp\twrk60iar72\bsp.c	110;"	d	file:
-SERIAL_TRACE_SEND	.\ahsm\bsp\cfv1\cw6_3\bsp.c	60;"	d	file:
-SERIAL_TRACE_SEND	.\ahsm\bsp\cfv1\cw6_3\bsp.c	64;"	d	file:
-SERIAL_TRACE_SEND	.\ahsm\bsp\s08\cw6_3\bsp.c	60;"	d	file:
-SERIAL_TRACE_SEND	.\ahsm\bsp\s08\cw6_3\bsp.c	64;"	d	file:
 SERIAL_TRACE_SEND	.\oven\bsp\twrk60iar72\bsp.c	104;"	d	file:
 SERIAL_TRACE_SEND	.\oven\bsp\twrk60iar72\bsp.c	112;"	d	file:
 SERIAL_TRACE_SEND_BLOCK	.\oven\bsp\twrk60iar72\bsp.c	105;"	d	file:
 SERIAL_TRACE_SEND_BLOCK	.\oven\bsp\twrk60iar72\bsp.c	113;"	d	file:
-SHOW_GPRS_FMT	.\trtemp\bsp\x86\gprs.c	60;"	d	file:
-SIMU_PRIO	.\trtemp\trtemp.h	/^	SIMU_PRIO$/;"	e	enum:smaprio
-SIX	.\ahsm\my.h	/^	SIX,		\/* press the key '6' on the keyboard *\/$/;"	e
-SIZEOF_EP0STO	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	43;"	d	file:
-SIZEOF_EP0STO	.\ahsm\bsp\cfv1\cw6_3\bsp.c	36;"	d	file:
-SIZEOF_EP0STO	.\ahsm\bsp\s08\cw6_3\bsp.c	36;"	d	file:
 SIZEOF_EP0STO	.\oven\bsp\twrk60iar72\bsp.c	70;"	d	file:
 SIZEOF_EP0STO	.\oven\bsp\win32vc08\bsp.c	60;"	d	file:
-SIZEOF_EP0STO	.\trtemp\bsp\x86\bsp.c	42;"	d	file:
-SIZEOF_EP0_BLOCK	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	44;"	d	file:
-SIZEOF_EP0_BLOCK	.\ahsm\bsp\cfv1\cw6_3\bsp.c	37;"	d	file:
-SIZEOF_EP0_BLOCK	.\ahsm\bsp\s08\cw6_3\bsp.c	37;"	d	file:
 SIZEOF_EP0_BLOCK	.\oven\bsp\twrk60iar72\bsp.c	71;"	d	file:
 SIZEOF_EP0_BLOCK	.\oven\bsp\win32vc08\bsp.c	61;"	d	file:
-SIZEOF_EP0_BLOCK	.\trtemp\bsp\x86\bsp.c	41;"	d	file:
-SIZEOF_EP1STO	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	45;"	d	file:
-SIZEOF_EP1STO	.\ahsm\bsp\cfv1\cw6_3\bsp.c	38;"	d	file:
-SIZEOF_EP1STO	.\ahsm\bsp\s08\cw6_3\bsp.c	38;"	d	file:
 SIZEOF_EP1STO	.\oven\bsp\twrk60iar72\bsp.c	72;"	d	file:
 SIZEOF_EP1STO	.\oven\bsp\win32vc08\bsp.c	62;"	d	file:
-SIZEOF_EP1STO	.\trtemp\bsp\x86\bsp.c	46;"	d	file:
-SIZEOF_EP1_BLOCK	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	46;"	d	file:
-SIZEOF_EP1_BLOCK	.\ahsm\bsp\cfv1\cw6_3\bsp.c	39;"	d	file:
-SIZEOF_EP1_BLOCK	.\ahsm\bsp\s08\cw6_3\bsp.c	39;"	d	file:
 SIZEOF_EP1_BLOCK	.\oven\bsp\twrk60iar72\bsp.c	73;"	d	file:
 SIZEOF_EP1_BLOCK	.\oven\bsp\win32vc08\bsp.c	63;"	d	file:
-SIZEOF_EP1_BLOCK	.\trtemp\bsp\x86\bsp.c	44;"	d	file:
-SOCKET_TRACE	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	39;"	d	file:
 SOCKET_TRACE	.\oven\bsp\win32vc08\bsp.c	57;"	d	file:
-SOCKET_TRACE	.\trtemp\bsp\x86\bsp.c	34;"	d	file:
 START	.\oven\oven_1\ovenevt.h	/^	START,	\/* dtart button pressed *\/$/;"	e	enum:ov_sigs_t
 START	.\oven\oven_2\ovenevt.h	/^	START,	\/* dtart button pressed *\/$/;"	e	enum:ov_sigs_t
 START	.\oven\oven_3\ovenevt.h	/^	START,	\/* dtart button pressed *\/$/;"	e	enum:ov_sigs_t
 START	.\oven\oven_4\ovenevt.h	/^	START,	\/* dtart button pressed *\/$/;"	e	enum:ov_sigs_t
 START	.\oven\oven_5\ovenevt.h	/^	START,	\/* dtart button pressed *\/$/;"	e	enum:ov_sigs_t
-STARTCF_H	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.h	25;"	d
-STOP_T	.\trtemp\trtemp.h	/^} STOP_T;$/;"	t
-SUPPORT_ROM_TO_RAM	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.h	60;"	d
+START	.\oven\oven_6\ovenevt.h	/^	START,	\/* dtart button pressed *\/$/;"	e	enum:ov_sigs_t
 SW1	.\oven\bsp\twrk60iar72\gpio.h	51;"	d
-SW1_SWITCH	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	SW1_SWITCH,$/;"	e
-SW1_SWITCH	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	SW1_SWITCH,$/;"	e
 SW2	.\oven\bsp\twrk60iar72\gpio.h	52;"	d
-SW2_SWITCH	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	SW2_SWITCH,$/;"	e
-SW2_SWITCH	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	SW2_SWITCH,$/;"	e
-SW3_SWITCH	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	SW3_SWITCH,$/;"	e
-SW3_SWITCH	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	SW3_SWITCH,$/;"	e
-SW4_SWITCH	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	SW4_SWITCH,$/;"	e
-SW4_SWITCH	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	SW4_SWITCH,$/;"	e
-SWITCHS_NUM	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	SWITCHS_NUM$/;"	e
-SWITCHS_NUM	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	SWITCHS_NUM$/;"	e
-SWITCH_ST	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^}SWITCH_ST;$/;"	t
-SWITCH_ST	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^}SWITCH_ST;$/;"	t
-SWITCH_TICK	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	35;"	d
-SWITCH_TICK	.\ahsm\bsp\s08\cw6_3\switch\switch.h	35;"	d
-SWITCH_TICK_MS	.\ahsm\bsp\cfv1\cw6_3\switch\swhdl.h	17;"	d
-SWITCH_TICK_MS	.\ahsm\bsp\s08\cw6_3\switch\swhdl.h	17;"	d
-SW_PRESSED	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	SW_PRESSED$/;"	e
-SW_PRESSED	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	SW_PRESSED$/;"	e
-SW_RELEASED	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	SW_RELEASED,$/;"	e
-SW_RELEASED	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	SW_RELEASED,$/;"	e
-Size	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.h	/^	unsigned long    Size;$/;"	m	struct:RomInfo
-Source	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.h	/^	void            *Source;$/;"	m	struct:RomInfo
-TCP_TRACE_CLOSE	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	92;"	d	file:
-TCP_TRACE_CLOSE	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	98;"	d	file:
 TCP_TRACE_CLOSE	.\oven\bsp\win32vc08\bsp.c	119;"	d	file:
 TCP_TRACE_CLOSE	.\oven\bsp\win32vc08\bsp.c	125;"	d	file:
-TCP_TRACE_CLOSE	.\trtemp\bsp\x86\bsp.c	100;"	d	file:
-TCP_TRACE_CLOSE	.\trtemp\bsp\x86\bsp.c	94;"	d	file:
-TCP_TRACE_OPEN	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	84;"	d	file:
-TCP_TRACE_OPEN	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	97;"	d	file:
 TCP_TRACE_OPEN	.\oven\bsp\win32vc08\bsp.c	111;"	d	file:
 TCP_TRACE_OPEN	.\oven\bsp\win32vc08\bsp.c	124;"	d	file:
-TCP_TRACE_OPEN	.\trtemp\bsp\x86\bsp.c	86;"	d	file:
-TCP_TRACE_OPEN	.\trtemp\bsp\x86\bsp.c	99;"	d	file:
-TCP_TRACE_SEND	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	94;"	d	file:
-TCP_TRACE_SEND	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	99;"	d	file:
 TCP_TRACE_SEND	.\oven\bsp\win32vc08\bsp.c	120;"	d	file:
 TCP_TRACE_SEND	.\oven\bsp\win32vc08\bsp.c	126;"	d	file:
-TCP_TRACE_SEND	.\trtemp\bsp\x86\bsp.c	101;"	d	file:
-TCP_TRACE_SEND	.\trtemp\bsp\x86\bsp.c	96;"	d	file:
 TCP_TRACE_SEND_BLOCK	.\oven\bsp\win32vc08\bsp.c	121;"	d	file:
 TCP_TRACE_SEND_BLOCK	.\oven\bsp\win32vc08\bsp.c	127;"	d	file:
-TCTRL_DBG	.\trtemp\bsp\x86\debug.h	/^	TCTRL_DBG,$/;"	e
-TCTRL_DBG_CFG	.\trtemp\bsp\x86\dbgcfg.h	27;"	d
-TCTRL_PRIO	.\trtemp\trtemp.h	/^	TCTRL_PRIO,$/;"	e	enum:smaprio
-TCTRL_TMP_HIGH_TH	.\trtemp\tempctrl\tctrl.h	62;"	d
-TCTRL_TMP_LOW_TH	.\trtemp\tempctrl\tctrl.h	54;"	d
-TEMP_DELTA	.\trtemp\bsp\x86\tmp.h	42;"	d
-TEMP_INITIAL	.\trtemp\bsp\x86\tmp.h	34;"	d
-TEMP_MAX_VALUE	.\trtemp\bsp\x86\tmp.h	50;"	d
-TEMP_MIN_VALUE	.\trtemp\bsp\x86\tmp.h	58;"	d
-TEMP_TICK	.\trtemp\bsp\x86\tmp.h	26;"	d
-TERM	.\ahsm\my.h	/^	TERM		\/* press the key escape on the keyboard *\/$/;"	e
 TERM	.\oven\oven_1\ovenevt.h	/^	TERM,   \/* to close application in x86 *\/$/;"	e	enum:ov_sigs_t
 TERM	.\oven\oven_2\ovenevt.h	/^	TERM,   \/* to close application in x86 *\/$/;"	e	enum:ov_sigs_t
 TERM	.\oven\oven_3\ovenevt.h	/^	TERM,   \/* to close application in x86 *\/$/;"	e	enum:ov_sigs_t
 TERM	.\oven\oven_4\ovenevt.h	/^	TERM,   \/* to close application in x86 *\/$/;"	e	enum:ov_sigs_t
 TERM	.\oven\oven_5\ovenevt.h	/^	TERM,   \/* to close application in x86 *\/$/;"	e	enum:ov_sigs_t
-TERM	.\trtemp\trtemp.h	/^	TERM,$/;"	e	enum:trtemp_sigs
-THREE	.\ahsm\my.h	/^	THREE,		\/* press the key '3' on the keyboard *\/$/;"	e
-TMP_DBG	.\trtemp\bsp\x86\debug.h	/^	TMP_DBG,$/;"	e
-TMP_DBG_CFG	.\trtemp\bsp\x86\dbgcfg.h	26;"	d
-TMP_DW	.\trtemp\bsp\x86\keymap.h	38;"	d
-TMP_UP	.\trtemp\bsp\x86\keymap.h	37;"	d
+TERM	.\oven\oven_6\ovenevt.h	/^	TERM,   \/* to close application in x86 *\/$/;"	e	enum:ov_sigs_t
 TOUT	.\oven\oven_1\ovenevt.h	/^	TOUT,	\/* timer expired *\/$/;"	e	enum:ov_sigs_t
 TOUT	.\oven\oven_2\ovenevt.h	/^	TOUT,	\/* timer expired *\/$/;"	e	enum:ov_sigs_t
 TOUT	.\oven\oven_3\ovenevt.h	/^	TOUT,	\/* timer expired *\/$/;"	e	enum:ov_sigs_t
 TOUT	.\oven\oven_4\ovenevt.h	/^	TOUT,	\/* timer expired *\/$/;"	e	enum:ov_sigs_t
 TOUT	.\oven\oven_5\ovenevt.h	/^	TOUT,	\/* timer expired *\/$/;"	e	enum:ov_sigs_t
+TOUT	.\oven\oven_6\ovenevt.h	/^	TOUT,	\/* timer expired *\/$/;"	e	enum:ov_sigs_t
 TRCQTY_T	.\rkh\source\include\rkhtrc.h	/^	typedef rui16_t TRCQTY_T;$/;"	t
 TRCQTY_T	.\rkh\source\include\rkhtrc.h	/^	typedef rui8_t TRCQTY_T;$/;"	t
-TRC_COM_PORT	.\ahsm\bsp\cfv1\cw6_3\bsp.c	56;"	d	file:
-TRC_COM_PORT	.\ahsm\bsp\s08\cw6_3\bsp.c	56;"	d	file:
-TRC_IP_ADDR	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	76;"	d	file:
 TRC_IP_ADDR	.\oven\bsp\win32vc08\bsp.c	103;"	d	file:
-TRC_IP_ADDR	.\trtemp\bsp\x86\bsp.c	78;"	d	file:
-TRC_TCP_PORT	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	79;"	d	file:
 TRC_TCP_PORT	.\oven\bsp\win32vc08\bsp.c	106;"	d	file:
-TRC_TCP_PORT	.\trtemp\bsp\x86\bsp.c	81;"	d	file:
-TRK_DBG	.\trtemp\bsp\x86\debug.h	/^	TRK_DBG,$/;"	e
-TRK_DBG_CFG	.\trtemp\bsp\x86\dbgcfg.h	29;"	d
-TRK_MAX_VELOCITY	.\trtemp\tracking\trk.h	65;"	d
-TRK_MIN_VELOCITY	.\trtemp\tracking\trk.h	73;"	d
-TRK_POS_PRD	.\trtemp\tracking\trk.h	81;"	d
-TRK_PRIO	.\trtemp\trtemp.h	/^	TRK_PRIO,$/;"	e	enum:smaprio
-TRK_STOP_TIME	.\trtemp\tracking\trk.h	89;"	d
-TRT_EVENT_TYPES	.\trtemp\trtemp.h	/^enum TRT_EVENT_TYPES$/;"	g
-TRT_EVT_COMPRESSOR	.\trtemp\trtemp.h	/^	TRT_EVT_COMPRESSOR,$/;"	e	enum:TRT_EVENT_TYPES
-TRT_EVT_POSITION	.\trtemp\trtemp.h	/^	TRT_EVT_POSITION,$/;"	e	enum:TRT_EVENT_TYPES
-TRT_EVT_STOP	.\trtemp\trtemp.h	/^	TRT_EVT_STOP,$/;"	e	enum:TRT_EVENT_TYPES
-TRT_EVT_VMAX	.\trtemp\trtemp.h	/^	TRT_EVT_VMAX,$/;"	e	enum:TRT_EVENT_TYPES
-TRT_NUM_EVT_TYPES	.\trtemp\trtemp.h	/^	TRT_NUM_EVT_TYPES$/;"	e	enum:TRT_EVENT_TYPES
-TSMP	.\trtemp\trtemp.h	/^	TSMP,$/;"	e	enum:trtemp_sigs
-TSMP_T	.\trtemp\trtemp.h	/^} TSMP_T;$/;"	t
-TWO	.\ahsm\my.h	/^	TWO,		\/* press the key '2' on the keyboard *\/$/;"	e
-TWO_BIT_STOP	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	ONE_BIT_STOP, TWO_BIT_STOP$/;"	e
-TWO_BIT_STOP	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	ONE_BIT_STOP, TWO_BIT_STOP$/;"	e
-Target	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.h	/^	void            *Target;$/;"	m	struct:RomInfo
-UC_B1200	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	20;"	d
-UC_B1200	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	35;"	d
-UC_B1200	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	50;"	d
-UC_B1200	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	20;"	d
-UC_B1200	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	35;"	d
-UC_B1200	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	50;"	d
-UC_B19200	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	24;"	d
-UC_B19200	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	39;"	d
-UC_B19200	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	54;"	d
-UC_B19200	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	24;"	d
-UC_B19200	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	39;"	d
-UC_B19200	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	54;"	d
-UC_B2400	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	21;"	d
-UC_B2400	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	36;"	d
-UC_B2400	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	51;"	d
-UC_B2400	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	21;"	d
-UC_B2400	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	36;"	d
-UC_B2400	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	51;"	d
-UC_B300	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	18;"	d
-UC_B300	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	33;"	d
-UC_B300	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	48;"	d
-UC_B300	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	18;"	d
-UC_B300	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	33;"	d
-UC_B300	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	48;"	d
-UC_B38400	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	25;"	d
-UC_B38400	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	40;"	d
-UC_B38400	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	55;"	d
-UC_B38400	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	25;"	d
-UC_B38400	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	40;"	d
-UC_B38400	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	55;"	d
-UC_B4800	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	22;"	d
-UC_B4800	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	37;"	d
-UC_B4800	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	52;"	d
-UC_B4800	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	22;"	d
-UC_B4800	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	37;"	d
-UC_B4800	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	52;"	d
-UC_B57600	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	26;"	d
-UC_B57600	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	41;"	d
-UC_B57600	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	56;"	d
-UC_B57600	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	26;"	d
-UC_B57600	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	41;"	d
-UC_B57600	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	56;"	d
-UC_B600	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	19;"	d
-UC_B600	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	34;"	d
-UC_B600	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	49;"	d
-UC_B600	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	19;"	d
-UC_B600	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	34;"	d
-UC_B600	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	49;"	d
-UC_B9600	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	23;"	d
-UC_B9600	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	38;"	d
-UC_B9600	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	53;"	d
-UC_B9600	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	23;"	d
-UC_B9600	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	38;"	d
-UC_B9600	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	53;"	d
 UPDATE_IN_PARENT	.\rkh\source\rkh.c	149;"	d	file:
 UPDATE_IN_PARENT	.\rkh\source\rkh.c	156;"	d	file:
 UPDATE_PARENT	.\rkh\source\rkh.c	145;"	d	file:
 UPDATE_PARENT	.\rkh\source\rkh.c	154;"	d	file:
-UP_KEY	.\trtemp\bsp\x86\keymap.h	27;"	d
-VECTORDISPLAY	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	23;"	d	file:
-VECTORDISPLAY	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	28;"	d	file:
-VECTORDISPLAY2	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	24;"	d	file:
-VECTORDISPLAY2	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	29;"	d	file:
-VECTORDISPLAY3	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	25;"	d	file:
-VECTORDISPLAY3	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	30;"	d	file:
-VEL_DELTA	.\trtemp\bsp\x86\gps.h	34;"	d
-VEL_DW	.\trtemp\bsp\x86\keymap.h	41;"	d
-VEL_MAX_VALUE	.\trtemp\bsp\x86\gps.h	42;"	d
-VEL_MIN_VALUE	.\trtemp\bsp\x86\gps.h	50;"	d
-VEL_UP	.\trtemp\bsp\x86\keymap.h	40;"	d
-VMAX_T	.\trtemp\trtemp.h	/^} VMAX_T;$/;"	t
-Vtrap14	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	/^vectorTableEntryType vector_printf @Vtrap14     = TrapHandler_printf;$/;"	v
 WIN32_LEAN_AND_MEAN	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.h	185;"	d
-ZERO	.\ahsm\my.h	/^	ZERO,		\/* press the key '0' on the keyboard *\/$/;"	e
-_MCF_EXCEPTIONS_H	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.h	9;"	d
-_Startup	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	/^__EXTERN_C void _Startup(void) {$/;"	f
-_Startup	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	/^__EXTERN_C void _Startup(void) {$/;"	f
-_Stop	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\derivative.h	9;"	d
-_Stop	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\derivative.h	9;"	d
-_Wait	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\derivative.h	12;"	d
-_Wait	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\derivative.h	12;"	d
-__24_576MHz__	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	45;"	d
-__24_576MHz__	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	45;"	d
-__BSP_H__	.\ahsm\bsp\80x86\win32_st\vc08\bsp.h	28;"	d
-__BSP_H__	.\ahsm\bsp\cfv1\cw6_3\bsp.h	28;"	d
-__BSP_H__	.\ahsm\bsp\s08\cw6_3\bsp.h	28;"	d
 __BSP_H__	.\oven\bsp\twrk60iar72\bsp.h	47;"	d
 __BSP_H__	.\oven\bsp\win32vc08\bsp.h	46;"	d
-__BSP_H__	.\trtemp\bsp\x86\bsp.h	11;"	d
 __CLIACT_H__	.\oven\oven_1\ovenact.h	7;"	d
 __CLIACT_H__	.\oven\oven_2\ovenact.h	7;"	d
 __CLIACT_H__	.\oven\oven_3\ovenact.h	7;"	d
 __CLIACT_H__	.\oven\oven_4\ovenact.h	7;"	d
 __CLIACT_H__	.\oven\oven_5\ovenact.h	7;"	d
-__CRITICAL_H__	.\ahsm\bsp\cfv1\cw6_3\critical\critical.h	7;"	d
-__CRITICAL_H__	.\ahsm\bsp\s08\cw6_3\critical\critical.h	7;"	d
-__CRITICAL_H__	.\trtemp\bsp\x86\critical.h	7;"	d
-__DBGCFG_H__	.\trtemp\bsp\x86\dbgcfg.h	18;"	d
-__DEBUG_H__	.\trtemp\bsp\x86\debug.h	5;"	d
-__EMGRACT_H__	.\trtemp\gprsmgr\gmgract.h	11;"	d
-__EMGR_H__	.\trtemp\gprsmgr\gmgr.h	20;"	d
-__EXTERN_C	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	24;"	d	file:
-__EXTERN_C	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	26;"	d	file:
-__EXTERN_C	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	24;"	d	file:
-__EXTERN_C	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	26;"	d	file:
-__FEED_COP_IN_HLI	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	47;"	d	file:
-__FEED_COP_IN_HLI	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	49;"	d	file:
-__FEED_COP_IN_HLI	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	47;"	d	file:
-__FEED_COP_IN_HLI	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	49;"	d	file:
+__CLIACT_H__	.\oven\oven_6\ovenact.h	7;"	d
 __GPIO_H__	.\oven\bsp\twrk60iar72\gpio.h	7;"	d
-__GPRS_H__	.\trtemp\bsp\x86\gprs.h	18;"	d
-__GPS_H__	.\trtemp\bsp\x86\gps.h	18;"	d
-__IO_H__	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	11;"	d
-__IO_H__	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	11;"	d
-__KEYMAP_H__	.\trtemp\bsp\x86\keymap.h	18;"	d
 __KUART_H__	.\oven\bsp\twrk60iar72\kuart.h	9;"	d
-__MYACT_H__	.\ahsm\myact.h	7;"	d
-__MYTYPES_H__	.\ahsm\bsp\cfv1\cw6_3\mytypes.h	6;"	d
-__MYTYPES_H__	.\ahsm\bsp\s08\cw6_3\mytypes.h	6;"	d
-__MY_H__	.\ahsm\my.h	7;"	d
-__NO_FLAGS_OFFSET	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	18;"	d	file:
-__NO_FLAGS_OFFSET	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	18;"	d	file:
-__NO_MAIN_OFFSET	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	19;"	d	file:
-__NO_MAIN_OFFSET	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	19;"	d	file:
 __OVEN_H__	.\oven\oven_1\oven.h	7;"	d
 __OVEN_H__	.\oven\oven_2\oven.h	7;"	d
 __OVEN_H__	.\oven\oven_3\oven.h	7;"	d
 __OVEN_H__	.\oven\oven_4\oven.h	7;"	d
 __OVEN_H__	.\oven\oven_5\oven.h	7;"	d
+__OVEN_H__	.\oven\oven_6\oven.h	7;"	d
 __RKHASSERT_H__	.\rkh\source\include\rkhassert.h	46;"	d
-__RKHCFG_H__	.\ahsm\rkhcfg.h	33;"	d
 __RKHCFG_H__	.\oven\oven_1\rkhcfg.h	45;"	d
 __RKHCFG_H__	.\oven\oven_2\rkhcfg.h	45;"	d
 __RKHCFG_H__	.\oven\oven_3\rkhcfg.h	45;"	d
 __RKHCFG_H__	.\oven\oven_4\rkhcfg.h	45;"	d
 __RKHCFG_H__	.\oven\oven_5\rkhcfg.h	45;"	d
-__RKHCFG_H__	.\trtemp\rkhcfg.h	33;"	d
-__RKHDATA_H__	.\ahsm\rkhdata.h	7;"	d
+__RKHCFG_H__	.\oven\oven_6\rkhcfg.h	45;"	d
 __RKHDEF_H__	.\rkh\source\include\rkhdef.h	50;"	d
 __RKHEVT_H__	.\rkh\source\include\rkhevt.h	47;"	d
 __RKHITL_H__	.\rkh\source\include\rkhitl.h	47;"	d
@@ -2476,57 +1904,17 @@ __SCEVT_H__	.\oven\oven_2\ovenevt.h	10;"	d
 __SCEVT_H__	.\oven\oven_3\ovenevt.h	10;"	d
 __SCEVT_H__	.\oven\oven_4\ovenevt.h	10;"	d
 __SCEVT_H__	.\oven\oven_5\ovenevt.h	10;"	d
-__SCI_H__	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.h	10;"	d
-__SCI_H__	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.h	10;"	d
-__SERDEFS_H__	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	6;"	d
-__SERDEFS_H__	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	6;"	d
-__SLOG_H__	.\ahsm\bsp\cfv1\cw6_3\serial\slog.h	6;"	d
-__SLOG_H__	.\ahsm\bsp\s08\cw6_3\serial\slog.h	6;"	d
-__SWHDL_H__	.\ahsm\bsp\cfv1\cw6_3\switch\swhdl.h	6;"	d
-__SWHDL_H__	.\ahsm\bsp\s08\cw6_3\switch\swhdl.h	6;"	d
-__SWITCH_H__	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	6;"	d
-__SWITCH_H__	.\ahsm\bsp\s08\cw6_3\switch\switch.h	6;"	d
-__TCPTRC_H__	.\ahsm\bsp\80x86\win32_st\vc08\tcptrc.h	35;"	d
+__SCEVT_H__	.\oven\oven_6\ovenevt.h	10;"	d
 __TCPTRC_H__	.\oven\bsp\win32vc08\tcptrc.h	51;"	d
-__TCPTRC_H__	.\trtemp\bsp\x86\tcptrc.h	35;"	d
-__TCTRLACT_H__	.\trtemp\tempctrl\tctrlact.h	11;"	d
-__TCTRL_H__	.\trtemp\tempctrl\tctrl.h	20;"	d
-__TMP_H__	.\trtemp\bsp\x86\tmp.h	18;"	d
-__TRKACT_H__	.\trtemp\tracking\trkact.h	11;"	d
-__TRK_H__	.\trtemp\tracking\trk.h	20;"	d
-__TRTEMP_H__	.\trtemp\trtemp.h	20;"	d
-__call_static_initializers	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.c	/^void __call_static_initializers(void)$/;"	f
-__copy_rom_sections_to_ram	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.c	/^static void __copy_rom_sections_to_ram(void)$/;"	f	file:
-__declspec	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	/^asm __declspec(register_abi)  void asm_exception_handler(void)$/;"	f
-__declspec	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	/^asm __declspec(register_abi) void TrapHandler_printf(void) {$/;"	f
-__declspec	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.c	/^asm __declspec(register_abi) void _ExitProcess(void)$/;"	f
-__declspec	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.c	/^asm __declspec(register_abi) void _startup(void)$/;"	f
-__declspec	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.c	/^static __declspec(register_abi) void __copy_rom_section(char* dst, const char* src, unsigned long size)$/;"	f	file:
-__declspec	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.c	/^static __declspec(register_abi) void clear_mem(char *dst, unsigned long n)$/;"	f	file:
-__initialize_hardware	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.c	/^void __initialize_hardware(void)$/;"	f
-__initialize_system	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\startcf.c	/^void __initialize_system(void)$/;"	f
 _clr_gpio	.\oven\bsp\twrk60iar72\gpio.h	29;"	d
-_dprintf	.\trtemp\bsp\x86\debug.c	/^_dprintf( const char* fmt, ...)$/;"	f
 _get_gpio	.\oven\bsp\twrk60iar72\gpio.h	32;"	d
 _init_gpio	.\oven\bsp\twrk60iar72\gpio.h	21;"	d
-_init_iopin	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	25;"	d
-_init_iopin	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	25;"	d
-_mdebug	.\trtemp\bsp\x86\debug.c	/^_mdebug( int i, const char *mn, const char *fn )$/;"	f
-_read_iopin	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	42;"	d
-_read_iopin	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	42;"	d
 _set_gpio	.\oven\bsp\twrk60iar72\gpio.h	28;"	d
-_set_iopin	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	34;"	d
-_set_iopin	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	34;"	d
-_startupData	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	/^struct _tagStartup _startupData;    \/* read-only:$/;"	v
-_startupData	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	/^struct _tagStartup _startupData;    \/* read-only:$/;"	v
 _tgl_gpio	.\oven\bsp\twrk60iar72\gpio.h	30;"	d
-_toggle_iopin	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	38;"	d
-_toggle_iopin	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	38;"	d
 action	.\rkh\source\include\rkhitl.h	/^	RKH_TRN_ACT_T action;$/;"	m	struct:RKH_ENPCN_T
 action	.\rkh\source\include\rkhitl.h	/^	RKH_TRN_ACT_T action;$/;"	m	struct:RKH_EXPCN_T
 action	.\rkh\source\include\rkhitl.h	/^	RKH_TRN_ACT_T action;$/;"	m	struct:RKH_TR_T
 add_to_list	.\rkh\source\rkhtim.c	68;"	d	file:
-asm_exception_handler	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	/^asm void asm_exception_handler(void)$/;"	f
 base	.\rkh\source\include\rkhitl.h	/^	struct RKH_BASE_T base;$/;"	m	struct:RKH_RSM_T
 base	.\rkh\source\include\rkhitl.h	/^	struct RKH_BASE_T base;$/;"	m	struct:RKH_SCHOICE_T
 base	.\rkh\source\include\rkhitl.h	/^	struct RKH_BASE_T base;$/;"	m	struct:RKH_SCOND_T
@@ -2534,11 +1922,7 @@ base	.\rkh\source\include\rkhitl.h	/^	struct RKH_BASE_T base;$/;"	m	struct:RKH_S
 base	.\rkh\source\include\rkhitl.h	/^	struct RKH_BASE_T base;$/;"	m	struct:RKH_SEXP_T
 base	.\rkh\source\include\rkhitl.h	/^	struct RKH_BASE_T base;$/;"	m	struct:RKH_SHIST_T
 base	.\rkh\source\include\rkhitl.h	/^	struct RKH_BASE_T base;$/;"	m	struct:RKH_ST_T
-baud	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	unsigned baud:4;$/;"	m
-baud	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	unsigned baud:4;$/;"	m
 baud	.\oven\bsp\twrk60iar72\kuart.h	/^	unsigned baud;$/;"	m
-bits	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	unsigned bits:1;$/;"	m
-bits	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	unsigned bits:1;$/;"	m
 bsize	.\rkh\source\include\rkhmp.h	/^	RKH_MPBS_T bsize;$/;"	m	struct:RKH_MP_T
 bsp_cli_done	.\oven\bsp\twrk60iar72\bsp.c	/^bsp_cli_done( rui8_t clino )$/;"	f
 bsp_cli_paused	.\oven\bsp\twrk60iar72\bsp.c	/^bsp_cli_paused( rui8_t clino )$/;"	f
@@ -2548,12 +1932,8 @@ bsp_cli_using	.\oven\bsp\twrk60iar72\bsp.c	/^bsp_cli_using( rui8_t clino, RKH_TN
 bsp_cli_wait_req	.\oven\bsp\twrk60iar72\bsp.c	/^bsp_cli_wait_req( rui8_t clino, RKH_TNT_T req_time )$/;"	f
 bsp_emitter_off	.\oven\bsp\win32vc08\bsp.c	/^bsp_emitter_off( void )$/;"	f
 bsp_emitter_on	.\oven\bsp\win32vc08\bsp.c	/^bsp_emitter_on( void )$/;"	f
-bsp_init	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^bsp_init( void )$/;"	f
-bsp_init	.\ahsm\bsp\cfv1\cw6_3\bsp.c	/^bsp_init( void )$/;"	f
-bsp_init	.\ahsm\bsp\s08\cw6_3\bsp.c	/^bsp_init( void )$/;"	f
 bsp_init	.\oven\bsp\twrk60iar72\bsp.c	/^bsp_init( int argc, char *argv[]  )$/;"	f
 bsp_init	.\oven\bsp\win32vc08\bsp.c	/^bsp_init( int argc, char *argv[] )$/;"	f
-bsp_init	.\trtemp\bsp\x86\bsp.c	/^bsp_init( int argc, char *argv[] )$/;"	f
 bsp_oven_init	.\oven\bsp\win32vc08\bsp.c	/^bsp_oven_init( void )$/;"	f
 bsp_publish	.\oven\bsp\twrk60iar72\bsp.c	/^bsp_publish( const RKH_EVT_T *e )$/;"	f	file:
 bsp_rand	.\oven\bsp\twrk60iar72\bsp.c	/^bsp_rand( void )$/;"	f
@@ -2561,160 +1941,67 @@ bsp_srand	.\oven\bsp\twrk60iar72\bsp.c	/^bsp_srand( rui32_t seed )$/;"	f
 bsp_svr_paused	.\oven\bsp\twrk60iar72\bsp.c	/^bsp_svr_paused( const RKH_SMA_T *sma )$/;"	f
 bsp_svr_recall	.\oven\bsp\twrk60iar72\bsp.c	/^bsp_svr_recall( rui8_t clino )$/;"	f
 bsp_switch_evt	.\oven\bsp\twrk60iar72\bsp.c	/^bsp_switch_evt( rui8_t s, rui8_t st )$/;"	f
-ccr_sp	.\ahsm\bsp\cfv1\cw6_3\critical\critical.c	/^static ushort *ccr_sp;$/;"	v	file:
-ccr_sp	.\ahsm\bsp\s08\cw6_3\critical\critical.c	/^static unsigned int ccr_sp;$/;"	v	file:
 ccr_sp	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.c	/^static unsigned int ccr_sp = (unsigned int)ccr_sp_mem;$/;"	v	file:
-ccr_sp_mem	.\ahsm\bsp\cfv1\cw6_3\critical\critical.c	/^static ushort ccr_sp_mem[ MAX_NESTING_CSECT ];$/;"	v	file:
-ccr_sp_mem	.\ahsm\bsp\s08\cw6_3\critical\critical.c	/^static unsigned char ccr_sp_mem[ MAX_NESTING_CSECT ];$/;"	v	file:
 ccr_sp_mem	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.c	/^static unsigned char ccr_sp_mem[ BSP_MAX_NESTING_CSECT ];$/;"	v	file:
 chk	.\rkh\source\rkhtrc.c	/^static rui8_t chk;$/;"	v	file:
 chk_restart_cnt	.\oven\oven_5\ovenact.c	/^chk_restart_cnt( void )$/;"	f
+chk_restart_cnt	.\oven\oven_6\ovenact.c	/^chk_restart_cnt( void )$/;"	f
 close	.\oven\oven_2\oven.h	/^RKH_DCLR_COMP_STATE close;$/;"	v
 close	.\oven\oven_3\oven.h	/^RKH_DCLR_COMP_STATE close;$/;"	v
 close	.\oven\oven_4\oven.h	/^RKH_DCLR_COMP_STATE close;$/;"	v
 close	.\oven\oven_5\oven.h	/^RKH_DCLR_COMP_STATE close;$/;"	v
+close	.\oven\oven_6\oven.h	/^RKH_DCLR_COMP_STATE close, cooking;$/;"	v
 close_hist	.\oven\oven_4\oven.h	/^RKH_DCLR_SHIST_STATE close_hist;$/;"	v
 close_hist	.\oven\oven_5\oven.h	/^RKH_DCLR_SHIST_STATE close_hist;$/;"	v
+close_hist	.\oven\oven_6\oven.h	/^RKH_DCLR_SHIST_STATE close_hist;$/;"	v
 clr_gpio	.\oven\bsp\twrk60iar72\gpio.h	41;"	d
 clr_led	.\oven\bsp\twrk60iar72\gpio.h	75;"	d
-cmp	.\trtemp\trtemp.h	/^	CMPCHG_T cmp;$/;"	m
-cmp_off	.\trtemp\tempctrl\tctrl.h	/^						cmp_off,$/;"	v
-cmp_on	.\trtemp\tempctrl\tctrl.h	/^						cmp_on;$/;"	v
-cmp_status	.\trtemp\bsp\x86\tmp.c	/^static rkhi8_t cmp_status;$/;"	v	file:
-cmp_status_chg	.\trtemp\bsp\x86\tmp.c	/^cmp_status_chg( void )$/;"	f
-cmpst_str	.\trtemp\bsp\x86\gprs.c	/^static const char *cmpst_str[] =$/;"	v	file:
-com1_init	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	/^com1_init( COMSET_T const *p )$/;"	f
-com1_init	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	/^com1_init( COMSET_T const *p )$/;"	f
-com1_rcv_isr	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	/^com1_rcv_isr( void )$/;"	f
-com1_rcv_isr	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	/^com1_rcv_isr( void )$/;"	f
-com1_sendchar	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	/^com1_sendchar( uchar c )$/;"	f
-com1_sendchar	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	/^com1_sendchar( uchar c )$/;"	f
-com2_init	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	/^com2_init( COMSET_T const *p )$/;"	f
-com2_init	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	/^com2_init( COMSET_T const *p )$/;"	f
-com2_rcv_isr	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	/^com2_rcv_isr( void )$/;"	f
-com2_rcv_isr	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	/^com2_rcv_isr( void )$/;"	f
-com2_sendchar	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	/^com2_sendchar( uchar c )$/;"	f
-com2_sendchar	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	/^com2_sendchar( uchar c )$/;"	f
-compressor_failrst	.\trtemp\tempctrl\tctrlact.c	/^compressor_failrst( RKHEVT_T *pe )$/;"	f
-compressor_failure	.\trtemp\tempctrl\tctrlact.c	/^compressor_failure( RKHEVT_T *pe )$/;"	f
-compressor_start	.\trtemp\tempctrl\tctrlact.c	/^compressor_start( RKHEVT_T *pe )$/;"	f
-compressor_stop	.\trtemp\tempctrl\tctrlact.c	/^compressor_stop( RKHEVT_T *pe )$/;"	f
-comsets	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	COMSET_T comsets;$/;"	m
-comsets	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	COMSET_T comsets;$/;"	m
 cooking	.\oven\oven_1\oven.h	/^RKH_DCLR_BASIC_STATE idle, ready, cooking;$/;"	v
 cooking	.\oven\oven_2\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
 cooking	.\oven\oven_3\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
 cooking	.\oven\oven_4\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
 cooking	.\oven\oven_5\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
+cooking	.\oven\oven_6\oven.h	/^RKH_DCLR_COMP_STATE close, cooking;$/;"	v
+cooking_cnd	.\oven\oven_6\oven.h	/^RKH_DCLR_COND_STATE cooking_cnd;$/;"	v
 cortex_m4_enter_critical	.\rkh\source\portable\arm-cortex\rkhs\arm_cm0\cw_v10\rkhport.c	54;"	d	file:
 cortex_m4_enter_critical	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\rkhport.c	54;"	d	file:
 cortex_m4_enter_critical	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.c	54;"	d	file:
 cortex_m4_exit_critical	.\rkh\source\portable\arm-cortex\rkhs\arm_cm0\cw_v10\rkhport.c	62;"	d	file:
 cortex_m4_exit_critical	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\rkhport.c	62;"	d	file:
 cortex_m4_exit_critical	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.c	62;"	d	file:
-crit_cnt	.\ahsm\bsp\cfv1\cw6_3\critical\critical.c	/^static unsigned short crit_cnt;$/;"	v	file:
 crit_cnt	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.c	/^static unsigned short crit_cnt = 0;$/;"	v	file:
 critical_nesting	.\rkh\source\portable\arm-cortex\rkhs\arm_cm0\cw_v10\rkhport.c	/^static ruint critical_nesting;$/;"	v	file:
 critical_nesting	.\rkh\source\portable\arm-cortex\rkhs\arm_cm3\codered\rkhport.c	/^static ruint critical_nesting;$/;"	v	file:
 critical_nesting	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\rkhport.c	/^static ruint critical_nesting;$/;"	v	file:
 critical_nesting	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.c	/^static ruint critical_nesting;$/;"	v	file:
 csection	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.c	/^static CRITICAL_SECTION csection;		\/* Win32 critical section object *\/$/;"	v	file:
-curr_pos	.\trtemp\tracking\trkact.c	/^static GPSFRM_T curr_pos;$/;"	v	file:
-curr_temp	.\trtemp\bsp\x86\tmp.c	/^static rkhi8_t curr_temp = TEMP_INITIAL;$/;"	v	file:
-data	.\trtemp\trtemp.h	/^	EVENT_DATA_T data;$/;"	m
-debsw	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	uchar debsw;			\/* debounced switch state *\/$/;"	m
-debsw	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	uchar debsw;			\/* debounced switch state *\/$/;"	m
 defchild	.\rkh\source\include\rkhitl.h	/^	RKHROM void *defchild;$/;"	m	struct:RKH_RSM_T
 defchild	.\rkh\source\include\rkhitl.h	/^	RKHROM void *defchild;$/;"	m	struct:RKH_SCMP_T
-derivative_interrupt	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	/^void derivative_interrupt(unsigned long vector)$/;"	f
-disable_rcv_interrupt	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	/^disable_rcv_interrupt( MUInt ch )$/;"	f
-disable_rcv_interrupt	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	/^disable_rcv_interrupt( MUInt ch )$/;"	f
-dprintf	.\trtemp\bsp\x86\debug.h	16;"	d
-dprintf	.\trtemp\bsp\x86\debug.h	24;"	d
-dummy_act	.\ahsm\myact.c	/^dummy_act( const struct rkhsma_t *sma, RKHEVT_T *pe )$/;"	f
-dummy_exit	.\ahsm\myact.c	/^dummy_exit( const struct rkhsma_t *sma )$/;"	f
+defer_start	.\oven\oven_6\ovenact.c	/^defer_start( const RKH_SMA_T *sma, RKH_EVT_T *pe )$/;"	f
 dyp	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_ST_T **dyp;$/;"	m	struct:RKH_RSM_T
 e	.\rkh\source\include\rkhevt.h	/^	RKH_SIG_T e;$/;"	m	struct:RKH_EVT_T
-e	.\trtemp\trtemp.h	/^	RKHEVT_T e;$/;"	m
-emdfq_sto	.\trtemp\gprsmgr\gmgract.c	/^static RKHEVT_T *emdfq_sto[ EMGR_MAX_DEFER_EVENT ];$/;"	v	file:
-enable_rcv_interrupt	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\sci.c	/^enable_rcv_interrupt( MUInt ch )$/;"	f
-enable_rcv_interrupt	.\ahsm\bsp\s08\cw6_3\mcu\sci\sci.c	/^enable_rcv_interrupt( MUInt ch )$/;"	f
 end	.\rkh\source\include\rkhmp.h	/^	void *end;$/;"	m	struct:RKH_MP_T
 enpcn	.\rkh\source\include\rkhitl.h	/^	RKHROM RKH_ENPCN_T *enpcn;$/;"	m	struct:RKH_SENP_T
 enter	.\rkh\source\include\rkhitl.h	/^	RKH_ENT_ACT_T enter;$/;"	m	struct:RKH_ST_T
-enter_critical	.\ahsm\bsp\cfv1\cw6_3\critical\critical.c	/^enter_critical( void )$/;"	f
-enter_critical	.\ahsm\bsp\s08\cw6_3\critical\critical.c	/^enter_critical( void )$/;"	f
-enter_critical	.\trtemp\bsp\x86\critical.h	14;"	d
-ep0sto	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^static rkhui8_t ep0sto[ SIZEOF_EP0STO ],$/;"	v	file:
-ep0sto	.\ahsm\bsp\cfv1\cw6_3\bsp.c	/^static rkhui8_t ep0sto[ SIZEOF_EP0STO ],$/;"	v	file:
-ep0sto	.\ahsm\bsp\s08\cw6_3\bsp.c	/^static rkhui8_t ep0sto[ SIZEOF_EP0STO ],$/;"	v	file:
 ep0sto	.\oven\bsp\twrk60iar72\bsp.c	/^static rui8_t ep0sto[ SIZEOF_EP0STO ],$/;"	v	file:
-ep0sto	.\trtemp\bsp\x86\bsp.c	/^static rkhui8_t ep0sto[ SIZEOF_EP0STO ],$/;"	v	file:
-ep1sto	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^				ep1sto[ SIZEOF_EP1STO ];$/;"	v	file:
-ep1sto	.\ahsm\bsp\cfv1\cw6_3\bsp.c	/^				ep1sto[ SIZEOF_EP1STO ];$/;"	v	file:
-ep1sto	.\ahsm\bsp\s08\cw6_3\bsp.c	/^				ep1sto[ SIZEOF_EP1STO ];$/;"	v	file:
 ep1sto	.\oven\bsp\twrk60iar72\bsp.c	/^				ep1sto[ SIZEOF_EP1STO ];$/;"	v	file:
-ep1sto	.\trtemp\bsp\x86\bsp.c	/^				ep1sto[ SIZEOF_EP1STO ];$/;"	v	file:
 equeue	.\rkh\source\include\rkhitl.h	/^	RKH_EQ_TYPE equeue;$/;"	m	struct:RKH_SMA_T
-event	.\ahsm\my.h	/^	RKHEVT_T event;$/;"	m
 event	.\rkh\source\include\rkhitl.h	/^	RKH_SIG_T event;$/;"	m	struct:RKH_TR_T
 evt	.\rkh\source\include\rkhtim.h	/^	RKH_EVT_T *evt;$/;"	m	struct:RKH_TMR_T
 exectr	.\rkh\source\include\rkhitl.h	/^	rui16_t exectr;			\/**< # of executed transitions *\/$/;"	m	struct:RKH_SMAI_T
 exit	.\rkh\source\include\rkhitl.h	/^	RKH_EXT_ACT_T exit;$/;"	m	struct:RKH_ST_T
-exit_critical	.\ahsm\bsp\cfv1\cw6_3\critical\critical.c	/^exit_critical( void )$/;"	f
-exit_critical	.\ahsm\bsp\s08\cw6_3\critical\critical.c	/^exit_critical( void )$/;"	f
-exit_critical	.\trtemp\bsp\x86\critical.h	15;"	d
 exptbl	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_EXPCN_T *exptbl;$/;"	m	struct:RKH_SSBM_T
 fce	.\oven\bsp\twrk60iar72\kuart.h	/^	KUART_HFC_T fce;	\/* flow control enable *\/$/;"	m
-fdbg	.\trtemp\bsp\x86\debug.c	/^static FILE *fdbg;$/;"	v	file:
 find_channtbl	.\oven\bsp\twrk60iar72\kuart.c	/^find_channtbl( UART_MemMapPtr channel )$/;"	f	file:
 free	.\rkh\source\include\rkhmp.h	/^	rui8_t free;$/;"	m
 free	.\rkh\source\include\rkhmp.h	/^	void *free;$/;"	m	struct:RKH_MP_T
-frm	.\trtemp\trtemp.h	/^	GPSFRM_T frm;$/;"	m
 fsig	.\rkh\source\rkhtrc.c	/^const RKH_TRC_FIL_T fsig = { RKH_TRC_MAX_SIGNALS, 	trcsigftbl };$/;"	v
 fsma	.\rkh\source\rkhtrc.c	/^const RKH_TRC_FIL_T fsma = { RKH_TRC_MAX_SMA, 		trcsmaftbl };$/;"	v
-ftbin	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^static FILE *ftbin;$/;"	v	file:
 ftbin	.\oven\bsp\win32vc08\bsp.c	/^static FILE *ftbin;$/;"	v	file:
-ftbin	.\trtemp\bsp\x86\bsp.c	/^static FILE *ftbin;$/;"	v	file:
 full	.\rkh\source\include\rkhmp.h	/^	rui8_t full;$/;"	m
-get_curr_temp	.\trtemp\bsp\x86\tmp.c	/^get_curr_temp( void )$/;"	f
 get_gpio	.\oven\bsp\twrk60iar72\gpio.h	43;"	d
-get_switch_state	.\ahsm\bsp\cfv1\cw6_3\switch\switch.c	/^get_switch_state( uchar who )$/;"	f
-get_switch_state	.\ahsm\bsp\s08\cw6_3\switch\switch.c	/^get_switch_state( uchar who )$/;"	f
-get_ts	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.c	/^get_ts( void )$/;"	f
-get_ts	.\ahsm\bsp\s08\cw6_3\mcu\mcu.c	/^get_ts( void )$/;"	f
 get_ts	.\oven\bsp\twrk60iar72\bsp.h	96;"	d
 gets	.\rkh\source\include\rkhmp.h	/^	rui8_t gets;$/;"	m
-gevt	.\trtemp\bsp\x86\gprs.c	/^static SEND_EVT_REQ_T gevt;$/;"	v	file:
-gmgr	.\trtemp\gprsmgr\gmgr.h	/^RKH_SMA_DCLR( gmgr );$/;"	v
-gmgr_defer_evt	.\trtemp\gprsmgr\gmgract.c	/^gmgr_defer_evt( RKHEVT_T *pe )$/;"	f
-gmgr_dfq	.\trtemp\gprsmgr\gmgract.c	/^static RKHRQ_T gmgr_dfq;$/;"	v	file:
-gmgr_evt_post	.\trtemp\gprsmgr\gmgract.c	/^gmgr_evt_post( SEND_EVT_REQ_T *e )$/;"	f
-gmgr_evt_req	.\trtemp\gprsmgr\gmgract.c	/^gmgr_evt_req( void )$/;"	f
-gmgr_idle	.\trtemp\gprsmgr\gmgr.h	/^RKH_DCLR_BASIC_STATE	gmgr_idle, gmgr_in_progress;$/;"	v
-gmgr_in_progress	.\trtemp\gprsmgr\gmgr.h	/^RKH_DCLR_BASIC_STATE	gmgr_idle, gmgr_in_progress;$/;"	v
-gmgr_init	.\trtemp\gprsmgr\gmgract.c	/^gmgr_init( void )$/;"	f
-gmgr_send_cfm	.\trtemp\gprsmgr\gmgract.c	/^gmgr_send_cfm( RKHEVT_T *pe )$/;"	f
-gmgr_send_last	.\trtemp\gprsmgr\gmgract.c	/^gmgr_send_last( RKHEVT_T *pe )$/;"	f
-gmgr_send_req	.\trtemp\gprsmgr\gmgract.c	/^gmgr_send_req( RKHEVT_T *pe )$/;"	f
-gmgr_term	.\trtemp\gprsmgr\gmgract.c	/^gmgr_term( RKHEVT_T *pe )$/;"	f
-gprs_init	.\trtemp\bsp\x86\gprs.c	/^gprs_init( void )$/;"	f
-gprs_isr	.\trtemp\bsp\x86\gprs.c	/^gprs_isr( void )$/;"	f
-gprs_link_chg	.\trtemp\bsp\x86\gprs.c	/^gprs_link_chg( void )$/;"	f
-gprs_send	.\trtemp\bsp\x86\gprs.c	/^gprs_send( SEND_EVT_REQ_T *p )$/;"	f
-gprstick	.\trtemp\bsp\x86\gprs.c	/^static rkhi8_t gprstick;$/;"	v	file:
-gps_chk_online	.\trtemp\tracking\trk.h	/^RKH_DCLR_COND_STATE		gps_chk_online,$/;"	v
-gps_chk_vmax	.\trtemp\tracking\trk.h	/^						gps_chk_vmax;$/;"	v
-gps_init	.\trtemp\bsp\x86\gps.c	/^gps_init( void )$/;"	f
-gps_isr	.\trtemp\bsp\x86\gps.c	/^gps_isr( void )$/;"	f
-gps_moving	.\trtemp\tracking\trk.h	/^						gps_moving;$/;"	v
-gps_offline	.\trtemp\tracking\trk.h	/^RKH_DCLR_BASIC_STATE	gps_offline,$/;"	v
-gps_online	.\trtemp\tracking\trk.h	/^RKH_DCLR_COMP_STATE		gps_online;$/;"	v
-gps_sats_chg	.\trtemp\bsp\x86\gps.c	/^gps_sats_chg( void )$/;"	f
-gps_stop	.\trtemp\tracking\trk.h	/^						gps_stop,$/;"	v
-gps_vmax	.\trtemp\tracking\trk.h	/^						gps_vmax,$/;"	v
-gpsfrm	.\trtemp\bsp\x86\gps.c	/^static GPSFRM_T gpsfrm;$/;"	v	file:
-gpstick	.\trtemp\bsp\x86\gps.c	/^static rkhi8_t gpstick;$/;"	v	file:
 grp	.\rkh\source\include\rkhrdy.h	/^	rui8_t grp;$/;"	m
 guard	.\rkh\source\include\rkhitl.h	/^	RKH_GUARD_T guard;$/;"	m	struct:RKH_TR_T
 history	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_SHIST_T *history;$/;"	m	struct:RKH_SCMP_T
@@ -2722,42 +2009,16 @@ iaction	.\rkh\source\include\rkhitl.h	/^	RKH_INIT_ACT_T iaction;$/;"	m	struct:RO
 iaction	.\rkh\source\include\rkhitl.h	/^	RKH_TRN_ACT_T iaction;$/;"	m	struct:RKH_RSM_T
 idle	.\oven\oven_1\oven.h	/^RKH_DCLR_BASIC_STATE idle, ready, cooking;$/;"	v
 ievent	.\rkh\source\include\rkhitl.h	/^	const RKH_EVT_T *ievent;$/;"	m	struct:ROMRKH_T
-in_stop	.\trtemp\tracking\trkact.c	/^in_stop( RKHEVT_T *pe )$/;"	f
-inc_defer_start	.\oven\oven_5\ovenact.c	/^inc_defer_start( RKH_SMA_T *sma, RKH_EVT_T *pe )$/;"	f
+inc_defer_start	.\oven\oven_5\ovenact.c	/^inc_defer_start( const RKH_SMA_T *sma, RKH_EVT_T *pe )$/;"	f
+inc_start	.\oven\oven_6\ovenact.c	/^inc_start( const RKH_SMA_T *sma, RKH_EVT_T *pe )$/;"	f
 info	.\rkh\source\include\rkhtim.h	/^	RKH_TINFO_T info;$/;"	m	struct:RKH_TMR_T
-inform_switch	.\ahsm\bsp\cfv1\cw6_3\switch\switch.c	/^inform_switch( SWITCH_ST *p )$/;"	f
-inform_switch	.\ahsm\bsp\s08\cw6_3\switch\switch.c	/^inform_switch( SWITCH_ST *p )$/;"	f
-init	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	void (*init)( COMSET_T const *p );$/;"	m
-init	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	void (*init)( COMSET_T const *p );$/;"	m
-init_comen	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	110;"	d
-init_comen	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	110;"	d
-init_critical	.\ahsm\bsp\cfv1\cw6_3\critical\critical.c	/^init_critical( void )$/;"	f
-init_critical	.\ahsm\bsp\s08\cw6_3\critical\critical.c	/^init_critical( void )$/;"	f
-init_critical	.\trtemp\bsp\x86\critical.h	13;"	d
 init_gpio	.\oven\bsp\twrk60iar72\gpio.h	39;"	d
-init_iopin	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	32;"	d
-init_iopin	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	32;"	d
 init_ioports	.\oven\bsp\twrk60iar72\gpio.h	64;"	d
-init_leds	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	96;"	d
-init_leds	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	96;"	d
-init_pshbuts	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	88;"	d
-init_pshbuts	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	88;"	d
 inits	.\rkh\source\include\rkhmp.h	/^	rui8_t inits;$/;"	m
-io_init	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.c	/^io_init(void)$/;"	f
-io_init	.\ahsm\bsp\s08\cw6_3\mcu\io\io.c	/^io_init(void)$/;"	f
-is_online	.\trtemp\tracking\trkact.c	/^is_online( RKHEVT_T *pe )$/;"	f
-is_vmax	.\trtemp\tracking\trkact.c	/^is_vmax( RKHEVT_T *pe )$/;"	f
-isrVtpm1ovf	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.c	/^isrVtpm1ovf( void )$/;"	f
-isrVtpm1ovf	.\ahsm\bsp\s08\cw6_3\mcu\mcu.c	/^isrVtpm1ovf( void )$/;"	f
-isr_kbd_thread	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^isr_kbd_thread( LPVOID par )	\/* Win32 thread to emulate keyboard ISR *\/$/;"	f	file:
 isr_kbd_thread	.\oven\bsp\win32vc08\bsp.c	/^isr_kbd_thread( LPVOID par )	\/* Win32 thread to emulate keyboard ISR *\/$/;"	f	file:
-isr_kbd_thread	.\trtemp\bsp\x86\bsp.c	/^isr_kbd_thread( LPVOID par )	\/* Win32 thread to emulate keyboard ISR *\/$/;"	f	file:
-isr_tmr_thread	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^isr_tmr_thread( LPVOID par )	\/* Win32 thread to emulate timer ISR *\/$/;"	f	file:
 isr_tmr_thread	.\oven\bsp\win32vc08\bsp.c	/^isr_tmr_thread( LPVOID par )	\/* Win32 thread to emulate timer ISR *\/$/;"	f	file:
-isr_tmr_thread	.\trtemp\bsp\x86\bsp.c	/^isr_tmr_thread( LPVOID par )	\/* Win32 thread to emulate timer ISR *\/$/;"	f	file:
 istate	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_ST_T *istate;$/;"	m	struct:ROMRKH_T
 ix	.\rkh\source\include\rkhitl.h	/^	rui8_t ix;$/;"	m	struct:RKH_SEXP_T
-kbmap	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	41;"	d	file:
 kuart0_isr	.\oven\bsp\twrk60iar72\kuart.c	/^void kuart0_isr( void ){	kuart_isr( &kuart_channels[KUART0] ); }$/;"	f
 kuart1_isr	.\oven\bsp\twrk60iar72\kuart.c	/^void kuart1_isr( void ){	kuart_isr( &kuart_channels[KUART1] ); }$/;"	f
 kuart2_isr	.\oven\bsp\twrk60iar72\kuart.c	/^void kuart2_isr( void ){	kuart_isr( &kuart_channels[KUART2] ); }$/;"	f
@@ -2778,34 +2039,16 @@ l_isr_kbd	.\oven\bsp\win32vc08\bsp.c	/^static rui8_t l_isr_kbd;$/;"	v	file:
 l_isr_tick	.\oven\bsp\win32vc08\bsp.c	/^static rui8_t l_isr_tick;$/;"	v	file:
 l_isr_tick	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.c	/^static rui8_t l_isr_tick;$/;"	v	file:
 l_rnd	.\oven\bsp\twrk60iar72\bsp.c	/^static rui32_t l_rnd;			\/* random seed *\/$/;"	v	file:
-last	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	uchar last;				\/* previouse state *\/$/;"	m
-last	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	uchar last;				\/* previouse state *\/$/;"	m
-lat	.\trtemp\bsp\x86\gps.h	/^	rkhui32_t lat;$/;"	m
-lat	.\trtemp\trtemp.h	/^	rkhui32_t lat;$/;"	m
-link_is_ok	.\trtemp\bsp\x86\gprs.c	/^static rkhui8_t link_is_ok;$/;"	v	file:
-lng	.\trtemp\bsp\x86\gps.h	/^	rkhui32_t lng;$/;"	m
-lng	.\trtemp\trtemp.h	/^	rkhui32_t lng;$/;"	m
-loadByte	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	/^static void near loadByte(void) {$/;"	f	file:
-loadByte	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	/^static void near loadByte(void) {$/;"	f	file:
-lower2tmin	.\trtemp\tempctrl\tctrlact.c	/^lower2tmin( RKHEVT_T *pe )$/;"	f
 lpc17xx_enter_critical	.\rkh\source\portable\arm-cortex\rkhs\arm_cm3\codered\rkhport.c	55;"	d	file:
 lpc17xx_exit_critical	.\rkh\source\portable\arm-cortex\rkhs\arm_cm3\codered\rkhport.c	63;"	d	file:
-main	.\ahsm\main.c	/^main( void )$/;"	f
 main	.\oven\oven_1\main.c	/^main( int argc, char *argv[] )$/;"	f
 main	.\oven\oven_2\main.c	/^main( int argc, char *argv[] )$/;"	f
 main	.\oven\oven_3\main.c	/^main( int argc, char *argv[] )$/;"	f
 main	.\oven\oven_4\main.c	/^main( int argc, char *argv[] )$/;"	f
 main	.\oven\oven_5\main.c	/^main( int argc, char *argv[] )$/;"	f
-main	.\trtemp\main.c	/^main( int argc, char *argv[] )$/;"	f
-mcf_exception_handler	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	/^void mcf_exception_handler(void *framepointer) $/;"	f
-mcu_init	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.c	/^mcu_init( void )$/;"	f
-mcu_init	.\ahsm\bsp\s08\cw6_3\mcu\mcu.c	/^mcu_init( void )$/;"	f
-mdebug	.\trtemp\bsp\x86\debug.h	14;"	d
-mdebug	.\trtemp\bsp\x86\debug.h	22;"	d
+main	.\oven\oven_6\main.c	/^main( int argc, char *argv[] )$/;"	f
 mma	.\oven\bsp\twrk60iar72\kuart.c	/^	UART_MemMapPtr mma; \/* uart memory map address*\/$/;"	m	file:
 mpi	.\rkh\source\include\rkhmp.h	/^	RKH_MPI_T mpi;$/;"	m	struct:RKH_MP_T
-my	.\ahsm\my.h	/^RKH_SMA_DCLR( my );$/;"	v
-my_init	.\ahsm\myact.c	/^my_init( const void *sma )$/;"	f
 name	.\rkh\source\include\rkhitl.h	/^	const char *name;$/;"	m	struct:RKH_BASE_T
 name	.\rkh\source\include\rkhitl.h	/^	const char *name;$/;"	m	struct:ROMRKH_T
 nblocks	.\rkh\source\include\rkhmp.h	/^	RKH_MPNB_T nblocks;$/;"	m	struct:RKH_MP_T
@@ -2827,85 +2070,66 @@ nstart	.\rkh\source\include\rkhtim.h	/^	rui16_t nstart;		\/**	# of start request
 nstop	.\rkh\source\include\rkhtim.h	/^	rui16_t nstop;		\/**	# of stop requests *\/$/;"	m	struct:RKH_TINFO_T
 ntick	.\rkh\source\include\rkhtim.h	/^	RKH_TNT_T ntick;$/;"	m	struct:RKH_TMR_T
 num	.\oven\bsp\twrk60iar72\kuart.c	/^	uint8_t num;$/;"	m	file:
+off	.\oven\oven_6\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, on, off;$/;"	v
+on	.\oven\oven_6\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, on, off;$/;"	v
 open	.\oven\oven_2\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
 open	.\oven\oven_3\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
 open	.\oven\oven_4\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
 open	.\oven\oven_5\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
+open	.\oven\oven_6\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, on, off;$/;"	v
 os_signal	.\rkh\source\include\rkhitl.h	/^	RKH_OSSIGNAL_TYPE os_signal;$/;"	m	struct:RKH_SMA_T
 ov_sigs_t	.\oven\oven_1\ovenevt.h	/^typedef enum ov_sigs_t$/;"	g
 ov_sigs_t	.\oven\oven_2\ovenevt.h	/^typedef enum ov_sigs_t$/;"	g
 ov_sigs_t	.\oven\oven_3\ovenevt.h	/^typedef enum ov_sigs_t$/;"	g
 ov_sigs_t	.\oven\oven_4\ovenevt.h	/^typedef enum ov_sigs_t$/;"	g
 ov_sigs_t	.\oven\oven_5\ovenevt.h	/^typedef enum ov_sigs_t$/;"	g
+ov_sigs_t	.\oven\oven_6\ovenevt.h	/^typedef enum ov_sigs_t$/;"	g
 oven	.\oven\oven_1\oven.h	/^RKH_SMA_DCLR( oven );$/;"	v
 oven	.\oven\oven_2\oven.h	/^RKH_SMA_DCLR( oven );$/;"	v
 oven	.\oven\oven_3\oven.h	/^RKH_SMA_DCLR( oven );$/;"	v
 oven	.\oven\oven_4\oven.h	/^RKH_SMA_DCLR( oven );$/;"	v
 oven	.\oven\oven_5\oven.h	/^RKH_SMA_DCLR( oven );$/;"	v
+oven	.\oven\oven_6\oven.h	/^RKH_SMA_DCLR( oven );$/;"	v
 oven_init	.\oven\oven_1\ovenact.c	/^oven_init( void )$/;"	f
 oven_init	.\oven\oven_2\ovenact.c	/^oven_init( void )$/;"	f
 oven_init	.\oven\oven_3\ovenact.c	/^oven_init( void )$/;"	f
 oven_init	.\oven\oven_4\ovenact.c	/^oven_init( void )$/;"	f
 oven_init	.\oven\oven_5\ovenact.c	/^oven_init( void )$/;"	f
+oven_init	.\oven\oven_6\ovenact.c	/^oven_init( void )$/;"	f
 oventim	.\oven\oven_1\ovenact.c	/^RKH_TMR_T oventim;$/;"	v
 oventim	.\oven\oven_2\ovenact.c	/^RKH_TMR_T oventim;$/;"	v
 oventim	.\oven\oven_3\ovenact.c	/^RKH_TMR_T oventim;$/;"	v
 oventim	.\oven\oven_4\ovenact.c	/^RKH_TMR_T oventim;$/;"	v
 oventim	.\oven\oven_5\ovenact.c	/^RKH_TMR_T oventim;$/;"	v
+oventim	.\oven\oven_6\ovenact.c	/^RKH_TMR_T oventim;$/;"	v
 parent	.\rkh\source\include\rkhitl.h	/^	RKHROM RKH_RSM_T *parent;$/;"	m	struct:RKH_SEXP_T
 parent	.\rkh\source\include\rkhitl.h	/^	RKHROM RKH_ST_T *parent;$/;"	m	struct:RKH_SHIST_T
 parent	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_ST_T *parent;$/;"	m	struct:RKH_SENP_T
 parent	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_ST_T *parent;$/;"	m	struct:RKH_ST_T
-parity	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	unsigned parity:3;$/;"	m
-parity	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	unsigned parity:3;$/;"	m
 pend	.\rkh\source\include\rkhrq.h	/^	void **pend;$/;"	m	struct:RKH_RQ_T
 period	.\rkh\source\include\rkhtim.h	/^	RKH_TNT_T period;$/;"	m	struct:RKH_TMR_T
-pevt	.\trtemp\gprsmgr\gmgract.c	/^static SEND_EVT_REQ_T *pevt;$/;"	v	file:
 pin	.\rkh\source\include\rkhrq.h	/^	void **pin;$/;"	m	struct:RKH_RQ_T
 pool	.\rkh\source\include\rkhevt.h	/^	rui8_t pool;$/;"	m	struct:RKH_EVT_T
-pos	.\trtemp\trtemp.h	/^	GPSFRM_T pos;$/;"	m
 pout	.\rkh\source\include\rkhrq.h	/^	void **pout;$/;"	m	struct:RKH_RQ_T
-ppos	.\trtemp\tracking\trkact.c	/^static EGPSFRM_T *ppos;$/;"	v	file:
 ppty	.\rkh\source\include\rkhitl.h	/^	rui8_t ppty;$/;"	m	struct:ROMRKH_T
 prepro	.\rkh\source\include\rkhitl.h	/^	RKH_PPRO_T prepro;$/;"	m	struct:RKH_SBSC_T
 prepro	.\rkh\source\include\rkhitl.h	/^	RKH_PPRO_T prepro;$/;"	m	struct:RKH_SCMP_T
-print_banner	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^print_banner( void )$/;"	f	file:
 print_banner	.\oven\bsp\win32vc08\bsp.c	/^print_banner( void )$/;"	f	file:
-print_banner	.\trtemp\bsp\x86\bsp.c	/^print_banner( void )$/;"	f	file:
-print_help	.\trtemp\bsp\x86\bsp.c	/^print_help( void )$/;"	f	file:
-print_settings	.\trtemp\bsp\x86\bsp.c	/^print_settings( void )$/;"	f	file:
 prio	.\oven\bsp\twrk60iar72\kuart.c	/^	uint8_t prio;$/;"	m	file:
 prio	.\rkh\source\include\rkhitl.h	/^	rui8_t prio;$/;"	m	struct:ROMRKH_T
 pstart	.\rkh\source\include\rkhrq.h	/^	const void **pstart;$/;"	m	struct:RKH_RQ_T
-put_char	.\ahsm\bsp\cfv1\cw6_3\serial\serial.c	/^put_char( HUInt channel, const uchar c )$/;"	f
-put_char	.\ahsm\bsp\s08\cw6_3\serial\serial.c	/^put_char( HUInt channel, const uchar c )$/;"	f
-put_nchar	.\ahsm\bsp\cfv1\cw6_3\serial\serial.c	/^put_nchar( HUInt channel, const uchar *p, rkhui16_t qty )$/;"	f
-put_nchar	.\ahsm\bsp\s08\cw6_3\serial\serial.c	/^put_nchar( HUInt channel, const uchar *p, rkhui16_t qty )$/;"	f
-put_string	.\ahsm\bsp\cfv1\cw6_3\serial\serial.c	/^put_string( HUInt channel, const char *p )$/;"	f
-put_string	.\ahsm\bsp\s08\cw6_3\serial\serial.c	/^put_string( HUInt channel, const char *p )$/;"	f
 puts	.\rkh\source\include\rkhmp.h	/^	rui8_t puts;$/;"	m
-qe_gmgr	.\trtemp\main.c	/^static RKHEVT_T *qe_gmgr[ QGMGR_STO_SIZE ];$/;"	v	file:
-qe_tctrl	.\trtemp\main.c	/^static RKHEVT_T *qe_tctrl[ QTCTRL_STO_SIZE ];$/;"	v	file:
-qe_trk	.\trtemp\main.c	/^static RKHEVT_T *qe_trk[ QTRK_STO_SIZE ];$/;"	v	file:
-qsto	.\ahsm\main.c	/^static RKHEVT_T *qsto[ QSTO_SIZE ];$/;"	v	file:
 qsto	.\oven\oven_1\main.c	/^static RKH_EVT_T *qsto[ QSTO_SIZE ];$/;"	v	file:
 qsto	.\oven\oven_2\main.c	/^static RKH_EVT_T *qsto[ QSTO_SIZE ];$/;"	v	file:
 qsto	.\oven\oven_3\main.c	/^static RKH_EVT_T *qsto[ QSTO_SIZE ];$/;"	v	file:
 qsto	.\oven\oven_4\main.c	/^static RKH_EVT_T *qsto[ QSTO_SIZE ];$/;"	v	file:
 qsto	.\oven\oven_5\main.c	/^static RKH_EVT_T *qsto[ QSTO_SIZE ];$/;"	v	file:
+qsto	.\oven\oven_6\main.c	/^static RKH_EVT_T *qsto[ QSTO_SIZE ];$/;"	v	file:
 qty	.\rkh\source\include\rkhrq.h	/^	RKH_RQNE_T qty;$/;"	m	struct:RKH_RQ_T
-qurc	.\oven\oven_5\ovenact.c	/^static RKH_RQ_T qurc;$/;"	v	file:
+qurc	.\oven\oven_5\ovenact.c	/^RKH_RQ_T qurc;$/;"	v
+qurc	.\oven\oven_6\ovenact.c	/^RKH_RQ_T qurc;$/;"	v
 qurc_sto	.\oven\oven_5\ovenact.c	/^static RKH_EVT_T *qurc_sto[ MAX_SIZEOF_QURC ];$/;"	v	file:
-rawsw	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	uchar (*rawsw)(void); 	\/* read IO *\/$/;"	m
-rawsw	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	uchar (*rawsw)(void); 	\/* read IO *\/$/;"	m
-rawsw1	.\ahsm\bsp\cfv1\cw6_3\switch\swhdl.c	/^rawsw1( void )$/;"	f
-rawsw1	.\ahsm\bsp\s08\cw6_3\switch\swhdl.c	/^rawsw1( void )$/;"	f
-rawsw2	.\ahsm\bsp\cfv1\cw6_3\switch\swhdl.c	/^rawsw2( void )$/;"	f
-rawsw2	.\ahsm\bsp\s08\cw6_3\switch\swhdl.c	/^rawsw2( void )$/;"	f
-rawsw3	.\ahsm\bsp\cfv1\cw6_3\switch\swhdl.c	/^rawsw3( void )$/;"	f
-rawsw3	.\ahsm\bsp\s08\cw6_3\switch\swhdl.c	/^rawsw3( void )$/;"	f
-rawsw4	.\ahsm\bsp\cfv1\cw6_3\switch\swhdl.c	/^rawsw4( void )$/;"	f
-rawsw4	.\ahsm\bsp\s08\cw6_3\switch\swhdl.c	/^rawsw4( void )$/;"	f
+qurc_sto	.\oven\oven_6\ovenact.c	/^static RKH_EVT_T *qurc_sto[ MAX_SIZEOF_QURC ];$/;"	v	file:
 rbool_t	.\rkh\source\portable\80x86\linux_st\gnu\rkht.h	/^typedef unsigned int	rbool_t;$/;"	t
 rbool_t	.\rkh\source\portable\80x86\win32_mt\vc08\rkht.h	/^typedef unsigned int	rbool_t;$/;"	t
 rbool_t	.\rkh\source\portable\80x86\win32_st\vc08\rkht.h	/^typedef unsigned int	rbool_t;$/;"	t
@@ -2915,22 +2139,19 @@ rbool_t	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\rkht.h	/^typedef u
 rbool_t	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkht.h	/^typedef unsigned int	rbool_t;$/;"	t
 rbool_t	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkht.h	/^typedef unsigned int	rbool_t;$/;"	t
 rbool_t	.\rkh\source\portable\s08\rkhs\cw6_3\rkht.h	/^typedef unsigned int	rbool_t;$/;"	t
-read_iopin	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	44;"	d
-read_iopin	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	44;"	d
 ready	.\oven\oven_1\oven.h	/^RKH_DCLR_BASIC_STATE idle, ready, cooking;$/;"	v
 ready	.\oven\oven_2\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
 ready	.\oven\oven_3\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
 ready	.\oven\oven_4\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
 ready	.\oven\oven_5\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, cooking;$/;"	v
-recall_events	.\trtemp\gprsmgr\gmgract.c	/^recall_events( void )$/;"	f
-recall_evts	.\oven\oven_5\ovenact.c	/^recall_evts( RKH_SMA_T *sma, RKH_EVT_T *pe )$/;"	f
-rel_curr_pos	.\trtemp\tracking\trkact.c	/^rel_curr_pos( RKHEVT_T *pe )$/;"	f
+ready	.\oven\oven_6\oven.h	/^RKH_DCLR_BASIC_STATE open, ready, on, off;$/;"	v
+recall_evts	.\oven\oven_5\ovenact.c	/^recall_evts( const RKH_SMA_T *sma, RKH_EVT_T *pe )$/;"	f
+recall_evts	.\oven\oven_6\ovenact.c	/^recall_evts( const RKH_SMA_T *sma, RKH_EVT_T *pe )$/;"	f
 rem_from_list	.\rkh\source\rkhtim.c	/^rem_from_list( RKH_TMR_T *t, RKH_TMR_T *tprev )$/;"	f	file:
-reset_now	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.h	41;"	d
-reset_now	.\ahsm\bsp\s08\cw6_3\mcu\mcu.h	41;"	d
 reset_now	.\oven\bsp\twrk60iar72\bsp.h	90;"	d
 reset_now	.\oven\bsp\twrk60iar72\bsp.h	92;"	d
 restart_cnt	.\oven\oven_5\ovenact.c	/^static rui8_t restart_cnt;$/;"	v	file:
+restart_cnt	.\oven\oven_6\ovenact.c	/^static rui8_t restart_cnt;$/;"	v	file:
 restart_timer	.\oven\oven_3\ovenact.c	/^restart_timer( void )$/;"	f
 restart_timer	.\oven\oven_4\ovenact.c	/^restart_timer( void )$/;"	f
 ri16_t	.\rkh\source\portable\80x86\linux_st\gnu\rkht.h	/^typedef signed short 	ri16_t;$/;"	t
@@ -2970,18 +2191,14 @@ rint	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkht.h	/^typedef si
 rint	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkht.h	/^typedef signed int		rint;$/;"	t
 rint	.\rkh\source\portable\s08\rkhs\cw6_3\rkht.h	/^typedef signed char		rint;$/;"	t
 rkh_add_tr_action	.\rkh\source\rkh.c	/^rkh_add_tr_action( RKH_TRN_ACT_T **list, RKH_TRN_ACT_T act, rui8_t *num )$/;"	f	file:
-rkh_assert	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^rkh_assert( RKHROM char * const file, int line )$/;"	f
-rkh_assert	.\ahsm\bsp\cfv1\cw6_3\bsp.c	/^rkh_assert( RKHROM char * const file, int line )$/;"	f
-rkh_assert	.\ahsm\bsp\s08\cw6_3\bsp.c	/^rkh_assert( RKHROM char * const file, int line )$/;"	f
 rkh_assert	.\oven\bsp\twrk60iar72\bsp.c	/^rkh_assert( RKHROM char * const file, int line )$/;"	f
 rkh_assert	.\oven\bsp\win32vc08\bsp.c	/^rkh_assert( RKHROM char * const file, int line )$/;"	f
-rkh_assert	.\trtemp\bsp\x86\bsp.c	/^rkh_assert( RKHROM char * const file, int line )$/;"	f
-rkh_call_guard	.\rkh\source\include\rkhitl.h	2698;"	d
-rkh_call_guard	.\rkh\source\include\rkhitl.h	2705;"	d
-rkh_call_guard	.\rkh\source\include\rkhitl.h	2712;"	d
-rkh_call_guard	.\rkh\source\include\rkhitl.h	2718;"	d
-rkh_call_prepro	.\rkh\source\include\rkhitl.h	2599;"	d
-rkh_call_prepro	.\rkh\source\include\rkhitl.h	2604;"	d
+rkh_call_guard	.\rkh\source\include\rkhitl.h	2708;"	d
+rkh_call_guard	.\rkh\source\include\rkhitl.h	2715;"	d
+rkh_call_guard	.\rkh\source\include\rkhitl.h	2722;"	d
+rkh_call_guard	.\rkh\source\include\rkhitl.h	2728;"	d
+rkh_call_prepro	.\rkh\source\include\rkhitl.h	2609;"	d
+rkh_call_prepro	.\rkh\source\include\rkhitl.h	2614;"	d
 rkh_else	.\rkh\source\rkh.c	/^rkh_else( RKH_EVT_T *pe )$/;"	f
 rkh_else	.\rkh\source\rkh.c	/^rkh_else( const struct RKH_SMA_T *sma )$/;"	f
 rkh_else	.\rkh\source\rkh.c	/^rkh_else( const struct RKH_SMA_T *sma, RKH_EVT_T *pe )$/;"	f
@@ -3002,6 +2219,7 @@ rkh_exit_critical	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.c	/^rkh_exit_cri
 rkh_exit_critical	.\rkh\source\portable\s08\rkhs\cw6_3\rkhport.c	/^rkh_exit_critical( void )$/;"	f
 rkh_free_blk_t	.\rkh\source\rkhmp.c	/^typedef struct rkh_free_blk_t$/;"	s	file:
 rkh_fwk_ae	.\rkh\source\rkhdyn.c	/^rkh_fwk_ae( RKH_ES_T esize, RKH_SIG_T e )$/;"	f
+rkh_fwk_clear_history	.\rkh\source\include\rkh.h	2778;"	d
 rkh_fwk_clear_history	.\rkh\source\rkh.c	/^rkh_fwk_clear_history( RKHROM RKH_SHIST_T *h )$/;"	f
 rkh_fwk_defer	.\rkh\source\rkhdyn.c	/^rkh_fwk_defer( RKH_RQ_T *q, const RKH_EVT_T *e )$/;"	f
 rkh_fwk_enter	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.c	/^rkh_fwk_enter( void )$/;"	f
@@ -3035,18 +2253,6 @@ rkh_get_port_version	.\rkh\source\portable\arm-cortex\rkhs\arm_cm0\cw_v10\rkhpor
 rkh_get_port_version	.\rkh\source\portable\arm-cortex\rkhs\arm_cm3\codered\rkhport.c	/^rkh_get_port_version( void )$/;"	f
 rkh_get_port_version	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\rkhport.c	/^rkh_get_port_version( void )$/;"	f
 rkh_get_port_version	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkhport.c	/^rkh_get_port_version( void )$/;"	f
-rkh_hk_exit	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^rkh_hk_exit( void ) $/;"	f
-rkh_hk_exit	.\ahsm\bsp\cfv1\cw6_3\bsp.c	/^rkh_hk_exit( void ) $/;"	f
-rkh_hk_exit	.\ahsm\bsp\s08\cw6_3\bsp.c	/^rkh_hk_exit( void ) $/;"	f
-rkh_hk_exit	.\trtemp\bsp\x86\bsp.c	/^rkh_hk_exit( void ) $/;"	f
-rkh_hk_idle	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^rkh_hk_idle( void )				\/* called within critical section *\/$/;"	f
-rkh_hk_idle	.\ahsm\bsp\cfv1\cw6_3\bsp.c	/^rkh_hk_idle( void )				\/* called within critical section *\/$/;"	f
-rkh_hk_idle	.\ahsm\bsp\s08\cw6_3\bsp.c	/^rkh_hk_idle( void )				\/* called within critical section *\/$/;"	f
-rkh_hk_idle	.\trtemp\bsp\x86\bsp.c	/^rkh_hk_idle( void )				\/* called within critical section *\/$/;"	f
-rkh_hk_start	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^rkh_hk_start( void ) $/;"	f
-rkh_hk_start	.\ahsm\bsp\cfv1\cw6_3\bsp.c	/^rkh_hk_start( void ) $/;"	f
-rkh_hk_start	.\ahsm\bsp\s08\cw6_3\bsp.c	/^rkh_hk_start( void ) $/;"	f
-rkh_hk_start	.\trtemp\bsp\x86\bsp.c	/^rkh_hk_start( void ) $/;"	f
 rkh_hook_exit	.\oven\bsp\twrk60iar72\bsp.c	/^rkh_hook_exit( void ) $/;"	f
 rkh_hook_exit	.\oven\bsp\win32vc08\bsp.c	/^rkh_hook_exit( void ) $/;"	f
 rkh_hook_idle	.\oven\bsp\twrk60iar72\bsp.c	/^rkh_hook_idle( void )				\/* called within critical section *\/$/;"	f
@@ -3102,22 +2308,14 @@ rkh_tmr_tick	.\rkh\source\rkhtim.c	/^rkh_tmr_tick( const void *const sender )$/;
 rkh_trc_ao	.\rkh\source\rkhtrc.c	/^rkh_trc_ao( struct RKH_SMA_T *ao )$/;"	f
 rkh_trc_begin	.\rkh\source\rkhtrc.c	/^rkh_trc_begin( rui8_t eid )$/;"	f
 rkh_trc_clear_chk	.\rkh\source\rkhtrc.c	/^rkh_trc_clear_chk( void )$/;"	f
-rkh_trc_close	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^rkh_trc_close( void )$/;"	f
-rkh_trc_close	.\ahsm\bsp\cfv1\cw6_3\bsp.c	/^rkh_trc_close( void )$/;"	f
-rkh_trc_close	.\ahsm\bsp\s08\cw6_3\bsp.c	/^rkh_trc_close( void )$/;"	f
 rkh_trc_close	.\oven\bsp\twrk60iar72\bsp.c	/^rkh_trc_close( void )$/;"	f
 rkh_trc_close	.\oven\bsp\win32vc08\bsp.c	/^rkh_trc_close( void )$/;"	f
-rkh_trc_close	.\trtemp\bsp\x86\bsp.c	/^rkh_trc_close( void )$/;"	f
 rkh_trc_end	.\rkh\source\rkhtrc.c	/^rkh_trc_end( void )$/;"	f
 rkh_trc_events	.\rkh\source\include\rkhtrc.h	/^typedef enum rkh_trc_events$/;"	g
 rkh_trc_filter_event_	.\rkh\source\rkhtrc.c	/^rkh_trc_filter_event_( rui8_t ctrl, rui8_t evt )$/;"	f
 rkh_trc_filter_group_	.\rkh\source\rkhtrc.c	/^rkh_trc_filter_group_( rui8_t ctrl, rui8_t grp, rui8_t mode )$/;"	f
-rkh_trc_flush	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^rkh_trc_flush( void )$/;"	f
-rkh_trc_flush	.\ahsm\bsp\cfv1\cw6_3\bsp.c	/^rkh_trc_flush( void )$/;"	f
-rkh_trc_flush	.\ahsm\bsp\s08\cw6_3\bsp.c	/^rkh_trc_flush( void )$/;"	f
 rkh_trc_flush	.\oven\bsp\twrk60iar72\bsp.c	/^rkh_trc_flush( void )$/;"	f
 rkh_trc_flush	.\oven\bsp\win32vc08\bsp.c	/^rkh_trc_flush( void )$/;"	f
-rkh_trc_flush	.\trtemp\bsp\x86\bsp.c	/^rkh_trc_flush( void )$/;"	f
 rkh_trc_fmt_mem	.\rkh\source\rkhtrc.c	/^rkh_trc_fmt_mem( const rui8_t *mem, rui8_t size )$/;"	f
 rkh_trc_fmt_str	.\rkh\source\rkhtrc.c	/^rkh_trc_fmt_str( const char *s )$/;"	f
 rkh_trc_fmt_u16	.\rkh\source\rkhtrc.c	/^rkh_trc_fmt_u16( rui8_t fmt, rui16_t d )$/;"	f
@@ -3125,22 +2323,14 @@ rkh_trc_fmt_u32	.\rkh\source\rkhtrc.c	/^rkh_trc_fmt_u32( rui8_t fmt, rui32_t d )
 rkh_trc_fmt_u8	.\rkh\source\rkhtrc.c	/^rkh_trc_fmt_u8( rui8_t fmt, rui8_t d )$/;"	f
 rkh_trc_get	.\rkh\source\rkhtrc.c	/^rkh_trc_get( void )$/;"	f
 rkh_trc_get_block	.\rkh\source\rkhtrc.c	/^rkh_trc_get_block( TRCQTY_T *nget )$/;"	f
-rkh_trc_getts	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^rkh_trc_getts( void )$/;"	f
-rkh_trc_getts	.\ahsm\bsp\cfv1\cw6_3\bsp.c	/^rkh_trc_getts( void )$/;"	f
-rkh_trc_getts	.\ahsm\bsp\s08\cw6_3\bsp.c	/^rkh_trc_getts( void )$/;"	f
 rkh_trc_getts	.\oven\bsp\twrk60iar72\bsp.c	/^rkh_trc_getts( void )$/;"	f
 rkh_trc_getts	.\oven\bsp\win32vc08\bsp.c	/^rkh_trc_getts( void )$/;"	f
-rkh_trc_getts	.\trtemp\bsp\x86\bsp.c	/^rkh_trc_getts( void )$/;"	f
 rkh_trc_groups	.\rkh\source\include\rkhtrc.h	/^typedef enum rkh_trc_groups$/;"	g
 rkh_trc_init	.\rkh\source\rkhtrc.c	/^rkh_trc_init( void )$/;"	f
 rkh_trc_isoff_	.\rkh\source\rkhtrc.c	/^rkh_trc_isoff_( rui8_t e )$/;"	f
 rkh_trc_obj	.\rkh\source\rkhtrc.c	/^rkh_trc_obj( rui8_t tre, rui8_t *obj, const char *obj_name )$/;"	f
-rkh_trc_open	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^rkh_trc_open( void )$/;"	f
-rkh_trc_open	.\ahsm\bsp\cfv1\cw6_3\bsp.c	/^rkh_trc_open( void )$/;"	f
-rkh_trc_open	.\ahsm\bsp\s08\cw6_3\bsp.c	/^rkh_trc_open( void )$/;"	f
 rkh_trc_open	.\oven\bsp\twrk60iar72\bsp.c	/^rkh_trc_open( void )$/;"	f
 rkh_trc_open	.\oven\bsp\win32vc08\bsp.c	/^rkh_trc_open( void )$/;"	f
-rkh_trc_open	.\trtemp\bsp\x86\bsp.c	/^rkh_trc_open( void )$/;"	f
 rkh_trc_put	.\rkh\source\rkhtrc.c	/^rkh_trc_put( rui8_t b )$/;"	f
 rkh_trc_sig	.\rkh\source\rkhtrc.c	/^rkh_trc_sig( RKH_SIG_T sig, const char *sig_name )$/;"	f
 rkh_trc_simfil	.\rkh\source\rkhtrc.c	/^rkh_trc_simfil( const RKH_TRC_FIL_T *filter, 	RKH_TRC_FSLOT slot, $/;"	f
@@ -3157,10 +2347,7 @@ rkhnpool	.\rkh\source\rkhdyn.c	/^static rui8_t rkhnpool;$/;"	v	file:
 rkhrg	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.c	/^RKH_RG_T rkhrg;					\/* ready group of SMAs *\/$/;"	v
 rkhrg	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.c	/^RKH_RG_T rkhrg;					\/* ready group of SMAs *\/$/;"	v
 romrkh	.\rkh\source\include\rkhitl.h	/^	RKHROM RKH_ROM_T *romrkh;$/;"	m	struct:RKH_SMA_T
-room_in_dfq	.\trtemp\gprsmgr\gmgract.c	/^room_in_dfq( RKHEVT_T *pe )$/;"	f
 rqi	.\rkh\source\include\rkhrq.h	/^	RKH_RQI_T rqi;$/;"	m	struct:RKH_RQ_T
-rti_handler	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.c	/^rti_handler( void )$/;"	f
-rti_handler	.\ahsm\bsp\s08\cw6_3\mcu\mcu.c	/^rti_handler( void )$/;"	f
 rui16_t	.\rkh\source\portable\80x86\linux_st\gnu\rkht.h	/^typedef unsigned short 	rui16_t;$/;"	t
 rui16_t	.\rkh\source\portable\80x86\win32_mt\vc08\rkht.h	/^typedef unsigned short 	rui16_t;$/;"	t
 rui16_t	.\rkh\source\portable\80x86\win32_st\vc08\rkht.h	/^typedef unsigned short 	rui16_t;$/;"	t
@@ -3197,65 +2384,27 @@ ruint	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\cw_v10\rkht.h	/^typedef uns
 ruint	.\rkh\source\portable\arm-cortex\rkhs\arm_cm4f\iar_v7_2\rkht.h	/^typedef unsigned int	ruint;$/;"	t
 ruint	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkht.h	/^typedef unsigned int	ruint;$/;"	t
 ruint	.\rkh\source\portable\s08\rkhs\cw6_3\rkht.h	/^typedef unsigned char	ruint;$/;"	t
-running	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^rkhui8_t running;$/;"	v
 running	.\oven\bsp\win32vc08\bsp.c	/^rui8_t running;$/;"	v
 running	.\rkh\source\include\rkhitl.h	/^	rbool_t running;$/;"	m	struct:RKH_SMA_T
 running	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.c	/^static rui8_t running;$/;"	v	file:
-running	.\trtemp\bsp\x86\bsp.c	/^rkhui8_t running;$/;"	v
 rx_ffsz	.\oven\bsp\twrk60iar72\kuart.h	/^	uint8 rx_ffsz;		\/* rx fifo size *\/$/;"	m
 rxcb	.\oven\bsp\twrk60iar72\kuart.c	/^	KUARTRX_CB rxcb;$/;"	m	file:
 rxcb	.\oven\bsp\twrk60iar72\kuart.h	/^	KUARTRX_CB rxcb;		\/* rx callback function *\/$/;"	m
 sbm	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_RSM_T *sbm;$/;"	m	struct:RKH_SSBM_T
-sc	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	uchar sc;				\/* switch scan code *\/$/;"	m
-sc	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	uchar sc;				\/* switch scan code *\/$/;"	m
-schar	.\ahsm\bsp\cfv1\cw6_3\mytypes.h	/^typedef signed char		schar;$/;"	t
-schar	.\ahsm\bsp\s08\cw6_3\mytypes.h	/^typedef signed char		schar;$/;"	t
-sci_br_tbl	.\ahsm\bsp\cfv1\cw6_3\mcu\sci\scibrtbl.c	/^const unsigned short sci_br_tbl[NUM_BAUD] =$/;"	v
-sci_br_tbl	.\ahsm\bsp\s08\cw6_3\mcu\sci\scibrtbl.c	/^const unsigned short sci_br_tbl[NUM_BAUD] =$/;"	v
-send_char	.\ahsm\bsp\cfv1\cw6_3\serial\serdefs.h	/^	void (*send_char)( uchar c );$/;"	m
-send_char	.\ahsm\bsp\s08\cw6_3\serial\serdefs.h	/^	void (*send_char)( uchar c );$/;"	m
-send_curr_pos	.\trtemp\tracking\trkact.c	/^send_curr_pos( RKHEVT_T *pe )$/;"	f
-send_in_stop	.\trtemp\tracking\trkact.c	/^send_in_stop( RKHEVT_T *pe )$/;"	f
-send_vmax_limit	.\trtemp\tracking\trkact.c	/^send_vmax_limit( void )$/;"	f
-serial_default	.\ahsm\bsp\cfv1\cw6_3\serial\sertable.c	/^const COM_T serial_default[ NUM_CHANNELS ] =$/;"	v
-serial_default	.\ahsm\bsp\s08\cw6_3\serial\sertable.c	/^const COM_T serial_default[ NUM_CHANNELS ] =$/;"	v
-serial_init	.\ahsm\bsp\cfv1\cw6_3\serial\serial.c	/^serial_init( HUInt channel )$/;"	f
-serial_init	.\ahsm\bsp\s08\cw6_3\serial\serial.c	/^serial_init( HUInt channel )$/;"	f
-set_comen	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	112;"	d
-set_comen	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	112;"	d
-set_curr_pos	.\trtemp\tracking\trkact.c	/^set_curr_pos( RKHEVT_T *pe )$/;"	f
 set_gpio	.\oven\bsp\twrk60iar72\gpio.h	40;"	d
-set_iopin	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	36;"	d
-set_iopin	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	36;"	d
-set_led	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	108;"	d
-set_led	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	108;"	d
 set_led	.\oven\bsp\twrk60iar72\gpio.h	74;"	d
-set_x_1	.\ahsm\myact.c	/^set_x_1( const struct rkhsma_t *sma )$/;"	f
-set_x_2	.\ahsm\myact.c	/^set_x_2( const struct rkhsma_t *sma )$/;"	f
-set_x_3	.\ahsm\myact.c	/^set_x_3( const struct rkhsma_t *sma )$/;"	f
-set_y_0	.\ahsm\myact.c	/^set_y_0( const struct rkhsma_t *sma )$/;"	f
-set_y_1	.\ahsm\myact.c	/^set_y_1( const struct rkhsma_t *sma, RKHEVT_T *pe )$/;"	f
-set_y_2	.\ahsm\myact.c	/^set_y_2( const struct rkhsma_t *sma, RKHEVT_T *pe )$/;"	f
-show_data	.\ahsm\myact.c	/^show_data( const struct rkhsma_t *sma, RKHEVT_T *pe )$/;"	f
-show_evt	.\trtemp\bsp\x86\gprs.c	/^show_evt( void )$/;"	f	file:
-show_evt_compressor	.\trtemp\bsp\x86\gprs.c	/^show_evt_compressor( CMPCHG_T *p )$/;"	f	file:
-show_evt_position	.\trtemp\bsp\x86\gprs.c	/^show_evt_position( GPSFRM_T *p )$/;"	f	file:
-show_evt_stop	.\trtemp\bsp\x86\gprs.c	/^show_evt_stop( STOP_T *p )$/;"	f	file:
-show_evt_vmax	.\trtemp\bsp\x86\gprs.c	/^show_evt_vmax( VMAX_T *p )$/;"	f	file:
 sinfo	.\rkh\source\include\rkhitl.h	/^	RKH_SMAI_T sinfo;$/;"	m	struct:RKH_SMA_T
 size	.\rkh\source\include\rkhtrc.h	/^	RKH_TRC_FSLOT size;		\/** Size of filter table in bytes *\/$/;"	m	struct:RKH_TRC_FIL_T
-sma	.\ahsm\my.h	/^	RKHSMA_T sma;	\/* base structure *\/$/;"	m
 sma	.\oven\oven_1\oven.h	/^	RKH_SMA_T sma;	\/* base structure *\/$/;"	m
 sma	.\oven\oven_2\oven.h	/^	RKH_SMA_T sma;	\/* base structure *\/$/;"	m
 sma	.\oven\oven_3\oven.h	/^	RKH_SMA_T sma;	\/* base structure *\/$/;"	m
 sma	.\oven\oven_4\oven.h	/^	RKH_SMA_T sma;	\/* base structure *\/$/;"	m
 sma	.\oven\oven_5\oven.h	/^	RKH_SMA_T sma;	\/* base structure *\/$/;"	m
+sma	.\oven\oven_6\oven.h	/^	RKH_SMA_T sma;	\/* base structure *\/$/;"	m
 sma	.\rkh\source\include\rkhrq.h	/^	const struct RKH_SMA_T *sma;$/;"	m	struct:RKH_RQ_T
 sma	.\rkh\source\include\rkhtim.h	/^	const struct RKH_SMA_T *sma;$/;"	m	struct:RKH_TMR_T
 sma_is_rdy	.\rkh\source\portable\80x86\linux_st\gnu\rkhport.c	/^sem_t sma_is_rdy;          		\/* Semaphore to signal when SMAs are ready *\/$/;"	v
 sma_is_rdy	.\rkh\source\portable\80x86\win32_st\vc08\rkhport.c	/^HANDLE sma_is_rdy;          	\/* Win32 event to signal when SMAs are ready *\/$/;"	v
-smaprio	.\trtemp\trtemp.h	/^enum smaprio$/;"	g
-sr_mem	.\ahsm\bsp\cfv1\cw6_3\critical\critical.c	/^static unsigned short sr_mem;$/;"	v	file:
 sr_mem	.\rkh\source\portable\cfv1\rkhs\cw6_3\rkhport.c	/^static unsigned short sr_mem;$/;"	v	file:
 st	.\rkh\source\include\rkhitl.h	/^	RKH_ST_T st;$/;"	m	struct:RKH_SBSC_T
 st	.\rkh\source\include\rkhitl.h	/^	RKH_ST_T st;$/;"	m	struct:RKH_SCMP_T
@@ -3266,76 +2415,31 @@ start_cooking	.\oven\oven_2\ovenact.c	/^start_cooking( void )$/;"	f
 start_cooking	.\oven\oven_3\ovenact.c	/^start_cooking( void )$/;"	f
 start_cooking	.\oven\oven_4\ovenact.c	/^start_cooking( void )$/;"	f
 start_cooking	.\oven\oven_5\ovenact.c	/^start_cooking( void )$/;"	f
-start_epos_tmr	.\trtemp\tracking\trkact.c	/^start_epos_tmr( void )$/;"	f
-start_estop_tmr	.\trtemp\tracking\trkact.c	/^start_estop_tmr( void )$/;"	f
-state	.\ahsm\bsp\cfv1\cw6_3\switch\switch.h	/^	uchar state;			\/* current state *\/$/;"	m
-state	.\ahsm\bsp\s08\cw6_3\switch\switch.h	/^	uchar state;			\/* current state *\/$/;"	m
+start_cooking	.\oven\oven_6\ovenact.c	/^start_cooking( void )$/;"	f
 state	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_ST_T *state;$/;"	m	struct:RKH_SMA_T
-state	.\trtemp\bsp\x86\gps.h	/^	rkhui32_t state;$/;"	m
-state	.\trtemp\trtemp.h	/^	rkhui8_t state;$/;"	m
-stop	.\trtemp\trtemp.h	/^	STOP_T stop;$/;"	m
 stop_cooking	.\oven\oven_1\ovenact.c	/^stop_cooking( void )$/;"	f
 stop_cooking	.\oven\oven_2\ovenact.c	/^stop_cooking( void )$/;"	f
 stop_cooking	.\oven\oven_3\ovenact.c	/^stop_cooking( void )$/;"	f
 stop_cooking	.\oven\oven_4\ovenact.c	/^stop_cooking( void )$/;"	f
 stop_cooking	.\oven\oven_5\ovenact.c	/^stop_cooking( void )$/;"	f
-stop_epos_tmr	.\trtemp\tracking\trkact.c	/^stop_epos_tmr( void )$/;"	f
-stop_estop_tmr	.\trtemp\tracking\trkact.c	/^stop_estop_tmr( void )$/;"	f
-switch_start	.\ahsm\bsp\cfv1\cw6_3\switch\switch.c	/^switch_start( void )$/;"	f
-switch_start	.\ahsm\bsp\s08\cw6_3\switch\switch.c	/^switch_start( void )$/;"	f
-switch_tick	.\ahsm\bsp\cfv1\cw6_3\switch\switch.c	/^switch_tick( void )$/;"	f
-switch_tick	.\ahsm\bsp\s08\cw6_3\switch\switch.c	/^switch_tick( void )$/;"	f
-switchs	.\ahsm\bsp\cfv1\cw6_3\switch\switch.c	/^static SWITCH_ST switchs[SWITCHS_NUM] = $/;"	v	file:
-switchs	.\ahsm\bsp\s08\cw6_3\switch\switch.c	/^static SWITCH_ST switchs[SWITCHS_NUM] = $/;"	v	file:
-swtick	.\ahsm\bsp\cfv1\cw6_3\switch\switch.c	/^static HUInt swtick;$/;"	v	file:
-swtick	.\ahsm\bsp\s08\cw6_3\switch\switch.c	/^static HUInt swtick;$/;"	v	file:
+stop_cooking	.\oven\oven_6\ovenact.c	/^stop_cooking( void )$/;"	f
 target	.\rkh\source\include\rkhitl.h	/^	RKHROM RKH_ST_T **target;$/;"	m	struct:RKH_SHIST_T
 target	.\rkh\source\include\rkhitl.h	/^	RKHROM void *target;$/;"	m	struct:RKH_ENPCN_T
 target	.\rkh\source\include\rkhitl.h	/^	RKHROM void *target;$/;"	m	struct:RKH_EXPCN_T
 target	.\rkh\source\include\rkhitl.h	/^	RKHROM void *target;$/;"	m	struct:RKH_TR_T
 tbl	.\rkh\source\include\rkhrdy.h	/^	unsigned char tbl[ RKH_NUM_RDYGRP ];$/;"	m
 tbl	.\rkh\source\include\rkhtrc.h	/^	rui8_t *const tbl;		\/** Points to filter table in RAM *\/$/;"	m	struct:RKH_TRC_FIL_T
-tcp_trace_close	.\ahsm\bsp\80x86\win32_st\vc08\tcptrc.c	/^tcp_trace_close( SOCKET s )$/;"	f
 tcp_trace_close	.\oven\bsp\win32vc08\tcptrc.c	/^tcp_trace_close( SOCKET s )$/;"	f
-tcp_trace_close	.\trtemp\bsp\x86\tcptrc.c	/^tcp_trace_close( SOCKET s )$/;"	f
-tcp_trace_open	.\ahsm\bsp\80x86\win32_st\vc08\tcptrc.c	/^tcp_trace_open( unsigned short port, char *srv_ip, SOCKET *ps )$/;"	f
 tcp_trace_open	.\oven\bsp\win32vc08\tcptrc.c	/^tcp_trace_open( unsigned short port, char *srv_ip, SOCKET *ps )$/;"	f
-tcp_trace_open	.\trtemp\bsp\x86\tcptrc.c	/^tcp_trace_open( unsigned short port, char *srv_ip, SOCKET *ps )$/;"	f
-tcp_trace_send	.\ahsm\bsp\80x86\win32_st\vc08\tcptrc.c	/^tcp_trace_send( SOCKET s, char c )$/;"	f
 tcp_trace_send	.\oven\bsp\win32vc08\tcptrc.c	/^tcp_trace_send( SOCKET s, const char *buf, int len )$/;"	f
-tcp_trace_send	.\trtemp\bsp\x86\tcptrc.c	/^tcp_trace_send( SOCKET s, char c )$/;"	f
-tctrl	.\trtemp\tempctrl\tctrl.h	/^RKH_SMA_DCLR( tctrl );$/;"	v
-tctrl_init	.\trtemp\tempctrl\tctrlact.c	/^tctrl_init( void )$/;"	f
-tctrl_on_failure	.\trtemp\tempctrl\tctrl.h	/^RKH_DCLR_BASIC_STATE	tctrl_on_failure,$/;"	v
-tctrl_ready	.\trtemp\tempctrl\tctrl.h	/^RKH_DCLR_COMP_STATE		tctrl_ready;$/;"	v
-tctrl_send_evt	.\trtemp\tempctrl\tctrlact.c	/^tctrl_send_evt( rkhui8_t st, rkhui8_t temp )$/;"	f	file:
-temp	.\trtemp\trtemp.h	/^	rkhi8_t temp;$/;"	m
-terminate	.\ahsm\myact.c	/^terminate( const struct rkhsma_t *sma, RKHEVT_T *pe )$/;"	f
 tgl_gpio	.\oven\bsp\twrk60iar72\gpio.h	42;"	d
 thead	.\rkh\source\rkhtim.c	/^static RKH_TMR_T *thead;$/;"	v	file:
 thread	.\rkh\source\include\rkhitl.h	/^	RKH_THREAD_TYPE thread;$/;"	m	struct:RKH_SMA_T
 thread_function	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.c	/^thread_function( LPVOID arg )$/;"	f	file:
-tick_msec	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^static DWORD tick_msec;			\/* clock tick in msec *\/$/;"	v	file:
 tick_msec	.\oven\bsp\win32vc08\bsp.c	/^static DWORD tick_msec;			\/* clock tick in msec *\/$/;"	v	file:
 tick_msec	.\rkh\source\portable\80x86\win32_mt\vc08\rkhport.c	/^static DWORD tick_msec = 10u;			\/* clock tick in [msec] *\/$/;"	v	file:
-tick_msec	.\trtemp\bsp\x86\bsp.c	/^static DWORD tick_msec;			\/* clock tick in msec *\/$/;"	v	file:
-time_stamp	.\ahsm\bsp\cfv1\cw6_3\mcu\mcu.c	/^unsigned long time_stamp;$/;"	v
-time_stamp	.\ahsm\bsp\s08\cw6_3\mcu\mcu.c	/^unsigned long time_stamp;$/;"	v
 timhk	.\rkh\source\include\rkhtim.h	/^	RKH_THK_T timhk;$/;"	m	struct:RKH_TMR_T
-tmp_dec	.\trtemp\bsp\x86\tmp.c	/^tmp_dec( void )$/;"	f
-tmp_inc	.\trtemp\bsp\x86\tmp.c	/^tmp_inc( void )$/;"	f
-tmp_init	.\trtemp\bsp\x86\tmp.c	/^tmp_init( void )$/;"	f
-tmp_isr	.\trtemp\bsp\x86\tmp.c	/^tmp_isr( void )$/;"	f
-tmptick	.\trtemp\bsp\x86\tmp.c	/^static rkhi8_t tmptick;$/;"	v	file:
 tnext	.\rkh\source\include\rkhtim.h	/^	RKH_TMR_T *tnext;$/;"	m	struct:RKH_TMR_T
-toCopyDownBegOffs	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	126;"	d	file:
-toCopyDownBegOffs	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\Start08.c	128;"	d	file:
-toCopyDownBegOffs	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	126;"	d	file:
-toCopyDownBegOffs	.\ahsm\bsp\s08\cw6_3\prj\ahsm_s08\Sources\Start08.c	128;"	d	file:
-toggle_iopin	.\ahsm\bsp\cfv1\cw6_3\mcu\io\io.h	40;"	d
-toggle_iopin	.\ahsm\bsp\s08\cw6_3\mcu\io\io.h	40;"	d
-top	.\ahsm\bsp\s08\cw6_3\critical\critical.c	/^static unsigned char top;$/;"	v	file:
-tpos	.\trtemp\tracking\trkact.c	/^static RKHT_T tpos, tstop; $/;"	v	file:
 trceftbl	.\rkh\source\rkhtrc.c	/^static rui8_t trceftbl[ RKH_TRC_MAX_EVENTS_IN_BYTES ];$/;"	v	file:
 trcend	.\rkh\source\rkhtrc.c	/^static RKH_TE_T *trcin, *trcout, *trcend;$/;"	v	file:
 trcgfilter	.\rkh\source\rkhtrc.c	/^static rui8_t trcgfilter;$/;"	v	file:
@@ -3346,53 +2450,14 @@ trcqty	.\rkh\source\rkhtrc.c	/^static TRCQTY_T trcqty;$/;"	v	file:
 trcsigftbl	.\rkh\source\rkhtrc.c	/^static rui8_t trcsigftbl[ RKH_TRC_MAX_SIGNALS ];$/;"	v	file:
 trcsmaftbl	.\rkh\source\rkhtrc.c	/^static rui8_t trcsmaftbl[ RKH_TRC_MAX_SMA ];$/;"	v	file:
 trcstm	.\rkh\source\rkhtrc.c	/^static RKH_TE_T trcstm[ RKH_CFG_TRC_SIZEOF_STREAM ];$/;"	v	file:
-trk	.\trtemp\tracking\trk.h	/^RKH_SMA_DCLR( trk );$/;"	v
-trk_init	.\trtemp\tracking\trkact.c	/^trk_init( void )$/;"	f
-trt_crt_sec	.\trtemp\bsp\x86\bsp.c	/^CRITICAL_SECTION trt_crt_sec;	\/* critical section for this demo aplication *\/$/;"	v
 trtbl	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_TR_T *trtbl;$/;"	m	struct:RKH_SBSC_T
 trtbl	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_TR_T *trtbl;$/;"	m	struct:RKH_SCHOICE_T
 trtbl	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_TR_T *trtbl;$/;"	m	struct:RKH_SCMP_T
 trtbl	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_TR_T *trtbl;$/;"	m	struct:RKH_SCOND_T
 trtbl	.\rkh\source\include\rkhitl.h	/^	RKHROM struct RKH_TR_T *trtbl;$/;"	m	struct:RKH_SSBM_T
-trtemp_sigs	.\trtemp\trtemp.h	/^enum trtemp_sigs$/;"	g
-trtemp_trace_filters	.\trtemp\main.c	/^trtemp_trace_filters( void )$/;"	f
-trtemp_trace_sigobj	.\trtemp\main.c	/^trtemp_trace_sigobj( void )$/;"	f
 trz_uart	.\oven\bsp\twrk60iar72\bsp.c	/^	static const KUARTPP_ST trz_uart = $/;"	v	file:
-ts	.\ahsm\my.h	/^	rkhui16_t ts;$/;"	m
-ts	.\trtemp\trtemp.h	/^	ts_t ts;$/;"	m
 ts_cntr	.\oven\bsp\win32vc08\bsp.c	/^static RKH_TS_T ts_cntr;		\/* time stamp counter *\/$/;"	v	file:
-ts_t	.\trtemp\trtemp.h	/^typedef rkhui16_t ts_t;$/;"	t
-tsock	.\ahsm\bsp\80x86\win32_st\vc08\bsp.c	/^	static SOCKET tsock;$/;"	v	file:
 tsock	.\oven\bsp\win32vc08\bsp.c	/^	static SOCKET tsock;$/;"	v	file:
-tsock	.\trtemp\bsp\x86\bsp.c	/^	static SOCKET tsock;$/;"	v	file:
-tstop	.\trtemp\tracking\trkact.c	/^static RKHT_T tpos, tstop; $/;"	v	file:
 tx_ffsz	.\oven\bsp\twrk60iar72\kuart.h	/^	uint8 tx_ffsz;		\/* tx fifo size *\/$/;"	m
 type	.\rkh\source\include\rkhitl.h	/^	ruint type;					$/;"	m	struct:RKH_BASE_T
-type	.\trtemp\trtemp.h	/^	rkhui8_t type;$/;"	m
-uchar	.\ahsm\bsp\cfv1\cw6_3\mytypes.h	/^typedef unsigned char	uchar;$/;"	t
-uchar	.\ahsm\bsp\s08\cw6_3\mytypes.h	/^typedef unsigned char	uchar;$/;"	t
-uint	.\ahsm\bsp\cfv1\cw6_3\mytypes.h	/^typedef unsigned int	uint;$/;"	t
-uint	.\ahsm\bsp\s08\cw6_3\mytypes.h	/^typedef unsigned int	uint;$/;"	t
-ulong	.\ahsm\bsp\cfv1\cw6_3\mytypes.h	/^typedef unsigned long	ulong;$/;"	t
-ulong	.\ahsm\bsp\s08\cw6_3\mytypes.h	/^typedef unsigned long	ulong;$/;"	t
-upd_curr_pos	.\trtemp\tracking\trkact.c	/^upd_curr_pos( RKHEVT_T *pe )$/;"	f
-upper2tmax	.\trtemp\tempctrl\tctrlact.c	/^upper2tmax( RKHEVT_T *pe )$/;"	f
 used	.\rkh\source\include\rkhtim.h	/^	rui8_t used;$/;"	m	struct:RKH_TMR_T
-ushort	.\ahsm\bsp\cfv1\cw6_3\mytypes.h	/^typedef unsigned short	ushort;$/;"	t
-ushort	.\ahsm\bsp\s08\cw6_3\mytypes.h	/^typedef unsigned short	ushort;$/;"	t
-vectorTableEntryType	.\ahsm\bsp\cfv1\cw6_3\prj\ahsm_cfv1\Sources\exceptions.c	/^typedef void (* vectorTableEntryType)(void);$/;"	t	file:
-vel	.\trtemp\bsp\x86\gps.h	/^	rkhui32_t vel;$/;"	m
-vel	.\trtemp\trtemp.h	/^	rkhui32_t vel;$/;"	m
-vel_dec	.\trtemp\bsp\x86\gps.c	/^vel_dec( void )$/;"	f
-vel_inc	.\trtemp\bsp\x86\gps.c	/^vel_inc( void )$/;"	f
-verify_serial_channel	.\ahsm\bsp\cfv1\cw6_3\serial\serial.c	/^verify_serial_channel( HUInt channel )$/;"	f	file:
-verify_serial_channel	.\ahsm\bsp\s08\cw6_3\serial\serial.c	/^verify_serial_channel( HUInt channel )$/;"	f	file:
-vmax	.\trtemp\trtemp.h	/^	VMAX_T vmax;$/;"	m
-x	.\ahsm\my.h	/^	rkhui8_t x;		\/* private member *\/$/;"	m
-x1	.\ahsm\myact.c	/^x1( const struct rkhsma_t *sma, RKHEVT_T *pe )$/;"	f
-x2_or_x3	.\ahsm\myact.c	/^x2_or_x3( const struct rkhsma_t *sma, RKHEVT_T *pe )$/;"	f
-x_equal_1	.\ahsm\myact.c	/^x_equal_1( const struct rkhsma_t *sma, RKHEVT_T *pe )$/;"	f
-y	.\ahsm\my.h	/^	rkhui8_t y;		\/* private member *\/$/;"	m
-y0	.\ahsm\myact.c	/^y0( const struct rkhsma_t *sma, RKHEVT_T *pe )$/;"	f
-y1	.\ahsm\myact.c	/^y1( const struct rkhsma_t *sma, RKHEVT_T *pe )$/;"	f
-y2	.\ahsm\myact.c	/^y2( const struct rkhsma_t *sma, RKHEVT_T *pe )$/;"	f

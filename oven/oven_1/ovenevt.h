@@ -1,13 +1,11 @@
 /*
- *	scevt.h
+ *	ovenevt.h
  *	
- *	\brief
- *	Server-Client (SC) event definitions.
  */
 
 
-#ifndef __SCEVT_H__
-#define __SCEVT_H__
+#ifndef __OVENEVT_H__
+#define __OVENEVT_H__
 
 
 #include "rkh.h"
