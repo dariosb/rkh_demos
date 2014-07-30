@@ -56,13 +56,29 @@
 #define LED3			KGPIO(A, 29, 0, KGPIO_PDDR_OUT, KGPIO_PDOR_HIGH)
 #define LED4			KGPIO(A, 10, 0, KGPIO_PDDR_OUT, KGPIO_PDOR_HIGH)
 
+/*
+ * RKH Trace UART
+ */
+
+#define TRACE_KUART			UART3_BASE_PTR
+
+#define TRC_MUX_PPTY		(PORT_MUX_ALT3)
+#define CFGIO_TRC_RXD()		KPRPH(C, 16, TRC_MUX_PPTY,1)
+#define CFGIO_TRC_TXD()		KPRPH(C, 17, TRC_MUX_PPTY,1)
+#define CFGIO_TRC_RTS()		KPRPH(C, 18, TRC_MUX_PPTY,1)
+#define CFGIO_TRC_CTS()		KPRPH(C, 19, TRC_MUX_PPTY,1)
+
 
 /* 
  * GPIO access macros
  */
 
-#define init_ioports( x )				\
+#define init_ioports( x )			\
 			{						\
+				CFGIO_TRC_RXD();	\
+				CFGIO_TRC_TXD();	\
+				CFGIO_TRC_RTS();	\
+				CFGIO_TRC_CTS();	\
 				init_gpio( SW1 );	\
 				init_gpio( SW2 );	\
 				init_gpio( LED1 );	\
@@ -70,9 +86,6 @@
 				init_gpio( LED3 );	\
 				init_gpio( LED4 );	\
 			}
-
-#define set_led(x)	clr_iopin( x )
-#define clr_led(x)	set_iopin( x )
 
 void gpio_init(void);
 

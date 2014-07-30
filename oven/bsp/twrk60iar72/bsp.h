@@ -73,17 +73,11 @@
 
 
 void bsp_init( int argc, char *argv[] );
-rui32_t bsp_rand( void );
-void bsp_srand( rui32_t seed );
 
-void bsp_cli_req( rui8_t clino );
-void bsp_cli_wait_req( rui8_t clino, RKH_TNT_T req_time );
-void bsp_cli_using( rui8_t clino, RKH_TNT_T using_time );
-void bsp_cli_paused( rui8_t clino );
-void bsp_cli_resumed( rui8_t clino );
-void bsp_cli_done( rui8_t clino );
-void bsp_svr_recall( rui8_t clino );
-void bsp_svr_paused( const RKH_SMA_T *sma );
+void bsp_oven_init( void );
+void bsp_emitter_on( void );
+void bsp_emitter_off( void );
+
 void bsp_switch_evt( rui8_t s, rui8_t st );
 
 #ifdef RKH_DEBUG

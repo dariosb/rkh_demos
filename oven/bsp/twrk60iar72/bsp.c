@@ -43,26 +43,14 @@
 
 #include "bsp.h"
 #include "rkh.h"
-#include "scevt.h"
-#include "svr.h"
-#include "cli.h"
+#include "ovenevt.h"
+#include "oven.h"
 
 #include "cpu.h"
 #include "gpio.h"
 #include "kuart.h"
 
-#include "seqchbak.h"
-#include "seqlog.h"
-#include "sequence.h"
-#include "genled.h"
 #include "switch.h"
-
-
-
-/*
-#include "sequence.h"
-#include "switch.h"
-#include "gpio.h"*/
 
 
 #define SERIAL_TRACE			1
@@ -75,12 +63,12 @@
 
 RKH_THIS_MODULE
 
-static rui32_t l_rnd;			/* random seed */
 
-static RKH_ROM_STATIC_EVENT( e_pause, PAUSE );
+static RKH_ROM_STATIC_EVENT( e_start, START );
+static RKH_ROM_STATIC_EVENT( e_open, OPEN );
+static RKH_ROM_STATIC_EVENT( e_close, CLOSE );
 
-static rui8_t ep0sto[ SIZEOF_EP0STO ],
-				ep1sto[ SIZEOF_EP1STO ];
+static rbool_t sw2_tgl;
 
 #if defined( RKH_USE_TRC_SENDER )
 static rui8_t l_isr_kbd;
@@ -114,23 +102,9 @@ static rui8_t l_isr_kbd;
 #endif
 
 
-static
-void
-bsp_publish( const RKH_EVT_T *e )
-{
-	rint cn;
-
-	RKH_SMA_POST_FIFO( svr, e, &l_isr_kbd );			/* to server */
-
-	for( cn = 0; cn < NUM_CLIENTS; ++cn )				/* to clients */
-		RKH_SMA_POST_FIFO( CLI(cn), e, &l_isr_kbd );
-}
-
-
 void
 rkh_hook_timetick( void )
 {
-	sequence_interrupt();
 	switch_tick();
 }
 
@@ -138,8 +112,6 @@ rkh_hook_timetick( void )
 void 
 rkh_hook_start( void ) 
 {
-	rkh_fwk_epool_register( ep0sto, SIZEOF_EP0STO, SIZEOF_EP0_BLOCK  );
-	rkh_fwk_epool_register( ep1sto, SIZEOF_EP1STO, SIZEOF_EP1_BLOCK  );
 }
 
 
@@ -225,95 +197,44 @@ bsp_switch_evt( rui8_t s, rui8_t st )
 	if( st == SW_RELEASED )
 		return;
 
-	if(s == SW1_SWITCH )
-		bsp_publish( &e_pause );
+	switch(s)
+	{
+		case SW1_SWITCH:
+		  RKH_SMA_POST_FIFO( oven, &e_start, &l_isr_kbd );
+		  break;
+
+		case SW2_SWITCH:
+		  tgl_gpio( LED3 );
+		  RKH_SMA_POST_FIFO( oven, 
+				  ( sw2_tgl ^= 1 ) ? &e_close : &e_open, &l_isr_kbd );
+		  break;
+	} 
 }
 
 
-rui32_t 
-bsp_rand( void )
-{  
-	/* 
-	 * A very cheap pseudo-random-number generator.
-	 * "Super-Duper" Linear Congruential Generator (LCG)
-	 * LCG(2^32, 3*7*11*13*23, 0, seed) [MS]
-	 */
-    l_rnd = (rui32_t)(l_rnd * (3*7*11*13*23));
-    return l_rnd >> 8;
-}
-
-
-void 
-bsp_srand( rui32_t seed )
+void
+bsp_oven_init( void )
 {
-    l_rnd = seed;
 }
 
 
-void 
-bsp_cli_wait_req( rui8_t clino, RKH_TNT_T req_time )
+void
+bsp_emitter_on( void )
 {
-	(void)clino;
-	(void)req_time;
+	clr_gpio( LED1 );
 }
 
 
-void 
-bsp_cli_req( rui8_t clino )
+void
+bsp_emitter_off( void )
 {
-	set_cli_sled( clino, CLI_WAITING );
-}
-
-
-void 
-bsp_cli_using( rui8_t clino, RKH_TNT_T using_time )
-{
-	(void)using_time;
-
-	set_cli_sled( clino, CLI_WORKING );
-}
-
-
-void 
-bsp_cli_paused( rui8_t clino )
-{
-	set_cli_sled( clino, CLI_PAUSED );
-}
-
-
-void 
-bsp_cli_resumed( rui8_t clino )
-{
-	set_cli_sled( clino, CLI_IDLE );
-}
-
-
-void 
-bsp_cli_done( rui8_t clino )
-{
-	set_cli_sled( clino, CLI_IDLE );
-}
-
-
-void 
-bsp_svr_recall( rui8_t clino )
-{
-	(void)clino;
-}
-
-
-void 
-bsp_svr_paused( const RKH_SMA_T *sma )
-{
-	(void)sma;
+	set_gpio( LED1 );
 }
 
 
 void 
 bsp_init( int argc, char *argv[]  )
 {
-	rint cn;
-
 	(void)argc;
 	(void)argv;
 
@@ -321,14 +242,10 @@ bsp_init( int argc, char *argv[]  )
 	systick_init( RKH_CFG_FWK_TICK_RATE_HZ );
 	cpu_tstmr_init();
 	init_ioports();
-	init_seqs();
-    bsp_srand( 1234U );
 
 	rkh_fwk_init();
 
-	RKH_FILTER_OFF_SMA( svr );
-	for( cn = 0; cn < NUM_CLIENTS; ++cn )
-		RKH_FILTER_OFF_SMA( CLI(cn) );
+	RKH_FILTER_OFF_SMA( oven );
 
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_FIFO );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_LIFO );
@@ -340,7 +257,6 @@ bsp_init( int argc, char *argv[]  )
 
 #if defined( RKH_USE_TRC_SENDER )
 	RKH_TR_FWK_OBJ( &l_isr_kbd );
-	RKH_TR_FWK_OBJ( &g_isr_tick );
 #endif
     RKH_ENA_INTERRUPT();
 }
