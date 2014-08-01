@@ -1,138 +1,135 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="rkh">
-      <UniqueIdentifier>{7c09a6d6-7643-4ad5-8840-0df89da493ed}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="rkh\source">
-      <UniqueIdentifier>{fa7924d1-5416-4f5b-a3a3-c9d0fb4c664e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="rkh\include">
-      <UniqueIdentifier>{ae419515-6eb6-4314-938c-9d56916be658}</UniqueIdentifier>
-    </Filter>
     <Filter Include="oven">
       <UniqueIdentifier>{9583a0df-1903-4f53-a4c7-43b720aaa1cc}</UniqueIdentifier>
     </Filter>
     <Filter Include="bsp">
       <UniqueIdentifier>{64db5eeb-1e78-4358-baaf-86f53e7fdfe7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="rkh">
+      <UniqueIdentifier>{7e9a205e-2dca-4e0b-9124-65122c473e3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rkh\source">
+      <UniqueIdentifier>{699516a6-9dc5-47fb-80a1-151a7f6c0641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rkh\source\portable">
+      <UniqueIdentifier>{a7da5bd7-8449-4cac-a398-03534f32730a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rkh\source\include">
+      <UniqueIdentifier>{1f64684f-a217-4b15-a371-7fa351edc0be}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\rkh\source\rkh.c">
-      <Filter>rkh\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\rkh\source\rkhdyn.c">
-      <Filter>rkh\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\rkh\source\rkhmp.c">
-      <Filter>rkh\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.c">
-      <Filter>rkh\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\rkh\source\rkhrq.c">
-      <Filter>rkh\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\rkh\source\rkhs.c">
-      <Filter>rkh\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\rkh\source\rkhsma.c">
-      <Filter>rkh\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\rkh\source\rkhtbl.c">
-      <Filter>rkh\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\rkh\source\rkhtim.c">
-      <Filter>rkh\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\rkh\source\rkhtrc.c">
-      <Filter>rkh\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\oven_5\main.c">
-      <Filter>oven</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\oven_5\oven.c">
-      <Filter>oven</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\oven_5\ovenact.c">
-      <Filter>oven</Filter>
-    </ClCompile>
     <ClCompile Include="..\bsp.c">
       <Filter>bsp</Filter>
     </ClCompile>
     <ClCompile Include="..\tcptrc.c">
       <Filter>bsp</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkh.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhdyn.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhmp.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhrq.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhs.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhsma.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhtbl.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhtim.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhtrc.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.c">
+      <Filter>rkh\source\portable</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\oven\oven_5\main.c">
+      <Filter>oven</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\oven\oven_5\oven.c">
+      <Filter>oven</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\oven\oven_5\ovenact.c">
+      <Filter>oven</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkh.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhassert.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhdef.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhevt.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhitl.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhmp.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhplat.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\source\portable\80x86\win32_st\vc08\rkhport.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhrdy.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhrq.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhs.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\source\portable\80x86\win32_st\vc08\rkht.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkht.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhtim.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhtrc.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\rkh\source\include\rkhtype.h">
-      <Filter>rkh\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\oven_5\oven.h">
-      <Filter>oven</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\oven_5\ovenact.h">
-      <Filter>oven</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\oven_5\ovenevt.h">
-      <Filter>oven</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\oven_5\rkhcfg.h">
-      <Filter>oven</Filter>
-    </ClInclude>
     <ClInclude Include="..\bsp.h">
       <Filter>bsp</Filter>
     </ClInclude>
     <ClInclude Include="..\tcptrc.h">
       <Filter>bsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.h">
+      <Filter>rkh\source\portable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkht.h">
+      <Filter>rkh\source\portable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkh.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhassert.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhdef.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhevt.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhitl.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhmp.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhplat.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhrdy.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhrq.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhs.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhtim.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhtrc.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhtype.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\oven\oven_5\oven.h">
+      <Filter>oven</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\oven\oven_5\ovenact.h">
+      <Filter>oven</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\oven\oven_5\ovenevt.h">
+      <Filter>oven</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\oven\oven_5\rkhcfg.h">
+      <Filter>oven</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
