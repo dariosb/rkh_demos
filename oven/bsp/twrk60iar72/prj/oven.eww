@@ -2,7 +2,22 @@
 
 <workspace>
   <project>
-    <path>$WS_DIR$\oven.ewp</path>
+    <path>$WS_DIR$\oven_1.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\oven_2.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\oven_3.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\oven_4.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\oven_5.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\oven_6.ewp</path>
   </project>
   <batchBuild/>
 </workspace>

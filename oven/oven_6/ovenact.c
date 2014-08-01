@@ -49,7 +49,7 @@ oven_init( void )
 {
 	bsp_oven_init();
 	RKH_TMR_INIT( &oventim, &e_tout, NULL );
-	rkh_rq_init( &qurc, qurc_sto, MAX_SIZEOF_QURC, NULL );
+	rkh_rq_init( &qurc, (const void **)qurc_sto, MAX_SIZEOF_QURC, NULL );
 	restart_cnt = 0;
 }
 
