@@ -100,8 +100,8 @@ recall_evts( const RKH_SMA_T *sma, RKH_EVT_T *pe )
 {
 	(void)pe;
 
-	if( rkh_fwk_recall( (RKH_SMA_T *)(sma), &qurc ) == RKH_EVT_CAST(0) )
-		restart_cnt = 0;
+	if( rkh_fwk_recall( (RKH_SMA_T *)(sma), &qurc ) )
+		--restart_cnt;
 }
 
 

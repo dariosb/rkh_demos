@@ -77,7 +77,7 @@ static RKH_ROM_STATIC_EVENT( e_term, TERM );
 
 
 #if defined( RKH_USE_TRC_SENDER )
-static rui8_t l_isr_kbd;
+static rui8_t l_isr_switch;
 static rui8_t l_isr_tick;
 #endif
 
@@ -177,19 +177,19 @@ isr_kbd_thread( LPVOID par )	/* Win32 thread to emulate keyboard ISR */
 		{
 			case ESC:
 				running = 0;
-				RKH_SMA_POST_FIFO( oven, &e_term, &l_isr_kbd );
+				RKH_SMA_POST_FIFO( oven, &e_term, &l_isr_switch );
 				break;
 
 			case 's':
-				RKH_SMA_POST_FIFO( oven, &e_start, &l_isr_kbd );
+				RKH_SMA_POST_FIFO( oven, &e_start, &l_isr_switch );
 				break;
 
 			case 'o':
-				RKH_SMA_POST_FIFO( oven, &e_open, &l_isr_kbd );
+				RKH_SMA_POST_FIFO( oven, &e_open, &l_isr_switch );
 				break;
 
 			case 'c':
-				RKH_SMA_POST_FIFO( oven, &e_close, &l_isr_kbd );
+				RKH_SMA_POST_FIFO( oven, &e_close, &l_isr_switch );
 				break;
 
 			default:
@@ -366,7 +366,7 @@ bsp_init( int argc, char *argv[] )
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_FIFO );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_DCH );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SM_STATE );
-	RKH_FILTER_OFF_EVENT( RKH_TE_SM_TS_STATE );
+//	RKH_FILTER_OFF_EVENT( RKH_TE_SM_TS_STATE );
 	RKH_FILTER_OFF_EVENT( RKH_TE_FWK_DEFER );
 	RKH_FILTER_OFF_EVENT( RKH_TE_FWK_RCALL );
 //	RKH_FILTER_OFF_GROUP_ALL_EVENTS( RKH_TG_SM );
@@ -376,7 +376,7 @@ bsp_init( int argc, char *argv[] )
 	RKH_TRC_OPEN();
 
 #if defined( RKH_USE_TRC_SENDER )
-	RKH_TR_FWK_OBJ( &l_isr_kbd );
+	RKH_TR_FWK_OBJ( &l_isr_switch );
 	RKH_TR_FWK_OBJ( &l_isr_tick );
 #endif
 }

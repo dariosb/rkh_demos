@@ -71,7 +71,7 @@ static RKH_ROM_STATIC_EVENT( e_close, CLOSE );
 static rbool_t sw2_tgl;
 
 #if defined( RKH_USE_TRC_SENDER )
-static rui8_t l_isr_kbd;
+static rui8_t l_isr_switch;
 #endif
 
 
@@ -200,13 +200,13 @@ bsp_switch_evt( rui8_t s, rui8_t st )
 	switch(s)
 	{
 		case SW1_SWITCH:
-		  RKH_SMA_POST_FIFO( oven, &e_start, &l_isr_kbd );
+		  RKH_SMA_POST_FIFO( oven, &e_start, &l_isr_switch );
 		  break;
 
 		case SW2_SWITCH:
 		  tgl_gpio( LED3 );
 		  RKH_SMA_POST_FIFO( oven, 
-				  ( sw2_tgl ^= 1 ) ? &e_close : &e_open, &l_isr_kbd );
+				  ( sw2_tgl ^= 1 ) ? &e_close : &e_open, &l_isr_switch );
 		  break;
 	} 
 }
@@ -247,16 +247,21 @@ bsp_init( int argc, char *argv[]  )
 
 	RKH_FILTER_OFF_SMA( oven );
 
-	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_FIFO );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_LIFO );
+	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_FIFO );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_DCH );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SM_STATE );
+//	RKH_FILTER_OFF_EVENT( RKH_TE_SM_TS_STATE );	
+	RKH_FILTER_OFF_EVENT( RKH_TE_FWK_DEFER );
+	RKH_FILTER_OFF_EVENT( RKH_TE_FWK_RCALL );
+//	RKH_FILTER_OFF_GROUP_ALL_EVENTS( RKH_TG_SM );	
+
 	RKH_FILTER_OFF_ALL_SIGNALS();
 
     RKH_TRC_OPEN();
 
 #if defined( RKH_USE_TRC_SENDER )
-	RKH_TR_FWK_OBJ( &l_isr_kbd );
+	RKH_TR_FWK_OBJ( &l_isr_switch );
 #endif
     RKH_ENA_INTERRUPT();
 }
