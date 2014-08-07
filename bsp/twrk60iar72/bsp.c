@@ -87,11 +87,11 @@ static rui8_t l_isr_switch;
 	};
 
 	/* Trazer Tool COM Port */
-	#define SERIAL_TRACE_OPEN()		kuart_init( UART3_BASE_PTR, &trz_uart )
+	#define SERIAL_TRACE_OPEN()		kuart_init( TRACE_KUART, &trz_uart )
 	#define SERIAL_TRACE_CLOSE() 	(void)0
-	#define SERIAL_TRACE_SEND( d ) 	kuart_putchar( UART3_BASE_PTR, d )
+	#define SERIAL_TRACE_SEND( d ) 	kuart_putchar( TRACE_KUART, d )
 	#define SERIAL_TRACE_SEND_BLOCK( buf_, len_ ) 		\
-					kuart_putnchar( UART3_BASE_PTR, 	\
+					kuart_putnchar( TRACE_KUART, 	\
 								(char *)(buf_), 		\
 								(rui16_t)(len_))
 #else
@@ -262,6 +262,7 @@ bsp_init( int argc, char *argv[]  )
 
 #if defined( RKH_USE_TRC_SENDER )
 	RKH_TR_FWK_OBJ( &l_isr_switch );
+	RKH_TR_FWK_OBJ( &g_isr_tick );
 #endif
     RKH_ENA_INTERRUPT();
 }
