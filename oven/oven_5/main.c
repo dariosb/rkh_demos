@@ -25,7 +25,6 @@ main( int argc, char *argv[] )
 	/* send objects to trazer */
 	RKH_TR_FWK_AO( oven );
 	RKH_TR_FWK_QUEUE( &oven->equeue );
-	RKH_TR_FWK_QUEUE( &qurc );
 	RKH_TR_FWK_STATE( oven, &open );
 	RKH_TR_FWK_STATE( oven, &close );
 	RKH_TR_FWK_STATE( oven, &close_hist );

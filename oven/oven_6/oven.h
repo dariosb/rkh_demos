@@ -10,7 +10,7 @@
 #include "rkh.h"
 
 
-#define EMITTER_ON_TIME		RKH_TIME_SEC( 10 )
+#define EMITTER_ON_TIME		RKH_TIME_SEC( 5 )
 
 
 typedef struct

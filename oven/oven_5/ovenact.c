@@ -32,12 +32,7 @@ RKH_TMR_T oventim;
  * Declare queue to be used as deferred queue
  */
 
-#define MAX_SIZEOF_QURC		3
-
-RKH_RQ_T qurc;
-static RKH_EVT_T *qurc_sto[ MAX_SIZEOF_QURC ];
-
-static rui8_t restart_cnt;
+static rui8_t start_cnt, restart_cnt;
 
 
 /*
@@ -49,7 +44,6 @@ oven_init( void )
 {
 	bsp_oven_init();
 	RKH_TMR_INIT( &oventim, &e_tout, NULL );
-	rkh_rq_init( &qurc, (const void **)qurc_sto, MAX_SIZEOF_QURC, NULL );
 	restart_cnt = 0;
 }
 
@@ -57,6 +51,12 @@ oven_init( void )
 /*
  *	Defines state entry/exit functions
  */
+
+void
+reset_cnts( void )
+{
+	start_cnt = restart_cnt = 0;
+}
 
 void 
 start_cooking( void )
@@ -77,30 +77,36 @@ stop_cooking( void )
  */
 
 void
-inc_defer_start( const RKH_SMA_T *sma, RKH_EVT_T *pe )
+inc_start( const RKH_SMA_T *sma, RKH_EVT_T *pe )
 {
 	(void)sma;
+	(void)pe;
 
-	++restart_cnt;
-	rkh_fwk_defer( &qurc, pe );
+	++start_cnt;
 }
 
 void
-recall_evts( const RKH_SMA_T *sma, RKH_EVT_T *pe )
+restart_timer( const RKH_SMA_T *sma, RKH_EVT_T *pe )
 {
+	(void)sma;
 	(void)pe;
 
-	if( rkh_fwk_recall( (RKH_SMA_T *)(sma), &qurc ) )
-		--restart_cnt;
+	++restart_cnt;
+	RKH_TMR_ONESHOT( &oventim, oven, EMITTER_ON_TIME );
 }
-
 
 /*
  * Defines actions functions
  */
 
 rbool_t
-chk_restart_cnt( void )
+chk_start_cnt( void )
 {
-	return ( restart_cnt < 2 ) ? RKH_TRUE : RKH_FALSE;
+	return ( start_cnt < 2 ) ? RKH_TRUE : RKH_FALSE;
+}
+
+rbool_t
+chk_restart( void )
+{
+	return ( restart_cnt == start_cnt ) ? RKH_TRUE : RKH_FALSE;
 }

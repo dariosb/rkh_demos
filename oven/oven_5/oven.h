@@ -10,7 +10,7 @@
 #include "rkh.h"
 
 
-#define EMITTER_ON_TIME		RKH_TIME_SEC( 10 )
+#define EMITTER_ON_TIME		RKH_TIME_SEC( 5 )
 
 
 typedef struct
@@ -32,6 +32,7 @@ RKH_SMA_DCLR( oven );
 
 RKH_DCLR_BASIC_STATE open, ready, cooking;
 RKH_DCLR_COMP_STATE close;
+RKH_DCLR_COND_STATE cooking_cnd;
 RKH_DCLR_SHIST_STATE close_hist;
 
 
