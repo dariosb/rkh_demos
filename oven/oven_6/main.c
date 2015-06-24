@@ -25,7 +25,6 @@ main( int argc, char *argv[] )
 	/* send objects to trazer */
 	RKH_TR_FWK_AO( oven );
 	RKH_TR_FWK_QUEUE( &oven->equeue );
-	RKH_TR_FWK_QUEUE( &qurc );
 	RKH_TR_FWK_STATE( oven, &open );
 	RKH_TR_FWK_STATE( oven, &close );
 	RKH_TR_FWK_STATE( oven, &close_hist );
@@ -33,13 +32,14 @@ main( int argc, char *argv[] )
 	RKH_TR_FWK_STATE( oven, &cooking );
 	RKH_TR_FWK_STATE( oven, &cooking_cnd );
 	RKH_TR_FWK_STATE( oven, &on );
-	RKH_TR_FWK_STATE( oven, &off );
+	RKH_TR_FWK_STATE( oven, &pause );
 	RKH_TR_FWK_OBJ(	&oventim );
 
 	/* send signals to trazer */
 	RKH_TR_FWK_SIG( OPEN );
 	RKH_TR_FWK_SIG( CLOSE );
 	RKH_TR_FWK_SIG( START );
+	RKH_TR_FWK_SIG( STOP );
 	RKH_TR_FWK_SIG( TOUT );
 	RKH_TR_FWK_SIG( TERM );
 

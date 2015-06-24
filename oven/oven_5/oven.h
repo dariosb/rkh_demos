@@ -10,7 +10,8 @@
 #include "rkh.h"
 
 
-#define EMITTER_ON_TIME		RKH_TIME_SEC( 5 )
+#define COOKING_TIME		RKH_TIME_SEC( 5 )
+#define RESTRT_COOK_ALLOW	2
 
 
 typedef struct

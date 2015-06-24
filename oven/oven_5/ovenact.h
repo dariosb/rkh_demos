@@ -21,17 +21,17 @@ void oven_init( void );
  *	Defines state entry/exit functions
  */
 
-void reset_cnts( void );
-void start_cooking( void );
-void stop_cooking( void );
+void cook_init( void );
+void cook_start( void );
+void cook_stop( void );
 
 
 /*
  * Defines actions functions
  */
 
-void inc_start( const RKH_SMA_T *sma, RKH_EVT_T *pe );
-void restart_timer( const RKH_SMA_T *sma, RKH_EVT_T *pe );
+void inc_start( void );
+void cook_restart( void );
 
 /*
  * Defines guard functions

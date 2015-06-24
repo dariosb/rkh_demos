@@ -21,9 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\bsp.c">
-      <Filter>bsp</Filter>
-    </ClCompile>
     <ClCompile Include="..\tcptrc.c">
       <Filter>bsp</Filter>
     </ClCompile>
@@ -65,6 +62,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\oven\oven_6\ovenact.c">
       <Filter>oven</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bsp_ovn6.c">
+      <Filter>bsp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

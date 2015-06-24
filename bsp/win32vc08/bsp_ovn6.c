@@ -66,6 +66,7 @@ static RKH_TS_T ts_cntr;		/* time stamp counter */
 rui8_t running;
 
 static RKH_ROM_STATIC_EVENT( e_start, START );
+static RKH_ROM_STATIC_EVENT( e_stop, STOP );
 static RKH_ROM_STATIC_EVENT( e_open, OPEN );
 static RKH_ROM_STATIC_EVENT( e_close, CLOSE );
 static RKH_ROM_STATIC_EVENT( e_term, TERM );
@@ -180,6 +181,10 @@ isr_kbd_thread( LPVOID par )	/* Win32 thread to emulate keyboard ISR */
 				RKH_SMA_POST_FIFO( oven, &e_start, &panel );
 				break;
 
+			case 'p':
+				RKH_SMA_POST_FIFO( oven, &e_stop, &panel );
+				break;
+
 			case 'o':
 				RKH_SMA_POST_FIFO( oven, &e_open, &door );
 				break;
@@ -268,6 +273,7 @@ print_banner( void )
 	printf( "1.- Press 'O'/'o' door { Open  } -> oven.\n" );
 	printf( "2.- Press 'C'/'c' door { Close } -> oven.\n" );
 	printf( "3.- Press 'S'/'s' panel{ Start } -> oven.\n" );
+	printf( "3.- Press 'P'/'p' panel{ Stop  } -> oven.\n" );
 	printf( "4.- Press 'escape' to quit.\n\n\n" );
 }
 
@@ -334,24 +340,50 @@ bsp_oven_init( void )
 }
 
 
-time_t cStart, cStop;
+static time_t cStart, cStop, cPause, cContinue;
+static double in_pause;
 
 void
 bsp_emitter_on( void )
 {
 	time(&cStart);
+	cPause = cContinue = cStart;
+	in_pause = 0;
 	printf( "+- Cook Start \n" );
 	printf( "     Emitter: ON\n" );
 }
 
 
 void
+bsp_emitter_pause( void )
+{
+	time(&cPause);
+	printf( "     Emitter: PAUSE\n" );
+}
+
+
+void
+bsp_emitter_continue( void )
+{
+	time(&cContinue);
+	in_pause += difftime(cContinue, cPause);
+	printf( "     Emitter: CONTINUE\n" );
+	printf( "     In Pause: %5.2f sec\n\n", in_pause );
+
+}
+
+
+void
 bsp_emitter_off( void )
 {
+	double total;
+
 	time(&cStop);
+	total = difftime(cStop, cStart) - in_pause;
 	printf( "     Emitter: OFF\n" );
-	printf( "     Duration: %5.2f sec\n\n", difftime(cStop, cStart) );
+	printf( "     Cook Time: %5.2f sec\n\n", total );
 }
+
 
 
 void 

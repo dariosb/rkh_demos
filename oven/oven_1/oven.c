@@ -55,7 +55,7 @@ RKH_CREATE_TRANS_TABLE( ready )
 RKH_END_TRANS_TABLE
 
 
-RKH_CREATE_BASIC_STATE( cooking, start_cooking, stop_cooking,  RKH_ROOT, NULL );
+RKH_CREATE_BASIC_STATE( cooking, cook_start, cook_stop,  RKH_ROOT, NULL );
 RKH_CREATE_TRANS_TABLE( cooking )
 
 	RKH_TRREG( OPEN,	NULL,	NULL,	&idle ),
