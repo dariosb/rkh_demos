@@ -10,13 +10,13 @@
 #include "swhdl.h"
 
 
-MUInt
+ruint
 rawsw1( void )
 {
 	return GPIO_DRV_ReadPinInput(kGpioSW2);
 }
 
-MUInt
+ruint
 rawsw2( void )
 {
 	return GPIO_DRV_ReadPinInput(kGpioSW3);

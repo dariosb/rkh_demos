@@ -8,20 +8,13 @@
 #ifndef __SWITCH_H__
 #define __SWITCH_H__
 
-#ifdef __TINY_PROC__
-	typedef unsigned char	MUInt;
-	typedef signed char		MInt;
-#else
-	typedef unsigned int	MUInt;
-	typedef signed int		MInt;
-#endif
-
+#include "rkh.h"
 
 typedef struct
 {
 	unsigned char state;
-	MUInt (*rawsw)(void);
-	MUInt debsw;
+	ruint (*rawsw)(void);
+	ruint debsw;
 }SWITCH_ST;
 
 enum
@@ -38,6 +31,6 @@ enum
 };
 
 void switch_tick( void );
-MUInt get_switch_state( MUInt who );
+ruint get_switch_state( ruint who );
 
 #endif

@@ -9,10 +9,7 @@
 #include "switch.h"
 #include "swhdl.h"
 #include "bsp.h"
-#include "scevt.h"
 
-
-static RKH_ROM_STATIC_EVENT( e_pause, PAUSE );
 static SWITCH_ST switchs[SWITCHS_NUM] = 
 {
 	{ 0, rawsw1,	SW_RELEASED },
@@ -20,20 +17,11 @@ static SWITCH_ST switchs[SWITCHS_NUM] =
 };
 
 
-#define SWITCH_EVT(s__, st__)					\
-			do {								\
-				if((st__) == SW_RELEASED)		\
-					return;						\
-				if((s__) == SW1_SWITCH)			\
-					bsp_publish( &e_pause );	\
-			} while(0)
-
-			
 void
 switch_tick( void )
 {
 	SWITCH_ST *p;
-	MUInt s;
+	ruint s;
 
 	for( s = 0, p = switchs; p < &switchs[SWITCHS_NUM]; ++p, ++s ) 
 	{
@@ -41,20 +29,20 @@ switch_tick( void )
 		if( (p->state == 0xFF) && (p->debsw != SW_PRESSED) )
 		{
 			p->debsw = SW_PRESSED;
-			SWITCH_EVT( s, p->debsw );
+			bsp_pub_sw_evt( s, p->debsw );
 		}
 		else if( ( p->state == 0x00 ) && (p->debsw != SW_RELEASED) )
 		{
 			p->debsw = SW_RELEASED;
-			SWITCH_EVT( s, p->debsw );
+			bsp_pub_sw_evt( s, p->debsw );
 		}
 	}
 
 }
 
 
-MUInt
-get_switch_state( MUInt who )
+ruint
+get_switch_state( ruint who )
 {
 	return switchs[who].debsw;
 }

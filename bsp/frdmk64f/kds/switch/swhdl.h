@@ -12,7 +12,7 @@
 #include "switch.h"
 #include "fsl_gpio_driver.h"
 
-MUInt rawsw1( void );
-MUInt rawsw2( void );
+ruint rawsw1( void );
+ruint rawsw2( void );
 
 #endif

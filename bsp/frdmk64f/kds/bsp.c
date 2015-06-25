@@ -43,9 +43,8 @@
 
 
 #include "bsp.h"
-#include "svr.h"
-#include "cli.h"
-#include "scevt.h"
+#include "oven.h"
+#include "ovenevt.h"
 #include "rkh.h"
 #include "fsl_debug_console.h"
 #include "fsl_hwtimer_systick.h"
@@ -53,13 +52,6 @@
 
 
 #define SERIAL_TRACE			1
-
-#define SIZEOF_EP0STO				32
-#define SIZEOF_EP0_BLOCK			sizeof( RKH_EVT_T )
-#define SIZEOF_EP1STO				16
-#define SIZEOF_EP1_BLOCK			sizeof( REQ_EVT_T )
-#define SVR_NAME					"Server    -"
-#define CLI_NAME					"Client"
 
 /* This macro is needed only if the module requires to check 	.. */
 /* .. expressions that ought to be true as long as the program  .. */
@@ -69,12 +61,18 @@ RKH_THIS_MODULE
 
 
 static hwtimer_t hwtimer;			/* Systick hardware timer */
-static rui32_t l_rnd;				/* random seed */
-static rui8_t ep0sto[ SIZEOF_EP0STO ],
-				ep1sto[ SIZEOF_EP1STO ];
+
+static RKH_ROM_STATIC_EVENT( e_start, START );
+static RKH_ROM_STATIC_EVENT( e_open, OPEN );
+static RKH_ROM_STATIC_EVENT( e_close, CLOSE );
+static RKH_ROM_STATIC_EVENT( e_term, TERM );
+#if ( __STOP_BUTTON__ == RKH_ENABLED )
+static RKH_ROM_STATIC_EVENT( e_stop, STOP );
+#endif
 
 #if defined( RKH_USE_TRC_SENDER )
-static rui8_t l_isr_kbd;
+static rui8_t door;
+static rui8_t panel;
 #endif
 
 
@@ -96,21 +94,16 @@ static rui8_t l_isr_kbd;
 
 
 void
-bsp_publish( const RKH_EVT_T *e )
+bsp_pub_sw_evt( ruint s, ruint debsw )
 {
-	rint cn;
-
-	RKH_SMA_POST_FIFO( svr, e, &l_isr_kbd );			/* to server */
-
-	for( cn = 0; cn < NUM_CLIENTS; ++cn )				/* to clients */
-		RKH_SMA_POST_FIFO( CLI(cn), e, &l_isr_kbd );
+ //TODO: implement SWITCHS EVENTS
 }
 
 
 void
-rkh_isr_tick( void* data )
+rkh_tick( void* data )
 {
-	RKH_TIM_TICK((const void *)(rkh_isr_tick));
+	RKH_TIM_TICK((const void *)(rkh_tick));
 }
 
 
@@ -124,8 +117,6 @@ rkh_hook_timetick( void )
 void 
 rkh_hook_start( void ) 
 {
-	rkh_fwk_epool_register( ep0sto, SIZEOF_EP0STO, SIZEOF_EP0_BLOCK  );
-	rkh_fwk_epool_register( ep1sto, SIZEOF_EP1STO, SIZEOF_EP1_BLOCK  );
 }
 
 
@@ -156,39 +147,6 @@ rkh_assert( RKHROM char * const file, int line )
 }
 
 
-static
-void
-print_banner( void )
-{
-	PRINTF(	"\"Shared\" example\n\n" );
-	PRINTF(	"RKH version      = %s\n", RKH_RELEASE );
-	PRINTF(	"Port version     = %s\n", rkh_get_port_version() );
-	PRINTF(	"Port description = %s\n\n", rkh_get_port_desc() );
-	PRINTF(	"Description: \n\n" );
-	PRINTF(	"This application deals with the shared resource problem \n" );
-	PRINTF(	"in active object systems. Showing one of the biggest \n" );
-	PRINTF(	"benefit of using active objects: resource encapsulation. \n" );
-	PRINTF(	"The encapsulation naturally designates the owner of the \n" );
-	PRINTF(	"resource as the ultimate arbiter in resolving any contention \n" );
-	PRINTF(	"and potential conflicts for the resource. \n" );
-	PRINTF(	"The SHD application is relatively simple and can be tested \n" );
-	PRINTF(	"only with a couple of LEDs on your target board. \n" );
-	PRINTF(	"Still, SHD contains five (5) concurrent active objects \n" );
-	PRINTF(	"that exchange events via direct event posting mechanism. \n" );
-	PRINTF(	"The application uses four timers, as well as dynamic  \n" );
-	PRINTF(	"and static events. \n" );
-	PRINTF(	"On the other hand, this application could be used in either \n" );
-	PRINTF(	"preemptive or cooperative enviroment. \n" );
-	PRINTF(	"Aditionally, the SHD could be used to verify a new RKH port. \n" );
-	PRINTF(	"\n\n\n" );
-
-	PRINTF( "1.- Each Client have your own color, Client 1-4:\n" );
-	PRINTF( "	   	RED, GREEN, BLUE, YELLOW\n" );
-	PRINTF( "2.- Press SW2 to PAUSE.\n" );
-	PRINTF( "3.- Paused state is shown with a WHITE in RGB led\n." );
-}
-
-
 #if RKH_CFG_TRC_EN == RKH_ENABLED
 
 void 
@@ -198,7 +156,7 @@ rkh_trc_open( void )
 
 	SERIAL_TRACE_OPEN();
 	RKH_TRC_SEND_CFG( BSP_TS_RATE_HZ );
-	RKH_TR_FWK_OBJ( &rkh_isr_tick );
+	RKH_TR_FWK_OBJ( &rkh_tick );
 }
 
 
@@ -242,109 +200,43 @@ rkh_trc_flush( void )
 #endif
 
 
-rui32_t
-bsp_rand( void )
+void
+bsp_oven_init( void )
 {
-	/*
-	 * A very cheap pseudo-random-number generator.
-	 * "Super-Duper" Linear Congruential Generator (LCG)
-	 * LCG(2^32, 3*7*11*13*23, 0, seed) [MS]
-	 */
-    l_rnd = l_rnd * (3*7*11*13*23);
-    return l_rnd >> 8;
+
 }
 
 
 void
-bsp_srand( rui32_t seed )
+bsp_emitter_ready( void )
 {
-    l_rnd = seed;
+	set_rgb_led( RGB_LIME );
 }
 
-
-static RGB_COLOR_IDX bsp_led_colors[] = {
-											/* Server paused */
-											RGB_WHITE,
-
-											/*
-											 * Client1 1-4 according
-											 * to clino arg
-											 */
-											RGB_RED,
-											RGB_LIME,
-											RGB_BLUE,
-											RGB_YELLOW
-										};
-
 void
-bsp_cli_wait_req( rui8_t clino, RKH_TNT_T req_time )
+bsp_emitter_on( void )
 {
-	PRINTF( "Client[%d] - Waiting for send request to server (%d seg)\n",
-									CLI_ID(clino), req_time );
+	set_rgb_led( RGB_RED );
 }
 
 
 void
-bsp_cli_req( rui8_t clino )
+bsp_emitter_pause( void )
 {
-	PRINTF( "Client[%d] - Send request to server...\n", CLI_ID(clino) );
+	set_rgb_led( RGB_YELLOW );
 }
 
 
 void
-bsp_cli_using( rui8_t clino, RKH_TNT_T using_time )
+bsp_emitter_continue( void )
 {
-	PRINTF( "Client[%d] - Using server for %d [seg]\n",
-									CLI_ID(clino), using_time );
-	set_rgb_led( bsp_led_colors[clino] );
 }
 
 
 void
-bsp_cli_paused( rui8_t clino )
+bsp_emitter_off( void )
 {
-	PRINTF( "Client[%d] - Paused\n", CLI_ID(clino) );
-	set_rgb_led( RGB_WHITE );
-}
-
-
-void
-bsp_cli_resumed( rui8_t clino )
-{
-	PRINTF( "Client[%d] - Resumed\n", CLI_ID(clino) );
-}
-
-
-void
-bsp_cli_done( rui8_t clino )
-{
-	PRINTF( "Client[%d] - Done\n", CLI_ID(clino) );
 	set_rgb_led( RGB_BLACK );
-}
-
-
-void
-bsp_svr_recall( rui8_t clino )
-{
-	PRINTF( "%s Recall a deferred request from client[%d]\n",
-									SVR_NAME, CLI_ID(clino) );
-}
-
-
-void
-bsp_svr_paused( const RKH_SMA_T *sma )
-{
-	rint cn;
-	SVR_T *ao;
-
-	ao = RKH_CAST(SVR_T, sma);
-	PRINTF( "%s Paused | ", SVR_NAME );
-	PRINTF( "ntot = %d |", ao->ntot );
-
-	for( cn = 0; cn < NUM_CLIENTS; ++cn )
-		PRINTF( " cli%d=%d |", cn, ao->ncr[ cn ] );
-
-	PUTCHAR('\n');
 }
 
 
@@ -362,26 +254,19 @@ bsp_init( int argc, char *argv[]  )
 	/* Systick initialization */
     HWTIMER_SYS_Init(&hwtimer, &kSystickDevif, 0, NULL);
     HWTIMER_SYS_SetPeriod(&hwtimer, (1000*1000)/RKH_CFG_FWK_TICK_RATE_HZ);
-    HWTIMER_SYS_RegisterCallback(&hwtimer, rkh_isr_tick, NULL);
+    HWTIMER_SYS_RegisterCallback(&hwtimer, rkh_tick, NULL);
     HWTIMER_SYS_Start(&hwtimer);
-
-
-    bsp_srand( 1234U );
-	print_banner();
 
 	rkh_fwk_init();
 
-	RKH_FILTER_OFF_SMA( svr );
-	for( cn = 0; cn < NUM_CLIENTS; ++cn )
-		RKH_FILTER_OFF_SMA( CLI(cn) );
+	RKH_FILTER_OFF_SMA( oven );
 
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_FIFO );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_LIFO );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_DCH );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SM_STATE );
 	/*RKH_FILTER_OFF_ALL_SIGNALS();*/
-	RKH_FILTER_OFF_SIGNAL( REQ );
-	RKH_FILTER_OFF_SIGNAL( START );
 
 	RKH_TRC_OPEN();
 }
+
