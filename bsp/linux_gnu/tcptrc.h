@@ -29,45 +29,64 @@
  * 	e-mail:			francuccilea@gmail.com
  *
  *  --------------------------------------------------------------------------
- *  File                     : bsp.h
+ *  File                     : tcptrc.h
  *	Last updated for version : v2.4.04
  *	By                       : DB
+ *	                           LF
  *  --------------------------------------------------------------------------
  *  \endcond
  *
  * 	\file
  * 	\ingroup 	prt
  *
- * 	\brief 		BSP for 80x86 win32
+ * 	\brief 		Socket TCP/IP support for 80x86 OS linux
  */
 
 
-#ifndef __BSP_H__
-#define __BSP_H__
+#ifndef __TCPTRC_H__
+#define __TCPTRC_H__
 
-
-#include "rkh.h"
-
-
-#define BSP_TICKS_PER_SEC   		RKH_CFG_FWK_TICK_RATE_HZ
 
 /**
  * 	\brief
- * 	This macro represents the number of timestamp clock ticks per second. 
- * 	Dividing a count of timestamp ticks by this macro yields the number 
- * 	of seconds.
+ *	---.
+ * 
+ *	---.
+ *
+ * 	\param port 		---.
+ * 	\param srvip 		---.
+ * 	\param ps 			---.
+ *
+ * 	\returns
+ * 	---.
  */
 
-#define BSP_TS_RATE_HZ		   		RKH_CFG_FWK_TICK_RATE_HZ
+int tcp_trace_open( unsigned short port, char *srvip, int *ps );
 
 
-void bsp_init( int argc, char *argv[] );
+/**
+ * 	\brief
+ *	---.
+ * 
+ *	---.
+ *
+ * 	\param s 			---.
+ * 	\param c 			---.
+ */
 
-void bsp_oven_init( void );
-void bsp_emitter_ready( void );
-void bsp_emitter_on( void );
-void bsp_emitter_off( void );
-void bsp_emitter_pause( void );
-void bsp_emitter_continue( void );
+void tcp_trace_send( int s, const char *buf, int len );
+
+
+/**
+ * 	\brief
+ *	---.
+ * 
+ *	---.
+ *
+ * 	\param s	 		---.
+ */
+
+void tcp_trace_close( int s );
+
 
 #endif

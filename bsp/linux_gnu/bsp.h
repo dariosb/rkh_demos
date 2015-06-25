@@ -38,7 +38,7 @@
  * 	\file
  * 	\ingroup 	prt
  *
- * 	\brief 		BSP for 80x86 win32
+ * 	\brief 		BSP for 80x86 OS linux
  */
 
 
@@ -61,6 +61,9 @@
 #define BSP_TS_RATE_HZ		   		RKH_CFG_FWK_TICK_RATE_HZ
 
 
+
+
+
 void bsp_init( int argc, char *argv[] );
 
 void bsp_oven_init( void );
@@ -69,5 +72,6 @@ void bsp_emitter_on( void );
 void bsp_emitter_off( void );
 void bsp_emitter_pause( void );
 void bsp_emitter_continue( void );
+
 
 #endif

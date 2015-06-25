@@ -38,7 +38,7 @@
  * 	\file
  * 	\ingroup 	prt
  *
- * 	\brief 		BSP for 80x86 OS win32
+ * 	\brief 		BSP for 80x86 OS linux
  */
 
 
@@ -47,10 +47,12 @@
 #include "oven.h"
 #include "ovenevt.h"
 
-#include <conio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
+#include <pthread.h>
+#include <termios.h>
+#include <sys/time.h>
 
 
 #define BIN_TRACE					0
@@ -60,7 +62,7 @@
 
 RKH_THIS_MODULE
 
-static DWORD tick_msec;			/* clock tick in msec */
+static unsigned short tick_msec;			/* clock tick in msec */
 static RKH_TS_T ts_cntr;		/* time stamp counter */
 
 rui8_t running;
@@ -105,19 +107,19 @@ static FILE *ftbin;
 	#define TRC_TCP_PORT				6602
 
 	/* Trace Socket */
-	static SOCKET tsock;
+	static int tsock;
 
-	#define TCP_TRACE_OPEN() 									\
-				if( tcp_trace_open( TRC_TCP_PORT,				\
-							TRC_IP_ADDR, &tsock ) < 0 ) 		\
-				{ 												\
-					printf( "Can't open socket %s:%u\n", 		\
-								TRC_IP_ADDR, TRC_TCP_PORT );	\
-					exit( EXIT_FAILURE ); 						\
-				}
+	#define TCP_TRACE_OPEN()											\
+							if( tcp_trace_open( TRC_TCP_PORT, 			\
+										TRC_IP_ADDR, &tsock ) < 0 ) 	\
+							{ 											\
+								printf( "Can't open socket %s:%u\n",	\
+											TRC_IP_ADDR, TRC_TCP_PORT );\
+								exit( EXIT_FAILURE );					\
+							}
 	#define TCP_TRACE_CLOSE() 		tcp_trace_close( tsock )
 	#define TCP_TRACE_SEND( d ) 	tcp_trace_send( tsock, d, (int)1 )
-	#define TCP_TRACE_SEND_BLOCK( buf_, len_ ) 					\
+	#define TCP_TRACE_SEND_BLOCK( buf_, len_ ) \
 				tcp_trace_send( tsock, (const char *)(buf_), (int)(len_) )
 #else
 	#define TCP_TRACE_OPEN()					(void)0
@@ -128,18 +130,18 @@ static FILE *ftbin;
 
 
 #if BIN_TRACE == 1
-	#define FTBIN_FLUSH( buf_, len_ ) 						\
-				{											\
-					fwrite ( (buf_), 1, (len_), ftbin );	\
-					fflush( ftbin )							\
-				}
-	#define FTBIN_CLOSE() 	fclose( ftbin )
+	#define FTBIN_FLUSH( buf_, len_ )									\
+							{											\
+								fwrite ( (buf_), 1, (len_), ftbin ); 	\
+								fflush( ftbin );						\
+							}
+	#define FTBIN_CLOSE()		fclose( ftbin )
 	#define FTBIN_OPEN() 												\
-				if( ( ftbin = fopen( "../ftbin", "w+b" ) ) == NULL )	\
-				{														\
-					perror( "Can't open file\n" );						\
-					exit( EXIT_FAILURE );								\
-				}
+							if( ( ftbin = fopen( "ftbin", "w+b" ) ) == NULL ) \
+							{ 											\
+								printf( "Can't open file\n" ); \
+								exit( EXIT_FAILURE ); \
+							}
 #else
 	#define FTBIN_FLUSH( buf_, len_ )		(void)0
 	#define FTBIN_CLOSE()					(void)0
@@ -147,32 +149,55 @@ static FILE *ftbin;
 #endif
 
 
+#define bsp_msleep( x )				usleep( x * 1000UL )
+
+
 static 
-DWORD WINAPI 
-isr_tmr_thread( LPVOID par )	/* Win32 thread to emulate timer ISR */
+void *
+isr_tmr_thread( void *d )	/* thread to emulate timer ISR */
 {
-    ( void )par;
+	(void)d;
+
     while( running ) 
 	{
 		RKH_TIM_TICK( &rkh_tick );
-        Sleep( tick_msec );
+        bsp_msleep( tick_msec );
     }
-    return 0;
+
+	pthread_exit(NULL);
+	return NULL;
+}
+
+static struct termios orgt;
+
+static
+int 
+___getch( void )
+{
+	struct termios newt;
+	int ch;
+
+	tcgetattr( STDIN_FILENO, &orgt );
+	newt = orgt;
+	newt.c_lflag &= ~( ICANON | ECHO );
+	tcsetattr( STDIN_FILENO, TCSANOW, &newt );
+	ch = getchar();
+	tcsetattr( STDIN_FILENO, TCSANOW, &orgt );
+	return ch;
 }
 
 
 static 
-DWORD WINAPI 
-isr_kbd_thread( LPVOID par )	/* Win32 thread to emulate keyboard ISR */
+void * 
+isr_kbd_thread( void *par )	/* thread to emulate keyboard ISR */
 {
 	int c;
 
-    ( void )par;
+	( void )par;
     while( running ) 
 	{
-		c = _getch();
-		
-		switch( tolower(c) )
+		c = ___getch();
+		switch( c )
 		{
 			case ESC:
 				running = 0;
@@ -203,7 +228,7 @@ isr_kbd_thread( LPVOID par )	/* Win32 thread to emulate keyboard ISR */
 				break;
 		}
     }
-    return 0;
+	return NULL;
 }
 
 
@@ -217,23 +242,25 @@ rkh_hook_timetick( void )
 void 
 rkh_hook_start( void ) 
 {
-    DWORD thtmr_id, thkbd_id;
-    HANDLE hth_tmr, hth_kbd;
+	pthread_t thtmr_id, thkbd_id;  /* thread identifiers */
+ 	pthread_attr_t threadAttr;
 
 	/* set the desired tick rate */
-    tick_msec = 1000UL/BSP_TICKS_PER_SEC;
-	ts_cntr = 0;
+    tick_msec = RKH_TICK_RATE_MS;
     running = (rui8_t)1;
-	
-	/* create the ISR timer thread */
-    hth_tmr = CreateThread( NULL, 1024, &isr_tmr_thread, 0, 0, &thtmr_id );
-    RKH_ASSERT( hth_tmr != (HANDLE)0 );
-    SetThreadPriority( hth_tmr, THREAD_PRIORITY_TIME_CRITICAL );
 
-	/* create the ISR keyboard thread */
-    hth_kbd = CreateThread( NULL, 1024, &isr_kbd_thread, 0, 0, &thkbd_id );
-    RKH_ASSERT( hth_kbd != (HANDLE)0 );
-    SetThreadPriority( hth_kbd, THREAD_PRIORITY_NORMAL );
+	/* initialize the thread attribute */
+	pthread_attr_init(&threadAttr);
+
+	/* Set the stack size of the thread */
+	pthread_attr_setstacksize(&threadAttr, 1024);
+
+	/* Create the threads */
+	pthread_create(&thtmr_id, &threadAttr, isr_tmr_thread, NULL);
+	pthread_create(&thkbd_id, &threadAttr, isr_kbd_thread, NULL);
+
+	/* Destroy the thread attributes */
+	pthread_attr_destroy(&threadAttr);
 }
 
 
@@ -241,6 +268,7 @@ void
 rkh_hook_exit( void ) 
 {
 	RKH_TRC_FLUSH();
+	tcsetattr( STDIN_FILENO, TCSANOW, &orgt );
 }
 
 
@@ -261,7 +289,6 @@ rkh_assert( RKHROM char * const file, int line )
 	RKH_TRC_FLUSH();
 	RKH_DIS_INTERRUPT();
 	RKH_TR_FWK_ASSERT( (RKHROM char *)file, __LINE__ );
-	__debugbreak();
 	rkh_fwk_exit();
 }
 
@@ -401,10 +428,10 @@ bsp_init( int argc, char *argv[] )
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_FIFO );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_DCH );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SM_STATE );
-//	RKH_FILTER_OFF_EVENT( RKH_TE_SM_TS_STATE );
+/*	RKH_FILTER_OFF_EVENT( RKH_TE_SM_TS_STATE ); */
 	RKH_FILTER_OFF_EVENT( RKH_TE_FWK_DEFER );
 	RKH_FILTER_OFF_EVENT( RKH_TE_FWK_RCALL );
-//	RKH_FILTER_OFF_GROUP_ALL_EVENTS( RKH_TG_SM );
+/*	RKH_FILTER_OFF_GROUP_ALL_EVENTS( RKH_TG_SM ); */
 
 	RKH_FILTER_OFF_ALL_SIGNALS();
 
@@ -416,3 +443,5 @@ bsp_init( int argc, char *argv[] )
 	RKH_TR_FWK_OBJ( &rkh_tick );
 #endif
 }
+
+

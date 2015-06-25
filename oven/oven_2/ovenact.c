@@ -32,8 +32,6 @@ RKH_TMR_T oventim;
  * Declare queue to be used as deferred queue
  */
 
-static rui8_t start_cnt, restart_cnt;
-
 
 /*
  *	Defines HSM init function
