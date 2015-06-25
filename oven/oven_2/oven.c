@@ -46,7 +46,7 @@ RKH_CREATE_TRANS_TABLE( open )
 RKH_END_TRANS_TABLE
 
 
-RKH_CREATE_COMP_STATE( close, NULL, NULL,  RKH_ROOT, &ready, NULL );
+RKH_CREATE_COMP_STATE( close, NULL, NULL,  RKH_ROOT, &ready, &close_hist );
 RKH_CREATE_TRANS_TABLE( close )
 	
 	RKH_TRREG( OPEN,	NULL,	NULL,	&open ),
@@ -54,7 +54,7 @@ RKH_CREATE_TRANS_TABLE( close )
 RKH_END_TRANS_TABLE
 
 
-RKH_CREATE_BASIC_STATE( ready, NULL, NULL,  &close, NULL );
+RKH_CREATE_BASIC_STATE( ready, cook_ready, NULL,  &close, NULL );
 RKH_CREATE_TRANS_TABLE( ready )
 
 	RKH_TRREG( START,	NULL,	NULL,	&cooking ),
@@ -62,7 +62,7 @@ RKH_CREATE_TRANS_TABLE( ready )
 RKH_END_TRANS_TABLE
 
 
-RKH_CREATE_BASIC_STATE( cooking, start_cooking, stop_cooking,  &close, NULL );
+RKH_CREATE_BASIC_STATE( cooking, cook_start, cook_stop,  &close, NULL );
 RKH_CREATE_TRANS_TABLE( cooking )
 
 	RKH_TRREG( TOUT,	NULL,	NULL,	&ready ),

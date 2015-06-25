@@ -69,6 +69,9 @@ static RKH_ROM_STATIC_EVENT( e_start, START );
 static RKH_ROM_STATIC_EVENT( e_open, OPEN );
 static RKH_ROM_STATIC_EVENT( e_close, CLOSE );
 static RKH_ROM_STATIC_EVENT( e_term, TERM );
+#if ( __STOP_BUTTON__ == RKH_ENABLED )
+static RKH_ROM_STATIC_EVENT( e_stop, STOP );
+#endif
 
 
 #if defined( RKH_USE_TRC_SENDER )
@@ -180,11 +183,19 @@ isr_kbd_thread( LPVOID par )	/* Win32 thread to emulate keyboard ISR */
 				RKH_SMA_POST_FIFO( oven, &e_start, &panel );
 				break;
 
+#if ( __STOP_BUTTON__ == RKH_ENABLED )
+			case 'p':
+				RKH_SMA_POST_FIFO( oven, &e_stop, &panel );
+				break;
+#endif
+
 			case 'o':
+				printf( "- Open  ->\n" );
 				RKH_SMA_POST_FIFO( oven, &e_open, &door );
 				break;
 
 			case 'c':
+				printf( "- Close ->\n" );
 				RKH_SMA_POST_FIFO( oven, &e_close, &door );
 				break;
 
@@ -268,6 +279,9 @@ print_banner( void )
 	printf( "1.- Press 'O'/'o' door { Open  } -> oven.\n" );
 	printf( "2.- Press 'C'/'c' door { Close } -> oven.\n" );
 	printf( "3.- Press 'S'/'s' panel{ Start } -> oven.\n" );
+#if ( __STOP_BUTTON__ == RKH_ENABLED )
+	printf( "3.- Press 'P'/'p' panel{ Stop  } -> oven.\n" );
+#endif
 	printf( "4.- Press 'escape' to quit.\n\n\n" );
 }
 
@@ -327,6 +341,8 @@ rkh_trc_flush( void )
 #endif
 
 
+static time_t cStart, cStop;
+
 void
 bsp_oven_init( void )
 {
@@ -334,14 +350,31 @@ bsp_oven_init( void )
 }
 
 
-time_t cStart, cStop;
+void
+bsp_emitter_ready( void )
+{
+	printf( "+- Cook Ready \n" );
+}
 
 void
 bsp_emitter_on( void )
 {
 	time(&cStart);
-	printf( "+- Cook Start \n" );
 	printf( "     Emitter: ON\n" );
+}
+
+
+void
+bsp_emitter_pause( void )
+{
+	printf( "   Paused\n" );
+}
+
+
+void
+bsp_emitter_continue( void )
+{
+	printf( "   Continue\n" );
 }
 
 
@@ -350,7 +383,7 @@ bsp_emitter_off( void )
 {
 	time(&cStop);
 	printf( "     Emitter: OFF\n" );
-	printf( "     Duration: %5.2f sec\n\n", difftime(cStop, cStart) );
+	printf( "     Cook Time: %5.2f sec\n", difftime(cStop, cStart) );
 }
 
 

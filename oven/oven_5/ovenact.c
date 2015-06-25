@@ -52,8 +52,9 @@ oven_init( void )
  */
 
 void
-cook_init( void )
+cook_ready( void )
 {
+	bsp_emitter_ready();
 	start_cnt = restart_cnt = 0;
 }
 
@@ -97,7 +98,7 @@ cook_restart( void )
  */
 
 rbool_t
-chk_start_cnt( void )
+chk_start( void )
 {
 	return ( start_cnt < RESTRT_COOK_ALLOW ) ? RKH_TRUE : RKH_FALSE;
 }

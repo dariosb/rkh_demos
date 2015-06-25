@@ -10,7 +10,7 @@
 #include "rkh.h"
 
 
-#define EMITTER_ON_TIME		RKH_TIME_SEC( 10 )
+#define COOKING_TIME		RKH_TIME_SEC( 5 )	/* Cook cycle duration time */
 
 
 typedef struct
@@ -35,10 +35,10 @@ RKH_DCLR_COMP_STATE close;
 
 
 /*
- * Declares public variables
+ * Declare Public variables
  */
 
 extern RKH_TMR_T oventim;
-
+extern RKH_RQ_T qurc;
 
 #endif

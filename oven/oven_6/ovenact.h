@@ -22,6 +22,7 @@ void oven_init( void );
  */
 
 void cook_init( void );
+void cook_ready( void );
 void cook_start( void );
 void cook_pause( void );
 void cook_continue( void );
@@ -39,7 +40,7 @@ void cook_restart( void );
  * Defines guard functions
  */
 
-rbool_t chk_start_cnt( void );
+rbool_t chk_start( void );
 rbool_t chk_restart( void );
 
 

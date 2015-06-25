@@ -10,8 +10,8 @@
 #include "rkh.h"
 
 
-#define COOKING_TIME		RKH_TIME_SEC( 5 )
-#define RESTRT_COOK_ALLOW	2
+#define COOKING_TIME		RKH_TIME_SEC( 5 )	/* Cook cycle duration time */
+#define RESTRT_COOK_ALLOW	2					/* Max consecutive cycles */
 
 
 typedef struct

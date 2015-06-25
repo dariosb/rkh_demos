@@ -29,6 +29,13 @@ RKH_TMR_T oventim;
 
 
 /*
+ * Declare queue to be used as deferred queue
+ */
+
+static rui8_t start_cnt, restart_cnt;
+
+
+/*
  *	Defines HSM init function
  */
 
@@ -44,15 +51,21 @@ oven_init( void )
  *	Defines state entry/exit functions
  */
 
-void 
-start_cooking( void )
+void
+cook_ready( void )
 {
-	bsp_emitter_on();
-	RKH_TMR_ONESHOT( &oventim, oven, EMITTER_ON_TIME );
+	bsp_emitter_ready();
 }
 
 void 
-stop_cooking( void )
+cook_start( void )
+{
+	bsp_emitter_on();
+	RKH_TMR_ONESHOT( &oventim, oven, COOKING_TIME );
+}
+
+void 
+cook_stop( void )
 {
 	bsp_emitter_off();
 	rkh_tmr_stop( &oventim );

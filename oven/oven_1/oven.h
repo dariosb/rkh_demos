@@ -10,7 +10,7 @@
 #include "rkh.h"
 
 
-#define COOKING_TIME		RKH_TIME_SEC( 5 )
+#define COOKING_TIME		RKH_TIME_SEC( 5 )	/* Cook cycle duration time */
 
 
 typedef struct
