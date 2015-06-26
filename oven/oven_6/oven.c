@@ -38,7 +38,7 @@ RKH_SMA_CREATE( OVEN_T, oven, 0, HCAL, &opened, oven_init, NULL );
  *	Defines states and pseudostates.
  */
 
-RKH_CREATE_BASIC_STATE( opened, NULL, NULL,  RKH_ROOT, NULL );
+RKH_CREATE_BASIC_STATE( opened, door_open, NULL,  RKH_ROOT, NULL );
 RKH_CREATE_TRANS_TABLE( opened )
 
 	RKH_TRREG( CLOSE,	NULL,	NULL,	&close_hist ),

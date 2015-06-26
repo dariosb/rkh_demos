@@ -219,6 +219,13 @@ rkh_trc_flush( void )
 
 
 void
+bsp_door_open( void )
+{
+	set_rgb_led( RGB_BLACK );	
+}
+
+
+void
 bsp_oven_init( void )
 {
 
@@ -230,6 +237,7 @@ bsp_emitter_ready( void )
 {
 	set_rgb_led( RGB_LIME );
 }
+
 
 void
 bsp_emitter_on( void )

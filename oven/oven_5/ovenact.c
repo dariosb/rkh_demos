@@ -52,6 +52,12 @@ oven_init( void )
  */
 
 void
+door_open( void )
+{
+	bsp_door_open();
+}
+
+void
 cook_ready( void )
 {
 	bsp_emitter_ready();
