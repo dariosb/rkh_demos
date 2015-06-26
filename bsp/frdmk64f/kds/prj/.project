@@ -26,9 +26,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>oven_1</name>
+			<name>oven</name>
 			<type>2</type>
-			<locationURI>PARENT-4-PROJECT_LOC/oven/oven_1</locationURI>
+			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
 			<name>rkh</name>
@@ -54,6 +54,36 @@
 			<name>bsp/switch</name>
 			<type>2</type>
 			<locationURI>PARENT-1-PROJECT_LOC/switch</locationURI>
+		</link>
+		<link>
+			<name>oven/oven_1</name>
+			<type>2</type>
+			<locationURI>PARENT-4-PROJECT_LOC/oven/oven_1</locationURI>
+		</link>
+		<link>
+			<name>oven/oven_2</name>
+			<type>2</type>
+			<locationURI>PARENT-4-PROJECT_LOC/oven/oven_2</locationURI>
+		</link>
+		<link>
+			<name>oven/oven_3</name>
+			<type>2</type>
+			<locationURI>PARENT-4-PROJECT_LOC/oven/oven_3</locationURI>
+		</link>
+		<link>
+			<name>oven/oven_4</name>
+			<type>2</type>
+			<locationURI>PARENT-4-PROJECT_LOC/oven/oven_4</locationURI>
+		</link>
+		<link>
+			<name>oven/oven_5</name>
+			<type>2</type>
+			<locationURI>PARENT-4-PROJECT_LOC/oven/oven_5</locationURI>
+		</link>
+		<link>
+			<name>oven/oven_6</name>
+			<type>2</type>
+			<locationURI>PARENT-4-PROJECT_LOC/oven/oven_6</locationURI>
 		</link>
 		<link>
 			<name>rkh/include</name>
@@ -129,21 +159,6 @@
 			<name>SDK/platform/utilities</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>Debug/rkh/port/rkhport.c</name>
-			<type>1</type>
-			<locationURI>copy_PARENT123456/rkh/source/portable/arm-cortex/rkhs/ksdk/kds/rkhport.c</locationURI>
-		</link>
-		<link>
-			<name>Debug/rkh/port/rkhport.h</name>
-			<type>1</type>
-			<locationURI>copy_PARENT123456/rkh/source/portable/arm-cortex/rkhs/ksdk/kds/rkhport.h</locationURI>
-		</link>
-		<link>
-			<name>Debug/rkh/port/rkht.h</name>
-			<type>1</type>
-			<locationURI>copy_PARENT123456/rkh/source/portable/arm-cortex/rkhs/ksdk/kds/rkht.h</locationURI>
 		</link>
 		<link>
 			<name>SDK/platform/hwtimer/fsl_hwtimer_systick_irq.c</name>

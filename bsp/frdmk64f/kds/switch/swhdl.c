@@ -11,13 +11,19 @@
 
 
 ruint
-rawsw1( void )
+rawStart( void )
 {
-	return GPIO_DRV_ReadPinInput(kGpioSW2);
+	return GPIO_DRV_ReadPinInput(kGpioStart);
 }
 
 ruint
-rawsw2( void )
+rawStop( void )
 {
-	return GPIO_DRV_ReadPinInput(kGpioSW3);
+	return GPIO_DRV_ReadPinInput(kGpioStop);
+}
+	
+ruint
+rawDoor( void )
+{
+	return GPIO_DRV_ReadPinInput(kGpioDoor);
 }

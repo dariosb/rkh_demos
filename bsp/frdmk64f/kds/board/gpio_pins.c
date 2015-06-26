@@ -55,14 +55,21 @@
 
 gpio_input_pin_user_config_t switchPins[] = {
   {
-    .pinName = kGpioSW2,
+    .pinName = kGpioStart,
     .config.isPullEnable = true,
     .config.pullSelect = kPortPullUp,
     .config.isPassiveFilterEnabled = false,
     .config.interrupt = kPortIntDisabled
   },
   {
-    .pinName = kGpioSW3,
+    .pinName = kGpioStop,
+    .config.isPullEnable = true,
+    .config.pullSelect = kPortPullUp,
+    .config.isPassiveFilterEnabled = false,
+    .config.interrupt = kPortIntDisabled
+  },
+  {
+    .pinName = kGpioDoor,
     .config.isPullEnable = true,
     .config.pullSelect = kPortPullUp,
     .config.isPassiveFilterEnabled = false,

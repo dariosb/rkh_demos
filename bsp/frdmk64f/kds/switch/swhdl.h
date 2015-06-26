@@ -12,7 +12,8 @@
 #include "switch.h"
 #include "fsl_gpio_driver.h"
 
-ruint rawsw1( void );
-ruint rawsw2( void );
+ruint rawStart( void );
+ruint rawStop( void );
+ruint rawDoor( void );
 
 #endif

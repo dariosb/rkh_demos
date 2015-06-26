@@ -15,18 +15,22 @@ typedef struct
 	unsigned char state;
 	ruint (*rawsw)(void);
 	ruint debsw;
+	ruint filter;
 }SWITCH_ST;
 
 enum
 {
-	SW_RELEASED,
-	SW_PRESSED
+	SW_RELEASE = 0x01,
+	SW_PRESS = 0x02
 };
+
+#define SW_FLT_MSK	(SW_RELEASE|SW_PRESS)
 
 enum
 {
-	SW1_SWITCH,
-	SW2_SWITCH,
+	START_SW,
+	STOP_SW,
+	DOOR_SW,
 	SWITCHS_NUM
 };
 

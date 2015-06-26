@@ -96,7 +96,25 @@ static rui8_t panel;
 void
 bsp_pub_sw_evt( ruint s, ruint debsw )
 {
- //TODO: implement SWITCHS EVENTS
+ 	switch( s )
+	{
+		case START_SW:
+			RKH_SMA_POST_FIFO( oven, &e_start, &panel );
+			break;
+
+#if ( __STOP_BUTTON__ == RKH_ENABLED )			
+		case STOP_SW:
+			RKH_SMA_POST_FIFO( oven, &e_stop, &panel );
+			break;
+#endif
+
+		case DOOR_SW:
+			if( debsw == SW_PRESS )
+				RKH_SMA_POST_FIFO( oven, &e_close, &door );
+			else
+				RKH_SMA_POST_FIFO( oven, &e_open, &door );
+			break;			
+	}
 }
 
 
@@ -260,13 +278,23 @@ bsp_init( int argc, char *argv[]  )
 	rkh_fwk_init();
 
 	RKH_FILTER_OFF_SMA( oven );
-
-	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_FIFO );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_LIFO );
+	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_FIFO );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_DCH );
 	RKH_FILTER_OFF_EVENT( RKH_TE_SM_STATE );
-	/*RKH_FILTER_OFF_ALL_SIGNALS();*/
+//	RKH_FILTER_OFF_EVENT( RKH_TE_SM_TS_STATE );
+	RKH_FILTER_OFF_EVENT( RKH_TE_FWK_DEFER );
+	RKH_FILTER_OFF_EVENT( RKH_TE_FWK_RCALL );
+//	RKH_FILTER_OFF_GROUP_ALL_EVENTS( RKH_TG_SM );
+
+	RKH_FILTER_OFF_ALL_SIGNALS();
 
 	RKH_TRC_OPEN();
+
+#if defined( RKH_USE_TRC_SENDER )
+	RKH_TR_FWK_OBJ( &panel );
+	RKH_TR_FWK_OBJ( &door );
+	RKH_TR_FWK_OBJ( &rkh_tick );
+#endif	
 }
 

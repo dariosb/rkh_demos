@@ -12,8 +12,9 @@
 
 static SWITCH_ST switchs[SWITCHS_NUM] = 
 {
-	{ 0, rawsw1,	SW_RELEASED },
-	{ 0, rawsw2,	SW_RELEASED },
+	{ 0, rawStart,	SW_RELEASE, SW_PRESS },
+	{ 0, rawStop,	SW_RELEASE, SW_PRESS },
+	{ 0, rawDoor,	SW_RELEASE, SW_PRESS|SW_RELEASE },
 };
 
 
@@ -26,15 +27,17 @@ switch_tick( void )
 	for( s = 0, p = switchs; p < &switchs[SWITCHS_NUM]; ++p, ++s ) 
 	{
 		p->state = (p->state<<1) | !(p->rawsw()); 
-		if( (p->state == 0xFF) && (p->debsw != SW_PRESSED) )
+		if( (p->state == 0xFF) && (p->debsw != SW_PRESS) )
 		{
-			p->debsw = SW_PRESSED;
-			bsp_pub_sw_evt( s, p->debsw );
+			p->debsw = SW_PRESS;
+			if( p->filter & SW_PRESS )
+				bsp_pub_sw_evt( s, SW_PRESS );
 		}
-		else if( ( p->state == 0x00 ) && (p->debsw != SW_RELEASED) )
+		else if( ( p->state == 0x00 ) && (p->debsw != SW_RELEASE) )
 		{
-			p->debsw = SW_RELEASED;
-			bsp_pub_sw_evt( s, p->debsw );
+			p->debsw = SW_RELEASE;
+			if( p->filter & SW_RELEASE )
+				bsp_pub_sw_evt( s, SW_RELEASE );
 		}
 	}
 
