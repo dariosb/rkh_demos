@@ -34,7 +34,7 @@ main( int argc, char *argv[] )
 	RKH_TR_FWK_STATE( oven, &on );
 	RKH_TR_FWK_STATE( oven, &cstart );
 	RKH_TR_FWK_STATE( oven, &wstart );
-	RKH_TR_FWK_STATE( oven, &pause );
+	RKH_TR_FWK_STATE( oven, &paused );
 	RKH_TR_FWK_OBJ(	&oventim );
 	
 

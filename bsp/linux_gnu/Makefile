@@ -27,7 +27,7 @@ $(PROGNAME): $(objects) $(demoobj) $(rkhobjects) $(portobj)
 	@$(CC) $(CFLAGS) -c $(DEFINE) $<
 
 clean: 
-	/bin/rm -rf *.o *~ oven1 oven2 oven3 oven4 oven5 oven6
+	/bin/rm -rf *.o *~
 
 tags:
 	ctags -R $(RKHSRCPATH) $(PWD)

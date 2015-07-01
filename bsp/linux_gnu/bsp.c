@@ -215,12 +215,10 @@ isr_kbd_thread( void *par )	/* thread to emulate keyboard ISR */
 #endif
 
 			case 'o':
-				printf( "- Open  ->\n" );
 				RKH_SMA_POST_FIFO( oven, &e_open, &door );
 				break;
 
 			case 'c':
-				printf( "- Close ->\n" );
 				RKH_SMA_POST_FIFO( oven, &e_close, &door );
 				break;
 
@@ -369,6 +367,13 @@ rkh_trc_flush( void )
 
 
 static time_t cStart, cStop;
+
+void
+bsp_door_open( void )
+{
+	printf( "+- Door Open\n" );
+}
+
 
 void
 bsp_oven_init( void )

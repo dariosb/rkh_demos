@@ -1,8 +1,7 @@
 /**
-\page cross_frdmk64f FRDMK64F for K64 processor
 \image html rkh_bunner.jpg
 
-Running Shared RKH demo on Freescale <A HREF="http://www.freescale.com/
+Running Oven RKH demo on Freescale <A HREF="http://www.freescale.com/
 webapp/sps/site/prod_summary.jsp?code=K64_120">K64F120</A> demostration 
 board <A HREF="http://www.freescale.com/webapp/sps/site/
 prod_summary.jsp?code=FRDM-K64F">FRDMK64F120</A>.
@@ -36,14 +35,12 @@ PROJECT_KSDK_PATH variable, before to build.
 
 <STRONG>Shared demo BSP</STRONG>
 	
-- The RGB Led D12 shown which client request is running on server.
-- Each Client have your own color, Client 1-4: RED, GREEN, BLUE, YELLOW
-- Pressing SW2 button introduce a PAUSE event.
-- Paused state is shown with a WHITE in RGB led.
+- The RGB Led D12 shown oven states.
+- Pressing SW2 button introduce START event.
+- Pressing SW1 button introduce STOP event.
+- Oven Ready state is shown with a GREEN in RGB led.
+- Emitter ON state is shown with a RED in RGB led.
+- Paused state is shown with a YELLOW in RGB led.
 - Tracing info through SDA Virtual COM interface at 115200 8N1.
-- Debugging info through UART3 at 115200 8N1 on J1 pins: 2(RXD), 4(TXD).
-- FRDMK64F is compatible with R3 shields, <A HREF="http://shieldlist.org/
-cutedigi/rs232"> CuteDigi RS232 Shield can be used to adapt to RS232 levels
-the debugging info.
 
 */

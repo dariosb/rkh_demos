@@ -76,7 +76,7 @@ RKH_CREATE_BASIC_STATE( on, tmr_start, tmr_stop,  &cooking, NULL );
 RKH_CREATE_TRANS_TABLE( on )
 
 	RKH_TRINT( START,	chk_room_dfq,	defer_evt ),
-	RKH_TRREG( STOP,	NULL,	NULL,	&pause ),
+	RKH_TRREG( STOP,	NULL,	NULL,	&paused ),
 	RKH_TRREG( TMREVT,	NULL,	NULL,	&cstart ),
 
 RKH_END_TRANS_TABLE
@@ -98,8 +98,8 @@ RKH_CREATE_TRANS_TABLE( wstart )
 RKH_END_TRANS_TABLE
 
 
-RKH_CREATE_BASIC_STATE( pause, cook_pause, NULL,  &cooking, NULL );
-RKH_CREATE_TRANS_TABLE( pause )
+RKH_CREATE_BASIC_STATE( paused, cook_pause, NULL,  &cooking, NULL );
+RKH_CREATE_TRANS_TABLE( paused )
 
 	RKH_TRREG( START,	NULL,	cook_continue,	&on ),
 	RKH_TRREG( STOP,	NULL,	NULL,			&ready ),

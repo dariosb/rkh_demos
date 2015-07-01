@@ -868,7 +868,7 @@ n+1 COOKING_TIME segundos de duración.</body>
                 <subvertex xmi:type="uml:State" xmi:id="_dG7b9h9dEeWoRoiVtPz96g" name="wstart"/>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_dG7b9x9dEeWoRoiVtPz96g" name="cstart" kind="junction"/>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_dG7b-B9dEeWoRoiVtPz96g"/>
-                <subvertex xmi:type="uml:State" xmi:id="_9E3bIB9hEeWoRoiVtPz96g" name="Pause">
+                <subvertex xmi:type="uml:State" xmi:id="_9E3bIB9hEeWoRoiVtPz96g" name="paused">
                   <entry xmi:type="uml:Activity" xmi:id="_k4dsEB9iEeWoRoiVtPz96g" name="cook_pause"/>
                 </subvertex>
               </region>
