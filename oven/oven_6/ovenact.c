@@ -32,7 +32,8 @@ RKH_TMR_T oventim;
  * Declare queue to be used as deferred queue
  */
 
-static rui8_t start_cnt, restart_cnt;
+RKH_RQ_T dfq;
+static RKH_EVT_T *dfq_sto[ MAX_RESTART ];
 
 
 /*
@@ -44,6 +45,7 @@ oven_init( void )
 {
 	bsp_oven_init();
 	RKH_TMR_INIT( &oventim, &e_tout, NULL );
+	rkh_rq_init( &dfq, (const void **)dfq_sto, MAX_RESTART, NULL );
 }
 
 
@@ -60,36 +62,37 @@ door_open( void )
 void
 cook_ready( void )
 {
+	rkh_rq_deplete( &dfq );
 	bsp_emitter_ready();
-	start_cnt = restart_cnt = 0;
 }
 
 void 
 cook_start( void )
 {
 	bsp_emitter_on();
-	RKH_TMR_ONESHOT( &oventim, oven, COOK_TIME );
 }
-
-void 
-cook_pause( void )
-{
-	bsp_emitter_pause();
-	rkh_tmr_stop( &oventim );
-}
-
-void 
-cook_continue( void )
-{
-	bsp_emitter_continue();
-	RKH_TMR_ONESHOT( &oventim, oven, COOK_TIME );
-}
-
 
 void 
 cook_stop( void )
 {
 	bsp_emitter_off();
+}
+
+void
+cook_pause( void )
+{
+	bsp_emitter_pause();
+}
+
+void
+tmr_start( void )
+{
+	RKH_TMR_ONESHOT( &oventim, oven, COOK_TIME );
+}
+
+void
+tmr_stop( void )
+{
 	rkh_tmr_stop( &oventim );
 }
 
@@ -100,17 +103,18 @@ cook_stop( void )
 
 
 void
-inc_start( void )
+defer_evt( RKH_EVT_T *pe )
 {
-	++start_cnt;
+	rkh_fwk_defer( &dfq, pe );
 }
 
 
 void
-cook_restart( void )
+cook_continue( RKH_EVT_T *pe )
 {
-	++restart_cnt;
-	RKH_TMR_ONESHOT( &oventim, oven, COOK_TIME );
+	(void)pe;
+
+	bsp_emitter_continue();
 }
 
 
@@ -119,13 +123,14 @@ cook_restart( void )
  */
 
 rbool_t
-chk_start( void )
+chk_room_dfq( void )
 {
-	return ( start_cnt < MAX_RESTART ) ? RKH_TRUE : RKH_FALSE;
+	return rkh_rq_is_full( &dfq ) ? RKH_FALSE : RKH_TRUE;
 }
 
+
 rbool_t
-chk_restart( void )
+chk_dfq( void )
 {
-	return ( restart_cnt == start_cnt ) ? RKH_TRUE : RKH_FALSE;
+	return rkh_fwk_recall( oven, &dfq ) ? RKH_TRUE : RKH_FALSE;
 }

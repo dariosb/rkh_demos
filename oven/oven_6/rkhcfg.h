@@ -359,7 +359,7 @@
  *	See RKH_TRN_ACT_T definition.
  */
 
-#define RKH_CFG_SMA_ACT_ARG_EVT_EN		RKH_DISABLED
+#define RKH_CFG_SMA_ACT_ARG_EVT_EN		RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_GRD_ARG_EVT_EN is set to 1 then the transition guard  

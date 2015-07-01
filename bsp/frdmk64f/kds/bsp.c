@@ -256,6 +256,7 @@ bsp_emitter_pause( void )
 void
 bsp_emitter_continue( void )
 {
+	set_rgb_led( RGB_RED );
 }
 
 

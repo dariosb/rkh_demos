@@ -32,9 +32,9 @@ RKH_SMA_DCLR( oven );
  *	Declare states and pseudostates.
  */
 
-RKH_DCLR_BASIC_STATE opened, ready, on, paused;
+RKH_DCLR_BASIC_STATE opened, ready, on, wstart, pause;
 RKH_DCLR_COMP_STATE closed, cooking;
-RKH_DCLR_COND_STATE cooking_cnd;
+RKH_DCLR_COND_STATE cstart;
 RKH_DCLR_SHIST_STATE close_hist;
 
 
@@ -43,5 +43,6 @@ RKH_DCLR_SHIST_STATE close_hist;
  */
 
 extern RKH_TMR_T oventim;
+extern RKH_RQ_T dfq;
 
 #endif

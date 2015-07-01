@@ -24,24 +24,26 @@ void oven_init( void );
 void door_open( void );
 void cook_ready( void );
 void cook_start( void );
-void cook_pause( void );
-void cook_continue( void );
 void cook_stop( void );
+void cook_pause( void );
+void tmr_start( void );
+void tmr_stop( void );
 
 
 /*
  * Defines actions functions
  */
 
-void inc_start( void );
-void cook_restart( void );
+void defer_evt( RKH_EVT_T *pe );
+void cook_continue( RKH_EVT_T *pe );
+
 
 /*
  * Defines guard functions
  */
 
-rbool_t chk_start( void );
-rbool_t chk_restart( void );
+rbool_t chk_room_dfq( void );
+rbool_t chk_dfq( void );
 
 
 

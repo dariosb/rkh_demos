@@ -64,14 +64,14 @@ cook_ready( void )
 void 
 cook_start( void )
 {
-	bsp_emitter_on();
 	RKH_TMR_ONESHOT( &oventim, oven, COOK_TIME );
+	bsp_emitter_on();
 }
 
 void 
 cook_stop( void )
 {
-	bsp_emitter_off();
 	rkh_tmr_stop( &oventim );
+	bsp_emitter_off();
 }
 
