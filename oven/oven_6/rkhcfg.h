@@ -648,7 +648,7 @@
  *	See rkh_rq_deplete() function.
  */
 
-#define	RKH_CFG_RQ_DEPLETE_EN			RKH_DISABLED
+#define	RKH_CFG_RQ_DEPLETE_EN			RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_RQ_IS_FULL_EN is set to 1 then RKH will include the 
@@ -656,7 +656,7 @@
  *	See rkh_rq_is_full() function.
  */
 
-#define	RKH_CFG_RQ_IS_FULL_EN			RKH_DISABLED
+#define	RKH_CFG_RQ_IS_FULL_EN			RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_RQ_GET_NELEMS_EN is set to 1 then RKH will include the 

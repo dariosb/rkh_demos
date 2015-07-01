@@ -35,7 +35,7 @@ main( int argc, char *argv[] )
 	RKH_TR_FWK_SIG( OPEN );
 	RKH_TR_FWK_SIG( CLOSE );
 	RKH_TR_FWK_SIG( START );
-	RKH_TR_FWK_SIG( TOUT );
+	RKH_TR_FWK_SIG( TMREVT );
 	RKH_TR_FWK_SIG( TERM );
 
 	RKH_SMA_ACTIVATE( oven, qsto, QSTO_SIZE, 0, 0 );

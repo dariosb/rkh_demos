@@ -69,7 +69,7 @@ RKH_CREATE_COMP_STATE( cooking, NULL, NULL,  &closed, &on, NULL );
 RKH_CREATE_TRANS_TABLE( cooking )
 
 	RKH_TRREG( STOP,	NULL,	NULL,	&ready ),
-	RKH_TRREG( TOUT,	NULL,	NULL,	&cooking_cnd ),
+	RKH_TRREG( TMREVT,	NULL,	NULL,	&cooking_cnd ),
 
 RKH_END_TRANS_TABLE
 

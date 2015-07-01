@@ -13,11 +13,11 @@
 
 /*
  * 	Declare and allocate the 'e_tout' event.
- * 	The 'e_tout' event with TOUT signal never changes, so it can be 
+ * 	The 'e_tout' event with TMREVT signal never changes, so it can be 
  * 	statically allocated just once by means of RKH_ROM_STATIC_EVENT() macro.
  */
 
-static RKH_ROM_STATIC_EVENT( e_tout, TOUT );
+static RKH_ROM_STATIC_EVENT( e_tout, TMREVT );
 
 
 /*
@@ -32,7 +32,8 @@ RKH_TMR_T oventim;
  * Declare queue to be used as deferred queue
  */
 
-static rui8_t start_cnt, restart_cnt;
+RKH_RQ_T dfq;
+static RKH_EVT_T *dfq_sto[ MAX_RESTART ];
 
 
 /*
@@ -44,6 +45,7 @@ oven_init( void )
 {
 	bsp_oven_init();
 	RKH_TMR_INIT( &oventim, &e_tout, NULL );
+	rkh_rq_init( &dfq, (const void **)dfq_sto, MAX_RESTART, NULL );
 }
 
 
@@ -60,21 +62,31 @@ door_open( void )
 void
 cook_ready( void )
 {
+	rkh_rq_deplete( &dfq );
 	bsp_emitter_ready();
-	start_cnt = restart_cnt = 0;
 }
 
 void 
 cook_start( void )
 {
 	bsp_emitter_on();
-	RKH_TMR_ONESHOT( &oventim, oven, COOKING_TIME );
 }
 
 void 
 cook_stop( void )
 {
 	bsp_emitter_off();
+}
+
+void
+tmr_start( void )
+{
+	RKH_TMR_ONESHOT( &oventim, oven, COOK_TIME );
+}
+
+void
+tmr_stop( void )
+{
 	rkh_tmr_stop( &oventim );
 }
 
@@ -85,18 +97,11 @@ cook_stop( void )
 
 
 void
-inc_start( void )
+defer_evt( RKH_EVT_T *pe )
 {
-	++start_cnt;
+	rkh_fwk_defer( &dfq, pe );
 }
 
-
-void
-cook_restart( void )
-{
-	++restart_cnt;
-	RKH_TMR_ONESHOT( &oventim, oven, COOKING_TIME );
-}
 
 
 /*
@@ -104,13 +109,14 @@ cook_restart( void )
  */
 
 rbool_t
-chk_start( void )
+chk_room_dfq( void )
 {
-	return ( start_cnt < RESTRT_COOK_ALLOW ) ? RKH_TRUE : RKH_FALSE;
+	return rkh_rq_is_full( &dfq ) ? RKH_FALSE : RKH_TRUE;
 }
 
+
 rbool_t
-chk_restart( void )
+chk_dfq( void )
 {
-	return ( restart_cnt == start_cnt ) ? RKH_TRUE : RKH_FALSE;
+	return rkh_fwk_recall( oven, &dfq ) ? RKH_TRUE : RKH_FALSE;
 }

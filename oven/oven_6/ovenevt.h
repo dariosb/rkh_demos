@@ -21,7 +21,7 @@ typedef enum ov_sigs_t
 	CLOSE,	/* door is close */
 	START,	/* start button pressed */
 	STOP,	/* start button pressed */
-	TOUT,	/* timer expired */
+	TMREVT,	/* timer expired */
 	TERM,   /* to close application in x86 */
 } OV_SIGS_T;
 

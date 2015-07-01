@@ -13,11 +13,11 @@
 
 /*
  * 	Declare and allocate the 'e_tout' event.
- * 	The 'e_tout' event with TOUT signal never changes, so it can be 
+ * 	The 'e_tout' event with TMREVT signal never changes, so it can be 
  * 	statically allocated just once by means of RKH_ROM_STATIC_EVENT() macro.
  */
 
-static RKH_ROM_STATIC_EVENT( e_tout, TOUT );
+static RKH_ROM_STATIC_EVENT( e_tout, TMREVT );
 
 
 /*
@@ -48,7 +48,7 @@ void
 cook_start( void )
 {
 	bsp_emitter_on();
-	RKH_TMR_ONESHOT( &oventim, oven, COOKING_TIME );
+	RKH_TMR_ONESHOT( &oventim, oven, COOK_TIME );
 }
 
 void 

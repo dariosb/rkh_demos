@@ -64,19 +64,35 @@ RKH_CREATE_TRANS_TABLE( ready )
 
 RKH_END_TRANS_TABLE
 
-
-RKH_CREATE_BASIC_STATE( cooking, cook_start, cook_stop,  &closed, NULL );
+RKH_CREATE_COMP_STATE( cooking, cook_start, cook_stop,  RKH_ROOT, &on, &close_hist );
 RKH_CREATE_TRANS_TABLE( cooking )
-
-	RKH_TRINT( START,	chk_start,		inc_start ),
-	RKH_TRREG( TOUT,	NULL,	NULL,		&cooking_cnd ),
+	
+	RKH_TRREG( OPEN,	NULL,	NULL,	&opened ),
 
 RKH_END_TRANS_TABLE
 
-RKH_CREATE_COND_STATE( cooking_cnd );
-RKH_CREATE_BRANCH_TABLE( cooking_cnd )
 
-	RKH_BRANCH( chk_restart, 	NULL,			&ready ),
-	RKH_BRANCH( ELSE,			cook_restart,	&cooking ),
+RKH_CREATE_BASIC_STATE( on, tmr_start, tmr_stop,  &cooking, NULL );
+RKH_CREATE_TRANS_TABLE( on )
+
+	RKH_TRINT( START,	chk_room_dfq,	defer_evt ),
+	RKH_TRREG( TMREVT,	NULL,	NULL,	&cstart ),
+
+RKH_END_TRANS_TABLE
+
+RKH_CREATE_COND_STATE( cstart );
+RKH_CREATE_BRANCH_TABLE( cstart )
+
+	RKH_BRANCH( chk_dfq, 	NULL,	&wstart ),
+	RKH_BRANCH( ELSE,		NULL,	&ready ),
 
 RKH_END_BRANCH_TABLE
+
+
+RKH_CREATE_BASIC_STATE( wstart, NULL, NULL,  &cooking, NULL );
+RKH_CREATE_TRANS_TABLE( wstart )
+
+	RKH_TRREG( START,	NULL,	NULL,	&on ),
+
+RKH_END_TRANS_TABLE
+

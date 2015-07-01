@@ -10,8 +10,8 @@
 #include "rkh.h"
 
 
-#define COOKING_TIME		RKH_TIME_SEC( 5 )	/* Cook cycle duration time */
-#define RESTRT_COOK_ALLOW	2					/* Max consecutive cycles */
+#define COOK_TIME		RKH_TIME_SEC( 5 )	/* Cook cycle duration time */
+#define MAX_RESTART		2					/* Max consecutive cycles */
 
 
 typedef struct
@@ -31,9 +31,9 @@ RKH_SMA_DCLR( oven );
  *	Declare states and pseudostates.
  */
 
-RKH_DCLR_BASIC_STATE opened, ready, cooking;
-RKH_DCLR_COMP_STATE closed;
-RKH_DCLR_COND_STATE cooking_cnd;
+RKH_DCLR_BASIC_STATE opened, ready, on, wstart;
+RKH_DCLR_COMP_STATE closed, cooking;
+RKH_DCLR_COND_STATE cstart;
 RKH_DCLR_SHIST_STATE close_hist;
 
 
@@ -42,6 +42,6 @@ RKH_DCLR_SHIST_STATE close_hist;
  */
 
 extern RKH_TMR_T oventim;
-extern RKH_RQ_T qurc;
+extern RKH_RQ_T dfq;
 
 #endif
