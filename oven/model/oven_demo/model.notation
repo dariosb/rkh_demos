@@ -3949,7 +3949,7 @@
                     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dHCJ0R9dEeWoRoiVtPz96g"/>
                   </children>
                   <element xmi:type="uml:Region" href="model.uml#_dG7b5R9dEeWoRoiVtPz96g"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dHCJ1R9dEeWoRoiVtPz96g" x="-38" width="452" height="456"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dHCJ1R9dEeWoRoiVtPz96g" width="452" height="456"/>
                 </children>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dHCJ1h9dEeWoRoiVtPz96g" y="20" width="452" height="456"/>
               </children>
