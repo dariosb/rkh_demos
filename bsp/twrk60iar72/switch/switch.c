@@ -27,12 +27,12 @@ switch_tick( void )
 		if( (p->state == 0xFF) && (p->debsw != SW_PRESSED) )
 		{
 			p->debsw = SW_PRESSED;
-			bsp_switch_evt( s, p->debsw );
+			bsp_pub_sw_evt( s, p->debsw );
 		}
 		else if( ( p->state == 0x00 ) && (p->debsw != SW_RELEASED) )
 		{
 			p->debsw = SW_RELEASED;
-			bsp_switch_evt( s, p->debsw );
+			bsp_pub_sw_evt( s, p->debsw );
 		}
 	}
 }

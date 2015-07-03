@@ -55,18 +55,24 @@
 
 #define SERIAL_TRACE			1
 
+/* This macro is needed only if the module requires to check 	.. */
+/* .. expressions that ought to be true as long as the program  .. */
+/* .. is running. 												   */
+
 RKH_THIS_MODULE
 
 
 static RKH_ROM_STATIC_EVENT( e_start, START );
 static RKH_ROM_STATIC_EVENT( e_open, OPEN );
 static RKH_ROM_STATIC_EVENT( e_close, CLOSE );
-
-static rbool_t sw2_tgl;
+static RKH_ROM_STATIC_EVENT( e_term, TERM );
 
 #if defined( RKH_USE_TRC_SENDER )
-static rui8_t l_isr_switch;
+static rui8_t door;
+static rui8_t panel;
 #endif
+
+static rbool_t sw2_tgl;
 
 
 /*
@@ -94,6 +100,34 @@ static rui8_t l_isr_switch;
 	#define SERIAL_TRACE_SEND( d )					(void)0
 	#define SERIAL_TRACE_SEND_BLOCK( buf_, len_ )	(void)0
 #endif
+
+
+void
+bsp_pub_sw_evt( ruint s, ruint debsw )
+{
+	if( debsw == SW_RELEASED )
+		return;
+	
+ 	switch( s )
+	{
+		case SW1_SWITCH:
+			RKH_SMA_POST_FIFO( oven, &e_start, &panel );
+			break;
+
+		case SW2_SWITCH:
+			tgl_gpio( LED3 );
+			RKH_SMA_POST_FIFO( oven, 
+				  ( sw2_tgl ^= 1 ) ? &e_close : &e_open, &door );
+			  break;
+	}
+}
+
+
+void
+rkh_tick( void* data )
+{
+	RKH_TIM_TICK((const void *)(rkh_tick));
+}
 
 
 void
@@ -134,7 +168,7 @@ rkh_assert( RKHROM char * const file, int line )
 }
 
 
-#if RKH_CFG_TRC_EN == 1
+#if RKH_CFG_TRC_EN == RKH_ENABLED
 
 void 
 rkh_trc_open( void )
@@ -143,6 +177,7 @@ rkh_trc_open( void )
 
 	SERIAL_TRACE_OPEN();
 	RKH_TRC_SEND_CFG( BSP_TS_RATE_HZ );
+	RKH_TR_FWK_OBJ( &rkh_tick );
 }
 
 
@@ -169,7 +204,7 @@ rkh_trc_flush( void )
 
 	FOREVER
 	{
-		nbytes = 128;
+		nbytes = (TRCQTY_T)1024;
 
 		RKH_ENTER_CRITICAL_();
 		blk = rkh_trc_get_block( &nbytes );
@@ -185,24 +220,10 @@ rkh_trc_flush( void )
 }
 #endif
 
+
 void
-bsp_switch_evt( rui8_t s, rui8_t st )
+bsp_door_open( void )
 {
-	if( st == SW_RELEASED )
-		return;
-
-	switch(s)
-	{
-		case SW1_SWITCH:
-		  RKH_SMA_POST_FIFO( oven, &e_start, &l_isr_switch );
-		  break;
-
-		case SW2_SWITCH:
-		  tgl_gpio( LED3 );
-		  RKH_SMA_POST_FIFO( oven, 
-				  ( sw2_tgl ^= 1 ) ? &e_close : &e_open, &l_isr_switch );
-		  break;
-	} 
 }
 
 
@@ -213,9 +234,27 @@ bsp_oven_init( void )
 
 
 void
+bsp_emitter_ready( void )
+{
+}
+
+
+void
 bsp_emitter_on( void )
 {
 	clr_gpio( LED1 );
+}
+
+
+void
+bsp_emitter_pause( void )
+{
+}
+
+
+void
+bsp_emitter_continue( void )
+{
 }
 
 
@@ -255,8 +294,9 @@ bsp_init( int argc, char *argv[]  )
     RKH_TRC_OPEN();
 
 #if defined( RKH_USE_TRC_SENDER )
-	RKH_TR_FWK_OBJ( &l_isr_switch );
-	RKH_TR_FWK_OBJ( &g_isr_tick );
+	RKH_TR_FWK_OBJ( &panel );
+	RKH_TR_FWK_OBJ( &door );
+	RKH_TR_FWK_OBJ( &rkh_tick );
 #endif
     RKH_ENA_INTERRUPT();
 }

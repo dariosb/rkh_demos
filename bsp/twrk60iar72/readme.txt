@@ -2,7 +2,7 @@
 \page cross_twr_K60 "Kinetis K60/100Mhz ARM Cortex M-4F processor"
 \image html rkh_bunner.jpg
 
-Running Blinky RKH demo on Freescale ARM Cortex-M4F demostration board 
+Running Oven RKH demo on Freescale ARM Cortex-M4F demostration board 
 <A HREF="http://www.freescale.com/webapp/sps/site/
 prod_summary.jsp?code=TWR-K60D100M">TWR-K60D100M</A> 
 <A HREF="http://www.freescale.com/webapp/sps/site/
@@ -28,7 +28,9 @@ environment.
 
 <STRONG>Blinky demo BSP</STRONG>
 
-- Blink state is shown through target board D7 on PA[4].
+- Emitter state is shown through target board D7 on PA[4].
+- SW1 simulates START button.
+- SW2 simulates door switch states. OPEN/CLOSE events alternately.
 - Tracing info through UART3_TXD assigned to PC[17] on J8 connector of
   TWR-SER at 115200 8N1.
 */
