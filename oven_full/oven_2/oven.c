@@ -46,7 +46,7 @@ RKH_CREATE_TRANS_TABLE( opened )
 RKH_END_TRANS_TABLE
 
 
-RKH_CREATE_COMP_STATE( closed, NULL, NULL,  RKH_ROOT, &ready, &close_hist );
+RKH_CREATE_COMP_STATE( closed, NULL, NULL,  RKH_ROOT, &ready, NULL );
 RKH_CREATE_TRANS_TABLE( closed )
 	
 	RKH_TRREG( OPEN,	NULL,	NULL,	&opened ),
