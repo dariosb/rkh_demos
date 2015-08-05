@@ -31,6 +31,12 @@ main( int argc, char *argv[] )
 	RKH_TR_FWK_STATE( oven, &ready );
 	RKH_TR_FWK_STATE( oven, &cooking );
 	RKH_TR_FWK_OBJ(	&oventim );
+	RKH_TR_FWK_FUN(	&oven_init );
+	RKH_TR_FWK_FUN(	&door_open );
+	RKH_TR_FWK_FUN(	&cook_ready );
+	RKH_TR_FWK_FUN(	&cook_start );
+	RKH_TR_FWK_FUN(	&cook_stop );
+	
 
 	/* send signals to trazer */
 	RKH_TR_FWK_SIG( OPEN );

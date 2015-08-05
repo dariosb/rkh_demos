@@ -31,7 +31,7 @@
  *	Defines SMA (Active Object) "oven".
  */
 
-RKH_SMA_CREATE( OVEN_T, oven, 0, HCAL, &idle, oven_init, NULL );
+RKH_SMA_CREATE( OVEN_T, oven, 0, FLAT, &idle, oven_init, NULL );
 
 
 /*
@@ -58,7 +58,6 @@ RKH_END_TRANS_TABLE
 RKH_CREATE_BASIC_STATE( cooking, cook_start, cook_stop,  RKH_ROOT, NULL );
 RKH_CREATE_TRANS_TABLE( cooking )
 
-	RKH_TRREG( OPEN,	NULL,	NULL,	&idle ),
 	RKH_TRREG( TMREVT,	NULL,	NULL,	&idle ),
 
 RKH_END_TRANS_TABLE

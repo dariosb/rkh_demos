@@ -29,11 +29,6 @@ RKH_TMR_T oventim;
 
 
 /*
- * Declare queue to be used as deferred queue
- */
-
-
-/*
  *	Defines HSM init function
  */
 
@@ -48,18 +43,6 @@ oven_init( void )
 /*
  *	Defines state entry/exit functions
  */
-
-void
-door_open( void )
-{
-	bsp_door_open();
-}
-
-void
-cook_ready( void )
-{
-	bsp_emitter_ready();
-}
 
 void 
 cook_start( void )

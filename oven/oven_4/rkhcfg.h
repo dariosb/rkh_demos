@@ -256,7 +256,7 @@
  *	set to 1, the RKH allows deep history pseudostate usage.
  */
 
-#define RKH_CFG_SMA_DEEP_HIST_EN		RKH_ENABLED
+#define RKH_CFG_SMA_DEEP_HIST_EN		RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_SMA_SHALLOW_HIST_EN and #RKH_CFG_SMA_PSEUDOSTATE_EN 
@@ -270,14 +270,14 @@
  *	1, the RKH allows choice pseudostate usage.
  */
 
-#define RKH_CFG_SMA_CHOICE_EN			RKH_ENABLED
+#define RKH_CFG_SMA_CHOICE_EN			RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_SMA_CONDITIONAL_EN and #RKH_CFG_SMA_PSEUDOSTATE_EN are 
  *	set to 1, the RKH allows branch (or conditional) pseudostate usage.
  */
 
-#define RKH_CFG_SMA_CONDITIONAL_EN		RKH_ENABLED
+#define RKH_CFG_SMA_CONDITIONAL_EN		RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_SMA_SUBMACHINE_EN and #RKH_CFG_SMA_PSEUDOSTATE_EN are 
@@ -567,6 +567,14 @@
  */
 
 #define RKH_CFG_TRC_SM_PROCESS_EN		RKH_ENABLED
+
+/**
+ *	If the #RKH_CFG_TRC_SM_EXE_ACT_EN and #RKH_CFG_TRC_SM_EN are set to 1 
+ *	then RKH will include the "executed behavior of state machine" trace 
+ *	record.
+ */
+
+#define RKH_CFG_TRC_SM_EXE_ACT_EN		RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_NSEQ_EN is set to 1 then RKH will add to the trace 

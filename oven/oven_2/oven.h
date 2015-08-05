@@ -30,15 +30,14 @@ RKH_SMA_DCLR( oven );
  *	Declare states and pseudostates.
  */
 
-RKH_DCLR_BASIC_STATE opened, ready, cooking;
-RKH_DCLR_COMP_STATE closed;
+RKH_DCLR_BASIC_STATE idle, ready, cooking;
 
 
 /*
- * Declare Public variables
+ * Declares public variables
  */
 
 extern RKH_TMR_T oventim;
-extern RKH_RQ_T qurc;
+
 
 #endif
