@@ -76,16 +76,6 @@
 			<locationURI>PARENT-4-PROJECT_LOC/oven/oven_4</locationURI>
 		</link>
 		<link>
-			<name>oven/oven_5</name>
-			<type>2</type>
-			<locationURI>PARENT-4-PROJECT_LOC/oven/oven_5</locationURI>
-		</link>
-		<link>
-			<name>oven/oven_6</name>
-			<type>2</type>
-			<locationURI>PARENT-4-PROJECT_LOC/oven/oven_6</locationURI>
-		</link>
-		<link>
 			<name>rkh/include</name>
 			<type>2</type>
 			<locationURI>PARENT-4-PROJECT_LOC/rkh/source/include</locationURI>
