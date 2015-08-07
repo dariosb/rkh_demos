@@ -13,9 +13,4 @@ make clean > /dev/null
 echo oven4...
 make oven=4
 make clean > /dev/null
-echo oven5...
-make oven=5
-make clean > /dev/null
-echo oven6...
-make oven=6
 echo Done
