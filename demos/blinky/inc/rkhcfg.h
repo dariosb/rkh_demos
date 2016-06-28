@@ -180,7 +180,7 @@
  *	blocking calls and must execute as quickly as possible.
  *	When this is set the application must provide the hook function. 
  */
-#define RKH_CFG_HOOK_TIMETICK_EN		RKH_DISABLED
+#define RKH_CFG_HOOK_TIMETICK_EN		RKH_ENABLED
 
 /**
  *  If the #RKH_CFG_HOOK_PUT_TRCEVT_EN is set to 1, RKH will invoke the

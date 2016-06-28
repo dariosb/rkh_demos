@@ -56,6 +56,11 @@
 			<location>C:/CIAA/Firmware/modules</location>
 		</link>
 		<link>
+			<name>rkh</name>
+			<type>2</type>
+			<locationURI>PARENT-3-PROJECT_LOC/rkh</locationURI>
+		</link>
+		<link>
 			<name>src</name>
 			<type>2</type>
 			<locationURI>PARENT-1-PROJECT_LOC/src</locationURI>

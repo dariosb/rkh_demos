@@ -100,13 +100,11 @@ static RKH_TS_T bsp_tstamp;
 	#define SERIAL_TRACE_SEND_BLOCK( buf_, len_ )	(void)0
 #endif
 
-
-ALARMCALLBACK( TickHandler )
+void
+rkh_hook_timetick( void )
 {
-	RKH_TIM_TICK( &l_isr_tick );
 	++bsp_tstamp;
 }
-
 
 void 
 rkh_hook_start( void ) 
