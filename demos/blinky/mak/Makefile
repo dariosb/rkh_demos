@@ -37,9 +37,14 @@
 # Project path
 # Defined $(PROJECT_PATH) in eclipse environment
 PRJ_MKFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
+ECLIPSE_PATH = $(PWD)
+FIX_PATH = $(subst \,/,$(ECLIPSE_PATH))..
+FIX1_PATH = $(subst H:,/cygdrive/h,$(FIX_PATH))
+#override PROJECT_PATH := $(FIX1_PATH)
 
 # Project Name: based on Project Path and used to define OSEK configuration file
-PROJECT_NAME = $(lastword $(subst $(DS), , $(PROJECT_PATH)))
+#PROJECT_NAME = $(lastword $(subst $(DS), , $(PROJECT_PATH)))
+PROJECT_NAME = blinky
 
 # source path
 $(PROJECT_NAME)_SRC_PATH  += $(PROJECT_PATH)$(DS)src
@@ -78,3 +83,9 @@ print:
 	@echo $(RKH_PORT_PATH)
 	@echo $(SRC_FILES)
 	@echo $(INC_FILES)
+	@echo $(ECLIPSE_PATH)
+	@echo $(FIX_PATH)
+	@echo $(FIX1_PATH)
+	@echo $(PROJECT_PATH)
+	@echo $(OIL_FILES)
+

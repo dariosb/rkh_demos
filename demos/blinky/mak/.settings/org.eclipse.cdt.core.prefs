@@ -4,6 +4,6 @@ environment/project/0.794673920/BOARD/operation=append
 environment/project/0.794673920/BOARD/value=edu_ciaa_nxp
 environment/project/0.794673920/PROJECT_PATH/delimiter=;
 environment/project/0.794673920/PROJECT_PATH/operation=replace
-environment/project/0.794673920/PROJECT_PATH/value=/cygdrive/h/vortex/SASE2016-lessons/demos/blinky
+environment/project/0.794673920/PROJECT_PATH/value=${ProjDirPath}/..
 environment/project/0.794673920/append=true
 environment/project/0.794673920/appendContributed=true
