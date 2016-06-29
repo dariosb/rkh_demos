@@ -1,58 +1,77 @@
 ###############################################################################
 #
-# Copyright 2014, ACSE & CADIEEL
-#    ACSE   : http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/ciaa/
-#    CADIEEL: http://www.cadieel.org.ar
+#                                Framework RKH
+#                                -------------
 #
-# This file is part of CIAA Firmware.
+#            State-machine framework for reactive embedded systems
 #
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are met:
+#                      Copyright (C) 2010 Leandro Francucci.
+#          All rights reserved. Protected by international copyright laws.
 #
-# 1. Redistributions of source code must retain the above copyright notice,
-#    this list of conditions and the following disclaimer.
 #
-# 2. Redistributions in binary form must reproduce the above copyright notice,
-#    this list of conditions and the following disclaimer in the documentation
-#    and/or other materials provided with the distribution.
+#  RKH is free software: you can redistribute it and/or modify it under the
+#  terms of the GNU General Public License as published by the Free Software
+#  Foundation, either version 3 of the License, or (at your option) any
+#  later version.
 #
-# 3. Neither the name of the copyright holder nor the names of its
-#    contributors may be used to endorse or promote products derived from this
-#    software without specific prior written permission.
+#  RKH is distributed in the hope that it will be useful, but WITHOUT ANY
+#  WARRANTY; without even the implied warranty of MERCHANTABILITY or
+#  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+#  more details.
 #
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-# ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-# LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-# POSSIBILITY OF SUCH DAMAGE.
+#  You should have received a copy of the GNU General Public License along
+#  with RKH, see copying.txt file.
+#
+#  Contact information:
+#  RKH web site:   http://sourceforge.net/projects/rkh-reactivesys/
+#  e-mail:         francuccilea@gmail.com
+#
+###############################################################################
+#
+#  \file       Makefile
+#
+#  \brief      RKH Framework Make file for buildng CIAA Firmware Apps
+#
+###############################################################################
+#
+# Development history 
+#
+#  2016.06.27  DaBa  v0.0.01  Initial version
+#
+###############################################################################
+#
+# Autors
+#  DaBa  Dario Baliña  dariosb@gmail.com
 #
 ###############################################################################
 
-# Project path
-# Defined $(PROJECT_PATH) in eclipse environment
+###############################################################################
+# Project source files path´s
+# $(PROJECT_PATH) variable must be defined in environment
+ifeq ($(OS),Windows_NT)
+# if winOS, convert paths from Windows to cygwin	
+U_PROJECT_PATH = $(shell cygpath -u $(PROJECT_PATH))
+else
+U_PROJECT_PATH = $(PROJECT_PATH)
+endif
+
 PRJ_MKFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 
-# Project Name: based on Project Path and used to define OSEK configuration file
-PROJECT_NAME = $(lastword $(subst $(DS), , $(PROJECT_PATH)))
+# Project Name: based on PROJECT_PATH, used to define OSEK configuration file
+PROJECT_NAME = $(lastword $(subst $(DS), , $(U_PROJECT_PATH)))
 
 # source path
-$(PROJECT_NAME)_SRC_PATH  += $(PROJECT_PATH)$(DS)src
+$(PROJECT_NAME)_SRC_PATH  += $(U_PROJECT_PATH)$(DS)src
 
 # include path
-INC_FILES            += $(PROJECT_PATH)$(DS)inc
+INC_FILES            += $(U_PROJECT_PATH)$(DS)inc
 
 # project source files
 SRC_FILES            += $(wildcard $($(PROJECT_NAME)_SRC_PATH)$(DS)*.c)
 
 ###############################################################################
 # configuration for OSEK-OS
-OIL_FILES            += $(PROJECT_PATH)$(DS)etc$(DS)$(PROJECT_NAME).oil
+OIL_FILES            += $(U_PROJECT_PATH)$(DS)etc$(DS)$(PROJECT_NAME).oil
 # Modules needed for this example
 MODS ?= modules$(DS)posix           \
         modules$(DS)ciaak           \
@@ -61,20 +80,25 @@ MODS ?= modules$(DS)posix           \
         modules$(DS)libs
 
 ###############################################################################
-# RKH variables definition
-#RKH_PATH  		 ?= /cygdrive$(DS)h$(DS)vortex$(DS)RKH
-RKH_PATH  		 ?= $(PROJECT_PATH)$(DS)..$(DS)..$(DS)rkh
-RKH_PLATFORM     ?= __CIAA_OSEK__
+# RKH Makefile Path and port definition
+RKH_PATH		?= $(U_PROJECT_PATH)$(DS)..$(DS)..$(DS)rkh
+RKH_PLATFORM	?= __CIAA_OSEK__
 
 include $(RKH_PATH)$(DS)Makefile
 
 # Add RKH source files and includes
-SRC_FILES           += $(RKH_SRC_FILES)
-INC_FILES			+= $(RKH_INC_PATH)
+SRC_FILES		+= $(RKH_SRC_FILES)
+INC_FILES		+= $(RKH_INC_PATH)
 
-print:
+###############################################################################
+# Rule to debug Path´s definitions
+pathdbg:
+	@echo $(PROJECT_PATH)
+	@echo $(U_PROJECT_PATH)
+	@echo $(OIL_FILES)
 	@echo $(RKH_SRC_PATH)
 	@echo $(RKH_SRC_FILES)
 	@echo $(RKH_PORT_PATH)
 	@echo $(SRC_FILES)
 	@echo $(INC_FILES)
+

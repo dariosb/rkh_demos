@@ -46,9 +46,6 @@ enum
 };
 
 RKH_ARRAY_SMA_DCLR(clis, NUM_CLIENTS);
-RKH_SMA_DCLR(cli0);
-RKH_SMA_DCLR(cli1);
-RKH_SMA_DCLR(cli2);
 
 /* =================== Declares states and pseudostates ==================== */
 RKH_DCLR_BASIC_STATE client_idle, client_waiting, client_using, client_paused;

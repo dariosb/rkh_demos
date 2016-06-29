@@ -10,6 +10,10 @@
 #include "client.h"
 #include "bsp.h"
 
+RKH_SMA_DCLR(cli0);
+RKH_SMA_DCLR(cli1);
+RKH_SMA_DCLR(cli2);
+
 const SMA_TASK_TBL_T rkh_sma_task_tbl[] =
 {
 	{ RKH_SMA(server),  ServerTask },
