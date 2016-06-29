@@ -26,19 +26,24 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>externals</name>
+			<name>etc</name>
 			<type>2</type>
-			<location>C:/CIAA/Firmware/externals/drivers</location>
+			<locationURI>PARENT-1-PROJECT_LOC/etc</locationURI>
 		</link>
 		<link>
-			<name>gen</name>
+			<name>inc</name>
 			<type>2</type>
-			<location>C:/CIAA/Firmware/out/gen</location>
+			<locationURI>PARENT-1-PROJECT_LOC/inc</locationURI>
 		</link>
 		<link>
-			<name>modules</name>
+			<name>rkh</name>
 			<type>2</type>
-			<location>C:/CIAA/Firmware/modules</location>
+			<locationURI>PARENT-3-PROJECT_LOC/rkh</locationURI>
+		</link>
+		<link>
+			<name>src</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
