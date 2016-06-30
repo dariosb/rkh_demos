@@ -47,12 +47,32 @@
 
 ###############################################################################
 # Project source files path´s
-# $(PROJECT_PATH) variable must be defined in environment
+# Must export $(PROJECT_PATH) in environment
 ifeq ($(OS),Windows_NT)
 # if winOS, convert paths from Windows to cygwin	
 U_PROJECT_PATH = $(shell cygpath -u $(PROJECT_PATH))
 else
 U_PROJECT_PATH = $(PROJECT_PATH)
+endif
+
+###############################################################################
+# Change Out Dir path
+ifeq (1,0)
+override OUT_DIR = $(U_PROJECT_PATH)mak$(DS)out
+INC_FILES            += $(OUT_DIR)$(DS)gen$(DS)inc
+INC_FILES            += $(OUT_DIR)$(DS)gen$(DS)inc$(DS)cortexM4
+
+override OBJ_DIR  = $(OUT_DIR)$(DS)obj
+# lib dir
+override LIB_DIR  = $(OUT_DIR)$(DS)lib
+# bin dir
+override BIN_DIR  = $(OUT_DIR)$(DS)bin
+# rtos gen dir
+override GEN_DIR = $(OUT_DIR)$(DS)gen
+# rtos test gen dir
+override RTOS_TEST_GEN_DIR = $(OUT_DIR)$(DS)rtos
+# etc dir (configuration dir)
+override ETC_DIR = $(OUT_DIR)$(DS)etc
 endif
 
 PRJ_MKFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
