@@ -32,7 +32,6 @@ extern "C" {
 #define CLI0            CLI(0)
 #define CLI1            CLI(1)
 #define CLI2            CLI(2)
-#define CLI3            CLI(3)
 #define CLI_STK_SIZE    (512 / sizeof(RKH_THREAD_STK_TYPE))
 
 /* -------------------------------- Constants ------------------------------ */
@@ -40,7 +39,7 @@ extern "C" {
 /* ======================== Declares active object ========================= */
 enum
 {
-    CLI_PRIO_0 = 1, CLI_PRIO_1, CLI_PRIO_2, CLI_PRIO_3,
+    CLI_PRIO_0 = 1, CLI_PRIO_1, CLI_PRIO_2,
     MAX_CLI_PRIO,
     NUM_CLIENTS = MAX_CLI_PRIO - 1,
 };

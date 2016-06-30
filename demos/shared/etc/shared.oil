@@ -97,7 +97,6 @@ OSEK OSEK {
       EVENT = RKHEvent;
    }
 
-
    TASK ServerTask {
       PRIORITY = 6;
       ACTIVATION = 1;

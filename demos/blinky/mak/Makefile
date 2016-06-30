@@ -81,7 +81,7 @@ MODS ?= modules$(DS)posix           \
 
 ###############################################################################
 # RKH Makefile Path and port definition
-RKH_PATH		?= $(U_PROJECT_PATH)$(DS)..$(DS)..$(DS)rkh
+RKH_PATH		?= $(U_PROJECT_PATH)..$(DS)..$(DS)rkh
 RKH_PLATFORM	?= __CIAA_OSEK__
 
 include $(RKH_PATH)$(DS)Makefile

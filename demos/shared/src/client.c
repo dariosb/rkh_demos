@@ -73,12 +73,10 @@ RKH_SMA_CREATE(Client, cli1, CLI_PRIO_1, HCAL, &client_idle, client_init, NULL);
 RKH_SMA_DEF_PTR(cli1);
 RKH_SMA_CREATE(Client, cli2, CLI_PRIO_2, HCAL, &client_idle, client_init, NULL);
 RKH_SMA_DEF_PTR(cli2);
-RKH_SMA_CREATE(Client, cli3, CLI_PRIO_3, HCAL, &client_idle, client_init, NULL);
-RKH_SMA_DEF_PTR(cli3);
 
 RKH_ARRAY_SMA_CREATE(clis, NUM_CLIENTS)
 {
-    &cli0, &cli1, &cli2, &cli3
+    &cli0, &cli1, &cli2
 };
 
 /* ---------------------------- Local variables ---------------------------- */
@@ -93,7 +91,6 @@ client_init(Client *const me)
     RKH_TR_FWK_AO(CLI0);
     RKH_TR_FWK_AO(CLI1);
     RKH_TR_FWK_AO(CLI2);
-    RKH_TR_FWK_AO(CLI3);
     RKH_TR_FWK_STATE(CLI0, &client_idle);
     RKH_TR_FWK_STATE(CLI0, &client_waiting);
     RKH_TR_FWK_STATE(CLI0, &client_using);

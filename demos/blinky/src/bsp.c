@@ -76,12 +76,12 @@ static RKH_TS_T bsp_tstamp;
 	#define TRACE_UART_BAUD	(void *)ciaaBAUDRATE_115200
 
 	/* Trazer Tool COM Port */
-	#define SERIAL_TRACE_OPEN()												\
-				{															\
+	#define SERIAL_TRACE_OPEN()												 \
+				{														     \
 					utrc = ciaaPOSIX_open(TRACE_UART_FD, ciaaPOSIX_O_WRONLY);\
-					ciaaPOSIX_ioctl(utrc, 									\
-							ciaaPOSIX_IOCTL_SET_BAUDRATE, TRACE_UART_BAUD); \
-					ActivateTask( RkhTraceTask );							\
+					ciaaPOSIX_ioctl(utrc, 									 \
+							ciaaPOSIX_IOCTL_SET_BAUDRATE, TRACE_UART_BAUD);  \
+					ActivateTask( RkhTraceTask );							 \
 				}
 
 	#define SERIAL_TRACE_CLOSE() 						\
