@@ -55,43 +55,23 @@ else
 U_PROJECT_PATH = $(PROJECT_PATH)
 endif
 
-###############################################################################
-# Change Out Dir path
-ifeq (1,0)
-override OUT_DIR = $(U_PROJECT_PATH)mak$(DS)out
-INC_FILES            += $(OUT_DIR)$(DS)gen$(DS)inc
-INC_FILES            += $(OUT_DIR)$(DS)gen$(DS)inc$(DS)cortexM4
-
-override OBJ_DIR  = $(OUT_DIR)$(DS)obj
-# lib dir
-override LIB_DIR  = $(OUT_DIR)$(DS)lib
-# bin dir
-override BIN_DIR  = $(OUT_DIR)$(DS)bin
-# rtos gen dir
-override GEN_DIR = $(OUT_DIR)$(DS)gen
-# rtos test gen dir
-override RTOS_TEST_GEN_DIR = $(OUT_DIR)$(DS)rtos
-# etc dir (configuration dir)
-override ETC_DIR = $(OUT_DIR)$(DS)etc
-endif
-
 PRJ_MKFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 
 # Project Name: based on PROJECT_PATH, used to define OSEK configuration file
 PROJECT_NAME = $(lastword $(subst $(DS), , $(U_PROJECT_PATH)))
 
 # source path
-$(PROJECT_NAME)_SRC_PATH  += $(U_PROJECT_PATH)$(DS)src
+$(PROJECT_NAME)_SRC_PATH  += $(U_PROJECT_PATH)src
 
 # include path
-INC_FILES            += $(U_PROJECT_PATH)$(DS)inc
+INC_FILES            += $(U_PROJECT_PATH)inc
 
 # project source files
 SRC_FILES            += $(wildcard $($(PROJECT_NAME)_SRC_PATH)$(DS)*.c)
 
 ###############################################################################
 # configuration for OSEK-OS
-OIL_FILES            += $(U_PROJECT_PATH)$(DS)etc$(DS)$(PROJECT_NAME).oil
+OIL_FILES            += $(U_PROJECT_PATH)etc$(DS)$(PROJECT_NAME).oil
 # Modules needed for this example
 MODS ?= modules$(DS)posix           \
         modules$(DS)ciaak           \

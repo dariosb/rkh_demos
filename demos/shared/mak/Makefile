@@ -47,7 +47,7 @@
 
 ###############################################################################
 # Project source files path´s
-# $(PROJECT_PATH) variable must be defined in environment
+# Must export $(PROJECT_PATH) in environment
 ifeq ($(OS),Windows_NT)
 # if winOS, convert paths from Windows to cygwin	
 U_PROJECT_PATH = $(shell cygpath -u $(PROJECT_PATH))
@@ -61,17 +61,17 @@ PRJ_MKFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 PROJECT_NAME = $(lastword $(subst $(DS), , $(U_PROJECT_PATH)))
 
 # source path
-$(PROJECT_NAME)_SRC_PATH  += $(U_PROJECT_PATH)$(DS)src
+$(PROJECT_NAME)_SRC_PATH  += $(U_PROJECT_PATH)src
 
 # include path
-INC_FILES            += $(U_PROJECT_PATH)$(DS)inc
+INC_FILES            += $(U_PROJECT_PATH)inc
 
 # project source files
 SRC_FILES            += $(wildcard $($(PROJECT_NAME)_SRC_PATH)$(DS)*.c)
 
 ###############################################################################
 # configuration for OSEK-OS
-OIL_FILES            += $(U_PROJECT_PATH)$(DS)etc$(DS)$(PROJECT_NAME).oil
+OIL_FILES            += $(U_PROJECT_PATH)etc$(DS)$(PROJECT_NAME).oil
 # Modules needed for this example
 MODS ?= modules$(DS)posix           \
         modules$(DS)ciaak           \
@@ -81,7 +81,7 @@ MODS ?= modules$(DS)posix           \
 
 ###############################################################################
 # RKH Makefile Path and port definition
-RKH_PATH		?= $(U_PROJECT_PATH)$(DS)..$(DS)..$(DS)rkh
+RKH_PATH		?= $(U_PROJECT_PATH)..$(DS)..$(DS)rkh
 RKH_PLATFORM	?= __CIAA_OSEK__
 
 include $(RKH_PATH)$(DS)Makefile
