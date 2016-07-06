@@ -58,7 +58,7 @@ endif
 PRJ_MKFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 
 # Project Name: based on PROJECT_PATH, used to define OSEK configuration file
-PROJECT_NAME = $(lastword $(subst $(DS), , $(U_PROJECT_PATH)))
+PROJECT_NAME = blinky
 
 # source path
 $(PROJECT_NAME)_SRC_PATH  += $(U_PROJECT_PATH)src

@@ -28,12 +28,12 @@
 		<link>
 			<name>etc</name>
 			<type>2</type>
-			<locationURI>copy_PARENT/etc</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/etc</locationURI>
 		</link>
 		<link>
 			<name>inc</name>
 			<type>2</type>
-			<locationURI>copy_PARENT/inc</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/inc</locationURI>
 		</link>
 		<link>
 			<name>rkh</name>
@@ -43,7 +43,7 @@
 		<link>
 			<name>src</name>
 			<type>2</type>
-			<locationURI>copy_PARENT/src</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/src</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
