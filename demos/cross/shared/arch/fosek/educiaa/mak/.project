@@ -26,19 +26,54 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>app</name>
-			<type>2</type>
-			<locationURI>copy_PARENT123/app</locationURI>
-		</link>
-		<link>
 			<name>etc</name>
 			<type>2</type>
 			<locationURI>copy_PARENT1234/etc</locationURI>
 		</link>
 		<link>
+			<name>shared</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>src</name>
 			<type>2</type>
 			<locationURI>copy_PARENT1234/src</locationURI>
+		</link>
+		<link>
+			<name>shared/client.c</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/client.c</locationURI>
+		</link>
+		<link>
+			<name>shared/client.h</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/client.h</locationURI>
+		</link>
+		<link>
+			<name>shared/main.c</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/main.c</locationURI>
+		</link>
+		<link>
+			<name>shared/rkhcfg.h</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/rkhcfg.h</locationURI>
+		</link>
+		<link>
+			<name>shared/scevt.h</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/scevt.h</locationURI>
+		</link>
+		<link>
+			<name>shared/server.c</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/server.c</locationURI>
+		</link>
+		<link>
+			<name>shared/server.h</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/server.h</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>

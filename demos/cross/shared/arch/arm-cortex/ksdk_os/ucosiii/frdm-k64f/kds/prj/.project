@@ -58,17 +58,17 @@
 		<link>
 			<name>bsp/cpu_cfg.h</name>
 			<type>1</type>
-			<locationURI>PARENT-11-PROJECT_LOC/uCos_port/demo/cross/shared/platform/ucos/v3.03.01/cpu_cfg.h</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/cpu_cfg.h</locationURI>
 		</link>
 		<link>
 			<name>bsp/os_cfg.h</name>
 			<type>1</type>
-			<locationURI>PARENT-11-PROJECT_LOC/uCos_port/demo/cross/shared/platform/ucos/v3.03.01/os_cfg.h</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/os_cfg.h</locationURI>
 		</link>
 		<link>
 			<name>bsp/os_cfg_app.h</name>
 			<type>1</type>
-			<locationURI>PARENT-11-PROJECT_LOC/uCos_port/demo/cross/shared/platform/ucos/v3.03.01/os_cfg_app.h</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/os_cfg_app.h</locationURI>
 		</link>
 		<link>
 			<name>bsp/switch</name>
@@ -113,12 +113,12 @@
 		<link>
 			<name>rkh/rkhport.c</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/portable/ucos/v3.03.01/rkhport.c</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/portable/arm-cortex/ksdk_os/ucosiii/kds/rkhport.c</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhport.h</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/portable/ucos/v3.03.01/rkhport.h</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/portable/arm-cortex/ksdk_os/ucosiii/kds/rkhport.h</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhrq.c</name>
@@ -138,7 +138,7 @@
 		<link>
 			<name>rkh/rkht.h</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/portable/ucos/v3.03.01/rkht.h</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/portable/arm-cortex/ksdk_os/ucosiii/kds/rkht.h</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhtbl.c</name>

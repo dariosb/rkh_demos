@@ -82,7 +82,7 @@ MODS ?= modules$(DS)posix           \
 
 ###############################################################################
 # RKH Application Makefile Path and port definition
-RKH_APP_PATH	?= $(U_PROJECT_PATH)..$(DS)..$(DS)..$(DS)app
+RKH_APP_PATH	?= $(U_PROJECT_PATH)..$(DS)..$(DS)..
 RKH_PLATFORM	?= __CIAA_OSEK__
 
 include $(RKH_APP_PATH)$(DS)Makefile

@@ -54,7 +54,7 @@ CFLAGS += -D$(RKH_PLATFORM)
 
 ###############################################################################
 # RKH Makefile Path definition
-RKH_PATH		?= $(RKH_APP_PATH)$(DS)..$(DS)..$(DS)..$(DS)..$(DS)rkh
+RKH_PATH		?= $(RKH_APP_PATH)$(DS)..$(DS)..$(DS)..$(DS)rkh
 RKH_PLATFORM	?= __CIAA_OSEK__
 
 include $(RKH_PATH)$(DS)Makefile
