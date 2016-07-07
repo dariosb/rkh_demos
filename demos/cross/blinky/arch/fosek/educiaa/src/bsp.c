@@ -115,26 +115,6 @@ static RKH_ROM_STATIC_EVENT(ev_term, TERMINATE);
 
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
-static
-void
-print_banner(void)
-{
-    ciaaPOSIX_printf("Blinky: a very simple state machine example.\n\n");
-    ciaaPOSIX_printf("RKH version      = %s\n", RKH_RELEASE);
-    ciaaPOSIX_printf("Port version     = %s\n", rkh_get_port_version());
-    ciaaPOSIX_printf("Port description = %s\n\n", rkh_get_port_desc());
-    ciaaPOSIX_printf("Description: \n\n"
-                     "The goal of this demo application is to explain how to \n"
-                     "represent a \"flat\" state machine and how to use the timer \n"
-                     "services using the RKH framework. To do that is proposed a \n"
-                     "very simple demo that use one state machine and one timer, \n"
-                     "which is shown and explained in the reference manual section \n"
-                     "\"Examples\". "
-                     "This is the 'hello world' of RKH programming!.\n\n\n");
-
-    ciaaPOSIX_printf("1.- Press ESC to quit \n\n\n");
-}
-
 /* ---------------------------- Global functions --------------------------- */
 void
 rkh_hook_timetick(void)
@@ -226,7 +206,6 @@ bsp_init(int argc, char *argv[])
     rkh_fwk_init();
 
     fd_out = ciaaPOSIX_open("/dev/dio/out/0", ciaaPOSIX_O_RDWR);
-    print_banner();
 
     RKH_FILTER_ON_GROUP(RKH_TRC_ALL_GROUPS);
     RKH_FILTER_ON_EVENT(RKH_TRC_ALL_EVENTS);
