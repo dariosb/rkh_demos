@@ -93,77 +93,77 @@
 		<link>
 			<name>rkh/include</name>
 			<type>2</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/include</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/include</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkh.c</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/rkh.c</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/rkh.c</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhdyn.c</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/rkhdyn.c</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/rkhdyn.c</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhmp.c</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/rkhmp.c</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/rkhmp.c</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhport.c</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/portable/arm-cortex/ksdk_os/ucosiii/kds/rkhport.c</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/portable/ucos/v3.03.01/rkhport.c</locationURI>
+		</link>
+		<link>
+			<name>rkh/rkhport.h</name>
+			<type>1</type>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/portable/ucos/v3.03.01/rkhport.h</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhrq.c</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/rkhrq.c</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/rkhrq.c</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhs.c</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/rkhs.c</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/rkhs.c</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhsma.c</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/rkhsma.c</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/rkhsma.c</locationURI>
+		</link>
+		<link>
+			<name>rkh/rkht.h</name>
+			<type>1</type>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/portable/ucos/v3.03.01/rkht.h</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhtbl.c</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/rkhtbl.c</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/rkhtbl.c</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhtim.c</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/rkhtim.c</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/rkhtim.c</locationURI>
 		</link>
 		<link>
 			<name>rkh/rkhtrc.c</name>
 			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/rkhtrc.c</locationURI>
+			<locationURI>PARENT-10-PROJECT_LOC/rkh/source/rkhtrc.c</locationURI>
 		</link>
 		<link>
-			<name>shared/cli.c</name>
+			<name>shared/client.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/cli.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/client.c</locationURI>
 		</link>
 		<link>
-			<name>shared/cli.h</name>
+			<name>shared/client.h</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/cli.h</locationURI>
-		</link>
-		<link>
-			<name>shared/cliact.c</name>
-			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/cliact.c</locationURI>
-		</link>
-		<link>
-			<name>shared/cliact.h</name>
-			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/cliact.h</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/client.h</locationURI>
 		</link>
 		<link>
 			<name>shared/main.c</name>
@@ -181,24 +181,14 @@
 			<locationURI>PARENT-7-PROJECT_LOC/scevt.h</locationURI>
 		</link>
 		<link>
-			<name>shared/svr.c</name>
+			<name>shared/server.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/svr.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/server.c</locationURI>
 		</link>
 		<link>
-			<name>shared/svr.h</name>
+			<name>shared/server.h</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/svr.h</locationURI>
-		</link>
-		<link>
-			<name>shared/svract.c</name>
-			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/svract.c</locationURI>
-		</link>
-		<link>
-			<name>shared/svract.h</name>
-			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/svract.h</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/server.h</locationURI>
 		</link>
 		<link>
 			<name>ucosiii/cpu_a.S</name>
@@ -339,16 +329,6 @@
 			<name>SDK/platform/utilities</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>rkh/include/rkhport.h</name>
-			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/portable/arm-cortex/ksdk_os/ucosiii/kds/rkhport.h</locationURI>
-		</link>
-		<link>
-			<name>rkh/include/rkht.h</name>
-			<type>1</type>
-			<locationURI>PARENT-10-PROJECT_LOC/source/portable/arm-cortex/ksdk_os/ucosiii/kds/rkht.h</locationURI>
 		</link>
 		<link>
 			<name>Debug/rkh/port/rkhport.c</name>
