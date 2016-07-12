@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="oven">
+      <UniqueIdentifier>{61a14cf2-96ef-4566-b75f-f393c6facb05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bsp">
+      <UniqueIdentifier>{612ca698-e6ac-4535-ad79-cef590c05238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rkh">
+      <UniqueIdentifier>{c7e4cdb1-ebd9-476a-9ae5-5c740a4f9e71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rkh\source">
+      <UniqueIdentifier>{b42f0fa0-e111-40f3-a3b3-5df5265dcd7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rkh\source\portable">
+      <UniqueIdentifier>{022b4197-c4fb-4fec-9840-f827b29734dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rkh\source\include">
+      <UniqueIdentifier>{95acfcf5-3e24-4f89-9a77-e2518e56a9bc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tcptrc.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkh.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhdyn.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhmp.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhrq.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhs.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhsma.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhtbl.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhtim.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\rkhtrc.c">
+      <Filter>rkh\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.c">
+      <Filter>rkh\source\portable</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\oven\oven_6\main.c">
+      <Filter>oven</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\oven\oven_6\oven.c">
+      <Filter>oven</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\oven\oven_6\ovenact.c">
+      <Filter>oven</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bsp.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\bsp.h">
+      <Filter>bsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tcptrc.h">
+      <Filter>bsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.h">
+      <Filter>rkh\source\portable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkht.h">
+      <Filter>rkh\source\portable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkh.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhassert.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhdef.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhevt.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhitl.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhmp.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhplat.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhrdy.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhrq.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhs.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhtim.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhtrc.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rkh\source\include\rkhtype.h">
+      <Filter>rkh\source\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\oven\oven_6\oven.h">
+      <Filter>oven</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\oven\oven_6\ovenact.h">
+      <Filter>oven</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\oven\oven_6\ovenevt.h">
+      <Filter>oven</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\oven\oven_6\rkhcfg.h">
+      <Filter>oven</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

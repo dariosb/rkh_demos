@@ -1,0 +1,28 @@
+/*
+ *	ovenact.h
+ */
+
+
+#ifndef __OVENACT_H__
+#define __OVENACT_H__
+
+
+#include "rkh.h"
+
+
+/*
+ *	Defines HSM init function
+ */
+
+void oven_init( void );
+
+
+/*
+ *	Defines state entry/exit functions
+ */
+
+void cook_start( void );
+void cook_stop( void );
+
+
+#endif
