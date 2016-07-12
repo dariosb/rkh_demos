@@ -51,7 +51,6 @@
 /* ----------------------------- Include files ----------------------------- */
 #include "bsp.h"
 #include "oven.h"
-#include "ovenevt.h"
 #include "rkh.h"
 #include "fsl_debug_console.h"
 #include "fsl_hwtimer_systick.h"

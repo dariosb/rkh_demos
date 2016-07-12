@@ -186,7 +186,7 @@ rkh_trc_flush(void)
 
     FOREVER
     {
-        nbytes = 1024;
+        nbytes = 128;
 
         RKH_ENTER_CRITICAL_();
         blk = rkh_trc_get_block(&nbytes);
