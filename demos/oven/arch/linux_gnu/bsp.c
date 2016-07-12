@@ -45,7 +45,6 @@
 #include "bsp.h"
 #include "rkh.h"
 #include "oven.h"
-#include "ovenevt.h"
 
 #include <unistd.h>
 #include <stdlib.h>

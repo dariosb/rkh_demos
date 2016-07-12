@@ -83,9 +83,7 @@ static int32_t utrc;
     }
 
     #define SERIAL_TRACE_SEND_BLOCK(buf_, len_)     \
-    {                                               \
-        ciaaPOSIX_write(utrc, buf_, len_);          \
-    }
+            ciaaPOSIX_write(utrc, buf_, len_)
 #else
     #define SERIAL_TRACE_OPEN()                     (void)0
     #define SERIAL_TRACE_CLOSE()                    (void)0
@@ -194,7 +192,10 @@ rkh_trc_flush(void)
 
         if ((blk != (rui8_t *)0))
         {
-            SERIAL_TRACE_SEND_BLOCK(blk, nbytes);
+        	while( nbytes )
+        	{
+               nbytes -= SERIAL_TRACE_SEND_BLOCK(blk, nbytes);
+        	}
         }
         else
         {
