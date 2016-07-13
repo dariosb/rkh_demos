@@ -13,7 +13,6 @@
 
 static RKH_EVT_T *qsto[ QSTO_SIZE ];
 
-	
 int
 main( int argc, char *argv[] )
 {
@@ -25,5 +24,6 @@ main( int argc, char *argv[] )
 	rkh_fwk_enter();
 
 	RKH_TRC_CLOSE();
+
 	return 0;
 }

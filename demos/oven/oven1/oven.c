@@ -38,13 +38,6 @@ RKH_CREATE_TRANS_TABLE( cooking )
 	RKH_TRREG( TMREVT,	NULL,	NULL,	&idle ),
 RKH_END_TRANS_TABLE
 
-/*
- *  Declare and allocate the 'e_tout' event.
- *  The 'e_tout' event with TIMEOUT signal never changes, so it can be
- *  statically allocated just once by means of RKH_ROM_STATIC_EVENT() macro.
- */
-static RKH_ROM_STATIC_EVENT( e_tout, TMREVT );
-
 /* ---------------------------- Local data types --------------------------- */
 struct Oven
 {
@@ -58,6 +51,13 @@ RKH_SMA_CREATE( Oven, oven, 0, FLAT, &idle, oven_init, NULL );
 RKH_SMA_DEF_PTR(oven);
 
 /* ---------------------------- Local variables ---------------------------- */
+/*
+ *  Declare and allocate the 'e_tout' event.
+ *  The 'e_tout' event with TIMEOUT signal never changes, so it can be
+ *  statically allocated just once by means of RKH_ROM_STATIC_EVENT() macro.
+ */
+static RKH_ROM_STATIC_EVENT( e_tout, TMREVT );
+
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
 /* ---------------------------- Global functions --------------------------- */

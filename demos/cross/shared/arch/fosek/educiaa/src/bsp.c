@@ -201,7 +201,7 @@ void
 rkh_trc_flush(void)
 {
     rui8_t *blk;
-    TRCQTY_T nbytes;
+    TRCQTY_T nbytes, qty;
     RKH_SR_ALLOC();
 
     FOREVER
@@ -214,7 +214,12 @@ rkh_trc_flush(void)
 
         if ((blk != (rui8_t *)0))
         {
-            SERIAL_TRACE_SEND_BLOCK(blk, nbytes);
+        	while( nbytes )
+        	{
+               qty = SERIAL_TRACE_SEND_BLOCK(blk, nbytes);
+               nbytes -= qty;
+               blk += qty;
+        	}
         }
         else
         {

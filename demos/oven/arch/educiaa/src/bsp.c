@@ -83,7 +83,7 @@ static int32_t utrc;
     }
 
     #define SERIAL_TRACE_SEND_BLOCK(buf_, len_)     \
-            ciaaPOSIX_write(utrc, buf_, len_)
+        ciaaPOSIX_write(utrc, buf_, len_)
 #else
     #define SERIAL_TRACE_OPEN()                     (void)0
     #define SERIAL_TRACE_CLOSE()                    (void)0
@@ -144,8 +144,6 @@ rkh_hook_exit(void)
 void
 rkh_assert(RKHROM char * const file, int line)
 {
-    ciaaPOSIX_printf("RKH_ASSERT: [%d] line from %s "
-                     "file\n", line, file);
     RKH_DIS_INTERRUPT();
     RKH_TR_FWK_ASSERT((RKHROM char *)file, __LINE__);
     rkh_fwk_exit();
@@ -179,7 +177,7 @@ void
 rkh_trc_flush(void)
 {
     rui8_t *blk;
-    TRCQTY_T nbytes;
+    TRCQTY_T nbytes, qty;
     RKH_SR_ALLOC();
 
     FOREVER
@@ -194,7 +192,9 @@ rkh_trc_flush(void)
         {
         	while( nbytes )
         	{
-               nbytes -= SERIAL_TRACE_SEND_BLOCK(blk, nbytes);
+               qty = SERIAL_TRACE_SEND_BLOCK(blk, nbytes);
+               nbytes -= qty;
+               blk += qty;
         	}
         }
         else
@@ -299,7 +299,7 @@ bsp_init(int argc, char *argv[])
 #if defined( RKH_USE_TRC_SENDER )
 	RKH_TR_FWK_OBJ( &panel );
 	RKH_TR_FWK_OBJ( &door );
-#endif	    
+#endif
 }
 
 /* ------------------------------ End of file ------------------------------ */
