@@ -33,7 +33,7 @@
  *  \file       bsp.h
  *  \ingroup    bsp
  *
- * 	\brief 		BSP for 80x86 OS linux
+ *  \brief      BSP for 80x86 OS linux
  */
 
 /* -------------------------- Development history -------------------------- */
@@ -59,29 +59,29 @@
 #define BIN_TRACE           0
 #define SOCKET_TRACE        1
 
-#define BSP_TICKS_PER_SEC   		RKH_CFG_FWK_TICK_RATE_HZ
+#define BSP_TICKS_PER_SEC           RKH_CFG_FWK_TICK_RATE_HZ
 
 /**
- * 	\brief
- * 	This macro represents the number of timestamp clock ticks per second. 
- * 	Dividing a count of timestamp ticks by this macro yields the number 
- * 	of seconds.
+ *  \brief
+ *  This macro represents the number of timestamp clock ticks per second.
+ *  Dividing a count of timestamp ticks by this macro yields the number
+ *  of seconds.
  */
 
-#define BSP_TS_RATE_HZ		   		RKH_CFG_FWK_TICK_RATE_HZ
+#define BSP_TS_RATE_HZ              RKH_CFG_FWK_TICK_RATE_HZ
 
 /* ------------------------------- Data types ------------------------------ */
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
-void bsp_init( int argc, char *argv[] );
+void bsp_init(int argc, char *argv[]);
 
-void bsp_door_open( void );
-void bsp_oven_init( void );
-void bsp_emitter_ready( void );
-void bsp_emitter_on( void );
-void bsp_emitter_off( void );
-void bsp_emitter_pause( void );
-void bsp_emitter_continue( void );
+void bsp_door_open(void);
+void bsp_oven_init(void);
+void bsp_emitter_ready(void);
+void bsp_emitter_on(void);
+void bsp_emitter_off(void);
+void bsp_emitter_pause(void);
+void bsp_emitter_continue(void);
 
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus

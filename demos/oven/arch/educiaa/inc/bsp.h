@@ -84,15 +84,15 @@ extern rui8_t trace_open;
 /* -------------------------- Function prototypes -------------------------- */
 void bsp_init(int argc, char *argv[]);
 
-void bsp_pub_sw_evt( ruint s, ruint debsw );
+void bsp_pub_sw_evt(ruint s, ruint debsw);
 
-void bsp_door_open( void );
-void bsp_oven_init( void );
-void bsp_emitter_ready( void );
-void bsp_emitter_on( void );
-void bsp_emitter_off( void );
-void bsp_emitter_pause( void );
-void bsp_emitter_continue( void );
+void bsp_door_open(void);
+void bsp_oven_init(void);
+void bsp_emitter_ready(void);
+void bsp_emitter_on(void);
+void bsp_emitter_off(void);
+void bsp_emitter_pause(void);
+void bsp_emitter_continue(void);
 
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus

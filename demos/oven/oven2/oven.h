@@ -27,21 +27,21 @@ extern "C" {
 #endif
 
 /* --------------------------------- Macros -------------------------------- */
-#define COOK_TIME		RKH_TIME_SEC( 5 )	/* Cook cycle duration time */
+#define COOK_TIME       RKH_TIME_SEC(5)     /* Cook cycle duration time */
 
 /* -------------------------------- Constants ------------------------------ */
 /* ================================ Signals ================================ */
 typedef enum ov_sigs_t
 {
-	OPEN,	/* door is open  */
-	CLOSE,	/* door is close */
-	START,	/* start button pressed */
-	TMREVT,	/* timer expired */
-	TERM,   /* to close application in x86 */
+    OPEN,   /* door is open  */
+    CLOSE,  /* door is close */
+    START,  /* start button pressed */
+    TMREVT, /* timer expired */
+    TERM,   /* to close application in x86 */
 } OV_SIGS_T;
 
 /* ======================== Declares active object ========================= */
-RKH_SMA_DCLR( oven );
+RKH_SMA_DCLR(oven);
 
 /* =================== Declares states and pseudostates ==================== */
 RKH_DCLR_BASIC_STATE idle, ready, cooking;
@@ -52,14 +52,14 @@ typedef struct Oven Oven;
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
 /* ============================ Initial action ============================= */
-void oven_init( Oven *const me );
+void oven_init(Oven *const me);
 
 /* ============================ Effect actions ============================= */
 /* ============================= Entry actions ============================= */
-void cook_start(Oven *const me, RKH_EVT_T *pe );
+void cook_start(Oven *const me, RKH_EVT_T *pe);
 
 /* ============================= Exit actions ============================== */
-void cook_stop(Oven *const me, RKH_EVT_T *pe );
+void cook_stop(Oven *const me, RKH_EVT_T *pe);
 
 /* ================================ Guards ================================= */
 

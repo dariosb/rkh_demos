@@ -33,7 +33,7 @@
  *  \file       bsp.c
  *  \ingroup    bsp
  *
- * 	\brief 		BSP for 80x86 OS linux
+ *  \brief      BSP for 80x86 OS linux
  */
 
 /* -------------------------- Development history -------------------------- */
@@ -65,57 +65,56 @@ RKH_THIS_MODULE
 /* ----------------------------- Local macros ------------------------------ */
 #if SOCKET_TRACE == 1
 
-	#include "tcptrc.h"
+    #include "tcptrc.h"
 
-	/* Trazer Tool IP Address */
-	#define TRC_IP_ADDR					"127.0.0.1"
+/* Trazer Tool IP Address */
+    #define TRC_IP_ADDR                 "127.0.0.1"
 
-	/* Trazer Tool TCP Port Address */
-	#define TRC_TCP_PORT				6602
+/* Trazer Tool TCP Port Address */
+    #define TRC_TCP_PORT                6602
 
-	/* Trace Socket */
-	static int tsock;
+/* Trace Socket */
+static int tsock;
 
-	#define TCP_TRACE_OPEN()											\
-							if( tcp_trace_open( TRC_TCP_PORT, 			\
-										TRC_IP_ADDR, &tsock ) < 0 ) 	\
-							{ 											\
-								printf( "Can't open socket %s:%u\n",	\
-											TRC_IP_ADDR, TRC_TCP_PORT );\
-								exit( EXIT_FAILURE );					\
-							}
-	#define TCP_TRACE_CLOSE() 		tcp_trace_close( tsock )
-	#define TCP_TRACE_SEND( d ) 	tcp_trace_send( tsock, d, (int)1 )
-	#define TCP_TRACE_SEND_BLOCK( buf_, len_ ) \
-				tcp_trace_send( tsock, (const char *)(buf_), (int)(len_) )
+    #define TCP_TRACE_OPEN()                                            \
+    if (tcp_trace_open(TRC_TCP_PORT,           \
+                       TRC_IP_ADDR, &tsock) < 0)     \
+    {                                           \
+        printf("Can't open socket %s:%u\n",    \
+               TRC_IP_ADDR, TRC_TCP_PORT); \
+        exit(EXIT_FAILURE);                   \
+    }
+    #define TCP_TRACE_CLOSE()       tcp_trace_close(tsock)
+    #define TCP_TRACE_SEND(d)     tcp_trace_send(tsock, d, (int)1)
+    #define TCP_TRACE_SEND_BLOCK(buf_, len_) \
+    tcp_trace_send(tsock, (const char *)(buf_), (int)(len_))
 #else
-	#define TCP_TRACE_OPEN()					(void)0
-	#define TCP_TRACE_CLOSE()					(void)0
-	#define TCP_TRACE_SEND( d )					(void)0
-	#define TCP_TRACE_SEND_BLOCK( buf_, len_ )	(void)0
+    #define TCP_TRACE_OPEN()                    (void)0
+    #define TCP_TRACE_CLOSE()                   (void)0
+    #define TCP_TRACE_SEND(d)                 (void)0
+    #define TCP_TRACE_SEND_BLOCK(buf_, len_)  (void)0
 #endif
-
 
 #if BIN_TRACE == 1
-	#define FTBIN_FLUSH( buf_, len_ )									\
-							{											\
-								fwrite ( (buf_), 1, (len_), ftbin ); 	\
-								fflush( ftbin );						\
-							}
-	#define FTBIN_CLOSE()		fclose( ftbin )
-	#define FTBIN_OPEN() 												\
-							if( ( ftbin = fopen( "ftbin", "w+b" ) ) == NULL ) \
-							{ 											\
-								printf( "Can't open file\n" ); \
-								exit( EXIT_FAILURE ); \
-							}
+    #define FTBIN_FLUSH(buf_, len_)                                   \
+    {                                           \
+        fwrite ((buf_), 1, (len_), ftbin);    \
+        fflush(ftbin);                        \
+    }
+    #define FTBIN_CLOSE()       fclose(ftbin)
+    #define FTBIN_OPEN()                                                \
+    if ((ftbin = fopen("ftbin", "w+b")) == NULL) \
+    {                                           \
+        printf("Can't open file\n"); \
+        exit(EXIT_FAILURE); \
+    }
 #else
-	#define FTBIN_FLUSH( buf_, len_ )		(void)0
-	#define FTBIN_CLOSE()					(void)0
-	#define FTBIN_OPEN()					(void)0
+    #define FTBIN_FLUSH(buf_, len_)       (void)0
+    #define FTBIN_CLOSE()                   (void)0
+    #define FTBIN_OPEN()                    (void)0
 #endif
 
-#define bsp_msleep( x )				usleep( x * 1000UL )
+#define bsp_msleep(x)             usleep(x * 1000UL)
 
 /* ------------------------------- Constants ------------------------------- */
 #define ESC                         0x1B
@@ -125,18 +124,18 @@ RKH_THIS_MODULE
 rui8_t running;
 
 /* ---------------------------- Local variables ---------------------------- */
-static unsigned short tick_msec;			/* clock tick in msec */
-static RKH_TS_T ts_cntr;		/* time stamp counter */
+static unsigned short tick_msec;            /* clock tick in msec */
+static RKH_TS_T ts_cntr;        /* time stamp counter */
 
-static RKH_ROM_STATIC_EVENT( e_start, START );
-static RKH_ROM_STATIC_EVENT( e_open, OPEN );
-static RKH_ROM_STATIC_EVENT( e_close, CLOSE );
-static RKH_ROM_STATIC_EVENT( e_term, TERM );
-#if ( __STOP_BUTTON__ == RKH_ENABLED )
-static RKH_ROM_STATIC_EVENT( e_stop, STOP );
+static RKH_ROM_STATIC_EVENT(e_start, START);
+static RKH_ROM_STATIC_EVENT(e_open, OPEN);
+static RKH_ROM_STATIC_EVENT(e_close, CLOSE);
+static RKH_ROM_STATIC_EVENT(e_term, TERM);
+#if (__STOP_BUTTON__ == RKH_ENABLED)
+static RKH_ROM_STATIC_EVENT(e_stop, STOP);
 #endif
 
-#if defined( RKH_USE_TRC_SENDER )
+#if defined(RKH_USE_TRC_SENDER)
 static rui8_t door;
 static rui8_t panel;
 static rui8_t rkh_tick;
@@ -150,289 +149,285 @@ static time_t cStart, cStop;
 
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
-static 
+static
 void *
-isr_tmr_thread( void *d )	/* thread to emulate timer ISR */
+isr_tmr_thread(void *d)     /* thread to emulate timer ISR */
 {
-	(void)d;
+    (void)d;
 
-    while( running ) 
-	{
-		RKH_TIM_TICK( &rkh_tick );
-        bsp_msleep( tick_msec );
+    while (running)
+    {
+        RKH_TIM_TICK(&rkh_tick);
+        bsp_msleep(tick_msec);
     }
 
-	pthread_exit(NULL);
-	return NULL;
+    pthread_exit(NULL);
+    return NULL;
 }
 
 static struct termios orgt;
 
 static
-int 
-___getch( void )
+int
+___getch(void)
 {
-	struct termios newt;
-	int ch;
+    struct termios newt;
+    int ch;
 
-	tcgetattr( STDIN_FILENO, &orgt );
-	newt = orgt;
-	newt.c_lflag &= ~( ICANON | ECHO );
-	tcsetattr( STDIN_FILENO, TCSANOW, &newt );
-	ch = getchar();
-	tcsetattr( STDIN_FILENO, TCSANOW, &orgt );
-	return ch;
+    tcgetattr(STDIN_FILENO, &orgt);
+    newt = orgt;
+    newt.c_lflag &= ~(ICANON | ECHO);
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+    ch = getchar();
+    tcsetattr(STDIN_FILENO, TCSANOW, &orgt);
+    return ch;
 }
 
-
-static 
-void * 
-isr_kbd_thread( void *par )	/* thread to emulate keyboard ISR */
+static
+void *
+isr_kbd_thread(void *par)   /* thread to emulate keyboard ISR */
 {
-	int c;
+    int c;
 
-	( void )par;
-    while( running ) 
-	{
-		c = ___getch();
-		switch( c )
-		{
-			case ESC:
-				running = 0;
-				RKH_SMA_POST_FIFO( oven, &e_term, &panel );
-				break;
+    (void)par;
+    while (running)
+    {
+        c = ___getch();
+        switch (c)
+        {
+            case ESC:
+                running = 0;
+                RKH_SMA_POST_FIFO(oven, &e_term, &panel);
+                break;
 
-			case 's':
-				RKH_SMA_POST_FIFO( oven, &e_start, &panel );
-				break;
+            case 's':
+                RKH_SMA_POST_FIFO(oven, &e_start, &panel);
+                break;
 
-#if ( __STOP_BUTTON__ == RKH_ENABLED )
-			case 'p':
-				RKH_SMA_POST_FIFO( oven, &e_stop, &panel );
-				break;
+#if (__STOP_BUTTON__ == RKH_ENABLED)
+            case 'p':
+                RKH_SMA_POST_FIFO(oven, &e_stop, &panel);
+                break;
 #endif
 
-			case 'o':
-				RKH_SMA_POST_FIFO( oven, &e_open, &door );
-				break;
+            case 'o':
+                RKH_SMA_POST_FIFO(oven, &e_open, &door);
+                break;
 
-			case 'c':
-				RKH_SMA_POST_FIFO( oven, &e_close, &door );
-				break;
+            case 'c':
+                RKH_SMA_POST_FIFO(oven, &e_close, &door);
+                break;
 
-			default:
-				break;
-		}
+            default:
+                break;
+        }
     }
-	return NULL;
+    return NULL;
 }
 
 static
 void
-print_banner( void )
+print_banner(void)
 {
-	printf(	"\"oven\" example\n\n" );
-	printf(	"RKH version      = %s\n", RKH_RELEASE );
-	printf(	"Port version     = %s\n", rkh_get_port_version() );
-	printf(	"Port description = %s\n\n", rkh_get_port_desc() );
-	printf(	"\n\n" );
+    printf("\"oven\" example\n\n");
+    printf("RKH version      = %s\n", RKH_RELEASE);
+    printf("Port version     = %s\n", rkh_get_port_version());
+    printf("Port description = %s\n\n", rkh_get_port_desc());
+    printf("\n\n");
 
-	printf( "1.- Press 'O'/'o' door { Open  } -> oven.\n" );
-	printf( "2.- Press 'C'/'c' door { Close } -> oven.\n" );
-	printf( "3.- Press 'S'/'s' panel{ Start } -> oven.\n" );
-#if ( __STOP_BUTTON__ == RKH_ENABLED )
-	printf( "3.- Press 'P'/'p' panel{ Stop  } -> oven.\n" );
+    printf("1.- Press 'O'/'o' door { Open  } -> oven.\n");
+    printf("2.- Press 'C'/'c' door { Close } -> oven.\n");
+    printf("3.- Press 'S'/'s' panel{ Start } -> oven.\n");
+#if (__STOP_BUTTON__ == RKH_ENABLED)
+    printf("3.- Press 'P'/'p' panel{ Stop  } -> oven.\n");
 #endif
-	printf( "4.- Press 'escape' to quit.\n\n\n" );
+    printf("4.- Press 'escape' to quit.\n\n\n");
 }
 
 /* ---------------------------- Global functions --------------------------- */
 void
-rkh_hook_timetick( void )
+rkh_hook_timetick(void)
 {
-	++ts_cntr;
+    ++ts_cntr;
 }
 
-void 
-rkh_hook_start( void ) 
+void
+rkh_hook_start(void)
 {
-	pthread_t thtmr_id, thkbd_id;  /* thread identifiers */
- 	pthread_attr_t threadAttr;
+    pthread_t thtmr_id, thkbd_id;  /* thread identifiers */
+    pthread_attr_t threadAttr;
 
-	/* set the desired tick rate */
+    /* set the desired tick rate */
     tick_msec = RKH_TICK_RATE_MS;
     running = (rui8_t)1;
 
-	/* initialize the thread attribute */
-	pthread_attr_init(&threadAttr);
+    /* initialize the thread attribute */
+    pthread_attr_init(&threadAttr);
 
-	/* Set the stack size of the thread */
-	pthread_attr_setstacksize(&threadAttr, 1024);
+    /* Set the stack size of the thread */
+    pthread_attr_setstacksize(&threadAttr, 1024);
 
-	/* Create the threads */
-	pthread_create(&thtmr_id, &threadAttr, isr_tmr_thread, NULL);
-	pthread_create(&thkbd_id, &threadAttr, isr_kbd_thread, NULL);
+    /* Create the threads */
+    pthread_create(&thtmr_id, &threadAttr, isr_tmr_thread, NULL);
+    pthread_create(&thkbd_id, &threadAttr, isr_kbd_thread, NULL);
 
-	/* Destroy the thread attributes */
-	pthread_attr_destroy(&threadAttr);
+    /* Destroy the thread attributes */
+    pthread_attr_destroy(&threadAttr);
 }
 
-void 
-rkh_hook_exit( void ) 
+void
+rkh_hook_exit(void)
 {
-	RKH_TRC_FLUSH();
-	tcsetattr( STDIN_FILENO, TCSANOW, &orgt );
+    RKH_TRC_FLUSH();
+    tcsetattr(STDIN_FILENO, TCSANOW, &orgt);
 }
 
-void 
-rkh_hook_idle( void )				/* called within critical section */
+void
+rkh_hook_idle(void)                 /* called within critical section */
 {
-    RKH_EXIT_CRITICAL( dummy );
-	RKH_TRC_FLUSH();
-    RKH_WAIT_FOR_EVENTS();		/* yield the CPU until new event(s) arrive */
+    RKH_EXIT_CRITICAL(dummy);
+    RKH_TRC_FLUSH();
+    RKH_WAIT_FOR_EVENTS();      /* yield the CPU until new event(s) arrive */
 }
 
-void 
-rkh_assert( RKHROM char * const file, int line )
+void
+rkh_assert(RKHROM char * const file, int line)
 {
-	fprintf( stderr,	"RKH_ASSERT: [%d] line from %s "
-						"file\n", line, file );
-	RKH_TRC_FLUSH();
-	RKH_DIS_INTERRUPT();
-	RKH_TR_FWK_ASSERT( (RKHROM char *)file, __LINE__ );
-	rkh_fwk_exit();
+    fprintf(stderr,    "RKH_ASSERT: [%d] line from %s "
+            "file\n", line, file);
+    RKH_TRC_FLUSH();
+    RKH_DIS_INTERRUPT();
+    RKH_TR_FWK_ASSERT((RKHROM char *)file, __LINE__);
+    rkh_fwk_exit();
 }
-
 
 #if RKH_CFG_TRC_EN == 1
 
-void 
-rkh_trc_open( void )
+void
+rkh_trc_open(void)
 {
-	rkh_trc_init();
+    rkh_trc_init();
 
-	FTBIN_OPEN();
-	TCP_TRACE_OPEN();
-	RKH_TRC_SEND_CFG( BSP_TS_RATE_HZ );
+    FTBIN_OPEN();
+    TCP_TRACE_OPEN();
+    RKH_TRC_SEND_CFG(BSP_TS_RATE_HZ);
 }
 
-
-void 
-rkh_trc_close( void )
+void
+rkh_trc_close(void)
 {
-	FTBIN_CLOSE();
-	TCP_TRACE_CLOSE();
+    FTBIN_CLOSE();
+    TCP_TRACE_CLOSE();
 }
 
-
-RKH_TS_T 
-rkh_trc_getts( void )
+RKH_TS_T
+rkh_trc_getts(void)
 {
-	return ( RKH_TS_T )ts_cntr;
+    return (RKH_TS_T)ts_cntr;
 }
 
-
-void 
-rkh_trc_flush( void )
+void
+rkh_trc_flush(void)
 {
-	rui8_t *blk;
-	TRCQTY_T nbytes;
-	RKH_SR_ALLOC();
+    rui8_t *blk;
+    TRCQTY_T nbytes;
+    RKH_SR_ALLOC();
 
-	FOREVER
-	{
-		nbytes = (TRCQTY_T)1024;
+    FOREVER
+    {
+        nbytes = (TRCQTY_T)1024;
 
-		RKH_ENTER_CRITICAL_();
-		blk = rkh_trc_get_block( &nbytes );
-		RKH_EXIT_CRITICAL_();
+        RKH_ENTER_CRITICAL_();
+        blk = rkh_trc_get_block(&nbytes);
+        RKH_EXIT_CRITICAL_();
 
-		if((blk != (rui8_t *)0))
-		{
-			FTBIN_FLUSH( blk, nbytes );
-			TCP_TRACE_SEND_BLOCK( blk, nbytes );
-		}
-		else
-			break;
-	}
+        if ((blk != (rui8_t *)0))
+        {
+            FTBIN_FLUSH(blk, nbytes);
+            TCP_TRACE_SEND_BLOCK(blk, nbytes);
+        }
+        else
+        {
+            break;
+        }
+    }
 }
 #endif
 
-
 void
-bsp_door_open( void )
+bsp_door_open(void)
 {
-	printf( "+- Door Open\n" );
+    printf("+- Door Open\n");
 }
 
 void
-bsp_oven_init( void )
+bsp_oven_init(void)
 {
-	printf( " Oven is running\n\n" );
+    printf(" Oven is running\n\n");
 }
 
 void
-bsp_emitter_ready( void )
+bsp_emitter_ready(void)
 {
-	printf( "+- Cook Ready \n" );
+    printf("+- Cook Ready \n");
 }
 
 void
-bsp_emitter_on( void )
+bsp_emitter_on(void)
 {
-	time(&cStart);
-	printf( "     Emitter: ON\n" );
+    time(&cStart);
+    printf("     Emitter: ON\n");
 }
 
 void
-bsp_emitter_pause( void )
+bsp_emitter_pause(void)
 {
-	printf( "   Paused\n" );
+    printf("   Paused\n");
 }
 
 void
-bsp_emitter_continue( void )
+bsp_emitter_continue(void)
 {
-	printf( "   Continue\n" );
+    printf("   Continue\n");
 }
 
 void
-bsp_emitter_off( void )
+bsp_emitter_off(void)
 {
-	time(&cStop);
-	printf( "     Emitter: OFF\n" );
-	printf( "     Cook Time: %5.2f sec\n", difftime(cStop, cStart) );
+    time(&cStop);
+    printf("     Emitter: OFF\n");
+    printf("     Cook Time: %5.2f sec\n", difftime(cStop, cStart));
 }
 
-void 
-bsp_init( int argc, char *argv[] )
+void
+bsp_init(int argc, char *argv[])
 {
-	(void)argc;
-	(void)argv;
+    (void)argc;
+    (void)argv;
 
-	print_banner();
-	rkh_fwk_init();
+    print_banner();
+    rkh_fwk_init();
 
-	RKH_FILTER_OFF_SMA( oven );
-	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_LIFO );
-	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_FIFO );
-	RKH_FILTER_OFF_EVENT( RKH_TE_SMA_DCH );
-	RKH_FILTER_OFF_EVENT( RKH_TE_SM_STATE );
-	RKH_FILTER_OFF_EVENT( RKH_TE_SM_EXE_ACT );
-	RKH_FILTER_OFF_GROUP_ALL_EVENTS( RKH_TG_TMR );
+    RKH_FILTER_OFF_SMA(oven);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SMA_LIFO);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SMA_FIFO);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SMA_DCH);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SM_STATE);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SM_EXE_ACT);
+    RKH_FILTER_OFF_GROUP_ALL_EVENTS(RKH_TG_TMR);
 /*	RKH_FILTER_OFF_EVENT( RKH_TE_SM_TS_STATE ); */
-	RKH_FILTER_OFF_EVENT( RKH_TE_FWK_DEFER );
-	RKH_FILTER_OFF_EVENT( RKH_TE_FWK_RCALL );
+    RKH_FILTER_OFF_EVENT(RKH_TE_FWK_DEFER);
+    RKH_FILTER_OFF_EVENT(RKH_TE_FWK_RCALL);
 /*	RKH_FILTER_OFF_GROUP_ALL_EVENTS( RKH_TG_SM ); */
 
-	RKH_FILTER_OFF_ALL_SIGNALS();
+    RKH_FILTER_OFF_ALL_SIGNALS();
 
-	RKH_TRC_OPEN();
+    RKH_TRC_OPEN();
 
-#if defined( RKH_USE_TRC_SENDER )
-	RKH_TR_FWK_OBJ( &panel );
-	RKH_TR_FWK_OBJ( &door );
-	RKH_TR_FWK_OBJ( &rkh_tick );
+#if defined(RKH_USE_TRC_SENDER)
+    RKH_TR_FWK_OBJ(&panel);
+    RKH_TR_FWK_OBJ(&door);
+    RKH_TR_FWK_OBJ(&rkh_tick);
 #endif
 }
 
