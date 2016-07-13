@@ -5,10 +5,7 @@ RKHSRCPATH=$(PWD)/../../../../rkh/source
 PORTPATH= $(RKHSRCPATH)/portable/80x86/linux_st/gnu
 PORTFILE=rkhport
 
-OVEN1SRCPATH=$(PWD)/../../oven1
-OVEN2SRCPATH=$(PWD)/../../oven2
-OVEN3SRCPATH=$(PWD)/../../oven3
-OVEN4SRCPATH=$(PWD)/../../oven4
+DEMOSRCPATH=$(PWD)/../../oven$(oven)
 
 DEFINE= -D__LNXGNU__ -D_BSD_SOURCE
 CFLAGS = -ansi -Wall -I$(RKHSRCPATH)/include -I$(PWD) -I$(PORTPATH) -I$(DEMOSRCPATH) 
@@ -26,9 +23,6 @@ objects:=$(patsubst %.c,%.o,$(wildcard *.c))
 $(PROGNAME): $(objects) $(demoobj) $(rkhobjects) $(portobj) 
 	@$(CC) -o $@ $(objects) $(rkh) $(demo) $(PORTFILE).o $(LDFLAGS)
 
-oven1: $(objects) $(demoobj) $(rkhobjects) $(portobj) 
-	@$(CC) -o $@ $(objects) $(rkh) $(demo) $(PORTFILE).o $(LDFLAGS)
-
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $(DEFINE) $<
 
@@ -37,6 +31,3 @@ clean:
 
 tags:
 	ctags -R $(RKHSRCPATH) $(PWD)
-
-print:
-	@echo $(OVEN1SRCPATH)

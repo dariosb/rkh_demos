@@ -1,99 +1,66 @@
-/**
- * \cond
+/*
  *  --------------------------------------------------------------------------
  *
  *                                Framework RKH
  *                                -------------
  *
- * 	          State-machine framework for reactive embedded systems            
- * 	        
- * 	                    Copyright (C) 2010 Leandro Francucci.
- * 	        All rights reserved. Protected by international copyright laws.
+ *            State-machine framework for reactive embedded systems
+ *
+ *                      Copyright (C) 2010 Leandro Francucci.
+ *          All rights reserved. Protected by international copyright laws.
  *
  *
- * 	RKH is free software: you can redistribute it and/or modify it under the 
- * 	terms of the GNU General Public License as published by the Free Software 
- * 	Foundation, either version 3 of the License, or (at your option) any 
- * 	later version.
+ *  RKH is free software: you can redistribute it and/or modify it under the
+ *  terms of the GNU General Public License as published by the Free Software
+ *  Foundation, either version 3 of the License, or (at your option) any
+ *  later version.
  *
- *  RKH is distributed in the hope that it will be useful, but WITHOUT ANY 
- *  WARRANTY; without even the implied warranty of MERCHANTABILITY or 
- *  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for 
+ *  RKH is distributed in the hope that it will be useful, but WITHOUT ANY
+ *  WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ *  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
  *  more details.
  *
- *  You should have received a copy of the GNU General Public License along 
+ *  You should have received a copy of the GNU General Public License along
  *  with RKH, see copying.txt file.
  *
- * 	Contact information:
- * 	RKH web site:	http://sourceforge.net/projects/rkh-reactivesys/
- * 	e-mail:			francuccilea@gmail.com
- *
- *  --------------------------------------------------------------------------
- *  File                     : bsp.c
- *	Last updated for version : v2.4.04
- *	By                       : DB
- *  --------------------------------------------------------------------------
- *  \endcond
- *
- * 	\file
- * 	\ingroup 	prt
- *
- * 	\brief 		BSP for 80x86 OS win32
+ *  Contact information:
+ *  RKH web site:   http://sourceforge.net/projects/rkh-reactivesys/
+ *  e-mail:         francuccilea@gmail.com
+ *  ---------------------------------------------------------------------------
  */
 
+/**
+ *  \file       bsp.c
+ *  \ingroup    bsp
+ *
+ *  \brief      BSP for 80x86 OS win32
+ */
 
+/* -------------------------- Development history -------------------------- */
+/*
+ *  2015.10.24  DaBa  v1.0.00  Initial version
+ */
+
+/* -------------------------------- Authors -------------------------------- */
+/*
+ *  LeFr  Leandro Francucci  francuccilea@gmail.com
+ *  DaBa  Darío Baliña  dariosb@gmail.com
+ */
+
+/* --------------------------------- Notes --------------------------------- */
+/* ----------------------------- Include files ----------------------------- */
 #include "bsp.h"
 #include "rkh.h"
 #include "oven.h"
-#include "ovenevt.h"
 
 #include <conio.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
 
-
-#define BIN_TRACE					0
-#define SOCKET_TRACE				1
-#define ESC							0x1B
-
-
 RKH_THIS_MODULE
 
-static DWORD tick_msec;			/* clock tick in msec */
-static RKH_TS_T ts_cntr;		/* time stamp counter */
-
-rui8_t running;
-
-static RKH_ROM_STATIC_EVENT( e_start, START );
-static RKH_ROM_STATIC_EVENT( e_open, OPEN );
-static RKH_ROM_STATIC_EVENT( e_close, CLOSE );
-static RKH_ROM_STATIC_EVENT( e_term, TERM );
-#if ( __STOP_BUTTON__ == RKH_ENABLED )
-static RKH_ROM_STATIC_EVENT( e_stop, STOP );
-#endif
-
-
-#if defined( RKH_USE_TRC_SENDER )
-static rui8_t door;
-static rui8_t panel;
-static rui8_t rkh_tick;
-#endif
-
-
-/* 
- * 	For binary trace feature.
- */
-
-#if BIN_TRACE == 1
-static FILE *ftbin;
-#endif
-
-
-/*
- * 	For socket trace feature.
- */
-
+/* ----------------------------- Local macros ------------------------------ */
 #if SOCKET_TRACE == 1
 
 	#include "tcptrc.h"
@@ -146,7 +113,41 @@ static FILE *ftbin;
 	#define FTBIN_OPEN()					(void)0
 #endif
 
+/* ------------------------------- Constants ------------------------------- */
+#define ESC                         0x1B
 
+/* ---------------------------- Local data types --------------------------- */
+/* ---------------------------- Global variables --------------------------- */
+rui8_t running;
+
+/* ---------------------------- Local variables ---------------------------- */
+static DWORD tick_msec;			/* clock tick in msec */
+static RKH_TS_T ts_cntr;		/* time stamp counter */
+
+static RKH_ROM_STATIC_EVENT( e_start, START );
+static RKH_ROM_STATIC_EVENT( e_open, OPEN );
+static RKH_ROM_STATIC_EVENT( e_close, CLOSE );
+static RKH_ROM_STATIC_EVENT( e_term, TERM );
+#if ( __STOP_BUTTON__ == RKH_ENABLED )
+static RKH_ROM_STATIC_EVENT( e_stop, STOP );
+#endif
+
+
+#if defined( RKH_USE_TRC_SENDER )
+static rui8_t door;
+static rui8_t panel;
+static rui8_t rkh_tick;
+#endif
+
+#if BIN_TRACE == 1
+static FILE *ftbin;
+#endif
+
+static time_t cStart, cStop;
+
+
+/* ----------------------- Local function prototypes ----------------------- */
+/* ---------------------------- Local functions ---------------------------- */
 static 
 DWORD WINAPI 
 isr_tmr_thread( LPVOID par )	/* Win32 thread to emulate timer ISR */
@@ -204,7 +205,26 @@ isr_kbd_thread( LPVOID par )	/* Win32 thread to emulate keyboard ISR */
     return 0;
 }
 
+static
+void
+print_banner( void )
+{
+	printf(	"\"oven\" example\n\n" );
+	printf(	"RKH version      = %s\n", RKH_RELEASE );
+	printf(	"Port version     = %s\n", rkh_get_port_version() );
+	printf(	"Port description = %s\n\n", rkh_get_port_desc() );
+	printf(	"\n\n" );
 
+	printf( "1.- Press 'O'/'o' door { Open  } -> oven.\n" );
+	printf( "2.- Press 'C'/'c' door { Close } -> oven.\n" );
+	printf( "3.- Press 'S'/'s' panel{ Start } -> oven.\n" );
+#if ( __STOP_BUTTON__ == RKH_ENABLED )
+	printf( "3.- Press 'P'/'p' panel{ Stop  } -> oven.\n" );
+#endif
+	printf( "4.- Press 'escape' to quit.\n\n\n" );
+}
+
+/* ---------------------------- Global functions --------------------------- */
 void
 rkh_hook_timetick( void )
 {
@@ -263,27 +283,6 @@ rkh_assert( RKHROM char * const file, int line )
 	rkh_fwk_exit();
 }
 
-
-static
-void
-print_banner( void )
-{
-	printf(	"\"oven\" example\n\n" );
-	printf(	"RKH version      = %s\n", RKH_RELEASE );
-	printf(	"Port version     = %s\n", rkh_get_port_version() );
-	printf(	"Port description = %s\n\n", rkh_get_port_desc() );
-	printf(	"\n\n" );
-
-	printf( "1.- Press 'O'/'o' door { Open  } -> oven.\n" );
-	printf( "2.- Press 'C'/'c' door { Close } -> oven.\n" );
-	printf( "3.- Press 'S'/'s' panel{ Start } -> oven.\n" );
-#if ( __STOP_BUTTON__ == RKH_ENABLED )
-	printf( "3.- Press 'P'/'p' panel{ Stop  } -> oven.\n" );
-#endif
-	printf( "4.- Press 'escape' to quit.\n\n\n" );
-}
-
-
 #if RKH_CFG_TRC_EN == 1
 
 void 
@@ -339,21 +338,17 @@ rkh_trc_flush( void )
 #endif
 
 
-static time_t cStart, cStop;
-
 void
 bsp_door_open( void )
 {
 	printf( "+- Door Open\n" );
 }
 
-
 void
 bsp_oven_init( void )
 {
 	printf( " Oven is running\n\n" );
 }
-
 
 void
 bsp_emitter_ready( void )
@@ -368,20 +363,17 @@ bsp_emitter_on( void )
 	printf( "     Emitter: ON\n" );
 }
 
-
 void
 bsp_emitter_pause( void )
 {
 	printf( "   Paused\n" );
 }
 
-
 void
 bsp_emitter_continue( void )
 {
 	printf( "   Continue\n" );
 }
-
 
 void
 bsp_emitter_off( void )
@@ -390,7 +382,6 @@ bsp_emitter_off( void )
 	printf( "     Emitter: OFF\n" );
 	printf( "     Cook Time: %5.2f sec\n", difftime(cStop, cStart) );
 }
-
 
 void 
 bsp_init( int argc, char *argv[] )
@@ -423,3 +414,5 @@ bsp_init( int argc, char *argv[] )
 	RKH_TR_FWK_OBJ( &rkh_tick );
 #endif
 }
+
+/* ------------------------------ End of file ------------------------------ */

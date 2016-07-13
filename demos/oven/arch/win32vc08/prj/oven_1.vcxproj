@@ -15,6 +15,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='out_oven1|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -32,7 +33,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='out_oven1|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\;$(ProjectDir)..\..\..\oven\oven_1;$(ProjectDir)..\..\..\rkh\source\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\;$(ProjectDir)..\..\..\oven1;$(ProjectDir)..\..\..\..\..\rkh\source\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;__W32STVC08__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -50,42 +51,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\oven\oven_1\main.c" />
-    <ClCompile Include="..\..\..\oven\oven_1\oven.c" />
-    <ClCompile Include="..\..\..\oven\oven_1\ovenact.c" />
-    <ClCompile Include="..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.c" />
-    <ClCompile Include="..\..\..\rkh\source\rkh.c" />
-    <ClCompile Include="..\..\..\rkh\source\rkhdyn.c" />
-    <ClCompile Include="..\..\..\rkh\source\rkhmp.c" />
-    <ClCompile Include="..\..\..\rkh\source\rkhrq.c" />
-    <ClCompile Include="..\..\..\rkh\source\rkhs.c" />
-    <ClCompile Include="..\..\..\rkh\source\rkhsma.c" />
-    <ClCompile Include="..\..\..\rkh\source\rkhtbl.c" />
-    <ClCompile Include="..\..\..\rkh\source\rkhtim.c" />
-    <ClCompile Include="..\..\..\rkh\source\rkhtrc.c" />
+    <ClCompile Include="..\..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.c" />
+    <ClCompile Include="..\..\..\..\..\rkh\source\rkh.c" />
+    <ClCompile Include="..\..\..\..\..\rkh\source\rkhdyn.c" />
+    <ClCompile Include="..\..\..\..\..\rkh\source\rkhmp.c" />
+    <ClCompile Include="..\..\..\..\..\rkh\source\rkhrq.c" />
+    <ClCompile Include="..\..\..\..\..\rkh\source\rkhs.c" />
+    <ClCompile Include="..\..\..\..\..\rkh\source\rkhsma.c" />
+    <ClCompile Include="..\..\..\..\..\rkh\source\rkhtbl.c" />
+    <ClCompile Include="..\..\..\..\..\rkh\source\rkhtim.c" />
+    <ClCompile Include="..\..\..\..\..\rkh\source\rkhtrc.c" />
+    <ClCompile Include="..\..\..\oven1\main.c" />
+    <ClCompile Include="..\..\..\oven1\oven.c" />
     <ClCompile Include="..\bsp.c" />
     <ClCompile Include="..\tcptrc.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\oven\oven_1\oven.h" />
-    <ClInclude Include="..\..\..\oven\oven_1\ovenact.h" />
-    <ClInclude Include="..\..\..\oven\oven_1\ovenevt.h" />
-    <ClInclude Include="..\..\..\oven\oven_1\rkhcfg.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkh.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhassert.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhdef.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhevt.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhitl.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhmp.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhplat.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhrdy.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhrq.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhs.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhtim.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhtrc.h" />
-    <ClInclude Include="..\..\..\rkh\source\include\rkhtype.h" />
-    <ClInclude Include="..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.h" />
-    <ClInclude Include="..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkht.h" />
+    <ClInclude Include="..\..\..\oven1\oven.h" />
+    <ClInclude Include="..\..\..\oven1\rkhcfg.h" />
     <ClInclude Include="..\bsp.h" />
     <ClInclude Include="..\tcptrc.h" />
   </ItemGroup>

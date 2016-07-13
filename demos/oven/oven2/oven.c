@@ -94,6 +94,8 @@ oven_init( Oven *const me )
 void 
 cook_start(Oven *const me, RKH_EVT_T *pe )
 {
+    (void)pe;
+
 	RKH_TMR_ONESHOT( &me->timer, RKH_UPCAST(RKH_SMA_T, me), COOK_TIME );
 	bsp_emitter_on();
 }
@@ -102,6 +104,8 @@ cook_start(Oven *const me, RKH_EVT_T *pe )
 void 
 cook_stop(Oven *const me, RKH_EVT_T *pe )
 {
+    (void)pe;
+
 	rkh_tmr_stop( &me->timer );
 	bsp_emitter_off();
 }
