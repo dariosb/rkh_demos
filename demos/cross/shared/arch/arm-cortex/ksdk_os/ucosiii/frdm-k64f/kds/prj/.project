@@ -331,21 +331,6 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>Debug/rkh/port/rkhport.c</name>
-			<type>1</type>
-			<locationURI>copy_PARENT123456/rkh/source/portable/arm-cortex/rkhs/ksdk/kds/rkhport.c</locationURI>
-		</link>
-		<link>
-			<name>Debug/rkh/port/rkhport.h</name>
-			<type>1</type>
-			<locationURI>copy_PARENT123456/rkh/source/portable/arm-cortex/rkhs/ksdk/kds/rkhport.h</locationURI>
-		</link>
-		<link>
-			<name>Debug/rkh/port/rkht.h</name>
-			<type>1</type>
-			<locationURI>copy_PARENT123456/rkh/source/portable/arm-cortex/rkhs/ksdk/kds/rkht.h</locationURI>
-		</link>
-		<link>
 			<name>SDK/platform/utilities/fsl_debug_console.c</name>
 			<type>1</type>
 			<location>C:/Freescale/KSDK_1.2.0/platform/utilities/src/fsl_debug_console.c</location>
