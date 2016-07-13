@@ -89,6 +89,8 @@ oven_init( Oven *const me )
 	RKH_TMR_INIT( &me->timer, &e_tout, NULL );
 }
 
+/* ============================ Effect actions ============================= */
+/* ============================= Entry actions ============================= */
 void 
 cook_start(Oven *const me, RKH_EVT_T *pe )
 {
@@ -96,6 +98,7 @@ cook_start(Oven *const me, RKH_EVT_T *pe )
 	bsp_emitter_on();
 }
 
+/* ============================= Exit actions ============================== */
 void 
 cook_stop(Oven *const me, RKH_EVT_T *pe )
 {
@@ -103,3 +106,5 @@ cook_stop(Oven *const me, RKH_EVT_T *pe )
 	bsp_emitter_off();
 }
 
+/* ================================ Guards ================================= */
+/* ------------------------------ End of file ------------------------------ */
