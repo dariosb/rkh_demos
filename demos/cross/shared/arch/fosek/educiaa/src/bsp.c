@@ -80,9 +80,7 @@ RKH_THIS_MODULE
     }
 
     #define SERIAL_TRACE_SEND_BLOCK(buf_, len_)     \
-    {                                               \
-        ciaaPOSIX_write(utrc, buf_, len_);          \
-    }
+        ciaaPOSIX_write(utrc, buf_, len_)
 #else
     #define SERIAL_TRACE_OPEN()                   (void)0
     #define SERIAL_TRACE_CLOSE()                  (void)0

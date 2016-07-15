@@ -88,6 +88,7 @@ oven_init(Oven *const me)
     RKH_TR_FWK_FUN(&cook_stop);
     RKH_TR_FWK_FUN(&door_open);
     RKH_TR_FWK_FUN(&cook_ready);
+    RKH_TR_FWK_FUN(&cook_restart);
 
     /* send signals to trazer */
     RKH_TR_FWK_SIG(OPEN);
@@ -103,7 +104,9 @@ oven_init(Oven *const me)
 void
 cook_restart(Oven *const me, RKH_EVT_T *pe)
 {
-    RKH_TMR_ONESHOT(&me->timer, oven, COOK_TIME);
+	(void)pe;
+
+    RKH_TMR_ONESHOT(&me->timer, RKH_UPCAST(RKH_SMA_T, me), COOK_TIME);
 }
 
 /* ============================= Entry actions ============================= */

@@ -58,7 +58,11 @@ endif
 PRJ_MKFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 
 # Project Name: based on PROJECT_PATH, used to define OSEK configuration file
+ifeq ($(OS),Windows_NT)
 TOP_PRJ_PATH	= $(shell cygpath -u $(PROJECT_PATH)$(DS)..$(DS)..$(DS)..)
+else
+TOP_PRJ_PATH	= $(PROJECT_PATH)$(DS)..$(DS)..$(DS)shared
+endif
 PROJECT_NAME	= $(lastword $(subst $(DS), , $(TOP_PRJ_PATH)))
 
 # source path
