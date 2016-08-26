@@ -84,6 +84,7 @@ RKH_END_TRANS_TABLE
 
 /* ============================= Active object ============================= */
 RKH_SMA_CREATE(AirCon, airCon, 0, HCAL, &off, init, NULL);
+RKH_SMA_DEF_PTR(airCon);
 
 /* ---------------------------- Local functions ---------------------------- */
 /* ---------------------------- Global functions --------------------------- */
@@ -92,40 +93,34 @@ RKH_SMA_CREATE(AirCon, airCon, 0, HCAL, &off, init, NULL);
 static void
 init(AirCon *const me)
 {
-    bsp_init();
 }
 
 /* ============================ Effect actions ============================= */
 static void
 fanOnOff(AirCon *const me)
 {
-    bsp_fanOnOff();
 }
 
 static void
 setHeater(AirCon *const me)
 {
-    bsp_setHeater();
 }
 
 static void
 setCooler(AirCon *const me)
 {
-    bsp_setCooler();
 }
 
 /* ============================= Entry actions ============================= */
 static void
 setOn(AirCon *const me)
 {
-    bsp_setOn();
 }
 
 /* ============================= Exit actions ============================== */
 static void
 setOff(AirCon *const me)
 {
-    bsp_setOff();
 }
 
 /* ================================ Guards ================================= */

@@ -36,7 +36,7 @@ main(int argc, char *argv[])
 {
     bsp_init(argc, argv);
 
-    RKH_SMA_ACTIVATE(aircon, qsto, QSTO_SIZE, 0, 0);
+    RKH_SMA_ACTIVATE(airCon, qsto, QSTO_SIZE, 0, 0);
     rkh_fwk_enter();
 
     RKH_TRC_CLOSE();

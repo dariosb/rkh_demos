@@ -1,11 +1,11 @@
-PROGNAME=blinky
+PROGNAME=aircon
 
 CC=gcc
 RKHSRCPATH=$(PWD)/../../../../../../../rkh/source
 PORTPATH= $(RKHSRCPATH)/portable/80x86/linux_st/gnu
 PORTFILE=rkhport
 
-DEMOSRCPATH=$(PWD)/../../../../../blinky
+DEMOSRCPATH=$(PWD)/../../../../../aircon
 
 DEFINE= -D__LNXGNU__ -D_BSD_SOURCE
 CFLAGS = -ansi -Wall -I$(RKHSRCPATH)/include -I$(PWD) -I$(PORTPATH) -I$(DEMOSRCPATH) 
