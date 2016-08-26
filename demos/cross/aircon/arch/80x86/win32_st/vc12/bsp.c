@@ -50,7 +50,7 @@
 /* --------------------------------- Notes --------------------------------- */
 /* ----------------------------- Include files ----------------------------- */
 #include "bsp.h"
-#include "blinky.h"
+#include "aircon.h"
 #include "rkh.h"
 
 #include <conio.h>
@@ -120,7 +120,6 @@ rui8_t running;
 
 /* ---------------------------- Local variables ---------------------------- */
 static DWORD tick_msec;         /* clock tick in msec */
-static RKH_ROM_STATIC_EVENT(ev_term, TERMINATE);
 
 #if BIN_TRACE == 1
 static FILE *ftbin;
@@ -153,7 +152,6 @@ isr_kbd_thread(LPVOID par)      /* Win32 thread to emulate keyboard ISR */
         c = _getch();
         if (c == ESC)
         {
-            RKH_SMA_POST_FIFO(blinky, &ev_term, 0);
             running = 0;
         }
     }
@@ -298,7 +296,7 @@ bsp_init(int argc, char *argv[])
     RKH_FILTER_ON_EVENT(RKH_TRC_ALL_EVENTS);
     RKH_FILTER_OFF_EVENT(RKH_TE_TMR_TOUT);
     RKH_FILTER_OFF_EVENT(RKH_TE_SM_STATE);
-    RKH_FILTER_OFF_SMA(blinky);
+    RKH_FILTER_OFF_SMA(airCon);
     RKH_FILTER_OFF_ALL_SIGNALS();
 
     RKH_TRC_OPEN();
