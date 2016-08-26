@@ -22,6 +22,8 @@
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
 /* ======================== States and pseudostates ======================== */
+RKH_DCLR_BASIC_STATE ledOff, ledOn;
+
 RKH_CREATE_BASIC_STATE(ledOn, NULL, NULL, RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(ledOn)
     RKH_TRREG(TIMEOUT, NULL, blinky_ledOff, &ledOff),
