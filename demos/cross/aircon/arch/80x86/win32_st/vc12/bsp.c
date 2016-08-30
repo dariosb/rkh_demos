@@ -56,6 +56,7 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <windows.h>
 #include <time.h>
 
 RKH_THIS_MODULE
@@ -93,53 +94,32 @@ static SOCKET tsock;
     #define TCP_TRACE_SEND_BLOCK(buf_, len_)  (void)0
 #endif
 
-#if BIN_TRACE == 1
-    #define FTBIN_FLUSH(buf_, len_) \
-    fwrite ((buf_), 1, (len_), ftbin); \
-    fflush(ftbin)
-    #define FTBIN_CLOSE() \
-    fclose(ftbin)
-    #define FTBIN_OPEN() \
-    if ((ftbin = fopen("../ftbin", "w+b")) == NULL) \
-    { \
-        perror("Can't open file\n"); \
-        exit(EXIT_FAILURE); \
-    }
-#else
-    #define FTBIN_FLUSH(buf_, len_)       (void)0
-    #define FTBIN_CLOSE()                 (void)0
-    #define FTBIN_OPEN()                  (void)0
-#endif
-
 /* ------------------------------- Constants ------------------------------- */
 #define ESC                         0x1B
+#define FAN_SPEED_UP                '+'
+#define FAN_SPEED_DOWN              '-'
+#define POWER_BUTTON                'p'
+#define MODE_BUTTON                 'm'
+#define X_OFFSET                    2
+#define Y_OFFSET                    20
+
 
 /* ---------------------------- Local data types --------------------------- */
 /* ---------------------------- Global variables --------------------------- */
 rui8_t running;
 
 /* ---------------------------- Local variables ---------------------------- */
-static DWORD tick_msec;         /* clock tick in msec */
+static RKH_ROM_STATIC_EVENT( e_powerButton, evPowerButton );
+static RKH_ROM_STATIC_EVENT( e_modeButton, evModeButton );
+static RKH_ROM_STATIC_EVENT( e_FanSpeedUp, evFanSpeedUp );
+static RKH_ROM_STATIC_EVENT( e_FanSpeedDown, evFanSpeedDown );
 
-#if BIN_TRACE == 1
-static FILE *ftbin;
-#endif
+static ruint l_pannel;
+
+static DWORD tick_msec;         /* clock tick in msec */
 
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
-static
-DWORD WINAPI
-isr_tmr_thread(LPVOID par)      /* Win32 thread to emulate timer ISR */
-{
-    (void)par;
-    while (running)
-    {
-        RKH_TIM_TICK(0);
-        Sleep(tick_msec);
-    }
-    return 0;
-}
-
 static
 DWORD WINAPI
 isr_kbd_thread(LPVOID par)      /* Win32 thread to emulate keyboard ISR */
@@ -150,54 +130,69 @@ isr_kbd_thread(LPVOID par)      /* Win32 thread to emulate keyboard ISR */
     while (running)
     {
         c = _getch();
-        if (c == ESC)
+        switch(tolower(c))
         {
-            running = 0;
+            case ESC:
+                running = 0;
+                break;
+
+            case POWER_BUTTON:
+                RKH_SMA_POST_FIFO( airCon, &e_powerButton, &l_pannel );
+                break;
+
+            case MODE_BUTTON:
+                RKH_SMA_POST_FIFO( airCon, &e_modeButton, &l_pannel );
+                break;
+
+            case FAN_SPEED_UP:
+                RKH_SMA_POST_FIFO( airCon, &e_FanSpeedUp, &l_pannel );
+                break;
+
+            case FAN_SPEED_DOWN:
+                RKH_SMA_POST_FIFO( airCon, &e_FanSpeedDown, &l_pannel );
+                break;
         }
     }
     return 0;
+}
+
+static void
+gotoxy(short x, short y)
+{
+    COORD coord;
+
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
 static
 void
 print_banner(void)
 {
-    printf("Blinky: a very simple state machine example.\n\n");
+    printf("AirCon: a very simple state machine example.\n\n");
     printf("RKH version      = %s\n", RKH_RELEASE);
     printf("Port version     = %s\n", rkh_get_port_version());
     printf("Port description = %s\n\n", rkh_get_port_desc());
     printf("Description: \n\n"
            "The goal of this demo application is to explain how to \n"
-           "represent a \"flat\" state machine and how to use the timer \n"
-           "services using the RKH framework. To do that is proposed a \n"
-           "very simple demo that use one state machine and one timer, \n"
-           "which is shown and explained in the reference manual section \n"
-           "\"Examples\". "
+           "represent a \"hierarchical\" state machine using RKH framework\n"
            "This is the 'hello world' of RKH programming!.\n\n\n");
 
-    printf("1.- Press ESC to quit \n\n\n");
+    printf("To simulate panel buttons press:\n");
+    printf("\t 'P' or 'p' - Power Button\n");
+    printf("\t 'M' or 'm' - Mode Button\n");
+    printf("\t '+' or '-' - Fan speed up/down\n");
 }
 
 /* ---------------------------- Global functions --------------------------- */
 void
-rkh_hook_timetick(void)
-{
-}
-
-void
 rkh_hook_start(void)
 {
-    DWORD thtmr_id, thkbd_id;
-    HANDLE hth_tmr, hth_kbd;
+    DWORD thkbd_id;
+    HANDLE hth_kbd;
 
-    /* set the desired tick rate */
-    tick_msec = RKH_TICK_RATE_MS;
     running = (rui8_t)1;
-
-    /* create the ISR timer thread */
-    hth_tmr = CreateThread(NULL, 1024, &isr_tmr_thread, 0, 0, &thtmr_id);
-    RKH_ASSERT(hth_tmr != (HANDLE)0);
-    SetThreadPriority(hth_tmr, THREAD_PRIORITY_TIME_CRITICAL);
 
     /* create the ISR keyboard thread */
     hth_kbd = CreateThread(NULL, 1024, &isr_kbd_thread, 0, 0, &thkbd_id);
@@ -236,7 +231,6 @@ void
 rkh_trc_open(void)
 {
     rkh_trc_init();
-    FTBIN_OPEN();
     TCP_TRACE_OPEN();
     RKH_TRC_SEND_CFG(BSP_TS_RATE_HZ);
 }
@@ -244,7 +238,6 @@ rkh_trc_open(void)
 void
 rkh_trc_close(void)
 {
-    FTBIN_CLOSE();
     TCP_TRACE_CLOSE();
 }
 
@@ -271,7 +264,6 @@ rkh_trc_flush(void)
 
         if ((blk != (rui8_t *)0))
         {
-            FTBIN_FLUSH(blk, nbytes);
             TCP_TRACE_SEND_BLOCK(blk, nbytes);
         }
         else
@@ -302,17 +294,45 @@ bsp_init(int argc, char *argv[])
     RKH_TRC_OPEN();
 }
 
-void
-bsp_led_on(void)
+void 
+BSP_AirConInit(void)
 {
-    printf("LED ON\n");
+    printf("\nAir Conditioner Init\n");
+
+    BSP_AirConPower(SET_OFF);
+    BSP_setCooler(SET_OFF);
+    BSP_setHeater(SET_OFF);
+    BSP_setFanSpeed(0);
+}
+
+void 
+BSP_AirConPower(setOnOff_t set)
+{
+    gotoxy(X_OFFSET, Y_OFFSET+0);
+    printf("Power: %-3s", (set == SET_ON) ? "ON" : "OFF");
+}
+
+void 
+BSP_setCooler(setOnOff_t set)
+{
+    gotoxy(X_OFFSET, Y_OFFSET+1);
+    printf("Cooler: %-3s", (set == SET_ON) ? "ON" : "OFF");
+}
+
+void 
+BSP_setHeater(setOnOff_t set)
+{
+    gotoxy(X_OFFSET, Y_OFFSET+2);
+    printf("Heater: %-3s", (set == SET_ON) ? "ON" : "OFF");
 }
 
 void
-bsp_led_off(void)
+BSP_setFanSpeed(ruint speed)
 {
-    printf("LED OFF\n");
+    gotoxy(X_OFFSET, Y_OFFSET+3);
+    printf("Fan Speed: %d", speed);
 }
+
 
 /* ------------------------------ End of file ------------------------------ */
 

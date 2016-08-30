@@ -61,8 +61,7 @@ extern "C" {
 
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
-#define BIN_TRACE                   0
-#define SOCKET_TRACE                1
+#define SOCKET_TRACE                0
 /* Trazer Tool IP Address */
     #define TRC_IP_ADDR                 "127.0.0.1"
 /* Trazer Tool TCP Port Address */
@@ -79,11 +78,21 @@ extern "C" {
 #define BSP_TS_RATE_HZ              CLOCKS_PER_SEC
 
 /* ------------------------------- Data types ------------------------------ */
+typedef enum
+{
+    SET_OFF,
+    SET_ON
+}setOnOff_t;
+
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
 void bsp_init(int argc, char *argv[]);
-void bsp_led_on(void);
-void bsp_led_off(void);
+
+void BSP_AirConInit(void);
+void BSP_AirConPower(setOnOff_t set);
+void BSP_setCooler(setOnOff_t set);
+void BSP_setHeater(setOnOff_t set);
+void BSP_setFanSpeed(ruint speed);
 
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus

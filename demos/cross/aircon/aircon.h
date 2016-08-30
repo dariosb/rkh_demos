@@ -40,7 +40,8 @@ typedef enum
 {
     evPowerButton,
     evModeButton,
-    evFanButton
+    evFanSpeedUp,
+    evFanSpeedDown
 }EvAirCon;
 
 /* ================================= Events ================================ */
