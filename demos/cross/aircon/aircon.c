@@ -28,26 +28,17 @@
 /* ------------------------------- Constants ------------------------------- */
 #define MAX_FAN_SPEED   5
 
+enum { POWER_OFF, POWER_ON };
+enum { COOLER_MODE, HEATER_MODE };
+
 /* ---------------------------- Local data types --------------------------- */
-typedef enum
-{
-    POWER_OFF,
-    POWER_ON
-} Power_t;
-
-typedef enum
-{
-    COOLER_MODE,
-    HEATER_MODE
-} Mode_t;
-
 typedef struct AirCon AirCon;
 struct AirCon
 {
     RKH_SMA_T base;
-    ruint fanSpeed;
-    Power_t power;
-    Mode_t mode;
+    int fanSpeed;
+    int power;
+    int mode;
 };
 
 /* ---------------------------- Global variables --------------------------- */
