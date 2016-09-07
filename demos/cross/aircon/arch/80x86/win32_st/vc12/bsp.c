@@ -292,16 +292,10 @@ bsp_init(int argc, char *argv[])
     RKH_FILTER_OFF_ALL_SIGNALS();
 
     RKH_TRC_OPEN();
-}
 
-void 
-BSP_AirConInit(void)
-{
-    printf("\nAir Conditioner Init\n");
-
-    BSP_AirConPower(SET_OFF);
-    BSP_setCooler(SET_OFF);
-    BSP_setHeater(SET_OFF);
+    BSP_setPowerOff();
+    BSP_setCoolerOff();
+    BSP_setHeaterOff();
     BSP_setFanSpeed(0);
 }
 

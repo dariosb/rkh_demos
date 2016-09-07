@@ -88,11 +88,18 @@ typedef enum
 /* -------------------------- Function prototypes -------------------------- */
 void bsp_init(int argc, char *argv[]);
 
-void BSP_AirConInit(void);
 void BSP_AirConPower(setOnOff_t set);
 void BSP_setCooler(setOnOff_t set);
 void BSP_setHeater(setOnOff_t set);
 void BSP_setFanSpeed(ruint speed);
+
+#define BSP_setPowerOff()   BSP_AirConPower(SET_OFF)
+#define BSP_setPowerOn()    BSP_AirConPower(SET_ON)
+#define BSP_setCoolerOff()  BSP_setCooler(SET_OFF)
+#define BSP_setCoolerOn()   BSP_setCooler(SET_ON)
+#define BSP_setHeaterOff()  BSP_setHeater(SET_OFF)
+#define BSP_setHeaterOn()   BSP_setHeater(SET_ON)
+
 
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus

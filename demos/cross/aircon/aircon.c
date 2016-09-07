@@ -23,6 +23,7 @@
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
 #include "aircon.h"
+#include "bsp.h"
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
@@ -36,9 +37,7 @@ typedef struct AirCon AirCon;
 struct AirCon
 {
     RKH_SMA_T base;
-    int fanSpeed;
-    int power;
-    int mode;
+    unsigned int fanSpeed;
 };
 
 /* ---------------------------- Global variables --------------------------- */
@@ -50,66 +49,71 @@ static void
 init(AirCon *const me)
 {
     me->fanSpeed = 0;
-    me->power = POWER_OFF;
-    me->mode = COOLER_MODE;
 }
 
 /* ============================ Effect actions ============================= */
 static void
-setPowerOn(AirCon *const me)
-{
-    me->power = POWER_ON;
-}
-
-static void
-setPowerOff(AirCon *const me)
-{
-    me->power = POWER_OFF;
-}
-
-static void
 fanSpeed_inc(AirCon *const me)
 {
-    ++me->fanSpeed;
+    BSP_setFanSpeed(++me->fanSpeed);
 }
 
 static void
 fanSpeed_dec(AirCon *const me)
 {
-   --me->fanSpeed; 
+    BSP_setFanSpeed(--me->fanSpeed);
 }
 
 /* ============================= Entry actions ============================= */
 static void
-setCoolerMode(AirCon *const me)
+setPowerOff(AirCon *const me)
 {
-    me->mode = COOLER_MODE;
+    BSP_setPowerOff();
 }
 
 static void
-setHeaterMode(AirCon *const me)
+setPowerOn(AirCon *const me)
 {
-    me->mode = HEATER_MODE;
+    BSP_setPowerOn();
+}
+
+static void
+setCoolerOn(AirCon *const me)
+{
+    BSP_setCoolerOn();
+}
+
+static void
+setHeaterOn(AirCon *const me)
+{
+    BSP_setHeaterOn();
 }
 
 /* ============================= Exit actions ============================== */
 static void
-fanSpeed_clear(AirCon *const me)
+setCoolerOff(AirCon *const me)
 {
-    me->fanSpeed = 0;
+    BSP_setCoolerOff();
+}
+
+static void
+setHeaterOff(AirCon *const me)
+{
+    BSP_setHeaterOff();
 }
 
 /* ================================ Guards ================================= */
 static rbool_t
-fanSpeed_isInRange(AirCon *const me)
+fanSpeed_isNotZero(AirCon *const me)
 {
-    return (me->fanSpeed < MAX_FAN_SPEED) ? RKH_GTRUE : RKH_GFALSE;
+    return (me->fanSpeed != 0) ? RKH_GTRUE : RKH_GFALSE;
 }
 
 static rbool_t
-fanSpeed_isNotZero(AirCon *const me)
+fanSpeed_isInRange(AirCon *const me)
 {
-    return (me->fanSpeed) ? RKH_GTRUE : RKH_GFALSE;
+    return ((0 <= me->fanSpeed) && (me->fanSpeed < MAX_FAN_SPEED)) ? 
+            RKH_GTRUE : RKH_GFALSE;
 }
 
 /* ---------------------------- Global functions --------------------------- */
@@ -118,24 +122,25 @@ fanSpeed_isNotZero(AirCon *const me)
 RKH_DCLR_BASIC_STATE off, cooler, heater;
 RKH_DCLR_COMP_STATE on;
 
-RKH_CREATE_BASIC_STATE(off, NULL, NULL, RKH_ROOT, NULL);
+RKH_CREATE_BASIC_STATE(off, setPowerOff, NULL, RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(off)
-    RKH_TRREG(evPowerButton, NULL, setPowerOn, &on),
+    RKH_TRREG(evPowerButton, NULL, NULL, &on),
 RKH_END_TRANS_TABLE
 
-RKH_CREATE_COMP_STATE(on, NULL, fanSpeed_clear, RKH_ROOT, &cooler, NULL);
+RKH_CREATE_COMP_REGION_STATE(on, setPowerOn, NULL, RKH_ROOT, &cooler,
+                             NULL, RKH_NO_HISTORY, NULL, NULL, NULL, NULL);
 RKH_CREATE_TRANS_TABLE(on)
-    RKH_TRINT(evFanSpeedUp, fanSpeed_isInRange, fanSpeed_inc),
     RKH_TRINT(evFanSpeedDown, fanSpeed_isNotZero, fanSpeed_dec),
-    RKH_TRREG(evPowerButton, NULL, setPowerOff, &off),
+    RKH_TRINT(evFanSpeedUp, fanSpeed_isInRange, fanSpeed_inc),
+    RKH_TRREG(evPowerButton, NULL, NULL, &off),
 RKH_END_TRANS_TABLE
 
-RKH_CREATE_BASIC_STATE(cooler, setCoolerMode, NULL, &on, NULL);
+RKH_CREATE_BASIC_STATE(cooler, setCoolerOn, setCoolerOff, &on, NULL);
 RKH_CREATE_TRANS_TABLE(cooler)
     RKH_TRREG(evModeButton, NULL, NULL, &heater),
 RKH_END_TRANS_TABLE
 
-RKH_CREATE_BASIC_STATE(heater, setHeaterMode, NULL, &on, NULL);
+RKH_CREATE_BASIC_STATE(heater, setHeaterOn, setHeaterOff, &on, NULL);
 RKH_CREATE_TRANS_TABLE(heater)
     RKH_TRREG(evModeButton, NULL, NULL, &cooler),
 RKH_END_TRANS_TABLE
