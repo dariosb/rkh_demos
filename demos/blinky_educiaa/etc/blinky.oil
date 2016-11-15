@@ -1,0 +1,118 @@
+/*
+ *  --------------------------------------------------------------------------
+ *
+ *                                Framework RKH
+ *                                -------------
+ *
+ *            State-machine framework for reactive embedded systems
+ *
+ *                      Copyright (C) 2010 Leandro Francucci.
+ *          All rights reserved. Protected by international copyright laws.
+ *
+ *
+ *  RKH is free software: you can redistribute it and/or modify it under the
+ *  terms of the GNU General Public License as published by the Free Software
+ *  Foundation, either version 3 of the License, or (at your option) any
+ *  later version.
+ *
+ *  RKH is distributed in the hope that it will be useful, but WITHOUT ANY
+ *  WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ *  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ *  more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with RKH, see copying.txt file.
+ *
+ *  Contact information:
+ *  RKH web site:   http://sourceforge.net/projects/rkh-reactivesys/
+ *  e-mail:         francuccilea@gmail.com
+ *  ---------------------------------------------------------------------------
+ */
+
+/**
+ *  \file       blinky.oil
+ *  \ingroup    app
+ *
+ *  \brief      RKH Blinky OIL configuration file 
+ */
+
+/* -------------------------- Development history -------------------------- */
+/*
+ *  2015.10.24  DaBa  v1.0.00  Initial version
+ */
+
+/* -------------------------------- Authors -------------------------------- */
+/*
+ *  LeFr  Leandro Francucci  francuccilea@gmail.com
+ *  DaBa  Darío Baliña  dariosb@gmail.com
+ */
+
+/* --------------------------------- Notes --------------------------------- */
+/*   RKH Blinky OIL configuration file                                       */
+/*                                                                           */
+/*  This file describes the current OSEK configuration.                      */
+/*  References:                                                              */
+/*  - OSEK OS standard: http://portal.osek-vdx.org/files/pdf/specs/os223.pdf */
+/*  - OSEK OIL standard: http://portal.osek-vdx.org/files/pdf/specs/oil25.pdf*/
+/*****************************************************************************/
+
+OSEK OSEK {
+
+   OS	ExampleOS {
+      STATUS = EXTENDED;
+      ERRORHOOK = TRUE;
+      PRETASKHOOK = FALSE;
+      POSTTASKHOOK = FALSE;
+      STARTUPHOOK = FALSE;
+      SHUTDOWNHOOK = FALSE;
+      USERESSCHEDULER = FALSE;
+      MEMMAP = FALSE;
+   };
+
+   EVENT = RKHEvent;
+   
+   APPMODE = RkhApp;
+
+   TASK RkhTraceTask {
+      PRIORITY = 1;
+      ACTIVATION = 1;
+      AUTOSTART = FALSE;
+      STACK = 512;
+      TYPE = BASIC;
+      SCHEDULE = FULL;
+   }
+
+   TASK BlinkyTask {
+      PRIORITY = 2;
+      ACTIVATION = 1;
+      AUTOSTART = FALSE;
+      STACK = 512;
+      TYPE = EXTENDED;
+      SCHEDULE = FULL;
+      EVENT = RKHEvent;
+   }
+
+   ALARM RKH_TickAlarm {
+      COUNTER = HardwareCounter;
+      ACTION = ALARMCALLBACK {
+	     ALARMCALLBACKNAME = TickHandler; 
+	  }
+   }
+
+   COUNTER HardwareCounter {
+      MAXALLOWEDVALUE = 1000;
+      TICKSPERBASE = 1;
+      MINCYCLE = 1;
+      TYPE = HARDWARE;
+      COUNTER = HWCOUNTER0;
+   };
+
+   ISR UART2_IRQHandler {
+      INTERRUPT = UART2;
+      CATEGORY = 2;
+      PRIORITY = 0;
+   };
+
+};
+
+/* ------------------------------ End of file ------------------------------ */
