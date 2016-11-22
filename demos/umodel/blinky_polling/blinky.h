@@ -14,8 +14,8 @@
 
 /* --------------------------------- Notes --------------------------------- */
 /* --------------------------------- Module -------------------------------- */
-#ifndef __OVEN_H__
-#define __OVEN_H__
+#ifndef __BLINKY_H__
+#define __BLINKY_H__
 
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
@@ -26,38 +26,36 @@ extern "C" {
 #endif
 
 /* --------------------------------- Macros -------------------------------- */
-#define BLINK_TICK       RKH_TIME_SEC(5)     /* Cook cycle duration time */
-
 /* -------------------------------- Constants ------------------------------ */
+#define DELAY   RKH_TIME_SEC(2)
+
 /* ================================ Signals ================================ */
 typedef enum bl_sigs_t
 {
     BLINK, 
-    START,
+    TOGGLE,
     STOP,
+    TERM
 } OV_SIGS_T;
 
 /* ======================== Declares active object ========================= */
 RKH_SM_DCLR(blinky);
 
 /* =================== Declares states and pseudostates ==================== */
-RKH_DCLR_BASIC_STATE idle, ready, cooking;
+RKH_DCLR_BASIC_STATE idle, blinking;
 
 /* ------------------------------- Data types ------------------------------ */
 //typedef struct Blinky Blinky;
 
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
-/* ============================ Initial action ============================= */
-void oven_init(Oven *const me);
+void blinky_tick(void);
+void blinky_blink(void);
 
+/* ============================ Initial action ============================= */
 /* ============================ Effect actions ============================= */
 /* ============================= Entry actions ============================= */
-void cook_start(Oven *const me, RKH_EVT_T *pe);
-
 /* ============================= Exit actions ============================== */
-void cook_stop(Oven *const me, RKH_EVT_T *pe);
-
 /* ================================ Guards ================================= */
 
 /* -------------------- External C language linkage end -------------------- */

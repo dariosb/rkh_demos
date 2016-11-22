@@ -16,6 +16,33 @@
     <ClCompile Include="..\..\..\blinky.c">
       <Filter>blinky</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhtrc.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhtim.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhtbl.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhsma.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhs.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhrq.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhmp.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhdyn.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="blinky">
@@ -34,6 +61,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\blinky.h">
       <Filter>blinky</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkht.h">
+      <Filter>rkh</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

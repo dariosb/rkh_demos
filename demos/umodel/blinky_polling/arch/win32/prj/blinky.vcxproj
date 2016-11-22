@@ -53,7 +53,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\;$(ProjectDir)..\..\;$(ProjectDir)..\..\..\..\..\..\rkh\source\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\;$(ProjectDir)..\..\..\;$(ProjectDir)..\..\..\..\..\..\rkh\source\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;__W32STVC08__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -90,13 +90,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.c" />
     <ClCompile Include="..\..\..\..\..\..\rkh\source\rkh.c" />
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhdyn.c" />
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhmp.c" />
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhrq.c" />
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhs.c" />
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhsma.c" />
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhtbl.c" />
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhtim.c" />
+    <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhtrc.c" />
     <ClCompile Include="..\..\..\blinky.c" />
     <ClCompile Include="..\..\..\main.c" />
     <ClCompile Include="..\bsp.c" />
     <ClCompile Include="..\tcptrc.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkht.h" />
     <ClInclude Include="..\..\..\blinky.h" />
     <ClInclude Include="..\..\..\rkhcfg.h" />
   </ItemGroup>

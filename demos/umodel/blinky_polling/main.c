@@ -18,7 +18,7 @@
 #include "rkh.h"
 #include "rkhtrc.h"
 #include "bsp.h"
-#include "oven.h"
+#include "blinky.h"
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
@@ -34,7 +34,6 @@ main(int argc, char *argv[])
     bsp_init(argc, argv);
 
     rkh_sm_init(blinky);
-    RKH_SMA_ACTIVATE(oven, qsto, QSTO_SIZE, 0, 0);
 
     rkh_fwk_enter();
 

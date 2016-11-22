@@ -54,10 +54,15 @@
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
 
+/* ---------------------- External C language linkage ---------------------- */
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
 #define BIN_TRACE                   0
-#define SOCKET_TRACE                1
+#define SOCKET_TRACE                0
 
 #define BSP_TICKS_PER_SEC           RKH_CFG_FWK_TICK_RATE_HZ
 
@@ -74,14 +79,8 @@
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
 void bsp_init(int argc, char *argv[]);
+void bsp_set_led(rui8_t led);
 
-void bsp_door_open(void);
-void bsp_oven_init(void);
-void bsp_emitter_ready(void);
-void bsp_emitter_on(void);
-void bsp_emitter_off(void);
-void bsp_emitter_pause(void);
-void bsp_emitter_continue(void);
 
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus

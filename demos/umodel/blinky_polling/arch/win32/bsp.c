@@ -123,9 +123,6 @@ rui8_t running;
 static DWORD tick_msec;         /* clock tick in msec */
 static RKH_TS_T ts_cntr;        /* time stamp counter */
 
-static RKH_ROM_STATIC_EVENT(e_start, START);
-static RKH_ROM_STATIC_EVENT(e_open, OPEN);
-static RKH_ROM_STATIC_EVENT(e_close, CLOSE);
 static RKH_ROM_STATIC_EVENT(e_term, TERM);
 #if (__STOP_BUTTON__ == RKH_ENABLED)
 static RKH_ROM_STATIC_EVENT(e_stop, STOP);
@@ -154,6 +151,7 @@ isr_tmr_thread(LPVOID par)      /* Win32 thread to emulate timer ISR */
     {
         RKH_TIM_TICK(&rkh_tick);
         Sleep(tick_msec);
+        blinky_tick();
     }
     return 0;
 }
@@ -173,25 +171,10 @@ isr_kbd_thread(LPVOID par)      /* Win32 thread to emulate keyboard ISR */
         {
             case ESC:
                 running = 0;
-                RKH_SMA_POST_FIFO(oven, &e_term, &panel);
                 break;
 
-            case 's':
-                RKH_SMA_POST_FIFO(oven, &e_start, &panel);
-                break;
-
-#if (__STOP_BUTTON__ == RKH_ENABLED)
-            case 'p':
-                RKH_SMA_POST_FIFO(oven, &e_stop, &panel);
-                break;
-#endif
-
-            case 'o':
-                RKH_SMA_POST_FIFO(oven, &e_open, &door);
-                break;
-
-            case 'c':
-                RKH_SMA_POST_FIFO(oven, &e_close, &door);
+            case 'b':
+                blinky_blink();
                 break;
 
             default:
@@ -205,19 +188,14 @@ static
 void
 print_banner(void)
 {
-    printf("\"oven\" example\n\n");
+    printf("\"Blinky Polling\" example\n\n");
     printf("RKH version      = %s\n", RKH_RELEASE);
     printf("Port version     = %s\n", rkh_get_port_version());
     printf("Port description = %s\n\n", rkh_get_port_desc());
     printf("\n\n");
 
-    printf("1.- Press 'O'/'o' door { Open  } -> oven.\n");
-    printf("2.- Press 'C'/'c' door { Close } -> oven.\n");
-    printf("3.- Press 'S'/'s' panel{ Start } -> oven.\n");
-#if (__STOP_BUTTON__ == RKH_ENABLED)
-    printf("3.- Press 'P'/'p' panel{ Stop  } -> oven.\n");
-#endif
-    printf("4.- Press 'escape' to quit.\n\n\n");
+    printf("1.- Press 'B'/'b' blink\n");
+    printf("2.- Press 'escape' to quit.\n\n\n");
 }
 
 /* ---------------------------- Global functions --------------------------- */
@@ -260,7 +238,7 @@ rkh_hook_idle(void)                 /* called within critical section */
 {
     RKH_EXIT_CRITICAL(dummy);
     RKH_TRC_FLUSH();
-    RKH_WAIT_FOR_EVENTS();      /* yield the CPU until new event(s) arrive */
+//    RKH_WAIT_FOR_EVENTS();      /* yield the CPU until new event(s) arrive */
 }
 
 void
@@ -329,48 +307,9 @@ rkh_trc_flush(void)
 #endif
 
 void
-bsp_door_open(void)
+bsp_set_led( rui8_t led )
 {
-    printf("+- Door Open\n");
-}
-
-void
-bsp_oven_init(void)
-{
-    printf(" Oven is running\n\n");
-}
-
-void
-bsp_emitter_ready(void)
-{
-    printf("+- Cook Ready \n");
-}
-
-void
-bsp_emitter_on(void)
-{
-    time(&cStart);
-    printf("     Emitter: ON\n");
-}
-
-void
-bsp_emitter_pause(void)
-{
-    printf("   Paused\n");
-}
-
-void
-bsp_emitter_continue(void)
-{
-    printf("   Continue\n");
-}
-
-void
-bsp_emitter_off(void)
-{
-    time(&cStop);
-    printf("     Emitter: OFF\n");
-    printf("     Cook Time: %5.2f sec\n", difftime(cStop, cStart));
+   printf("LED %s\n", led ? "ON" : "OFF");
 }
 
 void
