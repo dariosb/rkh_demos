@@ -43,7 +43,6 @@
 
 /* -------------------------------- Authors -------------------------------- */
 /*
- *  LeFr  Leandro Francucci  francuccilea@gmail.com
  *  DaBa  Darío Baliña  dariosb@gmail.com
  */
 
@@ -61,10 +60,6 @@ extern "C" {
 
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
-#define BIN_TRACE                   0
-#define SOCKET_TRACE                0
-
-#define BSP_TICKS_PER_SEC           RKH_CFG_FWK_TICK_RATE_HZ
 
 /**
  *  \brief
@@ -73,12 +68,11 @@ extern "C" {
  *  of seconds.
  */
 
-#define BSP_TS_RATE_HZ              RKH_CFG_FWK_TICK_RATE_HZ
+#define BSP_TICKS_PER_SEC           RKH_CFG_FWK_TICK_RATE_HZ
 
 /* ------------------------------- Data types ------------------------------ */
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
-void bsp_init(int argc, char *argv[]);
 void bsp_set_led(rui8_t led);
 
 
