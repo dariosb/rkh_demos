@@ -102,7 +102,6 @@
     <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhtrc.c" />
     <ClCompile Include="..\..\..\blinky.c" />
     <ClCompile Include="..\..\..\main.c" />
-    <ClCompile Include="..\bsp.c" />
     <ClCompile Include="..\tcptrc.c" />
   </ItemGroup>
   <ItemGroup>
