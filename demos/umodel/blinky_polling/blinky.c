@@ -30,13 +30,13 @@ static void toggle(void);
 /* ======================== States and pseudostates ======================== */
 RKH_CREATE_BASIC_STATE(idle, NULL, NULL,  RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(idle)
-    RKH_TRREG(BLINK,    NULL,   start,   &blinking),
+    RKH_TRREG(evBlink,    NULL,   start,   &blinking),
 RKH_END_TRANS_TABLE
 
 RKH_CREATE_BASIC_STATE(blinking, NULL, NULL,  RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(blinking)
-    RKH_TRINT(TOGGLE,   NULL,   toggle),
-    RKH_TRREG(BLINK,    NULL,   stop,   &idle),
+    RKH_TRINT(evToggle,   NULL,   toggle),
+    RKH_TRREG(evBlink,    NULL,   stop,   &idle),
 RKH_END_TRANS_TABLE
 
 
@@ -55,9 +55,9 @@ RKH_SM_DEF_PTR(blinky);
 
 /* ---------------------------- Local variables ---------------------------- */
 
-rui8_t blink, led;
-rui32_t led_tick;
-RKH_EVT_T evt;
+static rui8_t blink, led;
+static rui32_t led_tick;
+static RKH_EVT_T evt;
 
 /* ---------------------------- Local functions ---------------------------- */
 /* ============================ Initial action ============================= */
@@ -79,11 +79,8 @@ init(void)
     RKH_TR_FWK_FUN(&toggle);
 
     /* send signals to trazer */
-    RKH_TR_FWK_SIG(BLINK);
-    RKH_TR_FWK_SIG(TOGGLE);
-    RKH_TR_FWK_SIG(TERM);
-   
-
+    RKH_TR_FWK_SIG(evBlink);
+    RKH_TR_FWK_SIG(evToggle);
 }
 
 /* ============================ Effect actions ============================= */
@@ -124,11 +121,11 @@ blinky_sm_tick(void)
        if( blink )
        {
            led_tick = DELAY;
-           MK_SET_EVT(&evt, TOGGLE);
+           MK_SET_EVT(&evt, evToggle);
        }
        else
        {
-           MK_SET_EVT(&evt, BLINK);
+           MK_SET_EVT(&evt, evBlink);
        }
 
        rkh_sm_dispatch(blinky, &evt );
@@ -143,7 +140,7 @@ blinky_sm_blink(void)
    if( blink )
    {
        led_tick = DELAY;
-       MK_SET_EVT(&evt, BLINK);
+       MK_SET_EVT(&evt, evBlink);
        rkh_sm_dispatch(blinky, &evt );
    }
 

@@ -123,8 +123,7 @@ rui8_t running;
 static DWORD tick_msec;         /* clock tick in msec */
 static RKH_TS_T ts_cntr;        /* time stamp counter */
 
-static RKH_ROM_STATIC_EVENT(e_blink, BLINK);
-static RKH_ROM_STATIC_EVENT(e_term, TERM);
+static RKH_ROM_STATIC_EVENT(e_blink, evBlink);
 
 #if defined(RKH_USE_TRC_SENDER)
 static rui8_t keyb;
@@ -165,7 +164,6 @@ isr_kbd_thread(LPVOID par)      /* Win32 thread to emulate keyboard ISR */
         {
             case ESC:
                 running = 0;
-                RKH_SMA_POST_FIFO(blinky, &e_term, &keyb);
                 break;
 
             case 'b':

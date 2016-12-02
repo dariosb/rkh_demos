@@ -32,9 +32,8 @@ extern "C" {
 /* ================================ Signals ================================ */
 typedef enum bl_sigs_t
 {
-    BLINK, 
-    TOGGLE,
-    TERM
+    evBlink, 
+    evToggle
 } OV_SIGS_T;
 
 /* ======================== Declares active object ========================= */
@@ -44,8 +43,6 @@ RKH_SM_DCLR(blinky);
 RKH_DCLR_BASIC_STATE idle, blinking;
 
 /* ------------------------------- Data types ------------------------------ */
-//typedef struct Blinky Blinky;
-
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
 void blinky_sm_tick(void);

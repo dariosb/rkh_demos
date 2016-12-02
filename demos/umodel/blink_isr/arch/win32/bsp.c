@@ -123,22 +123,13 @@ rui8_t running;
 static DWORD tick_msec;         /* clock tick in msec */
 static RKH_TS_T ts_cntr;        /* time stamp counter */
 
-static RKH_ROM_STATIC_EVENT(e_term, TERM);
-#if (__STOP_BUTTON__ == RKH_ENABLED)
-static RKH_ROM_STATIC_EVENT(e_stop, STOP);
-#endif
-
 #if defined(RKH_USE_TRC_SENDER)
-static rui8_t door;
-static rui8_t panel;
 static rui8_t rkh_tick;
 #endif
 
 #if BIN_TRACE == 1
 static FILE *ftbin;
 #endif
-
-static time_t cStart, cStop;
 
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */

@@ -30,13 +30,13 @@ static void toggle(void);
 /* ======================== States and pseudostates ======================== */
 RKH_CREATE_BASIC_STATE(idle, NULL, NULL,  RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(idle)
-    RKH_TRREG(BLINK,    NULL,   start,   &blinking),
+    RKH_TRREG(evBlink,    NULL,   start,   &blinking),
 RKH_END_TRANS_TABLE
 
 RKH_CREATE_BASIC_STATE(blinking, NULL, NULL,  RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(blinking)
-    RKH_TRINT(TOGGLE,   NULL,   toggle),
-    RKH_TRREG(BLINK,    NULL,   stop,   &idle),
+    RKH_TRINT(evToggle,   NULL,   toggle),
+    RKH_TRREG(evBlink,    NULL,   stop,   &idle),
 RKH_END_TRANS_TABLE
 
 
@@ -56,7 +56,7 @@ RKH_SMA_DEF_PTR(blinky);
 /* ---------------------------- Local variables ---------------------------- */
 rui8_t led;
 static RKH_TMR_T timer;
-static RKH_ROM_STATIC_EVENT(e_toggle, TOGGLE);
+static RKH_ROM_STATIC_EVENT(e_toggle, evToggle);
 
 /* ---------------------------- Local functions ---------------------------- */
 /* ============================ Initial action ============================= */
@@ -78,10 +78,8 @@ init(void)
     RKH_TR_FWK_OBJ(&timer);
 
     /* send signals to trazer */
-    RKH_TR_FWK_SIG(BLINK);
-    RKH_TR_FWK_SIG(TOGGLE);
-    RKH_TR_FWK_SIG(STOP);
-    RKH_TR_FWK_SIG(TERM);
+    RKH_TR_FWK_SIG(evBlink);
+    RKH_TR_FWK_SIG(evToggle);
    
     RKH_TMR_INIT(&timer, &e_toggle, NULL);
 }
