@@ -102,11 +102,15 @@
     <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhtrc.c" />
     <ClCompile Include="..\..\..\blinky.c" />
     <ClCompile Include="..\..\..\main.c" />
+    <ClCompile Include="..\bsp.c" />
+    <ClCompile Include="..\tcptrc.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkht.h" />
     <ClInclude Include="..\..\..\blinky.h" />
     <ClInclude Include="..\..\..\rkhcfg.h" />
+    <ClInclude Include="..\bsp.h" />
+    <ClInclude Include="..\tcptrc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

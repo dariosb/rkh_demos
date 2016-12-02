@@ -37,6 +37,12 @@
     <ClCompile Include="..\..\..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkhport.c">
       <Filter>rkh</Filter>
     </ClCompile>
+    <ClCompile Include="..\bsp.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tcptrc.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="blinky">
@@ -58,6 +64,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkht.h">
       <Filter>rkh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bsp.h">
+      <Filter>bsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tcptrc.h">
+      <Filter>bsp</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

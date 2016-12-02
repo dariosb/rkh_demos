@@ -60,7 +60,11 @@ extern "C" {
 
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
+#define BIN_TRACE                   0
+#define SOCKET_TRACE                1
 
+#define BSP_TICKS_PER_SEC           RKH_CFG_FWK_TICK_RATE_HZ
+        
 /**
  *  \brief
  *  This macro represents the number of timestamp clock ticks per second.
@@ -68,12 +72,27 @@ extern "C" {
  *  of seconds.
  */
 
-#define BSP_TICKS_PER_SEC           RKH_CFG_FWK_TICK_RATE_HZ
+#define BSP_TS_RATE_HZ           RKH_CFG_FWK_TICK_RATE_HZ
+
+/**
+ * Switch id definition
+ */
+enum
+{
+    NO_SW,
+    BLINK_SW,
+    TERMINATE_SW
+};
 
 /* ------------------------------- Data types ------------------------------ */
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
+void bsp_init(int argc, char *argv[]);
+void bsp_idle(void);
+void bsp_exit(void);
 void bsp_set_led(rui8_t led);
+void bsp_wait_tickRate(int msec);
+rui8_t bsp_getSw(void);
 
 
 /* -------------------- External C language linkage end -------------------- */

@@ -25,91 +25,50 @@
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
-#define ESC             0x1B
-
 /* ---------------------------- Local data types --------------------------- */
 /* ---------------------------- Global variables --------------------------- */
 /* ---------------------------- Local variables ---------------------------- */
-rui8_t running;
-
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
-static
-void
-print_banner(void)
-{
-    printf("\"Blinky Polling\" example\n\n");
-    printf("RKH version      = %s\n", RKH_RELEASE);
-    printf("Port version     = %s\n", rkh_get_port_version());
-    printf("Port description = %s\n\n", rkh_get_port_desc());
-    printf("\n\n");
-
-    printf("1.- Press 'B'/'b' blink\n");
-    printf("2.- Press 'escape' to quit.\n\n\n");
-}
-
-static
-int
-test_keyboard(int *c)
-{
-    if(_kbhit())
-    {
-        *c = tolower(_getch());
-        return 1;
-    }
-
-    return 0;
-}
-
 /* ---------------------------- Global functions --------------------------- */
-void
-rkh_hook_idle( void )
-{
-}
-
-void
-bsp_set_led( rui8_t led )
-{
-   printf("LED %s\n", led ? "ON" : "OFF");
-}
 
 int
 main(int argc, char *argv[])
 {
-    int c, tick_msec;
+    rui8_t running, sw;
     
-    (void)argc;
-    (void)argv;
-
-    tick_msec = 1000UL / BSP_TICKS_PER_SEC;
-    running = 1;
-
-    print_banner();
+    bsp_init(argc, argv);
 
     rkh_sm_init(blinky);
 
+    running = 1;
+
     while (running)
     {
-        Sleep(tick_msec);
-        blinky_tick();
+        bsp_wait_tickRate(BSP_TICKS_PER_SEC);
 
-        if (test_keyboard(&c))
+        blinky_sm_tick();
+
+        switch( sw = bsp_getSw() )
         {
-            switch (c)
-            {
-                case ESC:
-                    running = 0;
-                    break;
+            case BLINK_SW:
+                blinky_sm_blink();
+                break;
 
-                case 'b':
-                    blinky_blink();
-                    break;
+            case TERMINATE_SW:
+               running = 0; 
+               break;
 
-                default:
-                    break;
-            }
+            case NO_SW:
+            default:
+               break;
         }
+
+        bsp_idle();
     }
+
+    bsp_exit();
+
     return 0;
 }
 

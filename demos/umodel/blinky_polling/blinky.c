@@ -68,6 +68,23 @@ init(void)
     blink = 0;
     led = 0;
     bsp_set_led(led);
+
+    /* send objects to trazer */
+    RKH_TR_FWK_AO(blinky);
+    RKH_TR_FWK_STATE(blinky, &idle);
+    RKH_TR_FWK_STATE(blinky, &blinking);
+    RKH_TR_FWK_FUN(&init);
+    RKH_TR_FWK_FUN(&start);
+    RKH_TR_FWK_FUN(&stop);
+    RKH_TR_FWK_FUN(&toggle);
+
+    /* send signals to trazer */
+    RKH_TR_FWK_SIG(BLINK);
+    RKH_TR_FWK_SIG(TOGGLE);
+    RKH_TR_FWK_SIG(STOP);
+    RKH_TR_FWK_SIG(TERM);
+   
+
 }
 
 /* ============================ Effect actions ============================= */
@@ -94,7 +111,6 @@ toggle(void)
 {
     led ^= 1;
     bsp_set_led(led);
-
 }
 
 /* ============================= Entry actions ============================= */
@@ -102,13 +118,13 @@ toggle(void)
 /* ================================ Guards ================================= */
 /* ---------------------------- Global functions --------------------------- */
 void
-blinky_tick(void)
+blinky_sm_tick(void)
 {
    if( led_tick && (--led_tick == 0) )
    {
        if( blink )
        {
-		   led_tick = DELAY;
+           led_tick = DELAY;
            MK_SET_EVT(&evt, TOGGLE);
        }
        else
@@ -121,7 +137,7 @@ blinky_tick(void)
 }
 
 void
-blinky_blink(void)
+blinky_sm_blink(void)
 {
    blink ^= 1;
 

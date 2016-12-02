@@ -49,14 +49,15 @@
 
 /* --------------------------------- Notes --------------------------------- */
 /* ----------------------------- Include files ----------------------------- */
-#include "bsp.h"
-#include "rkh.h"
-#include "blinky.h"
 
 #include <conio.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+
+#include "bsp.h"
+#include "rkh.h"
+#include "blinky.h"
 
 RKH_THIS_MODULE
 
@@ -142,47 +143,6 @@ static time_t cStart, cStop;
 
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
-static
-DWORD WINAPI
-isr_tmr_thread(LPVOID par)      /* Win32 thread to emulate timer ISR */
-{
-    (void)par;
-    while (running)
-    {
-        RKH_TIM_TICK(&rkh_tick);
-        Sleep(tick_msec);
-        blinky_tick();
-    }
-    return 0;
-}
-
-static
-DWORD WINAPI
-isr_kbd_thread(LPVOID par)      /* Win32 thread to emulate keyboard ISR */
-{
-    int c;
-
-    (void)par;
-    while (running)
-    {
-        c = _getch();
-
-        switch (tolower(c))
-        {
-            case ESC:
-                running = 0;
-                break;
-
-            case 'b':
-                blinky_blink();
-                break;
-
-            default:
-                break;
-        }
-    }
-    return 0;
-}
 
 static
 void
@@ -208,23 +168,7 @@ rkh_hook_timetick(void)
 void
 rkh_hook_start(void)
 {
-    DWORD thtmr_id, thkbd_id;
-    HANDLE hth_tmr, hth_kbd;
 
-    /* set the desired tick rate */
-    tick_msec = 1000UL / BSP_TICKS_PER_SEC;
-    ts_cntr = 0;
-    running = (rui8_t)1;
-
-    /* create the ISR timer thread */
-    hth_tmr = CreateThread(NULL, 1024, &isr_tmr_thread, 0, 0, &thtmr_id);
-    RKH_ASSERT(hth_tmr != (HANDLE)0);
-    SetThreadPriority(hth_tmr, THREAD_PRIORITY_TIME_CRITICAL);
-
-    /* create the ISR keyboard thread */
-    hth_kbd = CreateThread(NULL, 1024, &isr_kbd_thread, 0, 0, &thkbd_id);
-    RKH_ASSERT(hth_kbd != (HANDLE)0);
-    SetThreadPriority(hth_kbd, THREAD_PRIORITY_NORMAL);
 }
 
 void
@@ -236,9 +180,7 @@ rkh_hook_exit(void)
 void
 rkh_hook_idle(void)                 /* called within critical section */
 {
-    RKH_EXIT_CRITICAL(dummy);
     RKH_TRC_FLUSH();
-//    RKH_WAIT_FOR_EVENTS();      /* yield the CPU until new event(s) arrive */
 }
 
 void
@@ -307,12 +249,6 @@ rkh_trc_flush(void)
 #endif
 
 void
-bsp_set_led( rui8_t led )
-{
-   printf("LED %s\n", led ? "ON" : "OFF");
-}
-
-void
 bsp_init(int argc, char *argv[])
 {
     (void)argc;
@@ -321,7 +257,64 @@ bsp_init(int argc, char *argv[])
     print_banner();
     rkh_fwk_init();
 
+    RKH_FILTER_OFF_SMA(blinky);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SMA_LIFO);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SMA_FIFO);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SMA_DCH);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SM_STATE);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SM_EXE_ACT);
+    RKH_FILTER_OFF_GROUP_ALL_EVENTS(RKH_TG_TMR);
+
+    RKH_FILTER_OFF_ALL_SIGNALS();
+
     RKH_TRC_OPEN();
+}
+
+void
+bsp_idle(void)                 /* called within critical section */
+{
+    RKH_TRC_FLUSH();
+}
+
+void
+bsp_exit(void)
+{
+    rkh_fwk_exit();
+
+    RKH_TRC_CLOSE();
+}
+
+void
+bsp_set_led(rui8_t led)
+{
+   printf("LED %s\n", led ? "ON" : "OFF");
+}
+
+void
+bsp_wait_tickRate(int rate)
+{
+   Sleep(1000/rate);
+   RKH_TIM_TICK(&rkh_tick);
+}
+
+rui8_t
+bsp_getSw(void)
+{
+    if (_kbhit())
+    {
+        switch (tolower(_getch()))
+        {
+            case ESC:
+                return TERMINATE_SW;
+
+            case 'b':
+                return BLINK_SW;
+
+            default:
+                break;
+        }
+    }
+    return NO_SW;
 }
 
 /* ------------------------------ End of file ------------------------------ */
