@@ -119,7 +119,7 @@
  *  not report assertion failures when the #RKH_CFG_FWK_ASSERT_EN is enabled.
  */
 
-#define RKH_CFG_FWK_ASSERT_EN           RKH_DISABLED
+#define RKH_CFG_FWK_ASSERT_EN           RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_HOOK_DISPATCH_EN is set to 1, RKH will invoke the

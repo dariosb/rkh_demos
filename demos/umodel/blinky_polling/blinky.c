@@ -36,7 +36,7 @@ RKH_END_TRANS_TABLE
 RKH_CREATE_BASIC_STATE(blinking, NULL, NULL,  RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(blinking)
     RKH_TRINT(TOGGLE,   NULL,   toggle),
-    RKH_TRREG(STOP, NULL,   stop,   &idle),
+    RKH_TRREG(BLINK, NULL,   stop,   &idle),
 RKH_END_TRANS_TABLE
 
 
@@ -81,7 +81,6 @@ init(void)
     /* send signals to trazer */
     RKH_TR_FWK_SIG(BLINK);
     RKH_TR_FWK_SIG(TOGGLE);
-    RKH_TR_FWK_SIG(STOP);
     RKH_TR_FWK_SIG(TERM);
    
 
@@ -129,7 +128,7 @@ blinky_sm_tick(void)
        }
        else
        {
-           MK_SET_EVT(&evt, STOP);
+           MK_SET_EVT(&evt, BLINK);
        }
 
        rkh_sm_dispatch(blinky, &evt );

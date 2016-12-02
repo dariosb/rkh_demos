@@ -34,7 +34,6 @@ typedef enum bl_sigs_t
 {
     BLINK, 
     TOGGLE,
-    STOP,
     TERM
 } OV_SIGS_T;
 
