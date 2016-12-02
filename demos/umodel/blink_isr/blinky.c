@@ -36,7 +36,7 @@ RKH_END_TRANS_TABLE
 RKH_CREATE_BASIC_STATE(blinking, NULL, NULL,  RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(blinking)
     RKH_TRINT(TOGGLE,   NULL,   toggle),
-    RKH_TRREG(BLINK, NULL,   stop,   &idle),
+    RKH_TRREG(BLINK,    NULL,   stop,   &idle),
 RKH_END_TRANS_TABLE
 
 
