@@ -179,7 +179,7 @@ static
 void
 print_banner(void)
 {
-    printf("\"Blinky Polling\" example\n\n");
+    printf("\"Blinky ISR\" example\n\n");
     printf("RKH version      = %s\n", RKH_RELEASE);
     printf("Port version     = %s\n", rkh_get_port_version());
     printf("Port description = %s\n\n", rkh_get_port_desc());
