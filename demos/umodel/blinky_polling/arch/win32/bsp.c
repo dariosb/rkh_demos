@@ -154,7 +154,7 @@ print_banner(void)
     printf("Port description = %s\n\n", rkh_get_port_desc());
     printf("\n\n");
 
-    printf("1.- Press 'B'/'b' blink\n");
+    printf("1.- Press 'B'/'b' start/stop blink\n");
     printf("2.- Press 'escape' to quit.\n\n\n");
 }
 
