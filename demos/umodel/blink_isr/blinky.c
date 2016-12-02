@@ -18,132 +18,125 @@
 #include "blinky.h"
 #include "bsp.h"
 
-/* ---------------------- Local functions prototypes ----------------------- */
-static void init(void);
-static void start(void);
-static void stop(void);
-static void toggle(void);
+/* ------------------------------- Data types ------------------------------ */
+typedef struct Blinky Blinky;
 
+/* ---------------------- Local functions prototypes ----------------------- */
+static void init(Blinky *const me);
+static void startBlinking(Blinky *const me, RKH_EVT_T *pe);
+static void stopBlinking(Blinky *const me, RKH_EVT_T *pe);
+static void turnOffLed(Blinky *const me, RKH_EVT_T *pe);
+static void turnOffLed(Blinky *const me, RKH_EVT_T *pe);
+static void toggleLed(Blinky *const me, RKH_EVT_T *pe);
+static rbool_t isBlinking(Blinky *const me, RKH_EVT_T *pe);
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
 /* ======================== States and pseudostates ======================== */
 RKH_CREATE_BASIC_STATE(idle, NULL, NULL,  RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(idle)
-    RKH_TRREG(evBlink,    NULL,   start,   &blinking),
+    RKH_TRREG(evBlink,     NULL,        startBlinking,   &blinking),
 RKH_END_TRANS_TABLE
 
 RKH_CREATE_BASIC_STATE(blinking, NULL, NULL,  RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(blinking)
-    RKH_TRINT(evToggle,   NULL,   toggle),
-    RKH_TRREG(evBlink,    NULL,   stop,   &idle),
+    RKH_TRINT(evBlink,     NULL,        stopBlinking),
+    RKH_TRINT(evTimeout,   isBlinking,  toggleLed),
+    RKH_TRREG(evTimeout,   NULL,        turnOffLed,   &idle),
 RKH_END_TRANS_TABLE
 
 
 /* ---------------------------- Local data types --------------------------- */
-typedef struct Blinky Blinky;
 struct Blinky
 {
     RKH_SM_T sm;
-    int foo;
+    rui8_t led;
+    rui8_t blinking;
 };
 
 /* ---------------------------- Global variables --------------------------- */
+extern rui32_t blinkyTick;
+
 /* ============================= Active object ============================= */
 RKH_SM_CREATE(Blinky, blinky, 0, FLAT, &idle, init, NULL);
 RKH_SM_DEF_PTR(blinky);
 
 /* ---------------------------- Local variables ---------------------------- */
-
-static rui8_t blink, led;
-static rui32_t led_tick;
-static RKH_EVT_T evt;
-
 /* ---------------------------- Local functions ---------------------------- */
 /* ============================ Initial action ============================= */
 static
 void
-init(void)
+init(Blinky *const me)
 {
-    blink = 0;
-    led = 0;
-    bsp_set_led(led);
+    me->led = 0;
+    me->blinking = 0;
+    bsp_set_led(me->led);
 
     /* send objects to trazer */
     RKH_TR_FWK_AO(blinky);
     RKH_TR_FWK_STATE(blinky, &idle);
     RKH_TR_FWK_STATE(blinky, &blinking);
     RKH_TR_FWK_FUN(&init);
-    RKH_TR_FWK_FUN(&start);
-    RKH_TR_FWK_FUN(&stop);
-    RKH_TR_FWK_FUN(&toggle);
-
-    /* send signals to trazer */
-    RKH_TR_FWK_SIG(evBlink);
-    RKH_TR_FWK_SIG(evToggle);
+    RKH_TR_FWK_FUN(&turnOffLed);
+    RKH_TR_FWK_FUN(&toggleLed);
 }
 
 /* ============================ Effect actions ============================= */
 static
 void
-start(void)
+startBlinking(Blinky *const me, RKH_EVT_T *pe)
 {
-    led_tick = DELAY;
-    led = 1;
-    bsp_set_led(led);
+    (void)pe;
+
+    me->blinking = 1;
+    me->led = 1;
+    bsp_set_led(me->led);
+
+    blinkyTick = DELAY;
 }
 
 static
 void
-stop(void)
+stopBlinking(Blinky *const me, RKH_EVT_T *pe)
 {
-    led = 0;
-    bsp_set_led(led);
+    (void)pe;
+
+    me->blinking = 0;
+}
+
+static
+void
+turnOffLed(Blinky *const me, RKH_EVT_T *pe)
+{
+    (void)pe;
+
+    me->led = 0;
+    bsp_set_led(me->led);
 }
 
 static
 void 
-toggle(void)
+toggleLed(Blinky *const me, RKH_EVT_T *pe)
 {
-    led ^= 1;
-    bsp_set_led(led);
+    (void)pe;
+
+    me->led ^= 1;
+    bsp_set_led(me->led);
+
+    blinkyTick = DELAY;
+}
+
+static
+rbool_t
+isBlinking(Blinky *const me, RKH_EVT_T *pe)
+{
+	(void)pe;
+
+	return me->blinking == 1 ? RKH_GTRUE : RKH_GFALSE;
 }
 
 /* ============================= Entry actions ============================= */
 /* ============================= Exit actions ============================== */
 /* ================================ Guards ================================= */
 /* ---------------------------- Global functions --------------------------- */
-void
-blinky_sm_tick(void)
-{
-   if( led_tick && (--led_tick == 0) )
-   {
-       if( blink )
-       {
-           led_tick = DELAY;
-           MK_SET_EVT(&evt, evToggle);
-       }
-       else
-       {
-           MK_SET_EVT(&evt, evBlink);
-       }
-
-       rkh_sm_dispatch(blinky, &evt );
-   }
-}
-
-void
-blinky_sm_blink(void)
-{
-   blink ^= 1;
-
-   if( blink )
-   {
-       led_tick = DELAY;
-       MK_SET_EVT(&evt, evBlink);
-       rkh_sm_dispatch(blinky, &evt );
-   }
-
-}
-
 /* ------------------------------ End of file ------------------------------ */

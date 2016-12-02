@@ -18,96 +18,93 @@
 #include "blinky.h"
 #include "bsp.h"
 
-/* ---------------------- Local functions prototypes ----------------------- */
-static void init(void);
-static void start(void);
-static void stop(void);
-static void toggle(void);
+/* ------------------------------- Data types ------------------------------ */
+typedef struct Blinky Blinky;
 
+/* ---------------------- Local functions prototypes ----------------------- */
+static void init(Blinky *const me);
+static void turnOffLed(Blinky *const me, RKH_EVT_T *pe);
+static void toggleLed(Blinky *const me, RKH_EVT_T *pe);
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
 /* ======================== States and pseudostates ======================== */
 RKH_CREATE_BASIC_STATE(idle, NULL, NULL,  RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(idle)
-    RKH_TRREG(evBlink,    NULL,   start,   &blinking),
+    RKH_TRREG(evBlink,    NULL,     toggleLed,   &blinking),
 RKH_END_TRANS_TABLE
 
 RKH_CREATE_BASIC_STATE(blinking, NULL, NULL,  RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(blinking)
-    RKH_TRINT(evToggle,   NULL,   toggle),
-    RKH_TRREG(evBlink,    NULL,   stop,   &idle),
+    RKH_TRINT(evTimeout,   NULL,    toggleLed),
+    RKH_TRREG(evBlink,    NULL,     turnOffLed,   &idle),
 RKH_END_TRANS_TABLE
 
 
 /* ---------------------------- Local data types --------------------------- */
-typedef struct Blinky Blinky;
 struct Blinky
 {
-    RKH_SM_T sm;
-    int foo;
+    RKH_SMA_T sm;
+    rui8_t led;
+    RKH_TMR_T timer;
 };
 
 /* ---------------------------- Global variables --------------------------- */
 /* ============================= Active object ============================= */
-RKH_SM_CREATE(Blinky, blinky, 0, FLAT, &idle, init, NULL);
-RKH_SM_DEF_PTR(blinky);
+RKH_SMA_CREATE(Blinky, blinky, 0, FLAT, &idle, init, NULL);
+RKH_SMA_DEF_PTR(blinky);
 
 /* ---------------------------- Local variables ---------------------------- */
-
-static rui8_t blink, led;
-static rui32_t led_tick;
-static RKH_EVT_T evt;
+static RKH_ROM_STATIC_EVENT(e_timeout, evTimeout);
 
 /* ---------------------------- Local functions ---------------------------- */
 /* ============================ Initial action ============================= */
 static
 void
-init(void)
+init(Blinky *const me)
 {
-    blink = 0;
-    led = 0;
-    bsp_set_led(led);
+    me->led = 0;
+    bsp_set_led(me->led);
 
     /* send objects to trazer */
     RKH_TR_FWK_AO(blinky);
     RKH_TR_FWK_STATE(blinky, &idle);
     RKH_TR_FWK_STATE(blinky, &blinking);
     RKH_TR_FWK_FUN(&init);
-    RKH_TR_FWK_FUN(&start);
-    RKH_TR_FWK_FUN(&stop);
-    RKH_TR_FWK_FUN(&toggle);
+    RKH_TR_FWK_FUN(&turnOffLed);
+    RKH_TR_FWK_FUN(&toggleLed);
+    RKH_TR_FWK_OBJ(&me->timer);
 
     /* send signals to trazer */
     RKH_TR_FWK_SIG(evBlink);
-    RKH_TR_FWK_SIG(evToggle);
+    RKH_TR_FWK_SIG(evTimeout);
+   
+    RKH_TMR_INIT(&me->timer, &e_timeout, NULL);
 }
 
 /* ============================ Effect actions ============================= */
 static
 void
-start(void)
+turnOffLed(Blinky *const me, RKH_EVT_T *pe)
 {
-    led_tick = DELAY;
-    led = 1;
-    bsp_set_led(led);
-}
+    (void)pe;
 
-static
-void
-stop(void)
-{
-    led = 0;
-    bsp_set_led(led);
+    me->led = 0;
+    bsp_set_led(me->led);
+    rkh_tmr_stop(&me->timer);
 }
 
 static
 void 
-toggle(void)
+toggleLed(Blinky *const me, RKH_EVT_T *pe)
 {
-    led ^= 1;
-    bsp_set_led(led);
+    (void)pe;
+
+    me->led ^= 1;
+    bsp_set_led(me->led);
+    RKH_TMR_ONESHOT(&me->timer, blinky, DELAY);
 }
+
 
 /* ============================= Entry actions ============================= */
 /* ============================= Exit actions ============================== */

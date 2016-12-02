@@ -33,7 +33,7 @@ extern "C" {
 typedef enum bl_sigs_t
 {
     evBlink, 
-    evToggle
+    evTimeout
 } OV_SIGS_T;
 
 /* ======================== Declares active object ========================= */
@@ -45,9 +45,6 @@ RKH_DCLR_BASIC_STATE idle, blinking;
 /* ------------------------------- Data types ------------------------------ */
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
-void blinky_sm_tick(void);
-void blinky_sm_blink(void);
-
 /* ============================ Initial action ============================= */
 /* ============================ Effect actions ============================= */
 /* ============================= Entry actions ============================= */

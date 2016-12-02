@@ -33,7 +33,7 @@ extern "C" {
 typedef enum bl_sigs_t
 {
     evBlink, 
-    evToggle
+    evTimeout
 } OV_SIGS_T;
 
 /* ======================== Declares active object ========================= */

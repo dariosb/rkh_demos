@@ -131,6 +131,11 @@ static rui8_t rkh_tick;
 static FILE *ftbin;
 #endif
 
+rui32_t blinkyTick;
+
+static RKH_ROM_STATIC_EVENT(e_blink, evBlink);
+static RKH_ROM_STATIC_EVENT(e_timeout, evTimeout);
+
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
 static
@@ -142,35 +147,6 @@ isr_tmr_thread(LPVOID par)      /* Win32 thread to emulate timer ISR */
     {
         RKH_TIM_TICK(&rkh_tick);
         Sleep(tick_msec);
-        blinky_sm_tick();
-    }
-    return 0;
-}
-
-static
-DWORD WINAPI
-isr_kbd_thread(LPVOID par)      /* Win32 thread to emulate keyboard ISR */
-{
-    int c;
-
-    (void)par;
-    while (running)
-    {
-        c = _getch();
-
-        switch (tolower(c))
-        {
-            case ESC:
-                running = 0;
-                break;
-
-            case 'b':
-                blinky_sm_blink();
-                break;
-
-            default:
-                break;
-        }
     }
     return 0;
 }
@@ -194,7 +170,27 @@ void
 rkh_hook_timetick(void)
 {
     ++ts_cntr;
+
+    if (_kbhit())
+    {
+        switch (tolower(_getch()))
+        {
+            case 'b':
+                rkh_sm_dispatch(blinky, &e_blink );
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    if( blinkyTick && (--blinkyTick == 0) )
+    {
+        rkh_sm_dispatch(blinky, &e_timeout );
+    }
+    
 }
+
 
 void
 rkh_hook_start(void)
@@ -211,11 +207,6 @@ rkh_hook_start(void)
     hth_tmr = CreateThread(NULL, 1024, &isr_tmr_thread, 0, 0, &thtmr_id);
     RKH_ASSERT(hth_tmr != (HANDLE)0);
     SetThreadPriority(hth_tmr, THREAD_PRIORITY_TIME_CRITICAL);
-
-    /* create the ISR keyboard thread */
-    hth_kbd = CreateThread(NULL, 1024, &isr_kbd_thread, 0, 0, &thkbd_id);
-    RKH_ASSERT(hth_kbd != (HANDLE)0);
-    SetThreadPriority(hth_kbd, THREAD_PRIORITY_NORMAL);
 }
 
 void
@@ -302,6 +293,7 @@ bsp_set_led( rui8_t led )
    printf("LED %s\n", led ? "ON" : "OFF");
 }
 
+
 void
 bsp_init(int argc, char *argv[])
 {
@@ -322,6 +314,10 @@ bsp_init(int argc, char *argv[])
     RKH_FILTER_OFF_ALL_SIGNALS();
 
     RKH_TRC_OPEN();
+
+    /* send signals to trazer */
+    RKH_TR_FWK_SIG(evBlink);
+    RKH_TR_FWK_SIG(evTimeout);
 }
 
 /* ------------------------------ End of file ------------------------------ */
