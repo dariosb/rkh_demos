@@ -62,7 +62,7 @@ extern "C" {
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
 #define BIN_TRACE                   0
-#define SOCKET_TRACE                0
+#define SOCKET_TRACE                1
 
 #define BSP_TICKS_PER_SEC           RKH_CFG_FWK_TICK_RATE_HZ
 

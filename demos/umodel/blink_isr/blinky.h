@@ -49,8 +49,8 @@ RKH_DCLR_BASIC_STATE idle, blinking;
 
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
-void blinky_tick(void);
-void blinky_blink(void);
+void blinky_sm_tick(void);
+void blinky_sm_blink(void);
 
 /* ============================ Initial action ============================= */
 /* ============================ Effect actions ============================= */

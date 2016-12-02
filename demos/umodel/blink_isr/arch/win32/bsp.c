@@ -151,7 +151,7 @@ isr_tmr_thread(LPVOID par)      /* Win32 thread to emulate timer ISR */
     {
         RKH_TIM_TICK(&rkh_tick);
         Sleep(tick_msec);
-        blinky_tick();
+        blinky_sm_tick();
     }
     return 0;
 }
@@ -174,7 +174,7 @@ isr_kbd_thread(LPVOID par)      /* Win32 thread to emulate keyboard ISR */
                 break;
 
             case 'b':
-                blinky_blink();
+                blinky_sm_blink();
                 break;
 
             default:
@@ -194,7 +194,7 @@ print_banner(void)
     printf("Port description = %s\n\n", rkh_get_port_desc());
     printf("\n\n");
 
-    printf("1.- Press 'B'/'b' blink\n");
+    printf("1.- Press 'B'/'b' start/stop blink\n");
     printf("2.- Press 'escape' to quit.\n\n\n");
 }
 
@@ -238,7 +238,6 @@ rkh_hook_idle(void)                 /* called within critical section */
 {
     RKH_EXIT_CRITICAL(dummy);
     RKH_TRC_FLUSH();
-//    RKH_WAIT_FOR_EVENTS();      /* yield the CPU until new event(s) arrive */
 }
 
 void
@@ -320,6 +319,16 @@ bsp_init(int argc, char *argv[])
 
     print_banner();
     rkh_fwk_init();
+
+    RKH_FILTER_OFF_SMA(blinky);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SMA_LIFO);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SMA_FIFO);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SMA_DCH);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SM_STATE);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SM_EXE_ACT);
+    RKH_FILTER_OFF_GROUP_ALL_EVENTS(RKH_TG_TMR);
+
+    RKH_FILTER_OFF_ALL_SIGNALS();
 
     RKH_TRC_OPEN();
 }
