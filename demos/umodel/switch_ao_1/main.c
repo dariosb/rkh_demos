@@ -1,6 +1,6 @@
 /**
  *  \file       main.c
- *  \brief      uModel Led blinky polling implementation.
+ *  \brief      uModel Led blinky Active Object implementation.
  */
 
 /* -------------------------- Development history -------------------------- */

@@ -4,12 +4,12 @@
 
 /* -------------------------- Development history -------------------------- */
 /*
- *  2016.03.17  LeFr  v1.0.00  Initial version
+ *  2016.03.17  DaBa  v1.0.00  Initial version
  */
 
 /* -------------------------------- Authors -------------------------------- */
 /*
- *  LeFr  Leandro Francucci  francuccilea@gmail.com
+ *  DaBa  Darío Baliña  dariosb@gmail.com
  */
 
 /* --------------------------------- Notes --------------------------------- */
@@ -19,6 +19,7 @@
 
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
+#include "signals.h"
 
 /* ---------------------- External C language linkage ---------------------- */
 #ifdef __cplusplus
@@ -27,21 +28,8 @@ extern "C" {
 
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
-#define DELAY   RKH_TIME_SEC(2)
-
-/* ================================ Signals ================================ */
-typedef enum bl_sigs_t
-{
-    evOpen, 
-    evClose,
-    evTout
-} OV_SIGS_T;
-
 /* ======================== Declares active object ========================= */
 RKH_SMA_DCLR(button);
-
-/* =================== Declares states and pseudostates ==================== */
-RKH_DCLR_BASIC_STATE open, debouncing, closed;
 
 /* ------------------------------- Data types ------------------------------ */
 /* -------------------------- External variables --------------------------- */

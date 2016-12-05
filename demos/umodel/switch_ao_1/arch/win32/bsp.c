@@ -305,7 +305,7 @@ rkh_trc_flush(void)
 #endif
 
 void
-bsp_debButton(rui8_t bst)
+bsp_button(rui8_t bst)
 {
    printf("BUTTON is: %s\n", bst ? "CLOSE" : "OPEN");
 }

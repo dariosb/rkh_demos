@@ -20,6 +20,7 @@
 #include "bsp.h"
 
 /* ------------------------------- Data types ------------------------------ */
+typedef struct Blinky Blinky;
 
 /* ---------------------- Local functions prototypes ----------------------- */
 static void init(Blinky *const me);

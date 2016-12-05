@@ -85,7 +85,7 @@ enum
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
 void bsp_init(int argc, char *argv[]);
-void bsp_debButton(rui8_t bst);
+void bsp_button(rui8_t bst);
 
 
 /* -------------------- External C language linkage end -------------------- */

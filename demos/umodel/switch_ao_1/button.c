@@ -1,5 +1,5 @@
 /**
- *  \file       blinky.c
+ *  \file       button.c
  */
 
 /* -------------------------- Development history -------------------------- */
@@ -16,53 +16,59 @@
 /* --------------------------------- Notes --------------------------------- */
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
-#include "blinky.h"
+#include "button.h"
 #include "bsp.h"
 
 /* ------------------------------- Data types ------------------------------ */
-typedef struct Blinky Blinky;
+typedef struct Button Button;
 
 /* ---------------------- Local functions prototypes ----------------------- */
-static void init(Blinky *const me);
-static void startBlinking(Blinky *const me, RKH_EVT_T *pe);
-static void stopBlinking(Blinky *const me, RKH_EVT_T *pe);
-static void turnOnLed(Blinky *const me, RKH_EVT_T *pe);
-static void turnOffLed(Blinky *const me, RKH_EVT_T *pe);
-static void toggleLed(Blinky *const me, RKH_EVT_T *pe);
-static rbool_t isBlinking(Blinky *const me, RKH_EVT_T *pe);
+static void init(Button *const me);
+static void buttonIsClosing(Button *const me, RKH_EVT_T *pe);
+static void buttonOpen(Button *const me, RKH_EVT_T *pe);
+static void buttonClose(Button *const me, RKH_EVT_T *pe);
+static void buttonIsClosed(Button *const me, RKH_EVT_T *pe);
+static void buttonIsOpen(Button *const me, RKH_EVT_T *pe);
+static rbool_t isClose(Button *const me, RKH_EVT_T *pe);
+static rbool_t isOpen(Button *const me, RKH_EVT_T *pe);
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
 #define DELAY   RKH_TIME_SEC(2)
 
 /* ======================== States and pseudostates ======================== */
-RKH_DCLR_BASIC_STATE idle, blinking;
+RKH_DCLR_BASIC_STATE open, closing, closed;
 
-RKH_CREATE_BASIC_STATE(idle, NULL, NULL, RKH_ROOT, NULL);
-RKH_CREATE_TRANS_TABLE(idle)
-RKH_TRREG(evBlink,     NULL,        startBlinking,   &blinking),
+RKH_CREATE_BASIC_STATE(open, NULL, NULL, RKH_ROOT, NULL);
+RKH_CREATE_TRANS_TABLE(open)
+RKH_TRREG(evClose,     NULL,    buttonIsClosing,    &closing),
 RKH_END_TRANS_TABLE
 
-RKH_CREATE_BASIC_STATE(blinking, NULL, NULL, RKH_ROOT, NULL);
-RKH_CREATE_TRANS_TABLE(blinking)
-RKH_TRINT(evBlink,     NULL,        stopBlinking),
-RKH_TRINT(evTimeout,   isBlinking,  toggleLed),
-RKH_TRREG(evTimeout,   NULL,        turnOffLed,      &idle),
+RKH_CREATE_BASIC_STATE(closing, NULL, NULL, RKH_ROOT, NULL);
+RKH_CREATE_TRANS_TABLE(closing)
+RKH_TRINT(evOpen,      NULL,    buttonOpen),
+RKH_TRINT(evClose,     NULL,    buttonClose),
+RKH_TRREG(evTimeout,   isOpen,  NULL,               &open),
+RKH_TRREG(evTimeout,   isClose, buttonIsClosed,     &closed),
+RKH_END_TRANS_TABLE
+
+RKH_CREATE_BASIC_STATE(closed, NULL, NULL, RKH_ROOT, NULL);
+RKH_CREATE_TRANS_TABLE(closed)
+RKH_TRREG(evOpen,      NULL,    buttonIsOpen,       &open),
 RKH_END_TRANS_TABLE
 
 /* ---------------------------- Local data types --------------------------- */
-struct Blinky
+struct Button
 {
     RKH_SMA_T sma;
     RKH_TMR_T timer;
-    rui8_t led;
-    rui8_t blinking;
+    rui8_t st;
 };
 
 /* ---------------------------- Global variables --------------------------- */
 /* ============================= Active object ============================= */
-RKH_SMA_CREATE(Blinky, blinky, 0, FLAT, &idle, init, NULL);
-RKH_SMA_DEF_PTR(blinky);
+RKH_SMA_CREATE(Button, button, 0, FLAT, &open, init, NULL);
+RKH_SMA_DEF_PTR(button);
 
 /* ---------------------------- Local variables ---------------------------- */
 static RKH_ROM_STATIC_EVENT(e_timeout, evTimeout);
@@ -70,77 +76,82 @@ static RKH_ROM_STATIC_EVENT(e_timeout, evTimeout);
 /* ---------------------------- Local functions ---------------------------- */
 /* ============================ Initial action ============================= */
 static void
-init(Blinky *const me)
+init(Button *const me)
 {
-    me->led = 0;
-    me->blinking = 0;
-    bsp_set_led(me->led);
+    bsp_button(OPEN);
 
     /* send objects to trazer */
-    RKH_TR_FWK_AO(blinky);
-    RKH_TR_FWK_STATE(blinky, &idle);
-    RKH_TR_FWK_STATE(blinky, &blinking);
-    RKH_TR_FWK_OBJ(&me->timer);
+    RKH_TR_FWK_AO(button);
+    RKH_TR_FWK_STATE(button, &open);
+    RKH_TR_FWK_STATE(button, &closing);
+    RKH_TR_FWK_STATE(button, &closed);
     RKH_TR_FWK_FUN(&init);
-    RKH_TR_FWK_FUN(&startBlinking);
-    RKH_TR_FWK_FUN(&stopBlinking);
-    RKH_TR_FWK_FUN(&turnOffLed);
-    RKH_TR_FWK_FUN(&toggleLed);
-    RKH_TR_FWK_FUN(&isBlinking);
+    RKH_TR_FWK_FUN(&buttonIsOpen);
+    RKH_TR_FWK_FUN(&buttonIsClosing);
+    RKH_TR_FWK_FUN(&buttonIsClosed);
 
     RKH_TMR_INIT(&me->timer, &e_timeout, NULL);
 }
 
 /* ============================ Effect actions ============================= */
 static void
-startBlinking(Blinky *const me, RKH_EVT_T *pe)
+buttonIsClosing(Button *const me, RKH_EVT_T *pe)
 {
     (void)pe;
 
-    me->blinking = 1;
-    me->led = 1;
-    bsp_set_led(me->led);
-
+    me->st = CLOSE; 
     RKH_TMR_ONESHOT(&me->timer, RKH_UPCAST(RKH_SMA_T, me), DELAY);
 }
 
 static void
-stopBlinking(Blinky *const me, RKH_EVT_T *pe)
+buttonOpen(Button *const me, RKH_EVT_T *pe)
 {
     (void)pe;
 
-    me->blinking = 0;
+    me->st = OPEN; 
 }
 
 static void
-turnOffLed(Blinky *const me, RKH_EVT_T *pe)
+buttonClose(Button *const me, RKH_EVT_T *pe)
 {
     (void)pe;
 
-    me->led = 0;
-    bsp_set_led(me->led);
+    me->st = CLOSE; 
 }
 
 static void
-toggleLed(Blinky *const me, RKH_EVT_T *pe)
+buttonIsClosed(Button *const me, RKH_EVT_T *pe)
 {
     (void)pe;
 
-    me->led ^= 1;
-    bsp_set_led(me->led);
+    bsp_button(CLOSE);
+}
 
-    RKH_TMR_ONESHOT(&me->timer, RKH_UPCAST(RKH_SMA_T, me), DELAY);
+static void
+buttonIsOpen(Button *const me, RKH_EVT_T *pe)
+{
+    (void)pe;
+
+    bsp_button(OPEN);
 }
 
 /* ============================= Entry actions ============================= */
 /* ============================= Exit actions ============================== */
 /* ================================ Guards ================================= */
 static rbool_t
-isBlinking(Blinky *const me, RKH_EVT_T *pe)
+isClose(Button *const me, RKH_EVT_T *pe)
 {
     (void)pe;
 
-    return me->blinking == 1 ? RKH_GTRUE : RKH_GFALSE;
+    return me->st == CLOSE ? RKH_GTRUE : RKH_GFALSE;
+}
+
+static rbool_t
+isOpen(Button *const me, RKH_EVT_T *pe)
+{
+    (void)pe;
+
+    return me->st == OPEN ? RKH_GTRUE : RKH_GFALSE;
 }
 
 /* ---------------------------- Global functions --------------------------- */
