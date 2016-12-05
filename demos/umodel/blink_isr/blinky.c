@@ -9,7 +9,8 @@
 
 /* -------------------------------- Authors -------------------------------- */
 /*
- *  DaBa  Darío Baliña  dariosb@gmail.com
+ *  LeFr  Leandro Francucci  francuccilea@gmail.com
+ *  DaBa  Darío Baliña       dariosb@gmail.com
  */
 
 /* --------------------------------- Notes --------------------------------- */
@@ -25,7 +26,7 @@ typedef struct Blinky Blinky;
 static void init(Blinky *const me);
 static void startBlinking(Blinky *const me, RKH_EVT_T *pe);
 static void stopBlinking(Blinky *const me, RKH_EVT_T *pe);
-static void turnOffLed(Blinky *const me, RKH_EVT_T *pe);
+static void turnOnLed(Blinky *const me, RKH_EVT_T *pe);
 static void turnOffLed(Blinky *const me, RKH_EVT_T *pe);
 static void toggleLed(Blinky *const me, RKH_EVT_T *pe);
 static rbool_t isBlinking(Blinky *const me, RKH_EVT_T *pe);
@@ -33,18 +34,19 @@ static rbool_t isBlinking(Blinky *const me, RKH_EVT_T *pe);
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
 /* ======================== States and pseudostates ======================== */
-RKH_CREATE_BASIC_STATE(idle, NULL, NULL,  RKH_ROOT, NULL);
+RKH_DCLR_BASIC_STATE idle, blinking;
+
+RKH_CREATE_BASIC_STATE(idle, NULL, NULL, RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(idle)
-    RKH_TRREG(evBlink,     NULL,        startBlinking,   &blinking),
+RKH_TRREG(evBlink,     NULL,        startBlinking,   &blinking),
 RKH_END_TRANS_TABLE
 
-RKH_CREATE_BASIC_STATE(blinking, NULL, NULL,  RKH_ROOT, NULL);
+RKH_CREATE_BASIC_STATE(blinking, NULL, NULL, RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(blinking)
-    RKH_TRINT(evBlink,     NULL,        stopBlinking),
-    RKH_TRINT(evTimeout,   isBlinking,  toggleLed),
-    RKH_TRREG(evTimeout,   NULL,        turnOffLed,   &idle),
+RKH_TRINT(evBlink,     NULL,        stopBlinking),
+RKH_TRINT(evTimeout,   isBlinking,  toggleLed),
+RKH_TRREG(evTimeout,   NULL,        turnOffLed,      &idle),
 RKH_END_TRANS_TABLE
-
 
 /* ---------------------------- Local data types --------------------------- */
 struct Blinky
@@ -64,8 +66,7 @@ RKH_SM_DEF_PTR(blinky);
 /* ---------------------------- Local variables ---------------------------- */
 /* ---------------------------- Local functions ---------------------------- */
 /* ============================ Initial action ============================= */
-static
-void
+static void
 init(Blinky *const me)
 {
     me->led = 0;
@@ -77,13 +78,15 @@ init(Blinky *const me)
     RKH_TR_FWK_STATE(blinky, &idle);
     RKH_TR_FWK_STATE(blinky, &blinking);
     RKH_TR_FWK_FUN(&init);
+    RKH_TR_FWK_FUN(&startBlinking);
+    RKH_TR_FWK_FUN(&stopBlinking);
     RKH_TR_FWK_FUN(&turnOffLed);
     RKH_TR_FWK_FUN(&toggleLed);
+    RKH_TR_FWK_FUN(&isBlinking);
 }
 
 /* ============================ Effect actions ============================= */
-static
-void
+static void
 startBlinking(Blinky *const me, RKH_EVT_T *pe)
 {
     (void)pe;
@@ -95,8 +98,7 @@ startBlinking(Blinky *const me, RKH_EVT_T *pe)
     blinkyTick = DELAY;
 }
 
-static
-void
+static void
 stopBlinking(Blinky *const me, RKH_EVT_T *pe)
 {
     (void)pe;
@@ -104,8 +106,7 @@ stopBlinking(Blinky *const me, RKH_EVT_T *pe)
     me->blinking = 0;
 }
 
-static
-void
+static void
 turnOffLed(Blinky *const me, RKH_EVT_T *pe)
 {
     (void)pe;
@@ -114,8 +115,7 @@ turnOffLed(Blinky *const me, RKH_EVT_T *pe)
     bsp_set_led(me->led);
 }
 
-static
-void 
+static void
 toggleLed(Blinky *const me, RKH_EVT_T *pe)
 {
     (void)pe;
@@ -126,13 +126,12 @@ toggleLed(Blinky *const me, RKH_EVT_T *pe)
     blinkyTick = DELAY;
 }
 
-static
-rbool_t
+static rbool_t
 isBlinking(Blinky *const me, RKH_EVT_T *pe)
 {
-	(void)pe;
+    (void)pe;
 
-	return me->blinking == 1 ? RKH_GTRUE : RKH_GFALSE;
+    return me->blinking == 1 ? RKH_GTRUE : RKH_GFALSE;
 }
 
 /* ============================= Entry actions ============================= */

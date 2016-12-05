@@ -1,6 +1,6 @@
 /**
  *  \file       main.c
- *  \brief      uModel Led blinky polling implementation.
+ *  \brief      uModel Led blinky isr implementation.
  */
 
 /* -------------------------- Development history -------------------------- */
@@ -10,7 +10,8 @@
 
 /* -------------------------------- Authors -------------------------------- */
 /*
- *  DaBa  Darío Baliña  dariosb@gmail.com
+ *  LeFr  Leandro Francucci  francuccilea@gmail.com
+ *  DaBa  Darío Baliña       dariosb@gmail.com
  */
 
 /* --------------------------------- Notes --------------------------------- */

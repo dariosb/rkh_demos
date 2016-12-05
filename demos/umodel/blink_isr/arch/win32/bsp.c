@@ -44,7 +44,7 @@
 /* -------------------------------- Authors -------------------------------- */
 /*
  *  LeFr  Leandro Francucci  francuccilea@gmail.com
- *  DaBa  Darío Baliña  dariosb@gmail.com
+ *  DaBa  Darío Baliña       dariosb@gmail.com
  */
 
 /* --------------------------------- Notes --------------------------------- */
@@ -74,13 +74,13 @@ RKH_THIS_MODULE
 /* Trace Socket */
 static SOCKET tsock;
 
-    #define TCP_TRACE_OPEN()                                    \
-    if (tcp_trace_open(TRC_TCP_PORT,               \
-                       TRC_IP_ADDR, &tsock) < 0)         \
-    {                                               \
-        printf("Can't open socket %s:%u\n",        \
-               TRC_IP_ADDR, TRC_TCP_PORT);    \
-        exit(EXIT_FAILURE);                       \
+    #define TCP_TRACE_OPEN() \
+    if (tcp_trace_open(TRC_TCP_PORT, \
+                       TRC_IP_ADDR, &tsock) < 0) \
+    { \
+        printf("Can't open socket %s:%u\n", \
+               TRC_IP_ADDR, TRC_TCP_PORT); \
+        exit(EXIT_FAILURE); \
     }
     #define TCP_TRACE_CLOSE()       tcp_trace_close(tsock)
     #define TCP_TRACE_SEND(d)     tcp_trace_send(tsock, d, (int)1)
@@ -94,26 +94,26 @@ static SOCKET tsock;
 #endif
 
 #if BIN_TRACE == 1
-    #define FTBIN_FLUSH(buf_, len_)                       \
-    {                                           \
-        fwrite ((buf_), 1, (len_), ftbin);    \
-        fflush(ftbin)                         \
+    #define FTBIN_FLUSH(buf_, len_) \
+    { \
+        fwrite ((buf_), 1, (len_), ftbin); \
+        fflush(ftbin) \
     }
     #define FTBIN_CLOSE()   fclose(ftbin)
-    #define FTBIN_OPEN()                                                \
-    if ((ftbin = fopen("../ftbin", "w+b")) == NULL)    \
-    {                                                       \
-        perror("Can't open file\n");                      \
-        exit(EXIT_FAILURE);                               \
+    #define FTBIN_OPEN() \
+    if ((ftbin = fopen("../ftbin", "w+b")) == NULL) \
+    { \
+        perror("Can't open file\n"); \
+        exit(EXIT_FAILURE); \
     }
 #else
-    #define FTBIN_FLUSH(buf_, len_)       (void)0
+    #define FTBIN_FLUSH(buf_, len_)         (void)0
     #define FTBIN_CLOSE()                   (void)0
     #define FTBIN_OPEN()                    (void)0
 #endif
 
 /* ------------------------------- Constants ------------------------------- */
-#define ESC                         0x1B
+#define ESC                     0x1B
 
 /* ---------------------------- Local data types --------------------------- */
 /* ---------------------------- Global variables --------------------------- */
@@ -176,7 +176,11 @@ rkh_hook_timetick(void)
         switch (tolower(_getch()))
         {
             case 'b':
-                rkh_sm_dispatch(blinky, &e_blink );
+                rkh_sm_dispatch(blinky, (RKH_EVT_T *)&e_blink);
+                break;
+
+            case ESC:
+                running = 0;
                 break;
 
             default:
@@ -184,19 +188,17 @@ rkh_hook_timetick(void)
         }
     }
 
-    if( blinkyTick && (--blinkyTick == 0) )
+    if (blinkyTick && (--blinkyTick == 0))
     {
-        rkh_sm_dispatch(blinky, &e_timeout );
+        rkh_sm_dispatch(blinky, (RKH_EVT_T *)&e_timeout);
     }
-    
 }
-
 
 void
 rkh_hook_start(void)
 {
-    DWORD thtmr_id, thkbd_id;
-    HANDLE hth_tmr, hth_kbd;
+    DWORD thtmr_id;
+    HANDLE hth_tmr;
 
     /* set the desired tick rate */
     tick_msec = 1000UL / BSP_TICKS_PER_SEC;
@@ -288,11 +290,10 @@ rkh_trc_flush(void)
 #endif
 
 void
-bsp_set_led( rui8_t led )
+bsp_set_led(rui8_t led)
 {
-   printf("LED %s\n", led ? "ON" : "OFF");
+    printf("LED %s\n", led ? "ON" : "OFF");
 }
-
 
 void
 bsp_init(int argc, char *argv[])

@@ -44,7 +44,7 @@
 /* -------------------------------- Authors -------------------------------- */
 /*
  *  LeFr  Leandro Francucci  francuccilea@gmail.com
- *  DaBa  Darío Baliña  dariosb@gmail.com
+ *  DaBa  Darío Baliña       dariosb@gmail.com
  */
 
 /* --------------------------------- Notes --------------------------------- */
@@ -80,7 +80,6 @@ extern "C" {
 /* -------------------------- Function prototypes -------------------------- */
 void bsp_init(int argc, char *argv[]);
 void bsp_set_led(rui8_t led);
-
 
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus
