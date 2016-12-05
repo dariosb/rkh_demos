@@ -1,0 +1,112 @@
+/**
+ *  \file       blinky.c
+ */
+
+/* -------------------------- Development history -------------------------- */
+/*
+ *  2016.03.17  DaBa  v1.0.00  Initial version
+ */
+
+/* -------------------------------- Authors -------------------------------- */
+/*
+ *  LeFr  Leandro Francucci  francuccilea@gmail.com
+ *  DaBa  Darío Baliña       dariosb@gmail.com
+ */
+
+/* --------------------------------- Notes --------------------------------- */
+/* ----------------------------- Include files ----------------------------- */
+#include "rkh.h"
+#include "blinky.h"
+#include "bsp.h"
+
+/* ------------------------------- Data types ------------------------------ */
+typedef struct Blinky Blinky;
+
+/* ---------------------- Local functions prototypes ----------------------- */
+static void init(Blinky *const me);
+static void startBlinking(Blinky *const me, RKH_EVT_T *pe);
+static void stopBlinking(Blinky *const me, RKH_EVT_T *pe);
+static void turnOnLed(Blinky *const me, RKH_EVT_T *pe);
+static void turnOffLed(Blinky *const me, RKH_EVT_T *pe);
+static void toggleLed(Blinky *const me, RKH_EVT_T *pe);
+
+/* ----------------------------- Local macros ------------------------------ */
+/* ------------------------------- Constants ------------------------------- */
+/* ======================== States and pseudostates ======================== */
+RKH_DCLR_BASIC_STATE idle, blinking, waitForNextTout;
+
+RKH_CREATE_BASIC_STATE(idle, NULL, NULL, RKH_ROOT, NULL);
+RKH_CREATE_TRANS_TABLE(idle)
+RKH_TRREG(evBlink,     NULL,        toggleLed,      &blinking),
+RKH_END_TRANS_TABLE
+
+RKH_CREATE_BASIC_STATE(blinking, NULL, NULL, RKH_ROOT, NULL);
+RKH_CREATE_TRANS_TABLE(blinking)
+RKH_TRINT(evTimeout,   NULL,        toggleLed),
+RKH_TRREG(evBlink,     NULL,        NULL,       &waitForNextTout),
+RKH_END_TRANS_TABLE
+
+RKH_CREATE_BASIC_STATE(waitForNextTout, NULL, NULL, RKH_ROOT, NULL);
+RKH_CREATE_TRANS_TABLE(waitForNextTout)
+RKH_TRREG(evTimeout,   NULL,        turnOffLed, &idle),
+RKH_END_TRANS_TABLE
+
+/* ---------------------------- Local data types --------------------------- */
+struct Blinky
+{
+    RKH_SM_T sm;
+    rui8_t led;
+};
+
+/* ---------------------------- Global variables --------------------------- */
+extern rui32_t blinkyTick;
+
+/* ============================= Active object ============================= */
+RKH_SM_CREATE(Blinky, blinky, 0, FLAT, &idle, init, NULL);
+RKH_SM_DEF_PTR(blinky);
+
+/* ---------------------------- Local variables ---------------------------- */
+/* ---------------------------- Local functions ---------------------------- */
+/* ============================ Initial action ============================= */
+static void
+init(Blinky *const me)
+{
+    me->led = 0;
+    bsp_set_led(me->led);
+
+    /* send objects to trazer */
+    RKH_TR_FWK_AO(blinky);
+    RKH_TR_FWK_STATE(blinky, &idle);
+    RKH_TR_FWK_STATE(blinky, &blinking);
+    RKH_TR_FWK_STATE(blinky, &waitForNextTout);
+    RKH_TR_FWK_FUN(&init);
+    RKH_TR_FWK_FUN(&turnOffLed);
+    RKH_TR_FWK_FUN(&toggleLed);
+}
+
+/* ============================ Effect actions ============================= */
+static void
+turnOffLed(Blinky *const me, RKH_EVT_T *pe)
+{
+    (void)pe;
+
+    me->led = 0;
+    bsp_set_led(me->led);
+}
+
+static void
+toggleLed(Blinky *const me, RKH_EVT_T *pe)
+{
+    (void)pe;
+
+    me->led ^= 1;
+    bsp_set_led(me->led);
+
+    blinkyTick = DELAY;
+}
+
+/* ============================= Entry actions ============================= */
+/* ============================= Exit actions ============================== */
+/* ================================ Guards ================================= */
+/* ---------------------------- Global functions --------------------------- */
+/* ------------------------------ End of file ------------------------------ */
