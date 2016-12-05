@@ -316,7 +316,7 @@
  *	#RKH_SMA_T. See #RKH_INIT_ACT_T definition.
  */
 
-#define RKH_CFG_SMA_INIT_ARG_SMA_EN     RKH_DISABLED
+#define RKH_CFG_SMA_INIT_ARG_SMA_EN     RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_ENT_ARG_SMA_EN is set to 1 then the entry action
@@ -324,7 +324,7 @@
  *	#RKH_SMA_T. See #RKH_ENT_ACT_T definition.
  */
 
-#define RKH_CFG_SMA_ENT_ARG_SMA_EN      RKH_DISABLED
+#define RKH_CFG_SMA_ENT_ARG_SMA_EN      RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_ENT_ARG_STATE_EN is set to 1 then the entry action
@@ -332,7 +332,7 @@
  *	#RKH_ST_T. See #RKH_ENT_ACT_T definition.
  */
 
-#define RKH_CFG_SMA_ENT_ARG_STATE_EN    RKH_DISABLED
+#define RKH_CFG_SMA_ENT_ARG_STATE_EN    RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_EXT_ARG_SMA_EN is set to 1 then the exit action
@@ -340,7 +340,7 @@
  *	#RKH_SMA_T. See #RKH_EXT_ACT_T definition.
  */
 
-#define RKH_CFG_SMA_EXT_ARG_SMA_EN      RKH_DISABLED
+#define RKH_CFG_SMA_EXT_ARG_SMA_EN      RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_EXT_ARG_STATE_EN is set to 1 then the exit action
@@ -348,7 +348,7 @@
  *	#RKH_ST_T. See #RKH_EXT_ACT_T definition.
  */
 
-#define RKH_CFG_SMA_EXT_ARG_STATE_EN    RKH_DISABLED
+#define RKH_CFG_SMA_EXT_ARG_STATE_EN    RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_ACT_ARG_SMA_EN is set to 1 then the transition action
@@ -356,7 +356,7 @@
  *	#RKH_SMA_T. See #RKH_TRN_ACT_T definition.
  */
 
-#define RKH_CFG_SMA_ACT_ARG_SMA_EN      RKH_DISABLED
+#define RKH_CFG_SMA_ACT_ARG_SMA_EN      RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_ACT_ARG_EVT_EN is set to 1 then the transition action
@@ -364,7 +364,7 @@
  *	See RKH_TRN_ACT_T definition.
  */
 
-#define RKH_CFG_SMA_ACT_ARG_EVT_EN      RKH_DISABLED
+#define RKH_CFG_SMA_ACT_ARG_EVT_EN      RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_GRD_ARG_EVT_EN is set to 1 then the transition guard
@@ -372,7 +372,7 @@
  *	See RKH_GUARD_T definition.
  */
 
-#define RKH_CFG_SMA_GRD_ARG_EVT_EN      RKH_DISABLED
+#define RKH_CFG_SMA_GRD_ARG_EVT_EN      RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_GRD_ARG_SMA_EN is set to 1 then the transition guard
@@ -380,7 +380,7 @@
  *	RKH_SMA_T. See RKH_GUARD_T definition.
  */
 
-#define RKH_CFG_SMA_GRD_ARG_SMA_EN      RKH_DISABLED
+#define RKH_CFG_SMA_GRD_ARG_SMA_EN      RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_PPRO_ARG_SMA_EN is set to 1 then the event preprocessor
@@ -389,7 +389,7 @@
  *	RKH_SMA_T. See RKH_PPRO_T definition.
  */
 
-#define RKH_CFG_SMA_PPRO_ARG_SMA_EN     RKH_DISABLED
+#define RKH_CFG_SMA_PPRO_ARG_SMA_EN     RKH_ENABLED
 
 /**
  *  \brief
