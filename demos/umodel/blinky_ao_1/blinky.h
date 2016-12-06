@@ -19,7 +19,6 @@
 
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
-#include "signals.h"
 
 /* ---------------------- External C language linkage ---------------------- */
 #ifdef __cplusplus
@@ -28,6 +27,14 @@ extern "C" {
 
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
+/* ================================= Signals =============================== */
+typedef enum Signals Signals;
+enum Signals
+{
+    evBlink,
+    evTimeout
+};
+    
 /* ======================== Declares active object ========================= */
 RKH_SMA_DCLR(blinky);
 

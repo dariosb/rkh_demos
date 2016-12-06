@@ -29,6 +29,9 @@ static void toggleLed(Blinky *const me, RKH_EVT_T *pe);
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
+#define DELAY   RKH_TIME_SEC(2)
+
+
 /* ======================== States and pseudostates ======================== */
 RKH_DCLR_BASIC_STATE idle, blinking, waitForNextTout;
 
@@ -79,6 +82,8 @@ init(Blinky *const me)
     RKH_TR_FWK_FUN(&init);
     RKH_TR_FWK_FUN(&turnOffLed);
     RKH_TR_FWK_FUN(&toggleLed);
+    RKH_TR_FWK_SIG(evBlink);
+    RKH_TR_FWK_SIG(evTimeout);
 }
 
 /* ============================ Effect actions ============================= */

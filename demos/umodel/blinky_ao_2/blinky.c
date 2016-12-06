@@ -82,6 +82,8 @@ init(Blinky *const me)
     RKH_TR_FWK_FUN(&init);
     RKH_TR_FWK_FUN(&turnOffLed);
     RKH_TR_FWK_FUN(&toggleLed);
+    RKH_TR_FWK_SIG(evBlink);
+    RKH_TR_FWK_SIG(evTimeout);
 
     RKH_TMR_INIT(&me->timer, &e_timeout, NULL);
 }
