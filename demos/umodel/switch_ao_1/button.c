@@ -89,6 +89,14 @@ init(Button *const me)
     RKH_TR_FWK_FUN(&buttonIsOpen);
     RKH_TR_FWK_FUN(&buttonIsClosing);
     RKH_TR_FWK_FUN(&buttonIsClosed);
+    RKH_TR_FWK_FUN(&buttonOpen);
+    RKH_TR_FWK_FUN(&buttonClose);
+    RKH_TR_FWK_FUN(&isClose);
+    RKH_TR_FWK_FUN(&isOpen);
+    RKH_TR_FWK_SIG(evOpen);
+    RKH_TR_FWK_SIG(evClose);
+    RKH_TR_FWK_SIG(evTimeout);
+    RKH_TR_FWK_OBJ(&me->timer);
 
     RKH_TMR_INIT(&me->timer, &e_timeout, NULL);
 }
@@ -122,6 +130,7 @@ buttonClose(Button *const me, RKH_EVT_T *pe)
 static void
 buttonIsClosed(Button *const me, RKH_EVT_T *pe)
 {
+    (void)me;
     (void)pe;
 
     bsp_button(CLOSE);
@@ -130,6 +139,7 @@ buttonIsClosed(Button *const me, RKH_EVT_T *pe)
 static void
 buttonIsOpen(Button *const me, RKH_EVT_T *pe)
 {
+    (void)me;
     (void)pe;
 
     bsp_button(OPEN);
