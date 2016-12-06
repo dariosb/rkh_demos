@@ -87,7 +87,6 @@ enum
 void bsp_init(int argc, char *argv[]);
 void bsp_button(rui8_t bst);
 
-
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus
 }

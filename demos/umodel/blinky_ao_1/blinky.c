@@ -19,25 +19,31 @@
 #include "blinky.h"
 #include "bsp.h"
 
-/* ------------------------------- Data types ------------------------------ */
+/* ----------------------------- Local macros ------------------------------ */
+#define DELAY   RKH_TIME_SEC(2)
+
+/* ......................... Declares active object ........................ */
 typedef struct Blinky Blinky;
 
-/* ---------------------- Local functions prototypes ----------------------- */
+/* ................... Declares states and pseudostates .................... */
+RKH_DCLR_BASIC_STATE idle, blinking;
+
+/* ........................ Declares initial action ........................ */
 static void init(Blinky *const me);
+
+/* ........................ Declares effect actions ........................ */
 static void startBlinking(Blinky *const me, RKH_EVT_T *pe);
 static void stopBlinking(Blinky *const me, RKH_EVT_T *pe);
 static void turnOnLed(Blinky *const me, RKH_EVT_T *pe);
 static void turnOffLed(Blinky *const me, RKH_EVT_T *pe);
 static void toggleLed(Blinky *const me, RKH_EVT_T *pe);
+
+/* ......................... Declares entry actions ........................ */
+/* ......................... Declares exit actions ......................... */
+/* ............................ Declares guards ............................ */
 static rbool_t isBlinking(Blinky *const me, RKH_EVT_T *pe);
 
-/* ----------------------------- Local macros ------------------------------ */
-/* ------------------------------- Constants ------------------------------- */
-#define DELAY   RKH_TIME_SEC(2)
-
-/* ======================== States and pseudostates ======================== */
-RKH_DCLR_BASIC_STATE idle, blinking;
-
+/* ........................ States and pseudostates ........................ */
 RKH_CREATE_BASIC_STATE(idle, NULL, NULL, RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(idle)
 RKH_TRREG(evBlink,     NULL,        startBlinking,   &blinking),
@@ -50,7 +56,7 @@ RKH_TRINT(evTimeout,   isBlinking,  toggleLed),
 RKH_TRREG(evTimeout,   NULL,        turnOffLed,      &idle),
 RKH_END_TRANS_TABLE
 
-/* ---------------------------- Local data types --------------------------- */
+/* ............................. Active object ............................. */
 struct Blinky
 {
     RKH_SMA_T sma;
@@ -59,16 +65,17 @@ struct Blinky
     rui8_t blinking;
 };
 
-/* ---------------------------- Global variables --------------------------- */
-/* ============================= Active object ============================= */
 RKH_SMA_CREATE(Blinky, blinky, 0, FLAT, &idle, init, NULL);
 RKH_SMA_DEF_PTR(blinky);
 
+/* ------------------------------- Constants ------------------------------- */
+/* ---------------------------- Local data types --------------------------- */
+/* ---------------------------- Global variables --------------------------- */
 /* ---------------------------- Local variables ---------------------------- */
 static RKH_ROM_STATIC_EVENT(e_timeout, evTimeout);
 
 /* ---------------------------- Local functions ---------------------------- */
-/* ============================ Initial action ============================= */
+/* ............................ Initial action ............................. */
 static void
 init(Blinky *const me)
 {
@@ -93,7 +100,7 @@ init(Blinky *const me)
     RKH_TMR_INIT(&me->timer, &e_timeout, NULL);
 }
 
-/* ============================ Effect actions ============================= */
+/* ............................ Effect actions ............................. */
 static void
 startBlinking(Blinky *const me, RKH_EVT_T *pe)
 {
@@ -134,9 +141,9 @@ toggleLed(Blinky *const me, RKH_EVT_T *pe)
     RKH_TMR_ONESHOT(&me->timer, RKH_UPCAST(RKH_SMA_T, me), DELAY);
 }
 
-/* ============================= Entry actions ============================= */
-/* ============================= Exit actions ============================== */
-/* ================================ Guards ================================= */
+/* ............................. Entry actions ............................. */
+/* ............................. Exit actions .............................. */
+/* ................................ Guards ................................. */
 static rbool_t
 isBlinking(Blinky *const me, RKH_EVT_T *pe)
 {

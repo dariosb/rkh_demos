@@ -19,22 +19,27 @@
 #include "button.h"
 #include "bsp.h"
 
-/* ------------------------------- Data types ------------------------------ */
+/* ----------------------------- Local macros ------------------------------ */
+#define DELAY   RKH_TIME_SEC(2)
+
+/* ......................... Declares active object ........................ */
 typedef struct Button Button;
 
-/* ---------------------- Local functions prototypes ----------------------- */
+/* ................... Declares states and pseudostates .................... */
+RKH_DCLR_BASIC_STATE open, closing, opening, closed;
+
+/* ........................ Declares initial action ........................ */
 static void init(Button *const me);
+
+/* ........................ Declares effect actions ........................ */
 static void buttonClosing(Button *const me, RKH_EVT_T *pe);
 static void buttonIsClosed(Button *const me, RKH_EVT_T *pe);
 static void buttonIsOpen(Button *const me, RKH_EVT_T *pe);
 
-/* ----------------------------- Local macros ------------------------------ */
-/* ------------------------------- Constants ------------------------------- */
-#define DELAY   RKH_TIME_SEC(2)
-
-/* ======================== States and pseudostates ======================== */
-RKH_DCLR_BASIC_STATE open, closing, opening, closed;
-
+/* ......................... Declares entry actions ........................ */
+/* ......................... Declares exit actions ......................... */
+/* ............................ Declares guards ............................ */
+/* ........................ States and pseudostates ........................ */
 RKH_CREATE_BASIC_STATE(open, NULL, NULL, RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(open)
 RKH_TRREG(evClose,     NULL,    buttonClosing,      &closing),
@@ -57,23 +62,25 @@ RKH_CREATE_TRANS_TABLE(closed)
 RKH_TRREG(evOpen,      NULL,    buttonIsOpen,       &open),
 RKH_END_TRANS_TABLE
 
-/* ---------------------------- Local data types --------------------------- */
+/* ............................. Active object ............................. */
 struct Button
 {
     RKH_SMA_T sma;
     RKH_TMR_T timer;
 };
 
-/* ---------------------------- Global variables --------------------------- */
-/* ============================= Active object ============================= */
 RKH_SMA_CREATE(Button, button, 0, FLAT, &open, init, NULL);
 RKH_SMA_DEF_PTR(button);
 
+/* ------------------------------- Constants ------------------------------- */
+/* ---------------------------- Local data types --------------------------- */
+/* ---------------------------- Global variables --------------------------- */
 /* ---------------------------- Local variables ---------------------------- */
 static RKH_ROM_STATIC_EVENT(e_timeout, evTimeout);
 
+/* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
-/* ============================ Initial action ============================= */
+/* ............................ Initial action ............................. */
 static void
 init(Button *const me)
 {
@@ -97,7 +104,7 @@ init(Button *const me)
     RKH_TMR_INIT(&me->timer, &e_timeout, NULL);
 }
 
-/* ============================ Effect actions ============================= */
+/* ............................ Effect actions ............................. */
 static void
 buttonClosing(Button *const me, RKH_EVT_T *pe)
 {
@@ -124,9 +131,9 @@ buttonIsOpen(Button *const me, RKH_EVT_T *pe)
     bsp_button(OPEN);
 }
 
-/* ============================= Entry actions ============================= */
-/* ============================= Exit actions ============================== */
-/* ================================ Guards ================================= */
+/* ............................. Entry actions ............................. */
+/* ............................. Exit actions .............................. */
+/* ................................ Guards ................................. */
 /* ---------------------------- Global functions --------------------------- */
 /* ------------------------------ End of file ------------------------------ */
 

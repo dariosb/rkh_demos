@@ -74,40 +74,40 @@ RKH_THIS_MODULE
 /* Trace Socket */
 static SOCKET tsock;
 
-    #define TCP_TRACE_OPEN()                                    \
-    if (tcp_trace_open(TRC_TCP_PORT,               \
-                       TRC_IP_ADDR, &tsock) < 0)         \
-    {                                               \
-        printf("Can't open socket %s:%u\n",        \
-               TRC_IP_ADDR, TRC_TCP_PORT);    \
-        exit(EXIT_FAILURE);                       \
+    #define TCP_TRACE_OPEN() \
+    if (tcp_trace_open(TRC_TCP_PORT, \
+                       TRC_IP_ADDR, &tsock) < 0) \
+    { \
+        printf("Can't open socket %s:%u\n", \
+               TRC_IP_ADDR, TRC_TCP_PORT); \
+        exit(EXIT_FAILURE); \
     }
     #define TCP_TRACE_CLOSE()       tcp_trace_close(tsock)
     #define TCP_TRACE_SEND(d)     tcp_trace_send(tsock, d, (int)1)
-    #define TCP_TRACE_SEND_BLOCK(buf_, len_)                  \
+    #define TCP_TRACE_SEND_BLOCK(buf_, len_) \
     tcp_trace_send(tsock, (const char *)(buf_), (int)(len_))
 #else
     #define TCP_TRACE_OPEN()                    (void)0
     #define TCP_TRACE_CLOSE()                   (void)0
-    #define TCP_TRACE_SEND(d)                 (void)0
-    #define TCP_TRACE_SEND_BLOCK(buf_, len_)  (void)0
+    #define TCP_TRACE_SEND(d)                   (void)0
+    #define TCP_TRACE_SEND_BLOCK(buf_, len_)    (void)0
 #endif
 
 #if BIN_TRACE == 1
-    #define FTBIN_FLUSH(buf_, len_)                       \
-    {                                           \
-        fwrite ((buf_), 1, (len_), ftbin);    \
-        fflush(ftbin)                         \
+    #define FTBIN_FLUSH(buf_, len_) \
+    { \
+        fwrite ((buf_), 1, (len_), ftbin); \
+        fflush(ftbin) \
     }
     #define FTBIN_CLOSE()   fclose(ftbin)
-    #define FTBIN_OPEN()                                                \
-    if ((ftbin = fopen("../ftbin", "w+b")) == NULL)    \
-    {                                                       \
-        perror("Can't open file\n");                      \
-        exit(EXIT_FAILURE);                               \
+    #define FTBIN_OPEN() \
+    if ((ftbin = fopen("../ftbin", "w+b")) == NULL) \
+    { \
+        perror("Can't open file\n"); \
+        exit(EXIT_FAILURE); \
     }
 #else
-    #define FTBIN_FLUSH(buf_, len_)       (void)0
+    #define FTBIN_FLUSH(buf_, len_)         (void)0
     #define FTBIN_CLOSE()                   (void)0
     #define FTBIN_OPEN()                    (void)0
 #endif
@@ -307,7 +307,7 @@ rkh_trc_flush(void)
 void
 bsp_button(rui8_t bst)
 {
-   printf("BUTTON is: %s\n", bst ? "CLOSE" : "OPEN");
+    printf("BUTTON is: %s\n", bst ? "CLOSE" : "OPEN");
 }
 
 void
@@ -335,7 +335,6 @@ bsp_init(int argc, char *argv[])
     RKH_TR_FWK_OBJ(&keyb);
     RKH_TR_FWK_OBJ(&rkh_tick);
 #endif
-
 }
 
 /* ------------------------------ End of file ------------------------------ */

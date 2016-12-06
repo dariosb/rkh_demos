@@ -19,22 +19,26 @@
 #include "blinky.h"
 #include "bsp.h"
 
-/* ------------------------------- Data types ------------------------------ */
+/* ----------------------------- Local macros ------------------------------ */
+#define DELAY   RKH_TIME_SEC(2)
+
+/* ......................... Declares active object ........................ */
 typedef struct Blinky Blinky;
 
-/* ---------------------- Local functions prototypes ----------------------- */
+/* ........................ States and pseudostates ........................ */
+RKH_DCLR_BASIC_STATE idle, blinking, waitForNextTout;
+
+/* ........................ Declares initial action ........................ */
 static void init(Blinky *const me);
+
+/* ........................ Declares effect actions ........................ */
 static void turnOffLed(Blinky *const me, RKH_EVT_T *pe);
 static void toggleLed(Blinky *const me, RKH_EVT_T *pe);
 
-/* ----------------------------- Local macros ------------------------------ */
-/* ------------------------------- Constants ------------------------------- */
-#define DELAY   RKH_TIME_SEC(2)
-
-
-/* ======================== States and pseudostates ======================== */
-RKH_DCLR_BASIC_STATE idle, blinking, waitForNextTout;
-
+/* ......................... Declares entry actions ........................ */
+/* ......................... Declares exit actions ......................... */
+/* ............................ Declares guards ............................ */
+/* ........................ States and pseudostates ........................ */
 RKH_CREATE_BASIC_STATE(idle, NULL, NULL, RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(idle)
 RKH_TRREG(evBlink,     NULL,        toggleLed,      &blinking),
@@ -51,23 +55,25 @@ RKH_CREATE_TRANS_TABLE(waitForNextTout)
 RKH_TRREG(evTimeout,   NULL,        turnOffLed, &idle),
 RKH_END_TRANS_TABLE
 
-/* ---------------------------- Local data types --------------------------- */
+/* ............................. Active object ............................. */
 struct Blinky
 {
     RKH_SM_T sm;
     rui8_t led;
 };
 
-/* ---------------------------- Global variables --------------------------- */
-extern rui32_t blinkyTick;
-
-/* ============================= Active object ============================= */
 RKH_SM_CREATE(Blinky, blinky, 0, FLAT, &idle, init, NULL);
 RKH_SM_DEF_PTR(blinky);
 
+/* ------------------------------- Constants ------------------------------- */
+/* ---------------------------- Local data types --------------------------- */
+/* ---------------------------- Global variables --------------------------- */
+extern rui32_t blinkyTick;
+
 /* ---------------------------- Local variables ---------------------------- */
+/* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
-/* ============================ Initial action ============================= */
+/* ............................ Initial action ............................. */
 static void
 init(Blinky *const me)
 {
@@ -86,7 +92,7 @@ init(Blinky *const me)
     RKH_TR_FWK_SIG(evTimeout);
 }
 
-/* ============================ Effect actions ============================= */
+/* ............................ Effect actions ............................. */
 static void
 turnOffLed(Blinky *const me, RKH_EVT_T *pe)
 {
@@ -107,8 +113,8 @@ toggleLed(Blinky *const me, RKH_EVT_T *pe)
     blinkyTick = DELAY;
 }
 
-/* ============================= Entry actions ============================= */
-/* ============================= Exit actions ============================== */
-/* ================================ Guards ================================= */
+/* ............................. Entry actions ............................. */
+/* ............................. Exit actions .............................. */
+/* ................................ Guards ................................. */
 /* ---------------------------- Global functions --------------------------- */
 /* ------------------------------ End of file ------------------------------ */
