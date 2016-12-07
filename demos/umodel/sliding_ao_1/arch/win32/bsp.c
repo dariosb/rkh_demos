@@ -51,7 +51,7 @@
 /* ----------------------------- Include files ----------------------------- */
 #include "bsp.h"
 #include "rkh.h"
-#include "button.h"
+#include "sliding.h"
 
 #include <conio.h>
 #include <stdlib.h>
@@ -123,8 +123,10 @@ rui8_t running;
 static DWORD tick_msec;         /* clock tick in msec */
 static RKH_TS_T ts_cntr;        /* time stamp counter */
 
-static RKH_ROM_STATIC_EVENT(e_open, evOpen);
-static RKH_ROM_STATIC_EVENT(e_close, evClose);
+static RKH_ROM_STATIC_EVENT(e_open, evDoorOpen);
+static RKH_ROM_STATIC_EVENT(e_close, evDoorClose);
+static RKH_ROM_STATIC_EVENT(e_strig, evSensorTriggered);
+static RKH_ROM_STATIC_EVENT(e_srel, evSensorReleased);
 
 #if defined(RKH_USE_TRC_SENDER)
 static rui8_t keyb;
@@ -168,11 +170,19 @@ isr_kbd_thread(LPVOID par)      /* Win32 thread to emulate keyboard ISR */
                 break;
 
             case 'c':
-                RKH_SMA_POST_FIFO(button, &e_close, &keyb);
+                RKH_SMA_POST_FIFO(sliding, &e_close, &keyb);
                 break;
 
             case 'o':
-                RKH_SMA_POST_FIFO(button, &e_open, &keyb);
+                RKH_SMA_POST_FIFO(sliding, &e_open, &keyb);
+                break;
+
+            case 's':
+                RKH_SMA_POST_FIFO(sliding, &e_strig, &keyb);
+                break;
+
+            case 'r':
+                RKH_SMA_POST_FIFO(sliding, &e_srel, &keyb);
                 break;
 
             default:
@@ -186,14 +196,16 @@ static
 void
 print_banner(void)
 {
-    printf("\"Button\" example\n\n");
+    printf("\"Sliding\" example\n\n");
     printf("RKH version      = %s\n", RKH_RELEASE);
     printf("Port version     = %s\n", rkh_get_port_version());
     printf("Port description = %s\n\n", rkh_get_port_desc());
     printf("\n\n");
 
-    printf("1.- Press 'O'/'o' to open button\n");
-    printf("1.- Press 'C'/'c' to close button\n");
+    printf("1.- Press 'O'/'o' door is open\n");
+    printf("1.- Press 'C'/'c' door is close\n");
+    printf("1.- Press 'S'/'s' sensor triggered\n");
+    printf("1.- Press 'R'/'r' sensor released\n");
     printf("2.- Press 'escape' to quit.\n\n\n");
 }
 
@@ -305,9 +317,11 @@ rkh_trc_flush(void)
 #endif
 
 void
-bsp_button(rui8_t bst)
+bsp_setMotor(rui8_t open, rui8_t close)
 {
-    printf("BUTTON is: %s\n", bst ? "CLOSE" : "OPEN");
+    printf("Motor - Open:%s | Close:%s\n", 
+                    open ? "ON" : "OFF",
+                    close ? "ON" : "OFF");
 }
 
 void
@@ -319,7 +333,7 @@ bsp_init(int argc, char *argv[])
     print_banner();
     rkh_fwk_init();
 
-    RKH_FILTER_OFF_SMA(button);
+    RKH_FILTER_OFF_SMA(sliding);
     RKH_FILTER_OFF_EVENT(RKH_TE_SMA_LIFO);
     RKH_FILTER_OFF_EVENT(RKH_TE_SMA_FIFO);
     RKH_FILTER_OFF_EVENT(RKH_TE_SMA_DCH);

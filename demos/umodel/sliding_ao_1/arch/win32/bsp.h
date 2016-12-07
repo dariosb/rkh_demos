@@ -77,15 +77,15 @@ extern "C" {
 
 enum
 {
-    OPEN,
-    CLOSE
+    OFF,
+    ON
 };
 
 /* ------------------------------- Data types ------------------------------ */
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
 void bsp_init(int argc, char *argv[]);
-void bsp_button(rui8_t bst);
+void bsp_setMotor(rui8_t open, rui8_t close);
 
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus

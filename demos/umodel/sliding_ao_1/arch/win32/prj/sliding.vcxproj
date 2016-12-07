@@ -100,15 +100,15 @@
     <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhtbl.c" />
     <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhtim.c" />
     <ClCompile Include="..\..\..\..\..\..\rkh\source\rkhtrc.c" />
-    <ClCompile Include="..\..\..\button.c" />
     <ClCompile Include="..\..\..\main.c" />
+    <ClCompile Include="..\..\..\sliding.c" />
     <ClCompile Include="..\bsp.c" />
     <ClCompile Include="..\tcptrc.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\..\rkh\source\portable\80x86\win32_st\vc08\rkht.h" />
-    <ClInclude Include="..\..\..\button.h" />
     <ClInclude Include="..\..\..\rkhcfg.h" />
+    <ClInclude Include="..\..\..\sliding.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

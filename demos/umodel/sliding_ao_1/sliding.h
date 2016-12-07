@@ -31,13 +31,14 @@ extern "C" {
 typedef enum Signals Signals;
 enum Signals
 {
-    evOpen,
-    evClose,
-    evTimeout
+    evDoorClose,
+    evDoorOpen,
+    evSensorTriggered,
+    evSensorReleased,
 };
     
 /* ........................ Declares active object ......................... */
-RKH_SMA_DCLR(button);
+RKH_SMA_DCLR(sliding);
 
 /* ------------------------------- Data types ------------------------------ */
 /* -------------------------- External variables --------------------------- */
