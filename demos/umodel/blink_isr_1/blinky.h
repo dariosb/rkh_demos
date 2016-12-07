@@ -1,5 +1,5 @@
 /*
- *  \file       led.h
+ *  \file       blinky.h
  */
 
 /* -------------------------- Development history -------------------------- */

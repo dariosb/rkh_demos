@@ -1,5 +1,5 @@
 /*
- *  \file       led.h
+ *  \file       button.h
  */
 
 /* -------------------------- Development history -------------------------- */

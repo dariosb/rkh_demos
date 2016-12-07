@@ -1,6 +1,6 @@
 /**
  *  \file       main.c
- *  \brief      uModel Led blinky Active Object implementation.
+ *  \brief      uModel switch debouncing Active Object implementation.
  */
 
 /* -------------------------- Development history -------------------------- */

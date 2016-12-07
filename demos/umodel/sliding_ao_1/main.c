@@ -1,6 +1,6 @@
 /**
  *  \file       main.c
- *  \brief      uModel Led blinky Active Object implementation.
+ *  \brief      uModel Sliding Door Active Object implementation.
  */
 
 /* -------------------------- Development history -------------------------- */
@@ -18,7 +18,7 @@
 #include "rkh.h"
 #include "rkhtrc.h"
 #include "bsp.h"
-#include "button.h"
+#include "sliding.h"
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
@@ -37,7 +37,7 @@ main(int argc, char *argv[])
 {
     bsp_init(argc, argv);
 
-    RKH_SMA_ACTIVATE(button, qsto, QSTO_SIZE, 0, 0);
+    RKH_SMA_ACTIVATE(sliding, qsto, QSTO_SIZE, 0, 0);
 
     rkh_fwk_enter();
 
