@@ -70,8 +70,6 @@ RKH_SM_DEF_PTR(blinky);
 /* ------------------------------- Constants ------------------------------- */
 /* ---------------------------- Local data types --------------------------- */
 /* ---------------------------- Global variables --------------------------- */
-extern rui32_t blinkyTick;
-
 /* ---------------------------- Local variables ---------------------------- */
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
@@ -107,7 +105,7 @@ startBlinking(Blinky *const me, RKH_EVT_T *pe)
     me->led = 1;
     bsp_set_led(me->led);
 
-    blinkyTick = DELAY;
+    bsp_set_blinkyTick(DELAY);
 }
 
 static void
@@ -135,7 +133,7 @@ toggleLed(Blinky *const me, RKH_EVT_T *pe)
     me->led ^= 1;
     bsp_set_led(me->led);
 
-    blinkyTick = DELAY;
+    bsp_set_blinkyTick(DELAY);
 }
 
 /* ............................. Entry actions ............................. */

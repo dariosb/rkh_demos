@@ -290,6 +290,12 @@ rkh_trc_flush(void)
 #endif
 
 void
+bsp_set_blinkyTick(rui32_t t)
+{
+    blinkyTick = t;
+}
+
+void
 bsp_set_led(rui8_t led)
 {
     printf("LED %s\n", led ? "ON" : "OFF");

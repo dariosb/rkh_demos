@@ -79,6 +79,7 @@ extern "C" {
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
 void bsp_init(int argc, char *argv[]);
+void bsp_set_blinkyTick(rui32_t t);
 void bsp_set_led(rui8_t led);
 
 /* -------------------- External C language linkage end -------------------- */
