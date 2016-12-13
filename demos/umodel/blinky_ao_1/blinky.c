@@ -33,7 +33,7 @@ static void init(Blinky *const me);
 
 /* ........................ Declares effect actions ........................ */
 static void startBlinking(Blinky *const me, RKH_EVT_T *pe);
-static void stopBlinking(Blinky *const me, RKH_EVT_T *pe);
+static void toggleBlinking(Blinky *const me, RKH_EVT_T *pe);
 static void turnOnLed(Blinky *const me, RKH_EVT_T *pe);
 static void turnOffLed(Blinky *const me, RKH_EVT_T *pe);
 static void toggleLed(Blinky *const me, RKH_EVT_T *pe);
@@ -51,7 +51,7 @@ RKH_END_TRANS_TABLE
 
 RKH_CREATE_BASIC_STATE(blinking, NULL, NULL, RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(blinking)
-RKH_TRINT(evBlink,     NULL,        stopBlinking),
+RKH_TRINT(evBlink,     NULL,        toggleBlinking),
 RKH_TRINT(evTimeout,   isBlinking,  toggleLed),
 RKH_TRREG(evTimeout,   NULL,        turnOffLed,      &idle),
 RKH_END_TRANS_TABLE
@@ -90,7 +90,7 @@ init(Blinky *const me)
     RKH_TR_FWK_OBJ(&me->timer);
     RKH_TR_FWK_FUN(&init);
     RKH_TR_FWK_FUN(&startBlinking);
-    RKH_TR_FWK_FUN(&stopBlinking);
+    RKH_TR_FWK_FUN(&toggleBlinking);
     RKH_TR_FWK_FUN(&turnOffLed);
     RKH_TR_FWK_FUN(&toggleLed);
     RKH_TR_FWK_FUN(&isBlinking);
@@ -114,11 +114,11 @@ startBlinking(Blinky *const me, RKH_EVT_T *pe)
 }
 
 static void
-stopBlinking(Blinky *const me, RKH_EVT_T *pe)
+toggleBlinking(Blinky *const me, RKH_EVT_T *pe)
 {
     (void)pe;
 
-    me->blinking = 0;
+    me->blinking ^= 1;
 }
 
 static void

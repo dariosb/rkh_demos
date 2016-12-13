@@ -53,6 +53,7 @@ RKH_END_TRANS_TABLE
 RKH_CREATE_BASIC_STATE(waitForNextTout, NULL, NULL, RKH_ROOT, NULL);
 RKH_CREATE_TRANS_TABLE(waitForNextTout)
 RKH_TRREG(evTimeout,   NULL,        turnOffLed, &idle),
+RKH_TRREG(evBlink,     NULL,        NULL,       &blinking),
 RKH_END_TRANS_TABLE
 
 /* ............................. Active object ............................. */
