@@ -25,7 +25,7 @@
 /* ......................... Declares active object ........................ */
 typedef struct Blinky Blinky;
 
-/* ........................ States and pseudostates ........................ */
+/* ................... Declares states and pseudostates .................... */
 RKH_DCLR_BASIC_STATE idle, blinking, waitForNextTout;
 
 /* ........................ Declares initial action ........................ */
