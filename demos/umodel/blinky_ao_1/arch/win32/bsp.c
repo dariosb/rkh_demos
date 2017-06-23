@@ -49,8 +49,10 @@
 
 /* --------------------------------- Notes --------------------------------- */
 /* ----------------------------- Include files ----------------------------- */
-#include "bsp.h"
 #include "rkh.h"
+#include "rkhfwk_dynevt.h"
+#include "rkhfwk_sched.h"
+#include "bsp.h"
 #include "blinky.h"
 
 #include <conio.h>
@@ -184,8 +186,8 @@ print_banner(void)
 {
     printf("\"Blinky Active Object\" example\n\n");
     printf("RKH version      = %s\n", RKH_RELEASE);
-    printf("Port version     = %s\n", rkh_get_port_version());
-    printf("Port description = %s\n\n", rkh_get_port_desc());
+    printf("Port version     = %s\n", rkhport_get_version());
+    printf("Port description = %s\n\n", rkhport_get_desc());
     printf("\n\n");
 
     printf("1.- Press 'B'/'b' start/stop blink\n");
@@ -280,7 +282,7 @@ rkh_trc_flush(void)
 
     FOREVER
     {
-        nbytes = (TRCQTY_T)1024;
+        nbytes = (TRCQTY_T)128;
 
         RKH_ENTER_CRITICAL_();
         blk = rkh_trc_get_block(&nbytes);
@@ -317,7 +319,7 @@ bsp_init(int argc, char *argv[])
     RKH_FILTER_OFF_SMA(blinky);
     RKH_FILTER_OFF_EVENT(RKH_TE_SMA_LIFO);
     RKH_FILTER_OFF_EVENT(RKH_TE_SMA_FIFO);
-    RKH_FILTER_OFF_EVENT(RKH_TE_SMA_DCH);
+    RKH_FILTER_OFF_EVENT(RKH_TE_SM_DCH);
     RKH_FILTER_OFF_EVENT(RKH_TE_SM_STATE);
     RKH_FILTER_OFF_EVENT(RKH_TE_SM_EXE_ACT);
     RKH_FILTER_OFF_GROUP_ALL_EVENTS(RKH_TG_TMR);
