@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\blinky.c">
+      <Filter>blinky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main.c">
+      <Filter>blinky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\fwk\src\rkhfwk_bittbl.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\fwk\src\rkhfwk_dynevt.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\fwk\src\rkhfwk_evtpool.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\fwk\src\rkhfwk_sched.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\fwk\src\rkhfwk_version.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\mempool\src\rkhmempool.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\portable\80x86\win32_st\vc\rkhport.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\queue\src\rkhqueue.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\sm\src\rkhsm.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\sma\src\rkhsma.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\sma\src\rkhsma_prio.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\tmr\src\rkhtmr.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\trc\src\rkhtrc_filter.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\trc\src\rkhtrc_record.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\trc\src\rkhtrc_stream.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\arch\win32\bsp_blinky.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\arch\win32\assert.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\arch\win32\getopt.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\arch\win32\trace_io.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\arch\win32\trace_io_tcp.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\arch\win32\hook.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="bsp">
+      <UniqueIdentifier>{1d321839-5cd2-4118-b9b3-e2bcaee0b571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rkh">
+      <UniqueIdentifier>{4a559279-1271-456a-aefa-0fd0bdea8eb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="blinky">
+      <UniqueIdentifier>{69f77b1d-1f0b-4603-a98e-51beb27eb21f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

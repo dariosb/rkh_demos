@@ -16,6 +16,7 @@
 /* --------------------------------- Notes --------------------------------- */
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
+#include "rkhfwk_dynevt.h"
 #include "button.h"
 #include "bsp.h"
 

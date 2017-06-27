@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blink_isr_1", "..\..\blink_isr_1\build\win32\blink_isr_1.vcxproj", "{0E65AFBF-B8EE-443E-ACB3-C62AAC7FA19E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blink_isr_2", "..\..\blink_isr_2\build\win32\blink_isr_2.vcxproj", "{4F46EB91-8342-409D-BB78-A93E1AF0828C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blink_ao_1", "..\..\blinky_ao_1\build\win32\blink_ao_1.vcxproj", "{8829E7BE-0B2A-48ED-92DA-CEE9CC76BBDA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blink_ao_2", "..\..\blinky_ao_2\build\win32\blink_ao_2.vcxproj", "{F023278D-A6FF-4516-ACC3-D76FEA246E64}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sliding_ao_1", "..\..\sliding_ao_1\build\win32\sliding_ao_1.vcxproj", "{0E4E7977-BBB2-42A7-A0D2-4BA42E61C74F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "switch_ao_1", "..\..\switch_ao_1\build\win32\switch_ao_1.vcxproj", "{952FBC0D-C8CA-4D25-95FF-0E7DEC523C72}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "switch_ao_2", "..\..\switch_ao_2\build\win32\switch_ao_2.vcxproj", "{4C7D1B4E-0851-4E2C-8FE8-8EBFF7C80DFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E65AFBF-B8EE-443E-ACB3-C62AAC7FA19E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0E65AFBF-B8EE-443E-ACB3-C62AAC7FA19E}.Debug|Win32.Build.0 = Debug|Win32
+		{0E65AFBF-B8EE-443E-ACB3-C62AAC7FA19E}.Release|Win32.ActiveCfg = Release|Win32
+		{0E65AFBF-B8EE-443E-ACB3-C62AAC7FA19E}.Release|Win32.Build.0 = Release|Win32
+		{4F46EB91-8342-409D-BB78-A93E1AF0828C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F46EB91-8342-409D-BB78-A93E1AF0828C}.Debug|Win32.Build.0 = Debug|Win32
+		{4F46EB91-8342-409D-BB78-A93E1AF0828C}.Release|Win32.ActiveCfg = Release|Win32
+		{4F46EB91-8342-409D-BB78-A93E1AF0828C}.Release|Win32.Build.0 = Release|Win32
+		{8829E7BE-0B2A-48ED-92DA-CEE9CC76BBDA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8829E7BE-0B2A-48ED-92DA-CEE9CC76BBDA}.Debug|Win32.Build.0 = Debug|Win32
+		{8829E7BE-0B2A-48ED-92DA-CEE9CC76BBDA}.Release|Win32.ActiveCfg = Release|Win32
+		{8829E7BE-0B2A-48ED-92DA-CEE9CC76BBDA}.Release|Win32.Build.0 = Release|Win32
+		{F023278D-A6FF-4516-ACC3-D76FEA246E64}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F023278D-A6FF-4516-ACC3-D76FEA246E64}.Debug|Win32.Build.0 = Debug|Win32
+		{F023278D-A6FF-4516-ACC3-D76FEA246E64}.Release|Win32.ActiveCfg = Release|Win32
+		{F023278D-A6FF-4516-ACC3-D76FEA246E64}.Release|Win32.Build.0 = Release|Win32
+		{0E4E7977-BBB2-42A7-A0D2-4BA42E61C74F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0E4E7977-BBB2-42A7-A0D2-4BA42E61C74F}.Debug|Win32.Build.0 = Debug|Win32
+		{0E4E7977-BBB2-42A7-A0D2-4BA42E61C74F}.Release|Win32.ActiveCfg = Release|Win32
+		{0E4E7977-BBB2-42A7-A0D2-4BA42E61C74F}.Release|Win32.Build.0 = Release|Win32
+		{952FBC0D-C8CA-4D25-95FF-0E7DEC523C72}.Debug|Win32.ActiveCfg = Debug|Win32
+		{952FBC0D-C8CA-4D25-95FF-0E7DEC523C72}.Debug|Win32.Build.0 = Debug|Win32
+		{952FBC0D-C8CA-4D25-95FF-0E7DEC523C72}.Release|Win32.ActiveCfg = Release|Win32
+		{952FBC0D-C8CA-4D25-95FF-0E7DEC523C72}.Release|Win32.Build.0 = Release|Win32
+		{4C7D1B4E-0851-4E2C-8FE8-8EBFF7C80DFF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4C7D1B4E-0851-4E2C-8FE8-8EBFF7C80DFF}.Debug|Win32.Build.0 = Debug|Win32
+		{4C7D1B4E-0851-4E2C-8FE8-8EBFF7C80DFF}.Release|Win32.ActiveCfg = Release|Win32
+		{4C7D1B4E-0851-4E2C-8FE8-8EBFF7C80DFF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
