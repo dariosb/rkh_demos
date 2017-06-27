@@ -127,6 +127,7 @@ rkh_hook_timetick(void)
 
             case ESC:
                 running = 0;
+				rkhport_fwk_stop();
                 break;
 
             default:

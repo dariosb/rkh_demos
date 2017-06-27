@@ -35,6 +35,7 @@ enum Signals
     evDoorOpen,
     evSensorTriggered,
     evSensorReleased,
+    evTerminate
 };
     
 /* ........................ Declares active object ......................... */

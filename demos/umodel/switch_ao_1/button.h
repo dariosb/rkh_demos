@@ -33,7 +33,8 @@ enum Signals
 {
     evOpen,
     evClose,
-    evTimeout
+    evTimeout,
+    evTerminate
 };
     
 /* ........................ Declares active object ......................... */

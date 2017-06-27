@@ -68,6 +68,7 @@ RKH_THIS_MODULE
 /* ---------------------------- Local data types --------------------------- */
 /* ---------------------------- Global variables --------------------------- */
 /* ---------------------------- Local variables ---------------------------- */
+static RKH_ROM_STATIC_EVENT(evTerm, evTerminate);
 static RKH_ROM_STATIC_EVENT(e_open, evDoorOpen);
 static RKH_ROM_STATIC_EVENT(e_close, evDoorClose);
 static RKH_ROM_STATIC_EVENT(e_strig, evSensorTriggered);
@@ -108,6 +109,7 @@ bsp_keyParser(int c)
     switch (tolower(c))
     {
         case ESC:
+			RKH_SMA_POST_FIFO(sliding, &evTerm, &keyb);
             rkhport_fwk_stop();
             break;
 

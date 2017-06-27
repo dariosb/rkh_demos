@@ -32,7 +32,8 @@ typedef enum Signals Signals;
 enum Signals
 {
     evBlink,
-    evTimeout
+    evTimeout,
+    evTerminate
 };
 
 /* ........................ Declares active object ......................... */
