@@ -52,22 +52,22 @@
     <ClCompile Include="..\..\sliding.c">
       <Filter>sliding</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\arch\win32\bsp_sliding.c">
+    <ClCompile Include="..\..\..\_board\win32\assert.c">
       <Filter>bsp</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\arch\win32\assert.c">
+    <ClCompile Include="..\..\..\_board\win32\getopt.c">
       <Filter>bsp</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\arch\win32\getopt.c">
+    <ClCompile Include="..\..\..\_board\win32\trace_io.c">
       <Filter>bsp</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\arch\win32\trace_io.c">
+    <ClCompile Include="..\..\..\_board\win32\trace_io_tcp.c">
       <Filter>bsp</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\arch\win32\trace_io_tcp.c">
+    <ClCompile Include="..\..\..\_board\win32\bsp_sliding.c">
       <Filter>bsp</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\arch\win32\hook.c">
+    <ClCompile Include="..\..\..\_board\win32\hook.c">
       <Filter>bsp</Filter>
     </ClCompile>
   </ItemGroup>

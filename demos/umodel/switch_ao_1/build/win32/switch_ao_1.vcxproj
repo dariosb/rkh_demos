@@ -54,7 +54,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\;$(ProjectDir)..\..\..\arch\win32;$(ProjectDir)..\..\..\..\..\rkh\source\fwk\inc;$(ProjectDir)..\..\..\..\..\rkh\source\mempool\inc;$(ProjectDir)..\..\..\..\..\rkh\source\queue\inc;$(ProjectDir)..\..\..\..\..\rkh\source\sm\inc;$(ProjectDir)..\..\..\..\..\rkh\source\sma\inc;$(ProjectDir)..\..\..\..\..\rkh\source\tmr\inc;$(ProjectDir)..\..\..\..\..\rkh\source\trc\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\;$(ProjectDir)..\..\..\_board\win32;$(ProjectDir)..\..\..\..\..\rkh\source\fwk\inc;$(ProjectDir)..\..\..\..\..\rkh\source\mempool\inc;$(ProjectDir)..\..\..\..\..\rkh\source\queue\inc;$(ProjectDir)..\..\..\..\..\rkh\source\sm\inc;$(ProjectDir)..\..\..\..\..\rkh\source\sma\inc;$(ProjectDir)..\..\..\..\..\rkh\source\tmr\inc;$(ProjectDir)..\..\..\..\..\rkh\source\trc\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;__W32STVC__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -106,12 +106,12 @@
     <ClCompile Include="..\..\..\..\..\rkh\source\trc\src\rkhtrc_filter.c" />
     <ClCompile Include="..\..\..\..\..\rkh\source\trc\src\rkhtrc_record.c" />
     <ClCompile Include="..\..\..\..\..\rkh\source\trc\src\rkhtrc_stream.c" />
-    <ClCompile Include="..\..\..\arch\win32\assert.c" />
-    <ClCompile Include="..\..\..\arch\win32\bsp_switch.c" />
-    <ClCompile Include="..\..\..\arch\win32\getopt.c" />
-    <ClCompile Include="..\..\..\arch\win32\hook.c" />
-    <ClCompile Include="..\..\..\arch\win32\trace_io.c" />
-    <ClCompile Include="..\..\..\arch\win32\trace_io_tcp.c" />
+    <ClCompile Include="..\..\..\_board\win32\assert.c" />
+    <ClCompile Include="..\..\..\_board\win32\bsp_switch.c" />
+    <ClCompile Include="..\..\..\_board\win32\getopt.c" />
+    <ClCompile Include="..\..\..\_board\win32\hook.c" />
+    <ClCompile Include="..\..\..\_board\win32\trace_io.c" />
+    <ClCompile Include="..\..\..\_board\win32\trace_io_tcp.c" />
     <ClCompile Include="..\..\button.c" />
     <ClCompile Include="..\..\main.c" />
   </ItemGroup>
