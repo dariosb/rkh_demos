@@ -52,17 +52,12 @@
 		<link>
 			<name>src/bsp/Drivers</name>
 			<type>2</type>
-			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/Serial-Qt/Drivers</locationURI>
+			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>src/bsp/KitInfo2</name>
+			<name>src/bsp/KITInfo2</name>
 			<type>2</type>
-			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/Serial-Qt/KitInfo2</locationURI>
-		</link>
-		<link>
-			<name>src/bsp/Primitivas</name>
-			<type>2</type>
-			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/Serial-Qt/Primitivas</locationURI>
+			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
 			<name>src/bsp/assert.c</name>
@@ -75,9 +70,29 @@
 			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/bsp_blinky_isr.c</locationURI>
 		</link>
 		<link>
+			<name>src/bsp/cr_startup_lpc176x.c</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/cr_startup_lpc176x.c</locationURI>
+		</link>
+		<link>
+			<name>src/bsp/lpc17xx.c</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/lpc17xx.c</locationURI>
+		</link>
+		<link>
+			<name>src/bsp/system_LPC17xx.c</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/system_LPC17xx.c</locationURI>
+		</link>
+		<link>
 			<name>src/bsp/trace_io.c</name>
 			<type>1</type>
 			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/trace_io.c</locationURI>
+		</link>
+		<link>
+			<name>src/bsp/uart.c</name>
+			<type>1</type>
+			<location>D:/UTN_2016/rkh_demos/demos/umodel/_board/lpcxpresso/uart.c</location>
 		</link>
 		<link>
 			<name>src/rkh/rkhfwk_bittbl.c</name>
@@ -158,6 +173,16 @@
 			<name>src/rkh/rkhtrc_stream.c</name>
 			<type>1</type>
 			<locationURI>PARENT-5-PROJECT_LOC/rkh/source/trc/src/rkhtrc_stream.c</locationURI>
+		</link>
+		<link>
+			<name>src/bsp/KITInfo2/KitInic.c</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/Serial-Qt/KitInfo2/KitInic.c</locationURI>
+		</link>
+		<link>
+			<name>src/bsp/KITInfo2/UtilesInfo2.c</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/Serial-Qt/KitInfo2/UtilesInfo2.c</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>

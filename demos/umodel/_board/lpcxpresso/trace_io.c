@@ -49,6 +49,9 @@
 /* --------------------------------- Notes --------------------------------- */
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
+#include "type.h"
+#include "lpc17xx.h"
+#include "uart.h"
 
 #if RKH_CFG_TRC_EN == 1
 /* ----------------------------- Local macros ------------------------------ */
@@ -59,7 +62,7 @@
  *  Dividing a count of timestamp ticks by this macro yields the number
  *  of seconds.
  */
-#define BSP_TS_RATE_HZ              RKH_CFG_FWK_TICK_RATE_HZ
+#define BSP_TS_RATE_HZ              MCU_TS_RATE_HZ
 
 
 /* ---------------------------- Local data types --------------------------- */
@@ -72,47 +75,21 @@ void
 rkh_trc_open(void)
 {
     rkh_trc_init();
-#if 0
-    if (strlen(config.ftbinName) != 0)
-    {
-        if ((ftbin = fopen(config.ftbinName, "w+b")) == NULL)
-        {
-            printf("Can't open trace file %s\n", config.ftbinName);
-            exit(EXIT_FAILURE);
-        }
-    }
 
-    if (trace_io_tcp_open(config.tcpPort, config.tcpIpAddr, &tsock) < 0)
-    {
-        printf("Can't open socket %s:%u\n",
-               config.tcpIpAddr, config.tcpPort);
-        exit(EXIT_FAILURE);
-    }
-#endif
+    UARTInit(0, 38400);
+
     RKH_TRC_SEND_CFG(BSP_TS_RATE_HZ);
 }
 
 void
 rkh_trc_close(void)
 {
-#if 0
-    if (ftbin != NULL)
-    {
-        fclose(ftbin);
-    }
-
-    trace_io_tcp_close(tsock);
-#endif
 }
 
 RKH_TS_T
 rkh_trc_getts(void)
 {
-#if 0
-    return (RKH_TS_T)clock();
-#else
-    return (RKH_TS_T)0;
-#endif
+    return ( RKH_TS_T )get_ts();
 }
 
 void
@@ -130,21 +107,14 @@ rkh_trc_flush(void)
         blk = rkh_trc_get_block(&nbytes);
         RKH_EXIT_CRITICAL_();
 
-#if 0
         if ((blk != (rui8_t *)0))
         {
-            if (ftbin != NULL)
-            {
-                fwrite(blk, 1, nbytes, ftbin);
-            }
-
-            trace_io_tcp_send(tsock, (char *)blk, nbytes);
+            UARTPutnc( 0, (char *)blk, nbytes);
         }
         else
         {
             break;
         }
-#endif
     }
 }
 #endif

@@ -52,6 +52,7 @@
 #include "rkh.h"
 #include "rkhfwk_dynevt.h"
 #include "rkhfwk_sched.h"
+#include "lpc17xx.h"
 #include "bsp.h"
 #include "blinky.h"
 
@@ -73,12 +74,6 @@ rui8_t running;
 
 /* ---------------------------- Local variables ---------------------------- */
 static rui32_t tick_msec;         /* clock tick in msec */
-static RKH_TS_T ts_cntr;        /* time stamp counter */
-
-#if defined(RKH_USE_TRC_SENDER)
-static rui8_t rkh_tick;
-#endif
-
 rui32_t blinkyTick;
 
 static RKH_ROM_STATIC_EVENT(e_blink, evBlink);
@@ -106,7 +101,6 @@ print_banner(void)
 void
 rkh_hook_timetick(void)
 {
-    ++ts_cntr;
 #if 0
     if (_kbhit())
     {
@@ -137,8 +131,6 @@ rkh_hook_start(void)
 {
     /* set the desired tick rate */
     tick_msec = 1000UL / BSP_TICKS_PER_SEC;
-    InitSystick(tick_msec * 1000);
-    ts_cntr = 0;
 }
 
 void
@@ -172,8 +164,8 @@ bsp_init(int argc, char *argv[])
     (void)argc;
     (void)argv;
 
-    InicializarKit();
-	InitEXP();
+    cpu_init();
+    InitGPIOs();
 
     print_banner();
 
@@ -189,6 +181,7 @@ bsp_init(int argc, char *argv[])
 
     RKH_TRC_OPEN();
 
+	RKH_ENA_INTERRUPT();
     /* send signals to trazer */
     RKH_TR_FWK_SIG(evBlink);
     RKH_TR_FWK_SIG(evTimeout);
