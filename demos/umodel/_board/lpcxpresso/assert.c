@@ -57,7 +57,8 @@ RKH_THIS_MODULE
 #ifdef DEBUG
 #define reset_now()		__asm volatile	("	bkpt 0x00FF\n" )
 #else
-#define reset_now()		NVIC_SystemReset()
+//#define reset_now()		NVIC_SystemReset()
+#define reset_now()
 #endif
 
 /* ------------------------------- Constants ------------------------------- */

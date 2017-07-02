@@ -55,6 +55,8 @@
 #include "lpc17xx.h"
 #include "bsp.h"
 #include "blinky.h"
+#include "PR_Teclado.h"
+#include "FW_IO.h"
 
 #include <KitInfo2.h>
 #include <KitInfo2_Expansiones.h>
@@ -66,7 +68,10 @@ RKH_THIS_MODULE
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
-#define ESC                     0x1B
+enum
+{
+    SW5, SW4, SW3, SW2, SW1
+};
 
 /* ---------------------------- Local data types --------------------------- */
 /* ---------------------------- Global variables --------------------------- */
@@ -101,25 +106,21 @@ print_banner(void)
 void
 rkh_hook_timetick(void)
 {
-#if 0
-    if (_kbhit())
+    uint8_t k;
+
+    DriverTeclas();
+    k = Teclas_GetKey();
+    switch( k )
     {
-        switch (tolower(_getch()))
-        {
-            case 'b':
-                rkh_sm_dispatch(blinky, (RKH_EVT_T *)&e_blink);
-                break;
+        case SW1:
+            rkh_sm_dispatch(blinky, (RKH_EVT_T *)&e_blink);
+            break;
 
-            case ESC:
-                running = 0;
-				rkhport_fwk_stop();
-                break;
-
-            default:
-                break;
-        }
+        case NO_KEY:
+        default:
+        	break;
     }
-#endif
+
     if (blinkyTick && (--blinkyTick == 0))
     {
         rkh_sm_dispatch(blinky, (RKH_EVT_T *)&e_timeout);
@@ -155,7 +156,7 @@ bsp_set_blinkyTick(rui32_t t)
 void
 bsp_set_led(rui8_t led)
 {
-//    printf("LED %s\n", led ? "ON" : "OFF");
+    SetPIN(RGBB, led ? ON : OFF);
 }
 
 void
@@ -181,8 +182,9 @@ bsp_init(int argc, char *argv[])
 
     RKH_TRC_OPEN();
 
-	RKH_ENA_INTERRUPT();
-    /* send signals to trazer */
+    RKH_ENA_INTERRUPT();
+
+	/* send signals to trazer */
     RKH_TR_FWK_SIG(evBlink);
     RKH_TR_FWK_SIG(evTimeout);
 }

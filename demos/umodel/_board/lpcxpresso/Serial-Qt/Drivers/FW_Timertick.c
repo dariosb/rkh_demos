@@ -14,12 +14,6 @@
 #include "PR_DisplayMatricial.h"
 #include "FW_DisplayMatricial.h"
 #include "PR_Timer.h"
-#include "rkh.h"
-
-#if defined(RKH_USE_TRC_SENDER)
-static rui8_t rkh_tick;
-#endif
-
 
 volatile uint8_t f_1seg, f_100ms;
 
@@ -46,8 +40,6 @@ void InitSystick (uint32_t useg)
 void SysTick_Handler(void)
 {
 	static uint32_t centesimas = CENTESIMAS, decimas = DECIMAS;
-
-    RKH_TIM_TICK(&rkh_tick);
 
 	DriverTeclas();
 	Entradas_Debounce();

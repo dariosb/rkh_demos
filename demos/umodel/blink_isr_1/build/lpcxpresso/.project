@@ -60,6 +60,11 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>src/bsp/Primitivas</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>src/bsp/assert.c</name>
 			<type>1</type>
 			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/assert.c</locationURI>
@@ -175,6 +180,11 @@
 			<locationURI>PARENT-5-PROJECT_LOC/rkh/source/trc/src/rkhtrc_stream.c</locationURI>
 		</link>
 		<link>
+			<name>src/bsp/Drivers/FW_IO.c</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/Serial-Qt/Drivers/FW_IO.c</locationURI>
+		</link>
+		<link>
 			<name>src/bsp/KITInfo2/KitInic.c</name>
 			<type>1</type>
 			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/Serial-Qt/KitInfo2/KitInic.c</locationURI>
@@ -183,6 +193,11 @@
 			<name>src/bsp/KITInfo2/UtilesInfo2.c</name>
 			<type>1</type>
 			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/Serial-Qt/KitInfo2/UtilesInfo2.c</locationURI>
+		</link>
+		<link>
+			<name>src/bsp/Primitivas/PR_Teclado.c</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/Serial-Qt/Primitivas/PR_Teclado.c</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
