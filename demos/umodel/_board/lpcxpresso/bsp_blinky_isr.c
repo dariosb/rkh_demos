@@ -33,7 +33,7 @@
  *  \file       bsp.c
  *  \ingroup    bsp
  *
- *  \brief      BSP for 80x86 OS win32
+ *  \brief      BSP for LPCXpresso board
  */
 
 /* -------------------------- Development history -------------------------- */
@@ -44,7 +44,7 @@
 /* -------------------------------- Authors -------------------------------- */
 /*
  *  LeFr  Leandro Francucci  francuccilea@gmail.com
- *  DaBa  Darï¿½o Baliï¿½a       dariosb@gmail.com
+ *  DaBa  Darío Baliña       dariosb@gmail.com
  */
 
 /* --------------------------------- Notes --------------------------------- */
@@ -72,8 +72,6 @@ enum
 
 /* ---------------------------- Local data types --------------------------- */
 /* ---------------------------- Global variables --------------------------- */
-rui8_t running;
-
 /* ---------------------------- Local variables ---------------------------- */
 static rui32_t blinkyTick;
 static RKH_ROM_STATIC_EVENT(e_blink, evBlink);
