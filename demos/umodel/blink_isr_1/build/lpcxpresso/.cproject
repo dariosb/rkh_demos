@@ -132,6 +132,8 @@
 								<option id="gnu.c.compiler.option.include.paths.935914473" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../_board/lpcxpresso&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../_board/lpcxpresso/uart&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../_board/lpcxpresso/lpc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../_board/lpcxpresso/Serial-Qt/Drivers&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../_board/lpcxpresso/Serial-Qt/KitInfo2&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../_board/lpcxpresso/Serial-Qt/Primitivas&quot;"/>
@@ -151,9 +153,7 @@
 								<option id="gnu.both.asm.option.flags.crt.2125316887" name="Assembler flags" superClass="gnu.both.asm.option.flags.crt" value="-c -x assembler-with-cpp -DNDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -D__REDLIB__" valueType="string"/>
 								<option id="com.crt.advproject.gas.hdrlib.1134660751" name="Library headers" superClass="com.crt.advproject.gas.hdrlib" value="Redlib" valueType="enumerated"/>
 								<option id="com.crt.advproject.gas.specs.1608423717" name="Specs" superClass="com.crt.advproject.gas.specs" value="com.crt.advproject.gas.specs.codered" valueType="enumerated"/>
-								<option id="gnu.both.asm.option.include.paths.1051893441" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/rkh_demo/inc}&quot;"/>
-								</option>
+								<option id="gnu.both.asm.option.include.paths.1051893441" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath"/>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.92556214" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 								<inputType id="com.crt.advproject.assembler.input.205804655" name="Additional Assembly Source Files" superClass="com.crt.advproject.assembler.input"/>
 							</tool>
