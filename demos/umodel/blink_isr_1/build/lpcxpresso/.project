@@ -80,6 +80,11 @@
 			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/cr_startup_lpc176x.c</locationURI>
 		</link>
 		<link>
+			<name>src/bsp/hook.c</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/hook.c</locationURI>
+		</link>
+		<link>
 			<name>src/bsp/lpc17xx.c</name>
 			<type>1</type>
 			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/lpc17xx.c</locationURI>
@@ -97,7 +102,7 @@
 		<link>
 			<name>src/bsp/uart.c</name>
 			<type>1</type>
-			<location>D:/UTN_2016/rkh_demos/demos/umodel/_board/lpcxpresso/uart.c</location>
+			<locationURI>PARENT-3-PROJECT_LOC/_board/lpcxpresso/uart.c</locationURI>
 		</link>
 		<link>
 			<name>src/rkh/rkhfwk_bittbl.c</name>

@@ -52,17 +52,14 @@
 #include "rkh.h"
 #include "rkhfwk_dynevt.h"
 #include "rkhfwk_sched.h"
-#include "lpc17xx.h"
-#include "bsp.h"
 #include "blinky.h"
+#include "bsp.h"
+#include "lpc17xx.h"
 #include "PR_Teclado.h"
 #include "FW_IO.h"
-
-#include <KitInfo2.h>
-#include <KitInfo2_Expansiones.h>
-#include <KitInic.h>
-#include <KitInic_Expansiones.h>
-
+#include "KitInfo2.h"
+#include "KitInic.h"
+#include "uart.h"
 
 RKH_THIS_MODULE
 
@@ -78,33 +75,15 @@ enum
 rui8_t running;
 
 /* ---------------------------- Local variables ---------------------------- */
-static rui32_t tick_msec;         /* clock tick in msec */
-rui32_t blinkyTick;
-
+static rui32_t blinkyTick;
 static RKH_ROM_STATIC_EVENT(e_blink, evBlink);
 static RKH_ROM_STATIC_EVENT(e_timeout, evTimeout);
 
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
-static
-void
-print_banner(void)
-{
-#if 0
-    printf("\"Blinky ISR\" example\n\n");
-    printf("RKH version      = %s\n", RKH_RELEASE);
-    printf("Port version     = %s\n", rkhport_get_version());
-    printf("Port description = %s\n\n", rkhport_get_desc());
-    printf("\n\n");
-
-    printf("1.- Press 'B'/'b' start/stop blink\n");
-    printf("2.- Press 'escape' to quit.\n\n\n");
-#endif
-}
-
 /* ---------------------------- Global functions --------------------------- */
 void
-rkh_hook_timetick(void)
+bsp_timeTick(void)
 {
     uint8_t k;
 
@@ -128,26 +107,6 @@ rkh_hook_timetick(void)
 }
 
 void
-rkh_hook_start(void)
-{
-    /* set the desired tick rate */
-    tick_msec = 1000UL / BSP_TICKS_PER_SEC;
-}
-
-void
-rkh_hook_exit(void)
-{
-    RKH_TRC_FLUSH();
-}
-
-void
-rkh_hook_idle(void)                 /* called within critical section */
-{
-    RKH_EXIT_CRITICAL(dummy);
-    RKH_TRC_FLUSH();
-}
-
-void
 bsp_set_blinkyTick(rui32_t t)
 {
     blinkyTick = t;
@@ -167,9 +126,7 @@ bsp_init(int argc, char *argv[])
 
     cpu_init();
     InitGPIOs();
-
-    print_banner();
-
+    
     rkh_fwk_init();
 
     RKH_FILTER_ON_GROUP(RKH_TRC_ALL_GROUPS);

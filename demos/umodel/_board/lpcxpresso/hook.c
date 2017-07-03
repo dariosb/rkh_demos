@@ -57,34 +57,13 @@ RKH_THIS_MODULE
 /* ------------------------------- Constants ------------------------------- */
 /* ---------------------------- Local data types --------------------------- */
 /* ---------------------------- Global variables --------------------------- */
-#if defined(RKH_USE_TRC_SENDER)
-rui8_t rkh_tick;
-#endif
-
 /* ---------------------------- Local variables ---------------------------- */
-static DWORD tickMsec;
-
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
 /* ---------------------------- Global functions --------------------------- */
 void
 rkh_hook_start(void)
 {
-    DWORD thtmrId, thkbdId;
-    HANDLE hthTmr, hthKbd;
-
-    /* set the desired tick rate */
-    tickMsec = RKH_TICK_RATE_MS;
-
-    /* create the ISR timer thread */
-    hthTmr = CreateThread(NULL, 1024, &isr_tmrThread, 0, 0, &thtmrId);
-    RKH_ASSERT(hthTmr != (HANDLE)0);
-    SetThreadPriority(hthTmr, THREAD_PRIORITY_TIME_CRITICAL);
-
-    /* create the ISR keyboard thread */
-    hthKbd = CreateThread(NULL, 1024, &isr_kbdThread, 0, 0, &thkbdId);
-    RKH_ASSERT(hthKbd != (HANDLE)0);
-    SetThreadPriority(hthKbd, THREAD_PRIORITY_NORMAL);
 }
 
 void
@@ -102,9 +81,8 @@ rkh_hook_timetick(void)
 void
 rkh_hook_idle(void)             /* called within critical section */
 {
-    RKH_EXIT_CRITICAL(dummy);
+	RKH_ENA_INTERRUPT();
     RKH_TRC_FLUSH();
-    rkhport_wait_for_events();  /* yield the CPU until new event(s) arrive */
 }
 
 /* ------------------------------ File footer ------------------------------ */
