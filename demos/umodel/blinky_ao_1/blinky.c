@@ -10,7 +10,7 @@
 /* -------------------------------- Authors -------------------------------- */
 /*
  *  LeFr  Leandro Francucci  francuccilea@gmail.com
- *  DaBa  Darío Baliña       dariosb@gmail.com
+ *  DaBa  Darï¿½o Baliï¿½a       dariosb@gmail.com
  */
 
 /* --------------------------------- Notes --------------------------------- */
@@ -35,7 +35,6 @@ static void init(Blinky *const me);
 /* ........................ Declares effect actions ........................ */
 static void startBlinking(Blinky *const me, RKH_EVT_T *pe);
 static void toggleBlinking(Blinky *const me, RKH_EVT_T *pe);
-static void turnOnLed(Blinky *const me, RKH_EVT_T *pe);
 static void turnOffLed(Blinky *const me, RKH_EVT_T *pe);
 static void toggleLed(Blinky *const me, RKH_EVT_T *pe);
 

@@ -84,11 +84,13 @@ extern rui8_t rkh_tick;
 /* -------------------------- Function prototypes -------------------------- */
 void bsp_timeTick(void);
 void bsp_keyParser(int c);
+void bsp_pub_sw_evt(ruint s, ruint debsw);
 void bsp_init(int argc, char *argv[]);
 void bsp_set_blinkyTick(rui32_t t);
 void bsp_set_led(rui8_t led);
 void bsp_setMotor(rui8_t open, rui8_t close);
 void bsp_button(rui8_t bst);
+
 
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus
