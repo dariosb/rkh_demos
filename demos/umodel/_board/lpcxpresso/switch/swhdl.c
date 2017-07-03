@@ -14,17 +14,17 @@
 ruint
 rawDoorOpen( void )
 {
-	return GetPIN(KEY3);
+	return GetPIN(KEY2);
 }
 
 ruint
 rawDoorClose( void )
 {
-	return GetPIN(KEY1);
+	return GetPIN(KEY0);
 }
 	
 ruint
 rawSensor( void )
 {
-	return GetPIN(KEY2);
+	return GetPIN(KEY1);
 }

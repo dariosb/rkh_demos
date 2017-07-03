@@ -103,7 +103,7 @@ bsp_pub_sw_evt(ruint s, ruint debsw)
             break;
 
         case DOORCLOSE_SW:
-            RKH_SMA_POST_FIFO(sliding, &e_open, &door);
+            RKH_SMA_POST_FIFO(sliding, &e_close, &door);
             break;
 
         case SENSOR_SW:
