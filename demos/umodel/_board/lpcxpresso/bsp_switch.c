@@ -75,6 +75,7 @@ enum
 /* ---------------------------- Local variables ---------------------------- */
 static RKH_ROM_STATIC_EVENT(e_open, evOpen);
 static RKH_ROM_STATIC_EVENT(e_close, evClose);
+static uint8_t last_key;
 
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
@@ -84,21 +85,14 @@ bsp_timeTick(void)
 {
     uint8_t k;
 
-    k = DriverTeclasHW();
+    k = GetPIN(KEY0);
 
-    switch( k )
-    {
-        case SW1:
-            RKH_SMA_POST_FIFO(button, &e_close, &keyb);
-            break;
+    if(last_key == k)
+    	return;
 
-        case NO_KEY:
-            RKH_SMA_POST_FIFO(button, &e_open, &keyb);
-            break;
+    last_key = k;
 
-        default:
-        	break;
-    }    
+    RKH_SMA_POST_FIFO(button, k ? &e_open : &e_close, &keyb);
 }
 
 void

@@ -50,6 +50,7 @@
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
 #include "bsp.h"
+#include "lpc17xx.h"
 
 RKH_THIS_MODULE
 
@@ -62,8 +63,15 @@ RKH_THIS_MODULE
 /* ---------------------------- Local functions ---------------------------- */
 /* ---------------------------- Global functions --------------------------- */
 void
+SysTick_Handler( void )
+{
+	RKH_TIM_TICK(&rkh_tick);
+}
+
+void
 rkh_hook_start(void)
 {
+	systick_init();
 }
 
 void
