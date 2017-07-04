@@ -82,6 +82,7 @@ extern rui8_t rkh_tick;
 #endif
 
 /* -------------------------- Function prototypes -------------------------- */
+RKH_TS_T bsp_get_ts(void);
 void bsp_timeTick(void);
 void bsp_keyParser(int c);
 void bsp_pub_sw_evt(ruint s, ruint debsw);

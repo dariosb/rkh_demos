@@ -59,18 +59,28 @@ RKH_THIS_MODULE
 /* ---------------------------- Local data types --------------------------- */
 /* ---------------------------- Global variables --------------------------- */
 /* ---------------------------- Local variables ---------------------------- */
+static RKH_TS_T tstamp;
+
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
 /* ---------------------------- Global functions --------------------------- */
+RKH_TS_T
+bsp_get_ts(void)
+{
+    return tstamp;
+}
+
 void
 SysTick_Handler( void )
 {
+    ++tstamp;
 	RKH_TIM_TICK(&rkh_tick);
 }
 
 void
 rkh_hook_start(void)
 {
+    tstamp=0;
 	systick_init();
 }
 

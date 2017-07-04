@@ -89,7 +89,7 @@ rkh_trc_close(void)
 RKH_TS_T
 rkh_trc_getts(void)
 {
-    return ( RKH_TS_T )get_ts();
+    return bsp_get_ts();
 }
 
 void
