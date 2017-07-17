@@ -1,5 +1,5 @@
 /**
- *  \file       blinky.c
+ *  \file       oven.c
  *  \brief      Example application.
  */
 
@@ -16,6 +16,7 @@
 /* --------------------------------- Notes --------------------------------- */
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
+#include "rkhfwk_dynevt.h"
 #include "oven.h"
 #include "bsp.h"
 
@@ -66,7 +67,7 @@ static RKH_ROM_STATIC_EVENT(e_tout, TMREVT);
 void
 oven_init(Oven *const me)
 {
-    bsp_oven_init();
+    bsp_ovenInit();
 
     /* send objects to trazer */
     RKH_TR_FWK_AO(me);
@@ -97,7 +98,7 @@ cook_start(Oven *const me, RKH_EVT_T *pe)
     (void)pe;
 
     RKH_TMR_ONESHOT(&me->timer, RKH_UPCAST(RKH_SMA_T, me), COOK_TIME);
-    bsp_emitter_on();
+    bsp_emitterOn();
 }
 
 /* ============================= Exit actions ============================== */
@@ -107,7 +108,7 @@ cook_stop(Oven *const me, RKH_EVT_T *pe)
     (void)pe;
 
     rkh_tmr_stop(&me->timer);
-    bsp_emitter_off();
+    bsp_emitterOff();
 }
 
 /* ================================ Guards ================================= */

@@ -1,43 +1,6 @@
 /**
- * \cond
- *  --------------------------------------------------------------------------
- *
- *                                Framework RKH
- *                                -------------
- *
- *            State-machine framework for reactive embedded systems
- *
- *                      Copyright (C) 2010 Leandro Francucci.
- *          All rights reserved. Protected by international copyright laws.
- *
- *
- *  RKH is free software: you can redistribute it and/or modify it under the
- *  terms of the GNU General Public License as published by the Free Software
- *  Foundation, either version 3 of the License, or (at your option) any
- *  later version.
- *
- *  RKH is distributed in the hope that it will be useful, but WITHOUT ANY
- *  WARRANTY; without even the implied warranty of MERCHANTABILITY or
- *  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
- *  more details.
- *
- *  You should have received a copy of the GNU General Public License along
- *  with RKH, see copying.txt file.
- *
- *  Contact information:
- *  RKH web site:	http://sourceforge.net/projects/rkh-reactivesys/
- *  e-mail:			francuccilea@gmail.com
- *
- *  --------------------------------------------------------------------------
- *  File                     : rkhcfg.h
- *	Last updated for version : v2.4.04
- *	By                       : LF
- *  --------------------------------------------------------------------------
- *  \endcond
- *
- *  \file
- *
- *  \brief      RKH user configuration
+ *  \file       rkhcfg.c
+ *  \brief      RKH user configuration.
  */
 
 #ifndef __RKHCFG_H__
@@ -46,7 +9,6 @@
 /**
  *  Defines standard constants and macros.
  */
-
 #include "rkhdef.h"
 
 /* --- Configuration options related to framework ------------------------- */
@@ -55,16 +17,14 @@
  *	Specify the maximum number of state machine applications (SMA) to be used
  *	by the application (can be a number in the range [1..64]).
  */
-
-#define RKH_CFG_FWK_MAX_SMA             8u
+#define RKH_CFG_FWK_MAX_SMA             2u
 
 /**
  *	If the dynamic event support (see #RKH_CFG_FWK_DYN_EVT_EN) is set to
  *	1, RKH allows to use event with parameters, defer/recall, allocating
  *	and recycling dynamic events, among other features.
  */
-
-#define RKH_CFG_FWK_DYN_EVT_EN          RKH_ENABLED
+#define RKH_CFG_FWK_DYN_EVT_EN          RKH_DISABLED
 
 /**
  *	If the dynamic event support is enabled (see #RKH_CFG_FWK_DYN_EVT_EN)
@@ -73,8 +33,7 @@
  *	(can be a number in the range [0..256]).
  *	Note that a value of 0 will completely suppress the memory pool services.
  */
-
-#define RKH_CFG_FWK_MAX_EVT_POOL        4u
+#define RKH_CFG_FWK_MAX_EVT_POOL        0u
 
 /**
  *  Specify the size of the event signal. The valid values [in bits] are
@@ -82,14 +41,12 @@
  *  event structure size and therefore more memory consumption.
  *  See #RKH_SIG_T data type.
  */
-
 #define RKH_CFG_FWK_SIZEOF_EVT          8u
 
 /**
  *	Specify the maximum number of event signals to be used by the
  *	application.
  */
-
 #define RKH_CFG_FWK_MAX_SIGNALS         16u
 
 /**
@@ -98,7 +55,6 @@
  *	RKH_ALLOC_EVT(). Use a 8 value if the bigger event size is minor to
  *	256 bytes.
  */
-
 #define RKH_CFG_FWK_SIZEOF_EVT_SIZE     16u
 
 /**
@@ -106,8 +62,7 @@
  *	support is enabled (see #RKH_CFG_FWK_DYN_EVT_EN), RKH enables the
  *	defer and recall event features.
  */
-
-#define RKH_CFG_FWK_DEFER_EVT_EN        RKH_ENABLED
+#define RKH_CFG_FWK_DEFER_EVT_EN        RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_FWK_ASSERT_EN is set to 0 the checking assertions are
@@ -118,7 +73,6 @@
  *  macro RKH_ALLEGE(), that still evaluates the test condition, but does
  *  not report assertion failures when the #RKH_CFG_FWK_ASSERT_EN is enabled.
  */
-
 #define RKH_CFG_FWK_ASSERT_EN           RKH_ENABLED
 
 /**
@@ -126,7 +80,6 @@
  *	dispatch hook function rkh_hook_dispatch() when dispatching an event to
  *	a SMA. When this is set the application must provide the hook function.
  */
-
 #define RKH_CFG_HOOK_DISPATCH_EN        RKH_DISABLED
 
 /**
@@ -135,7 +88,6 @@
  *	posts the event to the event queue of the consumer SMA.
  *	When this is set the application must provide the hook function.
  */
-
 #define RKH_CFG_HOOK_SIGNAL_EN          RKH_DISABLED
 
 /**
@@ -145,7 +97,6 @@
  *	queue.
  *	When this is set the application must provide the hook function.
  */
-
 #define RKH_CFG_HOOK_TIMEOUT_EN         RKH_DISABLED
 
 /**
@@ -154,7 +105,6 @@
  *  the application.
  *	When this is set the application must provide the hook function.
  */
-
 #define RKH_CFG_HOOK_START_EN           RKH_ENABLED
 
 /**
@@ -164,7 +114,6 @@
  *	terminate or framework exit.
  *	When this is set the application must provide the hook function.
  */
-
 #define RKH_CFG_HOOK_EXIT_EN            RKH_ENABLED
 
 /**
@@ -179,7 +128,6 @@
  *	blocking calls and must execute as quickly as possible.
  *	When this is set the application must provide the hook function.
  */
-
 #define RKH_CFG_HOOK_TIMETICK_EN        RKH_ENABLED
 
 /**
@@ -199,8 +147,7 @@
  *  value to allow an application to deal with time when using timer
  *  services, converting ticks to time. See RKH_TICK_RATE_MS constant.
  */
-
-#define RKH_CFG_FWK_TICK_RATE_HZ        100u
+#define RKH_CFG_FWK_TICK_RATE_HZ            100u
 
 /* --- Configuration options related to state machine applications -------- */
 
@@ -208,7 +155,6 @@
  *	If the #RKH_CFG_SMA_GET_INFO_EN is set to 1 then RKH will include the
  *	rkh_clear_info() and rkh_get_info() functions.
  */
-
 #define RKH_CFG_SMA_GET_INFO_EN         RKH_DISABLED
 
 /**
@@ -220,7 +166,6 @@
  *	member of the derived structure. See \a prepro member of #RKH_ST_T
  *	structure for more information.
  */
-
 #define RKH_CFG_SMA_PPRO_EN             RKH_DISABLED
 
 /**
@@ -229,7 +174,6 @@
  *	not included: state nesting, composite state, history (shallow and deep)
  *	pseudostate, entry action, and exit action.
  */
-
 #define RKH_CFG_SMA_HCAL_EN             RKH_ENABLED
 
 /**
@@ -238,7 +182,6 @@
  *  hierarchical state machines uses up to 4 levels. Currently
  *  #RKH_CFG_SMA_MAX_HCAL_DEPTH cannot exceed 8.
  */
-
 #define RKH_CFG_SMA_MAX_HCAL_DEPTH      4u
 
 /**
@@ -247,56 +190,48 @@
  *	hierarchical state machines uses up to 4 transition segments.
  *	Currently #RKH_CFG_SMA_MAX_TRC_SEGS cannot exceed 8.
  */
-
 #define RKH_CFG_SMA_MAX_TRC_SEGS        4u
 
 /**
  *	If the #RKH_CFG_SMA_PSEUDOSTATE_EN is set to 1, the RKH allows
  *	pseudostates usage.
  */
-
 #define RKH_CFG_SMA_PSEUDOSTATE_EN      RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_DEEP_HIST_EN and #RKH_CFG_SMA_PSEUDOSTATE_EN are
  *	set to 1, the RKH allows deep history pseudostate usage.
  */
-
 #define RKH_CFG_SMA_DEEP_HIST_EN        RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_SMA_SHALLOW_HIST_EN and #RKH_CFG_SMA_PSEUDOSTATE_EN
  *	are set to 1, the RKH allows shallow history pseudostate usage.
  */
-
 #define RKH_CFG_SMA_SHALLOW_HIST_EN     RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_SMA_CHOICE_EN and #RKH_CFG_SMA_PSEUDOSTATE_EN are set to
  *	1, the RKH allows choice pseudostate usage.
  */
-
 #define RKH_CFG_SMA_CHOICE_EN           RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_SMA_CONDITIONAL_EN and #RKH_CFG_SMA_PSEUDOSTATE_EN are
  *	set to 1, the RKH allows branch (or conditional) pseudostate usage.
  */
-
 #define RKH_CFG_SMA_CONDITIONAL_EN      RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_SMA_SUBMACHINE_EN and #RKH_CFG_SMA_PSEUDOSTATE_EN are
  *	set to 1, the RKH allows submachine state (and exit/entry points) usage.
  */
-
 #define RKH_CFG_SMA_SUBMACHINE_EN       RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_SMA_TRC_SNDR_EN and #RKH_CFG_TRC_EN are set to 1,
  *	when posting an event the RKH inserts a pointer to the sender object.
  */
-
 #define RKH_CFG_SMA_TRC_SNDR_EN         RKH_ENABLED
 
 /**
@@ -305,7 +240,6 @@
  *	argc/argv. Also, the #RKH_CFG_SMA_INIT_EVT_EN changes the initial action
  *	prototype.
  */
-
 #define RKH_CFG_SMA_INIT_EVT_EN         RKH_DISABLED
 
 /* --- Configuration options related to SMA action featues ---------------- */
@@ -315,7 +249,6 @@
  *	prototype will add as argument a pointer to state machine structure
  *	#RKH_SMA_T. See #RKH_INIT_ACT_T definition.
  */
-
 #define RKH_CFG_SMA_INIT_ARG_SMA_EN     RKH_ENABLED
 
 /**
@@ -323,7 +256,6 @@
  *	prototype will add as argument a pointer to state machine structure
  *	#RKH_SMA_T. See #RKH_ENT_ACT_T definition.
  */
-
 #define RKH_CFG_SMA_ENT_ARG_SMA_EN      RKH_ENABLED
 
 /**
@@ -331,7 +263,6 @@
  *	prototype will add as argument a pointer to "this" state structure
  *	#RKH_ST_T. See #RKH_ENT_ACT_T definition.
  */
-
 #define RKH_CFG_SMA_ENT_ARG_STATE_EN    RKH_ENABLED
 
 /**
@@ -339,7 +270,6 @@
  *	prototype will add as argument a pointer to state machine structure
  *	#RKH_SMA_T. See #RKH_EXT_ACT_T definition.
  */
-
 #define RKH_CFG_SMA_EXT_ARG_SMA_EN      RKH_ENABLED
 
 /**
@@ -347,7 +277,6 @@
  *	prototype will add as argument a pointer to "this" state structure
  *	#RKH_ST_T. See #RKH_EXT_ACT_T definition.
  */
-
 #define RKH_CFG_SMA_EXT_ARG_STATE_EN    RKH_ENABLED
 
 /**
@@ -355,23 +284,20 @@
  *	prototype will add as argument a pointer to state machine structure
  *	#RKH_SMA_T. See #RKH_TRN_ACT_T definition.
  */
-
-#define RKH_CFG_SMA_ACT_ARG_SMA_EN      RKH_ENABLED
+#define RKH_CFG_SMA_ACT_ARG_SMA_EN      RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_SMA_ACT_ARG_EVT_EN is set to 1 then the transition action
  *	prototype will add as argument a pointer to ocurred event.
  *	See RKH_TRN_ACT_T definition.
  */
-
-#define RKH_CFG_SMA_ACT_ARG_EVT_EN      RKH_ENABLED
+#define RKH_CFG_SMA_ACT_ARG_EVT_EN      RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_SMA_GRD_ARG_EVT_EN is set to 1 then the transition guard
  *	prototype will add as argument a pointer to ocurred event.
  *	See RKH_GUARD_T definition.
  */
-
 #define RKH_CFG_SMA_GRD_ARG_EVT_EN      RKH_DISABLED
 
 /**
@@ -379,7 +305,6 @@
  *	prototype will add as argument a pointer to state machine structure
  *	RKH_SMA_T. See RKH_GUARD_T definition.
  */
-
 #define RKH_CFG_SMA_GRD_ARG_SMA_EN      RKH_DISABLED
 
 /**
@@ -388,7 +313,6 @@
  *	argument a pointer to state machine structure
  *	RKH_SMA_T. See RKH_PPRO_T definition.
  */
-
 #define RKH_CFG_SMA_PPRO_ARG_SMA_EN     RKH_DISABLED
 
 /**
@@ -437,7 +361,6 @@
  *	If the #RKH_CFG_TRC_EN is set to 1 then RKH will include the trace
  *	facility.
  */
-
 #define RKH_CFG_TRC_EN                  RKH_ENABLED
 
 /**
@@ -449,7 +372,6 @@
  *  RKH_FILTER_ON_GROUP_ALL_EVENTS(), RKH_FILTER_OFF_GROUP_ALL_EVENTS(),
  *  RKH_FILTER_ON_SMA(), and RKH_FILTER_OFF_SMA() macros.
  */
-
 #define RKH_CFG_TRC_RTFIL_EN            RKH_ENABLED
 
 /**
@@ -457,7 +379,6 @@
  *	set to 1, the RKH allows the usage of runtime trace filter for state
  *	machine applications (active objects).
  */
-
 #define RKH_CFG_TRC_RTFIL_SMA_EN        RKH_ENABLED
 
 /**
@@ -465,7 +386,6 @@
  *	are set to 1, the RKH allows the usage of runtime trace filter for
  *	signals (events).
  */
-
 #define RKH_CFG_TRC_RTFIL_SIGNAL_EN     RKH_ENABLED
 
 /**
@@ -473,112 +393,96 @@
  *	build and generate tracing information from the application-level code.
  *	This trace records are application-specific.
  */
-
 #define RKH_CFG_TRC_USER_TRACE_EN       RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_TRC_ALL_EN is set to 1 then RKH will include all its own
  *	trace records.
  */
-
 #define RKH_CFG_TRC_ALL_EN              RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_MP_EN is set to 1 then RKH will include all trace
  *	records related to the native fixed-size memory blocks.
  */
-
 #define RKH_CFG_TRC_MP_EN               RKH_DISABLED
 
 /**
- *	If the #RKH_CFG_TRC_RQ_EN is set to 1 then RKH will include all trace
+ *	If the #RKH_CFG_TRC_QUE_EN is set to 1 then RKH will include all trace
  *	records related to the native queues.
  */
-
-#define RKH_CFG_TRC_RQ_EN               RKH_DISABLED
+#define RKH_CFG_TRC_QUE_EN               RKH_DISABLED
 
 /**
  *	If the #RKH_CFG_TRC_SMA_EN is set to 1 then RKH will include all trace
  *	records related to the state machine applications.
  */
-
 #define RKH_CFG_TRC_SMA_EN              RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_TMR_EN is set to 1 then RKH will include all trace
  *	records related to the native software timer.
  */
-
-#define RKH_CFG_TRC_TMR_EN              RKH_DISABLED
+#define RKH_CFG_TRC_TMR_EN              RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_SM_EN is set to 1 then RKH will include all trace
  *	records related to the state machine (hierarchical and "flat").
  */
-
-#define RKH_CFG_TRC_SM_EN               RKH_DISABLED
+#define RKH_CFG_TRC_SM_EN               RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_FWK_EN is set to 1 then RKH will include all trace
  *	records related to the nativenative  event framework.
  */
-
 #define RKH_CFG_TRC_FWK_EN              RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_ASSERT_EN and #RKH_CFG_TRC_FWK_EN are set to 1 then
  *	RKH will include the "assertion" trace record.
  */
-
 #define RKH_CFG_TRC_ASSERT_EN           RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_SM_INIT_EN and #RKH_CFG_TRC_SM_EN are set to 1 then
  *	RKH will include the "init state machine" trace record.
  */
-
 #define RKH_CFG_TRC_SM_INIT_EN          RKH_ENABLED
 
 /**
- *	If the #RKH_CFG_TRC_SMA_DCH_EN and #RKH_CFG_TRC_SM_EN are set to 1 then
+ *	If the #RKH_CFG_TRC_SM_DCH_EN and #RKH_CFG_TRC_SM_EN are set to 1 then
  *	RKH will include the "start a state machine" trace record.
  */
-
-#define RKH_CFG_TRC_SMA_DCH_EN          RKH_ENABLED
+#define RKH_CFG_TRC_SM_DCH_EN           RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_SM_CLRH_EN and #RKH_CFG_TRC_SM_EN are set to 1 then
  *	RKH will include the "dispatch an event to state machine" trace record.
  */
-
 #define RKH_CFG_TRC_SM_CLRH_EN          RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_SM_CLRH_EN and #RKH_CFG_TRC_SM_EN are set to 1 then
  *	RKH will include the "clear the history pseudostate" trace record.
  */
-
 #define RKH_CFG_TRC_SM_TRN_EN           RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_SM_STATE_EN and #RKH_CFG_TRC_SM_EN are set to 1 then
  *	RKH will include the "final state of transition" trace record.
  */
-
 #define RKH_CFG_TRC_SM_STATE_EN         RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_SM_CLRH_EN and #RKH_CFG_TRC_SM_EN are set to 1 then
  *	RKH will include the "entry state" trace record.
  */
-
 #define RKH_CFG_TRC_SM_ENSTATE_EN       RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_SM_CLRH_EN and #RKH_CFG_TRC_SM_EN are set to 1 then
  *	RKH will include the "exit state" trace record.
  */
-
 #define RKH_CFG_TRC_SM_EXSTATE_EN       RKH_ENABLED
 
 /**
@@ -586,7 +490,6 @@
  *	RKH will include the "number of entry and exit states in transition"
  *	trace record.
  */
-
 #define RKH_CFG_TRC_SM_NENEX_EN         RKH_ENABLED
 
 /**
@@ -594,7 +497,6 @@
  *	RKH will include the "number of executed actions in transition" trace
  *	record.
  */
-
 #define RKH_CFG_TRC_SM_NTRNACT_EN       RKH_ENABLED
 
 /**
@@ -602,14 +504,12 @@
  *	RKH will include the "state or pseudostate in a compound transition"
  *	trace record.
  */
-
 #define RKH_CFG_TRC_SM_TS_STATE_EN      RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_SM_CLRH_EN and #RKH_CFG_TRC_SM_EN are set to 1 then
  *	RKH will include the "returned code from dispatch function" trace record.
  */
-
 #define RKH_CFG_TRC_SM_PROCESS_EN       RKH_ENABLED
 
 /**
@@ -617,7 +517,6 @@
  *	then RKH will include the "executed behavior of state machine" trace
  *	record.
  */
-
 #define RKH_CFG_TRC_SM_EXE_ACT_EN       RKH_ENABLED
 
 /**
@@ -625,14 +524,12 @@
  *	record an incremental number (1-byte), used like a sequence number.
  *	See RKH_TRC_NSEQ() and RKH_TRC_HDR() macros.
  */
-
 #define RKH_CFG_TRC_NSEQ_EN             RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_TRC_CHK_EN is set to 1 then RKH will add to the trace
  *	record a checksum (1-byte). See RKH_TRC_CHK() macro.
  */
-
 #define RKH_CFG_TRC_CHK_EN              RKH_ENABLED
 
 /**
@@ -640,92 +537,81 @@
  *	record a timestamp field. It's configurable by means of
  *	#RKH_CFGPORT_TRC_SIZEOF_TSTAMP.
  */
-
 #define RKH_CFG_TRC_TSTAMP_EN           RKH_ENABLED
 
 /**
  *	Specify the maximum number of trace events in the stream. The smaller
  *	this number, the lower the RAM consumption.
  */
-
 #define RKH_CFG_TRC_SIZEOF_STREAM       512u
 
 /* --- Configuration options related to queue (by reference) facility ----- */
 
 /**
- *	If the #RKH_CFG_RQ_EN is set to 1 then RKH will include the native queue
+ *	If the #RKH_CFG_QUE_EN is set to 1 then RKH will include the native queue
  *	facility.
  */
-
-#define RKH_CFG_RQ_EN                   RKH_ENABLED
+#define RKH_CFG_QUE_EN                   RKH_ENABLED
 
 /**
  *  Specify the maximum number of elements that any queue can contain.
  *  The valid values [in bits] are 8, 16 or 32. Default is 8.
- *	See #RKH_RQNE_T type.
+ *	See #RKH_QUENE_T type.
  */
-
-#define RKH_CFG_RQ_SIZEOF_NELEM         8u
+#define RKH_CFG_QUE_SIZEOF_NELEM         8u
 
 /**
- *	If the #RKH_CFG_RQ_GET_LWMARK_EN is set to 1 then RKH allows to known the
+ *	If the #RKH_CFG_QUE_GET_LWMARK_EN is set to 1 then RKH allows to known the
  *  minimum number of free elements ever in the queue (low-watermark ).
  *  This provides valuable empirical data for proper sizing of the queue.
  *  See rkh_rq_get_lwm() function.
  */
-
-#define RKH_CFG_RQ_GET_LWMARK_EN        RKH_DISABLED
+#define RKH_CFG_QUE_GET_LWMARK_EN        RKH_DISABLED
 
 /**
- *	If the #RKH_CFG_RQ_GET_INFO_EN is set to 1 then RKH allows to collect and
+ *	If the #RKH_CFG_QUE_GET_INFO_EN is set to 1 then RKH allows to collect and
  *	retrives performance information for a particular queue.
  *	See rkh_rq_get_info() and rkh_rq_clear_info() functions.
  */
-
-#define RKH_CFG_RQ_GET_INFO_EN          RKH_DISABLED
+#define RKH_CFG_QUE_GET_INFO_EN          RKH_DISABLED
 
 /**
- *	If the #RKH_CFG_RQ_READ_EN is set to 1 then RKH will include the
+ *	If the #RKH_CFG_QUE_READ_EN is set to 1 then RKH will include the
  *	rkh_rq_read() function that allows read an element from a queue without
  *	remove it. See rkh_rq_read() function.
  */
-
-#define RKH_CFG_RQ_READ_EN              RKH_DISABLED
+#define RKH_CFG_QUE_READ_EN              RKH_DISABLED
 
 /**
- *	If the #RKH_CFG_RQ_DEPLETE_EN is set to 1 then RKH will include the
+ *	If the #RKH_CFG_QUE_DEPLETE_EN is set to 1 then RKH will include the
  *	rkh_rq_deplete() function that empties the contents of the queue and
  *	eliminates all stored elements.
  *	See rkh_rq_deplete() function.
  */
-
-#define RKH_CFG_RQ_DEPLETE_EN           RKH_DISABLED
+#define RKH_CFG_QUE_DEPLETE_EN           RKH_DISABLED
 
 /**
- *	If the #RKH_CFG_RQ_IS_FULL_EN is set to 1 then RKH will include the
+ *	If the #RKH_CFG_QUE_IS_FULL_EN is set to 1 then RKH will include the
  *	rkh_rq_is_full() function that allows to known if a queue is full.
  *	See rkh_rq_is_full() function.
  */
-
-#define RKH_CFG_RQ_IS_FULL_EN           RKH_DISABLED
+#define RKH_CFG_QUE_IS_FULL_EN           RKH_DISABLED
 
 /**
- *	If the #RKH_CFG_RQ_GET_NELEMS_EN is set to 1 then RKH will include the
+ *	If the #RKH_CFG_QUE_GET_NELEMS_EN is set to 1 then RKH will include the
  *	rkh_rq_get_num() function that returns the number of elements currently
  *	in the queue.
  *	See rkh_rq_get_num() function.
  */
-
-#define RKH_CFG_RQ_GET_NELEMS_EN        RKH_DISABLED
+#define RKH_CFG_QUE_GET_NELEMS_EN        RKH_DISABLED
 
 /**
- *	If the #RKH_CFG_RQ_PUT_LIFO_EN is set to 1 then RKH will include the
+ *	If the #RKH_CFG_QUE_PUT_LIFO_EN is set to 1 then RKH will include the
  *	rkh_rq_put_lifo() function that puts an element on a queue in a LIFO
  *	manner.
  *	See rkh_rq_put_lifo() function.
  */
-
-#define RKH_CFG_RQ_PUT_LIFO_EN          RKH_ENABLED
+#define RKH_CFG_QUE_PUT_LIFO_EN          RKH_ENABLED
 
 /* --- Configuration options related to fixed-sized memory block facility - */
 
@@ -733,28 +619,24 @@
  *	If the #RKH_CFG_MP_EN is set to 1 then RKH will include the native
  *	fixed-size memory block management.
  */
-
 #define RKH_CFG_MP_EN                   RKH_ENABLED
 
 /**
  *	If the #RKH_CFG_MP_EN is set to 1 then RKH will include the native
  *	fixed-size memory block management.
  */
-
 #define RKH_CFG_MP_REDUCED_EN           RKH_DISABLED
 
 /**
  *  Specify the size of memory block size. The valid values [in bits] are
  *  8, 16 or 32. Default is 8. See #RKH_MPBS_T type.
  */
-
 #define RKH_CFG_MP_SIZEOF_BSIZE         8u
 
 /**
  *  Specify size of number of memory block size. The valid values [in bits]
  *  are 8, 16 or 32. Default is 8. See #RKH_MPNB_T type.
  */
-
 #define RKH_CFG_MP_SIZEOF_NBLOCK        8u
 
 /**
@@ -762,7 +644,6 @@
  *	rkh_mp_get_bsize() function that returns the size of memory block in
  *	bytes. See rkh_mp_get_bsize() function.
  */
-
 #define RKH_CFG_MP_GET_BSIZE_EN         RKH_DISABLED
 
 /**
@@ -771,7 +652,6 @@
  *	memory blocks in the pool.
  *	See rkh_mp_get_nfree() function.
  */
-
 #define RKH_CFG_MP_GET_NFREE_EN         RKH_DISABLED
 
 /**
@@ -781,7 +661,6 @@
  *	data for proper sizing of the memory pool.
  *	See rkh_mp_get_low_wmark() function.
  */
-
 #define RKH_CFG_MP_GET_LWM_EN           RKH_DISABLED
 
 /**
@@ -789,16 +668,14 @@
  *	rkh_mp_get_info() function that retrieves performance information for
  *	a particular memory pool. See rkh_mp_get_info() function.
  */
-
 #define RKH_CFG_MP_GET_INFO_EN          RKH_DISABLED
 
 /* --- Configuration options related to software timer facility ----------- */
 
 /**
- *	If the #RKH_CFG_RQ_EN is set to 1 then RKH will include the native software
+ *	If the #RKH_CFG_QUE_EN is set to 1 then RKH will include the native software
  *	timer facility.
  */
-
 #define RKH_CFG_TMR_EN                  RKH_ENABLED
 
 /**
@@ -806,7 +683,6 @@
  *  (maximum number of ticks). The valid values [in bits] are 8, 16 or 32.
  *  Default is 8.
  */
-
 #define RKH_CFG_TMR_SIZEOF_NTIMER       16u
 
 /**
@@ -814,7 +690,6 @@
  *	function when a timer expires. When this is set the application must
  *	provide the hook function.
  */
-
 #define RKH_CFG_TMR_HOOK_EN             RKH_DISABLED
 
 /**
@@ -822,7 +697,7 @@
  *	rkh_tmr_get_info() function that retrieves performance information for
  *	a particular software timer. See rkh_tmr_get_info() function.
  */
-
 #define RKH_CFG_TMR_GET_INFO_EN         RKH_DISABLED
 
 #endif
+/* ------------------------------ End of file ------------------------------ */

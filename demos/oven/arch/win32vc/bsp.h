@@ -81,9 +81,14 @@ extern rui8_t rkh_tick;
 /* -------------------------- Function prototypes -------------------------- */
 void bsp_timeTick(void);
 void bsp_keyParser(int c);
-void bsp_init(int argc, char *argv[]);
-void bsp_oven_init(void);
 void bsp_publishSwitchEvt(ruint s, ruint debsw);
+void bsp_init(int argc, char *argv[]);
+void bsp_ovenInit(void);
+void bsp_ovenInit(void);
+void bsp_doorOpen(void);
+void bsp_emitterReady(void);
+void bsp_emitterPause(void);
+void bsp_emitterContinue(void);
 void bsp_emitterOn(void);
 void bsp_emitterOff(void);
 

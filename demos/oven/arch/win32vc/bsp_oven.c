@@ -144,13 +144,13 @@ bsp_keyParser(int c)
 }
 
 void
-bsp_door_open(void)
+bsp_doorOpen(void)
 {
     printf("+- Door Open\n");
 }
 
 void
-bsp_oven_init(void)
+bsp_ovenInit(void)
 {
     printf(" Oven is running\n\n");
 }

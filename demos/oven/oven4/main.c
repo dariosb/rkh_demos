@@ -16,7 +16,7 @@
 /* --------------------------------- Notes --------------------------------- */
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
-#include "rkhtrc.h"
+#include "rkhfwk_sched.h"
 #include "bsp.h"
 #include "oven.h"
 

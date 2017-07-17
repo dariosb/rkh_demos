@@ -1,16 +1,16 @@
 /*
- *  \file       bkliny.h
+ *  \file       oven.h
  *  \brief      Example application.
  */
 
 /* -------------------------- Development history -------------------------- */
 /*
- *  2016.03.17  LeFr  v1.0.00  Initial version
+ *  2016.03.17  DaBa  v1.0.00  Initial version
  */
 
 /* -------------------------------- Authors -------------------------------- */
 /*
- *  LeFr  Leandro Francucci  francuccilea@gmail.com
+ *  DaBa  Darío Baliña  dariosb@gmail.com
  */
 
 /* --------------------------------- Notes --------------------------------- */
