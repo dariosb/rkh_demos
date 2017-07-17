@@ -10,10 +10,6 @@
 
 __CRP const unsigned int CRP_WORD = CRP_NO_CRP;
 
-#if defined(RKH_CFG_SMA_TRC_SNDR_EN)
-rui8_t rkh_tick;
-#endif
-
 /*
  * Setup systick for the RKH tick call.
  */
