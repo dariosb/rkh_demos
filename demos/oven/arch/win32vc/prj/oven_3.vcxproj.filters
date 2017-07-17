@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="bsp">
+      <UniqueIdentifier>{4c284d30-15a4-497f-bb5c-a8d307d5f8f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="oven">
+      <UniqueIdentifier>{99d93923-1eb1-473f-92c9-741c7e181526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rkh">
+      <UniqueIdentifier>{84eed31d-f44f-48c8-af46-853f18df8a7e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\bsp.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tcptrc.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\oven3\oven.c">
+      <Filter>oven</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\oven3\main.c">
+      <Filter>oven</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\bsp.h">
+      <Filter>bsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tcptrc.h">
+      <Filter>bsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\oven3\rkhcfg.h">
+      <Filter>oven</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\oven3\oven.h">
+      <Filter>oven</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

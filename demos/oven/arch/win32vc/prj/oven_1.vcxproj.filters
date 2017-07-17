@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="rkh">
+      <UniqueIdentifier>{d8fa5bff-86bb-475e-85d9-ffb81fe3085c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bsp">
+      <UniqueIdentifier>{d71d04dd-15e2-48c6-ab34-6fa7fd17e895}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="oven">
+      <UniqueIdentifier>{b71fff80-4e27-4b76-bf7a-762bff139aa3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\oven1\main.c">
+      <Filter>oven</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\oven1\oven.c">
+      <Filter>oven</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\fwk\src\rkhfwk_bittbl.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\fwk\src\rkhfwk_dynevt.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\fwk\src\rkhfwk_evtpool.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\fwk\src\rkhfwk_sched.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\fwk\src\rkhfwk_version.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\mempool\src\rkhmempool.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\portable\80x86\win32_st\vc\rkhport.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\queue\src\rkhqueue.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\sm\src\rkhsm.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\sma\src\rkhsma.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\sma\src\rkhsma_prio.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\tmr\src\rkhtmr.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\trc\src\rkhtrc_filter.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\trc\src\rkhtrc_record.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\rkh\source\trc\src\rkhtrc_stream.c">
+      <Filter>rkh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\assert.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bsp_oven.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\getopt.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hook.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\trace_io.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\trace_io_tcp.c">
+      <Filter>bsp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\oven1\oven.h">
+      <Filter>oven</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\oven1\rkhcfg.h">
+      <Filter>oven</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
