@@ -1,3 +1,7 @@
 *.sdf
 /Debug
+/out_oven1
+/out_oven2
+/out_oven3
+/out_oven4
 /Release
