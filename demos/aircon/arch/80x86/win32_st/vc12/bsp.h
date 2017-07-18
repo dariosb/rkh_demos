@@ -44,7 +44,7 @@
 /* -------------------------------- Authors -------------------------------- */
 /*
  *  LeFr  Leandro Francucci  francuccilea@gmail.com
- *  DaBa  Darío Baliña  dariosb@gmail.com
+ *  DaBa  Darío Baliña       dariosb@gmail.com
  */
 
 /* --------------------------------- Notes --------------------------------- */
@@ -61,13 +61,8 @@ extern "C" {
 
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
-#define SOCKET_TRACE                0
-/* Trazer Tool IP Address */
-    #define TRC_IP_ADDR                 "127.0.0.1"
-/* Trazer Tool TCP Port Address */
-    #define TRC_TCP_PORT                6602
-
 #define BSP_TICKS_PER_SEC           RKH_CFG_FWK_TICK_RATE_HZ
+
 /**
  *  \brief
  *  This macro represents the number of timestamp clock ticks per second.
@@ -75,7 +70,7 @@ extern "C" {
  *  of seconds.
  */
 
-#define BSP_TS_RATE_HZ              CLOCKS_PER_SEC
+#define BSP_TS_RATE_HZ              RKH_CFG_FWK_TICK_RATE_HZ
 
 /* ------------------------------- Data types ------------------------------ */
 typedef enum
@@ -85,7 +80,14 @@ typedef enum
 }setOnOff_t;
 
 /* -------------------------- External variables --------------------------- */
+#if defined(RKH_USE_TRC_SENDER)
+extern rui8_t rkh_tick;
+#endif
+
 /* -------------------------- Function prototypes -------------------------- */
+void bsp_timeTick(void);
+void bsp_keyParser(int c);
+void bsp_publishSwitchEvt(ruint s, ruint debsw);
 void bsp_init(int argc, char *argv[]);
 
 void BSP_AirConPower(setOnOff_t set);
@@ -99,6 +101,7 @@ void BSP_setFanSpeed(ruint speed);
 #define BSP_setCoolerOn()   BSP_setCooler(SET_ON)
 #define BSP_setHeaterOff()  BSP_setHeater(SET_OFF)
 #define BSP_setHeaterOn()   BSP_setHeater(SET_ON)
+
 
 
 /* -------------------- External C language linkage end -------------------- */
