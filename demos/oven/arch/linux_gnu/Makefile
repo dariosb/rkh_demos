@@ -1,33 +1,66 @@
 PROGNAME=oven$(oven)
 
 CC=gcc
+APPSRCPATH=$(PWD)/../../oven$(oven)
 RKHSRCPATH=$(PWD)/../../../../rkh/source
-PORTPATH= $(RKHSRCPATH)/portable/80x86/linux_st/gnu
+RKHMOD_FWK=$(RKHSRCPATH)/fwk
+RKHMOD_MEMPOOL=$(RKHSRCPATH)/mempool
+RKHMOD_QUEUE=$(RKHSRCPATH)/queue
+RKHMOD_SM=$(RKHSRCPATH)/sm
+RKHMOD_SMA=$(RKHSRCPATH)/sma
+RKHMOD_TMR=$(RKHSRCPATH)/tmr
+RKHMOD_TRC=$(RKHSRCPATH)/trc
+RKH_PORT= $(RKHSRCPATH)/portable/80x86/linux_st/gnu
+RKHBSP = $(PWD)
+
 PORTFILE=rkhport
 
-DEMOSRCPATH=$(PWD)/../../oven$(oven)
-
 DEFINE= -D__LNXGNU__ -D_BSD_SOURCE
-CFLAGS = -ansi -Wall -I$(RKHSRCPATH)/include -I$(PWD) -I$(PORTPATH) -I$(DEMOSRCPATH) 
+CFLAGS = -ansi -Wall -I$(APPSRCPATH) -I$(RKHMOD_FWK)/inc -I$(RKHMOD_MEMPOOL)/inc \
+		     -I$(RKHMOD_QUEUE)/inc -I$(RKHMOD_SM)/inc -I$(RKHMOD_SMA)/inc \
+			 -I$(RKHMOD_TMR)/inc -I$(RKHMOD_TRC)/inc -I$(RKH_PORT) \
+			 -I$(RKHBSP)
 LDFLAGS	= -lc -pthread 
 
 rkhobjects:=$(patsubst %.c,%.o,$(wildcard $(RKHSRCPATH)/*.c)) 
-portobj:=$(patsubst %.c,%.o,$(wildcard $(PORTPATH)/*.c)) 
+
+app_objs:=$(patsubst %.c,%.o,$(wildcard $(APPSRCPATH)/*.c)) 
+
+rkhfwk_objs:=$(patsubst %.c,%.o,$(wildcard $(RKHMOD_FWK)/src/*.c)) 
+rkhmempool_objs:=$(patsubst %.c,%.o,$(wildcard $(RKHMOD_MEMPOOL)/src/*.c)) 
+rkhqueue_objs:=$(patsubst %.c,%.o,$(wildcard $(RKHMOD_QUEUE)/src/*.c)) 
+rkhsm_objs:=$(patsubst %.c,%.o,$(wildcard $(RKHMOD_SM)/src/*.c)) 
+rkhsma_objs:=$(patsubst %.c,%.o,$(wildcard $(RKHMOD_SMA)/src/*.c)) 
+rkhtmr_objs:=$(patsubst %.c,%.o,$(wildcard $(RKHMOD_TMR)/src/*.c)) 
+rkhtrc_objs:=$(patsubst %.c,%.o,$(wildcard $(RKHMOD_TRC)/src/*.c)) 
+rkhport_obj:=$(patsubst %.c,%.o,$(wildcard $(RKH_PORT)/*.c)) 
+#rkhbsp_obj:=$(patsubst %.c,%.o,$(wildcard $(RKHBSP)/*.c)) 
+
 rkh:=$(patsubst $(RKHSRCPATH)/%, %,$(rkhobjects)) 
 
-demoobj:=$(patsubst %.c,%.o,$(wildcard $(DEMOSRCPATH)/*.c)) 
-demo:=$(patsubst $(DEMOSRCPATH)/%, %,$(demoobj)) 
+app:=$(patsubst $(APPSRCPATH)/%, %,$(app_objs)) 
+
+fwk:=$(patsubst $(RKHMOD_FWK)/src/%, %,$(rkhfwk_objs)) 
+mempool:=$(patsubst $(RKHMOD_MEMPOOL)/src/%, %,$(rkhmempool_objs)) 
+queue:=$(patsubst $(RKHMOD_QUEUE)/src/%, %,$(rkhqueue_objs)) 
+sm:=$(patsubst $(RKHMOD_SM)/src/%, %,$(rkhsm_objs)) 
+sma:=$(patsubst $(RKHMOD_SMA)/src/%, %,$(rkhsma_objs)) 
+tmr:=$(patsubst $(RKHMOD_TMR)/src/%, %,$(rkhtmr_objs)) 
+trc:=$(patsubst $(RKHMOD_TRC)/src/%, %,$(rkhtrc_objs)) 
+port:=$(patsubst $(RKH_PORT)/%, %,$(rkhport_obj)) 
+#rkhbsp:=$(patsubst $(RKHBSP)/%, %,$(rkhbsp_obj)) 
 
 objects:=$(patsubst %.c,%.o,$(wildcard *.c))
 
-$(PROGNAME): $(objects) $(demoobj) $(rkhobjects) $(portobj) 
-	@$(CC) -o $@ $(objects) $(rkh) $(demo) $(PORTFILE).o $(LDFLAGS)
+#$(PROGNAME): $(objects) $(app_objs) $(rkhobjects) $(rkhfwk_objs) $(rkhmempool_objs) $(rkhqueue_objs) $(rkhsm_objs) $(rkhsma_objs) $(rkhtmr_objs) $(rkhtrc_objs) $(rkhport_obj) $(rkhbsp_obj)
+$(PROGNAME): $(objects) $(app_objs) $(rkhobjects) $(rkhfwk_objs) $(rkhmempool_objs) $(rkhqueue_objs) $(rkhsm_objs) $(rkhsma_objs) $(rkhtmr_objs) $(rkhtrc_objs) $(rkhport_obj)
+	@$(CC) -o $@ $(objects) $(app) $(rkh) $(fwk) $(mempool) $(queue) $(sm) $(sma) $(tmr) $(trc) $(port) $(rkhbsp) $(LDFLAGS)
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $(DEFINE) $<
 
 clean: 
-	/bin/rm -rf *.o *~
+	/bin/rm -rf *.o *~ $(PROGNAME) 
 
 tags:
 	ctags -R $(RKHSRCPATH) $(PWD)

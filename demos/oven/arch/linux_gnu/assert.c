@@ -30,15 +30,15 @@
  */
 
 /**
- *  \file       bsp.h
- *  \brief      BSP for 80x86 OS Linux
+ *  \file       assert.c
+ *  \brief      RKH assert function for 80x86 OS win32
  *
  *  \ingroup    bsp
  */
 
 /* -------------------------- Development history -------------------------- */
 /*
- *  2017.04.14  LeFr  v2.4.05  Initial version
+ *  2017.04.14  DaBa  v2.4.05  Initial version
  */
 
 /* -------------------------------- Authors -------------------------------- */
@@ -46,40 +46,31 @@
  *  LeFr  Leandro Francucci  francuccilea@gmail.com
  *  DaBa  Dario Baliña       dariosb@gmail.com
  */
-
-/* --------------------------------- Module -------------------------------- */
-#ifndef __BSP_COMMON_H__
-#define __BSP_COMMON_H__
-
+/* --------------------------------- Notes --------------------------------- */
 /* ----------------------------- Include files ----------------------------- */
-/* ---------------------- External C language linkage ---------------------- */
-#ifdef __cplusplus
-extern "C" {
-#endif
+#include <stdio.h>
 
-/* --------------------------------- Macros -------------------------------- */
-/* -------------------------------- Constants ------------------------------ */
-/* ------------------------------- Data types ------------------------------ */
-/* -------------------------- External variables --------------------------- */
-/* -------------------------- Function prototypes -------------------------- */
-void bsp_init(int argc, char *argv[]);
-void bsp_keyParser(int c);
-void bsp_timeTick(void);
+#include "rkh.h"
+#include "rkhfwk_sched.h"
 
-void bsp_doorOpen(void);
-void bsp_ovenInit(void);
-void bsp_emitterReady(void);
-void bsp_emitterOn(void);
-void bsp_emitterOff(void);
-void bsp_emitterPause(void);
-void bsp_emitterContinue(void);
+RKH_THIS_MODULE
 
-/* -------------------- External C language linkage end -------------------- */
-#ifdef __cplusplus
+/* ----------------------------- Local macros ------------------------------ */
+/* ------------------------------- Constants ------------------------------- */
+/* ---------------------------- Local data types --------------------------- */
+/* ---------------------------- Global variables --------------------------- */
+/* ---------------------------- Local variables ---------------------------- */
+/* ----------------------- Local function prototypes ----------------------- */
+/* ---------------------------- Local functions ---------------------------- */
+/* ---------------------------- Global functions --------------------------- */
+void
+rkh_assert(RKHROM char * const file, int line)
+{
+    fprintf(stderr,    "RKH_ASSERT: [%d] line from %s "
+            "file\n", line, file);
+    RKH_DIS_INTERRUPT();
+    RKH_TR_FWK_ASSERT((RKHROM char *)file, __LINE__);
+    rkh_fwk_exit();
 }
-#endif
-
-/* ------------------------------ Module end ------------------------------- */
-#endif
 
 /* ------------------------------ File footer ------------------------------ */

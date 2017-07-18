@@ -30,15 +30,15 @@
  */
 
 /**
- *  \file       bsp.h
- *  \brief      BSP for 80x86 OS Linux
+ *  \file       trace_io_cfg.h
+ *  \brief      Socket TCP/IP support for 80x86 OS win32
  *
  *  \ingroup    bsp
  */
 
 /* -------------------------- Development history -------------------------- */
 /*
- *  2017.04.14  LeFr  v2.4.05  Initial version
+ *  2017.04.14  DaBa  v2.4.05  Initial version
  */
 
 /* -------------------------------- Authors -------------------------------- */
@@ -48,8 +48,8 @@
  */
 
 /* --------------------------------- Module -------------------------------- */
-#ifndef __BSP_COMMON_H__
-#define __BSP_COMMON_H__
+#ifndef __TRACE_CFG_H__
+#define __TRACE_CFG_H__
 
 /* ----------------------------- Include files ----------------------------- */
 /* ---------------------- External C language linkage ---------------------- */
@@ -59,20 +59,23 @@ extern "C" {
 
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
+#define FTBIN_NAME_STR_LEN          20
+#define TCP_IPADDR_STR_LEN          20
+
+#define TCP_TRC_IP_ADDR_DFT         "127.0.0.1"
+#define TCP_TRC_PORT_DFT             6602
+
 /* ------------------------------- Data types ------------------------------ */
+typedef struct
+{
+    char ftbinName[FTBIN_NAME_STR_LEN];
+    char tcpIpAddr[TCP_IPADDR_STR_LEN];
+    short tcpPort;
+} TRACE_CFG_ST;
+
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
-void bsp_init(int argc, char *argv[]);
-void bsp_keyParser(int c);
-void bsp_timeTick(void);
-
-void bsp_doorOpen(void);
-void bsp_ovenInit(void);
-void bsp_emitterReady(void);
-void bsp_emitterOn(void);
-void bsp_emitterOff(void);
-void bsp_emitterPause(void);
-void bsp_emitterContinue(void);
+void trace_io_setConfig(int argc, char **argv);
 
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus
@@ -81,5 +84,5 @@ void bsp_emitterContinue(void);
 
 /* ------------------------------ Module end ------------------------------- */
 #endif
-
 /* ------------------------------ File footer ------------------------------ */
+

@@ -30,15 +30,15 @@
  */
 
 /**
- *  \file       bsp.h
- *  \brief      BSP for 80x86 OS Linux
+ *  \file       trace_io_tcp.h
+ *  \brief      Socket TCP/IP support for 80x86 OS Linux
  *
  *  \ingroup    bsp
  */
 
 /* -------------------------- Development history -------------------------- */
 /*
- *  2017.04.14  LeFr  v2.4.05  Initial version
+ *  2017.04.14  DaBa  v2.4.05  Initial version
  */
 
 /* -------------------------------- Authors -------------------------------- */
@@ -48,8 +48,8 @@
  */
 
 /* --------------------------------- Module -------------------------------- */
-#ifndef __BSP_COMMON_H__
-#define __BSP_COMMON_H__
+#ifndef __TRACE_IO_TCP_H__
+#define __TRACE_IO_TCP_H__
 
 /* ----------------------------- Include files ----------------------------- */
 /* ---------------------- External C language linkage ---------------------- */
@@ -62,17 +62,9 @@ extern "C" {
 /* ------------------------------- Data types ------------------------------ */
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
-void bsp_init(int argc, char *argv[]);
-void bsp_keyParser(int c);
-void bsp_timeTick(void);
-
-void bsp_doorOpen(void);
-void bsp_ovenInit(void);
-void bsp_emitterReady(void);
-void bsp_emitterOn(void);
-void bsp_emitterOff(void);
-void bsp_emitterPause(void);
-void bsp_emitterContinue(void);
+int trace_io_tcp_open(unsigned short port, char *srvip, int *ps);
+void trace_io_tcp_send(int s, char c);
+void trace_io_tcp_close(int s);
 
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus
@@ -83,3 +75,4 @@ void bsp_emitterContinue(void);
 #endif
 
 /* ------------------------------ File footer ------------------------------ */
+
