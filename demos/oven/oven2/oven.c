@@ -71,7 +71,6 @@ oven_init(Oven *const me)
 
     /* send objects to trazer */
     RKH_TR_FWK_AO(me);
-    RKH_TR_FWK_QUEUE(&RKH_UPCAST(RKH_SMA_T, me)->equeue);
     RKH_TR_FWK_STATE(me, &idle);
     RKH_TR_FWK_STATE(me, &ready);
     RKH_TR_FWK_STATE(me, &cooking);
