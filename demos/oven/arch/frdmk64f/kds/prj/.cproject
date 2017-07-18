@@ -67,7 +67,13 @@
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup/gcc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../oven/${BUILD_OVEN_DIR}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../rkh/source/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sma/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/tmr/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/trc/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/mempool/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/fwk/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/queue/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sm/inc&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.2031937089" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;CPU_MK64FN1M0VMD12&quot;"/>
@@ -192,7 +198,13 @@
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup/gcc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../oven_6&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../rkh/source/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sma/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/tmr/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/trc/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/mempool/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/fwk/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/queue/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sm/inc&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.553782378" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;CPU_MK64FN1M0VMD12&quot;"/>
@@ -317,7 +329,13 @@
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup/gcc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../${BUILD_OVEN_DIR}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../rkh/source/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sma/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/tmr/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/trc/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/mempool/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/fwk/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/queue/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sm/inc&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.1010573688" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;CPU_MK64FN1M0VMD12&quot;"/>
@@ -442,7 +460,13 @@
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup/gcc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../${BUILD_OVEN_DIR}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../rkh/source/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sma/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/tmr/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/trc/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/mempool/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/fwk/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/queue/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sm/inc&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.1490399234" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;CPU_MK64FN1M0VMD12&quot;"/>
@@ -567,7 +591,13 @@
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup/gcc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../${BUILD_OVEN_DIR}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../rkh/source/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sma/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/tmr/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/trc/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/mempool/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/fwk/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/queue/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sm/inc&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.282801437" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;CPU_MK64FN1M0VMD12&quot;"/>
@@ -692,7 +722,13 @@
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_KSDK_PATH}/platform/devices/MK64F12/startup/gcc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../${BUILD_OVEN_DIR}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../rkh/source/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sma/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/tmr/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/trc/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/mempool/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/fwk/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/queue/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}../../../../../../../rkh/source/sm/inc&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.1164006273" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;CPU_MK64FN1M0VMD12&quot;"/>

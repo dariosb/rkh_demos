@@ -31,13 +31,13 @@ switch_tick( void )
 		{
 			p->debsw = SW_PRESS;
 			if( p->filter & SW_PRESS )
-				bsp_pub_sw_evt( s, SW_PRESS );
+				bsp_publishSwitchEvt( s, SW_PRESS );
 		}
 		else if( ( p->state == 0x00 ) && (p->debsw != SW_RELEASE) )
 		{
 			p->debsw = SW_RELEASE;
 			if( p->filter & SW_RELEASE )
-				bsp_pub_sw_evt( s, SW_RELEASE );
+				bsp_publishSwitchEvt( s, SW_RELEASE );
 		}
 	}
 
