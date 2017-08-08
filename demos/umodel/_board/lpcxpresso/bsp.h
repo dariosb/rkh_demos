@@ -44,7 +44,7 @@
 /* -------------------------------- Authors -------------------------------- */
 /*
  *  LeFr  Leandro Francucci  francuccilea@gmail.com
- *  DaBa  Darío Baliña       dariosb@gmail.com
+ *  DaBa  Darï¿½o Baliï¿½a       dariosb@gmail.com
  */
 
 /* --------------------------------- Notes --------------------------------- */
@@ -62,15 +62,6 @@ extern "C" {
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
 #define BSP_TICKS_PER_SEC           RKH_CFG_FWK_TICK_RATE_HZ
-
-/**
- *  \brief
- *  This macro represents the number of timestamp clock ticks per second.
- *  Dividing a count of timestamp ticks by this macro yields the number
- *  of seconds.
- */
-
-#define BSP_TS_RATE_HZ              RKH_CFG_FWK_TICK_RATE_HZ
 
 /* ------------------------------- Data types ------------------------------ */
 enum { OFF, ON };

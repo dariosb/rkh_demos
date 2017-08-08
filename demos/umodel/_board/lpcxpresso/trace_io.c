@@ -52,6 +52,7 @@
 #include "type.h"
 #include "lpc17xx.h"
 #include "uart.h"
+#include "bsp.h"
 
 #if RKH_CFG_TRC_EN == 1
 /* ----------------------------- Local macros ------------------------------ */
