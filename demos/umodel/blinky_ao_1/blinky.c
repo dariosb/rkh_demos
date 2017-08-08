@@ -65,7 +65,7 @@ struct Blinky
     rui8_t blinking;
 };
 
-RKH_SMA_CREATE(Blinky, blinky, 0, FLAT, &idle, init, NULL);
+RKH_SMA_CREATE(Blinky, blinky, 0, HCAL, &idle, init, NULL);
 RKH_SMA_DEF_PTR(blinky);
 
 /* ------------------------------- Constants ------------------------------- */

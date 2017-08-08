@@ -70,7 +70,7 @@ struct Button
     RKH_TMR_T timer;
 };
 
-RKH_SMA_CREATE(Button, button, 0, FLAT, &open, init, NULL);
+RKH_SMA_CREATE(Button, button, 0, HCAL, &open, init, NULL);
 RKH_SMA_DEF_PTR(button);
 
 /* ------------------------------- Constants ------------------------------- */

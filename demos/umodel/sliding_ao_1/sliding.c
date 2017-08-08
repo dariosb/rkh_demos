@@ -68,7 +68,7 @@ struct Sliding
     RKH_SMA_T sma;
 };
 
-RKH_SMA_CREATE(Sliding, sliding, 0, FLAT, &closing, init, NULL);
+RKH_SMA_CREATE(Sliding, sliding, 0, HCAL, &closing, init, NULL);
 RKH_SMA_DEF_PTR(sliding);
 
 /* ------------------------------- Constants ------------------------------- */
