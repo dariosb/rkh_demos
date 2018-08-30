@@ -82,6 +82,8 @@ void bsp_set_blinkyTick(rui32_t t);
 void bsp_set_led(rui8_t led);
 void bsp_setMotor(rui8_t open, rui8_t close);
 void bsp_button(rui8_t bst);
+void bsp_ApagarLed(void);
+void bsp_EncenderLed(void);
 
 
 /* -------------------- External C language linkage end -------------------- */
